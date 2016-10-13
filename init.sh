@@ -1,6 +1,10 @@
 #!/bin/sh
 
 composer install
-cp .env.example .env
+
+if [! -e .env]; then
+	cp .env.example .env
+fi
+
 php artisan key:generate
 
