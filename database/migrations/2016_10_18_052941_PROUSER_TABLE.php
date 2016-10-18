@@ -13,7 +13,11 @@ class PROUSERTABLE extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('PROUSER',function (Blueprint $table){
+        $table->increments('pro_id')->unique();
+        $table->string('e-mail');
+        $table->dateTime('time_limit');
+        )};
     }
 
     /**
@@ -23,6 +27,6 @@ class PROUSERTABLE extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('PROUSER');
     }
 }

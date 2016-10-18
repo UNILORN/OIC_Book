@@ -13,7 +13,12 @@ class USERSTABLE extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('USER',function (Blueprint $table){
+          
+
+
+          )};
+
     }
 
     /**
@@ -23,6 +28,6 @@ class USERSTABLE extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('USER');
     }
 }
