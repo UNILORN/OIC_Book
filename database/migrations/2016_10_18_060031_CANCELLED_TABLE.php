@@ -13,7 +13,11 @@ class CANCELLEDTABLE extends Migration
      */
     public function up()
     {
-        //
+      Schema::create('CANCELLED', function (Blueprint $table) {
+          $table->increments('cancelled_id')->unique();
+          $table->integer('uorder_id');
+          $table->boolean('cancell_flag');
+      });
     }
 
     /**
@@ -23,6 +27,6 @@ class CANCELLEDTABLE extends Migration
      */
     public function down()
     {
-        //
+         Schema::drop('CANCELLED');
     }
 }
