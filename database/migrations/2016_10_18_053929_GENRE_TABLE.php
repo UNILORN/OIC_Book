@@ -13,7 +13,12 @@ class GENRETABLE extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('GENRE',function(Blueprint$table){
+          $table->integer('genre_id')->unique();
+          $table->string('category',45);
+          $table->string('genre_1',45);
+          $table->string('genre_2',45);
+        });
     }
 
     /**

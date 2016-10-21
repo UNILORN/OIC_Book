@@ -13,7 +13,11 @@ class EMPLOYEETABLE extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('EMPLOYEE',function(Blueprint $table){
+          $table->increments('employee_id')->unique();
+          $table->string('employee_password',45);->unique();
+          $table->integer('employee_auth_id');
+        });
     }
 
     /**
@@ -23,6 +27,6 @@ class EMPLOYEETABLE extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('EMPLOYEE');
     }
 }

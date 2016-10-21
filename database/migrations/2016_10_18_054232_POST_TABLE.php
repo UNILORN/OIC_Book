@@ -13,7 +13,12 @@ class POSTTABLE extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('POST',function(Blueprint$table){
+          $table->increments('post_id')->unique();
+          $table->inreger('product_id');
+          $table->dateTime('show_start_time');
+          $table->dateTime('show_end_time');
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class POSTTABLE extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('POST');
     }
 }

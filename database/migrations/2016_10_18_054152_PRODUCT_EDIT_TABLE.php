@@ -13,7 +13,12 @@ class PRODUCTEDITTABLE extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('PRODUCT_EDIT',function(Blueprint$table){
+          $table->increments('product_edit_id')->unique();
+          $table->integer('product_id');
+          $table->dateTime('product_edit_time');
+          $table->integer('employee_id');
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class PRODUCTEDITTABLE extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('PRODUCT_EDIT');
     }
 }

@@ -13,7 +13,14 @@ class REVIEWTABLE extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('REVIEW',function(Blueprint$table){
+          $table->increments('review')->unique();
+          $table->integer('product_id');
+          $table->integer('user_id');
+          $table->integere('review');
+          $table->text('review_text',1000);
+          $table->dateTime('entry_time');
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class REVIEWTABLE extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('REVIEW');
     }
 }

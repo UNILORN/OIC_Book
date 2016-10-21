@@ -13,7 +13,10 @@ class TRANCELATERSTABLE extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('TRANCELATER',function(Blueprint$table){
+          $table->increments('trancelater_id')->unique();
+          $table->string('trancelater_name',45);
+        });
     }
 
     /**
@@ -23,6 +26,6 @@ class TRANCELATERSTABLE extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('TRANCELATER');
     }
 }
