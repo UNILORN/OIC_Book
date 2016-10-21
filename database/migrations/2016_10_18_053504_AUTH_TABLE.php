@@ -13,7 +13,11 @@ class AUTHTABLE extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('AUTH',function(Blueprint $table){
+          $table->integer('auth_id')->unique();
+          $table->integer('auth_content');
+          
+        });
     }
 
     /**
@@ -23,6 +27,6 @@ class AUTHTABLE extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('AUTH');
     }
 }

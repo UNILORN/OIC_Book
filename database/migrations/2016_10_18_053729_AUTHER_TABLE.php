@@ -13,7 +13,11 @@ class AUTHERSTABLE extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('AUTHER',function(Blueprint $table){
+          $table->increments('auther_id')->unique();
+          $table->integer('product_id');
+          $table->string('auther_cross'、45)
+        });
     }
 
     /**
@@ -23,6 +27,6 @@ class AUTHERSTABLE extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('AUTHER');
     }
 }

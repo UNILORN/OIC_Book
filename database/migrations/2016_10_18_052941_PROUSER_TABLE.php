@@ -15,8 +15,9 @@ class PROUSERTABLE extends Migration
     {
         Schema::create('PROUSER',function (Blueprint $table){
         $table->increments('pro_id')->unique();
-        $table->string('e-mail');
+        $table->string('e-mail',45);
         $table->dateTime('time_limit');
+        $table->string('pro_token', 45);
         )};
     }
 
