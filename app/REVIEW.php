@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class REVIEW extends Model
 {
-    //
+  protected $table = 'REVIEW_TABLE';
 }
