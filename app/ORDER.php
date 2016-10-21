@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class ORDER extends Model
 {
-    //
+    protected $table = 'ORDER_TABLE';
 }
