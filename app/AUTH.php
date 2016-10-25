@@ -8,3 +8,4 @@ class AUTH extends Model
 {
     protected $table = 'AUTH_TABLE';
 }
+//ok

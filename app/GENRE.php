@@ -8,3 +8,4 @@ class GENRE extends Model
 {
     protected $table = 'GENRE_TABLE';
 }
+//ok
