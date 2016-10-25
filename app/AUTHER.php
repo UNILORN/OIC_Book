@@ -8,3 +8,4 @@ class AUTHER extends Model
 {
     protected $table = 'AUTHER_TABLE';
 }
+//ok
