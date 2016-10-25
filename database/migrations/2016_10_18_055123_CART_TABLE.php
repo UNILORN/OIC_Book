@@ -13,7 +13,12 @@ class CARTTABLE extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('CART',function(Blueprint$table){
+          $table->increments('cart_id')->unique();
+          $table->integer('user_id');
+          $table->integer('product_id');
+          //$table->integer('');
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class CARTTABLE extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('CART');
     }
 }

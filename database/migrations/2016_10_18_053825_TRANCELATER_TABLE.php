@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class TRANCELATERSTABLE extends Migration
+class TRANCELATERTABLE extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,7 @@ class TRANCELATERSTABLE extends Migration
     {
         Schema::create('TRANCELATER',function(Blueprint$table){
           $table->increments('trancelater_id')->unique();
-          $table->string('trancelater_name',45);
+          $table->string('trancelater_name',45)->nullable();
         });
     }
 

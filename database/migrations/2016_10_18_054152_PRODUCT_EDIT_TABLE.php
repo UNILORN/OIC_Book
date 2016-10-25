@@ -15,9 +15,9 @@ class PRODUCTEDITTABLE extends Migration
     {
         Schema::create('PRODUCT_EDIT',function(Blueprint$table){
           $table->increments('product_edit_id')->unique();
-          $table->integer('product_id');
-          $table->dateTime('product_edit_time');
-          $table->integer('employee_id');
+          $table->integer('product_id')->nullable();
+          $table->dateTime('product_edit_time')->nullable();
+          $table->integer('employee_id')->nullable();
         });
     }
 
