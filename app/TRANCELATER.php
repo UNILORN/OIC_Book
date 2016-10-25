@@ -8,3 +8,4 @@ class TRANCELATER extends Model
 {
     protected $table = 'TRANCELATER_TABLE';
 }
+//ok

@@ -14,7 +14,7 @@ class ARRIVE extends Model
     public function arriveEmployee(){
     　　　return $this->hasMany('App\EMPLOYEE','employee_id','employee_id');
     }
-//public function kenpin(){
-//  まだない
+//public function arriveKenpin(){
+//  migrationがない
 //}
 }

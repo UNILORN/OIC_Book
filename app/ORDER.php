@@ -16,6 +16,5 @@ class ORDER extends Model
     }
     public function orderVendor(){
       return $this->hasMany('App\VENDOR', 'vendor_id', 'vendor_id');
-
     }
 }

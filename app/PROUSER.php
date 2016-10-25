@@ -8,3 +8,4 @@ class PROUSER extends Model
 {
     protected $table = 'PROUSER_TABLE';
 }
+//ok
