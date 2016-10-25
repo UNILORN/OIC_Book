@@ -14,12 +14,12 @@ class REVIEWTABLE extends Migration
     public function up()
     {
         Schema::create('REVIEW',function(Blueprint$table){
-          $table->increments('review')->unique();
-          $table->integer('product_id');
-          $table->integer('user_id');
-          $table->integere('review');
-          $table->text('review_text',1000);
-          $table->dateTime('entry_time');
+          $table->increments('review_id')->unique();
+          $table->integer('product_id')->nullable();
+          $table->integer('user_id')->nullable();
+          $table->integer('review')->nullable();
+          $table->text('review_text',1000)->nullable();
+          $table->dateTime('entry_time')->nullable();
         });
     }
 

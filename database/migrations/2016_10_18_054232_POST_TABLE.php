@@ -15,9 +15,9 @@ class POSTTABLE extends Migration
     {
         Schema::create('POST',function(Blueprint$table){
           $table->increments('post_id')->unique();
-          $table->inreger('product_id');
-          $table->dateTime('show_start_time');
-          $table->dateTime('show_end_time');
+          $table->integer('product_id')->nullable();
+          $table->dateTime('show_start_time')->nullable();
+          $table->dateTime('show_end_time')->nullable();
         });
     }
 

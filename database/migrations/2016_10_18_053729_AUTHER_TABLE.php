@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AUTHERSTABLE extends Migration
+class AUTHERTABLE extends Migration
 {
     /**
      * Run the migrations.
@@ -15,8 +15,8 @@ class AUTHERSTABLE extends Migration
     {
         Schema::create('AUTHER',function(Blueprint $table){
           $table->increments('auther_id')->unique();
-          $table->integer('product_id');
-          $table->string('auther_cross'、45)
+          $table->integer('product_id')->nullable();
+          $table->string('auther_cross',45)->nullable();
         });
     }
 
