@@ -15,7 +15,7 @@ class AUTHTABLE extends Migration
     {
         Schema::create('AUTH',function(Blueprint $table){
           $table->integer('auth_id')->unique();
-          $table->integer('auth_content')->nullable();
+          $table->integer('auth_content');
 
         });
     }

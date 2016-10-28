@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AUTHERTABLE extends Migration
+class METHODOFPAYMENTTABLE extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class AUTHERTABLE extends Migration
      */
     public function up()
     {
-        Schema::create('AUTHER',function(Blueprint $table){
-          $table->increments('auther_id')->unique();
-          $table->integer('product_id');
-          $table->string('auther_cross',45);
+        Schema::create('METHOD_OF_PAYMENT',function(Blueprint$table){
+          $table->increments('method_of_payment_id')->unique();
+          $table->string('method_of_payment',45);
         });
     }
 
@@ -27,6 +26,6 @@ class AUTHERTABLE extends Migration
      */
     public function down()
     {
-        Schema::drop('AUTHER');
+        Schema::drop('METHOD_OF_PAYMENT');
     }
 }
