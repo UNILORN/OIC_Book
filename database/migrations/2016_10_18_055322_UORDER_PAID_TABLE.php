@@ -13,7 +13,10 @@ class UORDERPAIDTABLE extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('UORDER_PAID',function(Blueprint$table){
+          $table->increments('uorder_paid_id')->unique();
+          $table->integer('uorder_id');
+        });
     }
 
     /**
@@ -23,6 +26,6 @@ class UORDERPAIDTABLE extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('UORDER_PAID');
     }
 }

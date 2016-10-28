@@ -15,10 +15,10 @@ class VENDORTABLE extends Migration
     {
         Schema::create('VENDOR',function(Blueprint $table){
           $table->increments('vendor_id')->unique();
-          $table->string('vendor_name',45)->nullable();
-          $table->string('vendor_email',45)->nullable();
-          $table->string('vendor_address',45)->nullable();
-          $table->string('vendor_phone_number',45)->nullable();
+          $table->string('vendor_name',45);
+          $table->string('vendor_email',45);
+          $table->string('vendor_address',45);
+          $table->string('vendor_phone_number',45);
 
         });
     }

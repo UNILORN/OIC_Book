@@ -15,9 +15,9 @@ class CARTTABLE extends Migration
     {
         Schema::create('CART',function(Blueprint$table){
           $table->increments('cart_id')->unique();
-          $table->integer('user_id');
-          $table->integer('product_id');
-          //$table->integer('');
+          $table->integer('user_id')->nullable();
+          $table->integer('product_id')->nullable();
+          $table->integer('product_cart_number')->nullable();
         });
     }
 

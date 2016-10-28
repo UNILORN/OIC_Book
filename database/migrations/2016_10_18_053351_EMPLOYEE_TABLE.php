@@ -16,7 +16,7 @@ class EMPLOYEETABLE extends Migration
         Schema::create('EMPLOYEE',function(Blueprint $table){
           $table->increments('employee_id')->unique();
           $table->string('employee_password',45)->unique();
-          $table->integer('employee_auth_id')->nullable();
+          $table->integer('employee_auth_id');
         });
     }
 

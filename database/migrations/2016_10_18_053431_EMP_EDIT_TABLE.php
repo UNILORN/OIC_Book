@@ -15,10 +15,10 @@ class EMPEDITTABLE extends Migration
     {
         Schema::create('EMP_EDIT',function (Blueprint $table){
           $table->increments('emp_edit_id')->unique();
-          $table->dateTime('emp_edit_time')->nullable();
-          $table->string('emp_edit_password',45)->nullable();
-          $table->integer('emp_edit_auth_id')->nullable();
-          $table->integer('employee_id')->nullable();
+          $table->dateTime('emp_edit_time');
+          $table->string('emp_edit_password',45);
+          $table->integer('emp_edit_auth_id');
+          $table->integer('employee_id');
         });
     }
 

@@ -15,21 +15,21 @@ class PRODUCTTABLE extends Migration
     {
         Schema::create('PRODUCT',function(Blueprint$table){
           $table->increments('product_id')->unique();
-          $table->string('product_name')->nullable();
-          $table->integer('genre_id')->nullable();
-          $table->string('product_image',45)->nullable();
-          $table->integer('product_price')->nullable();
-          $table->integer('product_stock')->nullable();
-          $table->integer('ISBN')->nullable();
-          $table->integer('trancelater_id')->nullable();
-          $table->integer('product_height')->nullable();
-          $table->integer('product_width')->nullable();
-          $table->integer('product_depth')->nullable();
-          $table->integer('product_page')->nullable();
-          $table->dateTime('product_start_day')->nullable();
-          $table->text('product_explanation',1000)->nullable();
-          $table->integer('product_browse＿number')->nullable();
-          $table->integer('product_order_number')->nullable();
+          $table->string('product_name');
+          $table->integer('genre_id');
+          $table->string('product_image',45);
+          $table->integer('product_price');
+          $table->integer('product_stock');
+          $table->integer('ISBN');
+          $table->integer('trancelater_id');
+          $table->integer('product_height');
+          $table->integer('product_width');
+          $table->integer('product_depth');
+          $table->integer('product_page');
+          $table->dateTime('product_start_day');
+          $table->text('product_explanation',1000);
+          $table->integer('product_browse＿number');
+          $table->integer('product_order_number');
         });
     }
 

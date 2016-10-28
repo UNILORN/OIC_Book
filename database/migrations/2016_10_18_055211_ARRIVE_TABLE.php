@@ -13,7 +13,14 @@ class ARRIVETABLE extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('ARRIVE',function(Blueprint$table){
+          $table->increments('arrive_id')->unique();
+          $table->integer('order_id');
+          $table->integer('employee_id');
+          $table->integer('arrive_number');
+          $table->dateTime('arrive_day');
+          $table->integer('inspection_id');
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class ARRIVETABLE extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('ARRIVE');
     }
 }

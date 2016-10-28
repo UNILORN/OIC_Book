@@ -15,7 +15,7 @@ class TRANCELATERTABLE extends Migration
     {
         Schema::create('TRANCELATER',function(Blueprint$table){
           $table->increments('trancelater_id')->unique();
-          $table->string('trancelater_name',45)->nullable();
+          $table->string('trancelater_name',45);
         });
     }
 

@@ -13,7 +13,18 @@ class UORDERTABLE extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('UORDER',function(Blueprint $table){
+          $table->increments('uorder')->unique();
+          $table->integer('user_id');
+          $table->dateTime('uorder_day');
+          $table->integer('uorder_price');
+          $table->integer('uorder_use_point');
+          $table->integer('uorder_add_point');
+          $table->boolean('uorder_payment');
+          $table->boolean('uorder_cancel');
+          $table->boolean('uorder_auth_cancel');
+          $table->integer('method_of_payment_id');
+        });
     }
 
     /**
@@ -23,6 +34,6 @@ class UORDERTABLE extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('UORDER');
     }
 }

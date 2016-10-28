@@ -13,7 +13,17 @@ class ORDERTABLE extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('ORDER',function(Blueprint $table){
+          $table->increments('order_id')->unique();
+          $table->integer('vender_id');
+          $table->integer('employee_id');
+          $table->integer('product_id');
+          $table->integer('order_number');
+          $table->dateTime('order_day');
+          $table->dateTime('arrive_plan');
+          $table->integer('remaining_amount');
+          $table->boolean('order_flug');
+        });
     }
 
     /**
@@ -23,6 +33,6 @@ class ORDERTABLE extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('ORDER');
     }
 }
