@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class EMP_EDIT extends Model
 {
-    protected $table = 'EMP_EDIT_TABLE';
+    protected $table = 'EMP_EDIT';
 
     public function empEdittarget(){
       return $this->hasMany('App\EMPLOYEE','employee_id','employee_id');
