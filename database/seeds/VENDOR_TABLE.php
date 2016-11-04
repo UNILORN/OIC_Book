@@ -11,17 +11,18 @@ class VENDOR_TABLE extends Seeder
      */
     public function run()
     {
-      DB::table('USER')->delete();
+      DB::table('VENDOR')->delete();
 
        //faker使う。普通に使う場合と同じ。
       $faker = Faker\Factory::create('ja_JP');
 
       for($i=0; $i<100; $i++)
       {
-          DB::table('USER')->insert([
+          DB::table('VENDOR')->insert([
             'vendor_name'=>$faker->company(),
+            'vendor_email'=>$faker->email(),
             'vendor_address'=>$faker->address(),
-
+            'vendor_phone_number'=>$faker->phoneNumber()
           ]);
       }
     }
