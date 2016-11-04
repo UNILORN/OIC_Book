@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CART extends Model
 {
-    protected $table = 'CART_TABLE';
+    protected $table = 'CART';
 
     public function cartUser()
    {

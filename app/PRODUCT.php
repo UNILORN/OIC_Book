@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PRODUCT extends Model
 {
-    protected $table = 'PRODUCT_TABLE';
+    protected $table = 'PRODUCT';
 
     public function productGenre(){
       return $this->hasMany('App\GENRE','genre_id','genre_id');

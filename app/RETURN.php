@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class RETURN extends Model
 {
-    protected $table = 'RETURN_TABLE';
+    protected $table = 'RETURN';
 
     public function returnProduct(){
       return $this->hasMany('App\PRODUCT', 'product_id', 'product_id');

@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class PROUSER extends Model
 {
-    protected $table = 'PROUSER_TABLE';
+    protected $table = 'PROUSER';
 }
 //ok

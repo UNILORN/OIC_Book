@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class UORDER_PAID extends Model
 {
-    protected $table = 'UORDER_PAID_TABLE';
+    protected $table = 'UORDER_PAID';
 }
+//???
