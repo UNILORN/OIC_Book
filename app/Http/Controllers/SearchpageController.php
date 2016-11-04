@@ -12,7 +12,6 @@ class SearchpageController extends Controller
     $books = PRODUCT::with('productGenre')
       ->with('productTrancelater')
       ->get();
-
       return response()->json($books);
   }
 

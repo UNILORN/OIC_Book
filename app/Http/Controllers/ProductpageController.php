@@ -10,8 +10,6 @@ use App\PRODUCT;
 class ProductpageController extends Controller
 {
     public function index(){
-
-
       return view('Productpage');
     }
 
