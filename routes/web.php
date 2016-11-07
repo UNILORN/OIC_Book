@@ -15,7 +15,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/', 'TOPpageController@index');
-Route::get('/search', 'SearchpageController@index');
+Route::resource('/search', 'SearchpageController');
 Route::get('/api/search', 'SearchpageController@index');
 Route::get('/product', 'ProductpageController@index');
 Route::get('/cart', 'CartpageController@index');

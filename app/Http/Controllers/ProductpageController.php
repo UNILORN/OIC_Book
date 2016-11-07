@@ -10,10 +10,7 @@ use App\PRODUCT;
 class ProductpageController extends Controller
 {
     public function index(){
-      $books = PRODUCT::with('productGenre')
-        ->with('productTrancelater')
-        ->get();
-      echo $books;
+      return view('Productpage');
     }
 
 }
