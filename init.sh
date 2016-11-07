@@ -1,11 +1,8 @@
 #!/bin/sh
 
 composer install
-composer update
 
-if [! -e .env]; then
-	cp .env.example .env
-fi
+cp .env.example .env
 
 php artisan key:generate
 
@@ -19,4 +16,4 @@ else
 	mysql -u root -p OIC_Book < OIC_Book.sql
 fi
 
-
+php artisan migrate
