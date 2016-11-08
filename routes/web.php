@@ -19,3 +19,4 @@ Route::resource('/search', 'SearchpageController');
 Route::get('/api/search', 'SearchpageController@index');
 Route::get('/product', 'ProductpageController@index');
 Route::get('/cart', 'CartpageController@index');
+Route::get('/product/all','ProductpageController@all');

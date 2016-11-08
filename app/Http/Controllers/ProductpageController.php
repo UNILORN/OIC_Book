@@ -12,5 +12,12 @@ class ProductpageController extends Controller
     public function index(){
       return view('Productpage');
     }
+    public function all(){
+      $product = DB::table('product')->get();
+      foreach ($users as $user)
+      {
+    var_dump($user->name);
+      }
+    }
 
 }
