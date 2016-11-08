@@ -19,7 +19,7 @@ class ARRIVETABLE extends Migration
           $table->integer('employee_id');
           $table->integer('arrive_number');
           $table->dateTime('arrive_day');
-          $table->integer('inspection_id');
+          $table->integer('arrive_price');
         });
     }
 
