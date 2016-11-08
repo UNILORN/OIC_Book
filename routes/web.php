@@ -19,3 +19,10 @@ Route::resource('/search', 'SearchpageController');
 Route::get('/api/search', 'SearchpageController@index');
 Route::get('/product', 'ProductpageController@index');
 Route::get('/cart', 'CartpageController@index');
+
+
+
+//管理者ページ
+Route::get('/admin',function(){
+  return view('/administer/admin');
+});
