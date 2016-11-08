@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class GENRETABLE extends Migration
+class AUTHERCROSSTABLE extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class GENRETABLE extends Migration
      */
     public function up()
     {
-        Schema::create('GENRE',function(Blueprint$table){
-          $table->increments('genre_id')->unique();
-          $table->string('category',45);
-          $table->string('genre_1',45);
-          $table->string('genre_2',45);
+        Schema::create('AUTHERCROSS',function(Blueprint$table){
+          $table->integer('auther_id');
+          $table->integer('product_id');
+          $table->string('auther_cross',45);
         });
     }
 
@@ -28,6 +27,6 @@ class GENRETABLE extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('AUTHERCROSS');
     }
 }

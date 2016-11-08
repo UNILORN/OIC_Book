@@ -16,7 +16,6 @@ class AUTHERTABLE extends Migration
         Schema::create('AUTHER',function(Blueprint $table){
           $table->increments('auther_id')->unique();
           $table->integer('product_id');
-          $table->string('auther_cross',45);
         });
     }
 
