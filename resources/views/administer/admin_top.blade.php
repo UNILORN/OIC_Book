@@ -1,11 +1,11 @@
 @extends('/administer/admin_template')
 
 
-@section('title', 'administerpage')
+@section('title', 'Top')
 
 @section('main')
 
 
-hoge
+
 
 @endsection

@@ -24,5 +24,5 @@ Route::get('/cart', 'CartpageController@index');
 
 //管理者ページ
 Route::get('/admin',function(){
-  return view('/administer/admin');
+  return view('/administer/admin_top');
 });
