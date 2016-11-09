@@ -19,7 +19,7 @@ class AUTHER_TABLE extends Seeder
       for($i=0; $i<100; $i++)
       {
           DB::table('AUTHER')->insert([
-            'product_id'=>$i,
+            'product_id'=>$i
 
           ]);
       }
