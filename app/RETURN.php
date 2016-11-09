@@ -3,9 +3,9 @@
 namespace App;
 use Illuminate\Database\Eloquent\Model;
 
-class RETURN extends Model
+class RETURN_BOOK extends Model
 {
-    protected $table = 'RETURN';
+    protected $table = 'RETURN_BOOK';
 
     public function returnProduct(){
       return $this->hasMany('App\PRODUCT', 'product_id', 'product_id');

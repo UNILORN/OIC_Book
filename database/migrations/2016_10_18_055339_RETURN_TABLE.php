@@ -13,7 +13,7 @@ class RETURNTABLE extends Migration
      */
     public function up()
     {
-        Schema::create('RETURN',function(Blueprint$table){
+        Schema::create('RETURN_BOOK',function(Blueprint$table){
           $table->increments('return_id')->unique();
           $table->integer('vender_id');
           $table->integer('product_id');
