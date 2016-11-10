@@ -1,0 +1,19 @@
+html,body{
+  height:100%;
+}
+.sidebar{
+  height:100%;
+  width:15%;
+  border-right: solid 1px;
+  text-align: center;
+  position: fixed;
+  text-decoration: none;
+}
+
+.sidebar li{
+  list-style: none;
+  height:7%;
+  margin-top:20px;
+  border-bottom: solid 1px;
+  color: black;
+}
