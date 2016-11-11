@@ -24,10 +24,10 @@ Route::get('/cart', 'CartpageController@index');
 
 //管理者ページ
 Route::get('/admin','AdmintopController@show');
-Route::resource('/admin/stok','AdminstocController');
+Route::resource('/admin/stock','AdminstockController');
 Route::resource('/admin/employee','AdminemployeeController');
 Route::get('/admin/sales','AdminsalesController@show');
-Route::get('/admin/history','AdiminhistoryController@show');
+Route::get('/admin/history','AdminhistoryController@show');
 Route::get('/admin/order','AdminorderController@show');
 Route::get('/admin/arrive','AdminarriveController@show');
 Route::get('/admin/payment','AdminpaymentController@show');
