@@ -8,13 +8,13 @@
   </head>
   <body>
     <div class="sidebar">
-    <a href="#"><li>在庫</li></a>
-    <a href="#"><li>従業員</li></a>
-    <a href="#"><li>売上</li></a>
-    <a href="#"><li>履歴</li></a>
-    <a href="#"><li>発注</li></a>
-    <a href="#"><li>入荷</li></a>
-    <a href="#"><li>入金</li></a>
+    <a href="/admin/stock"><li>在庫</li></a>
+    <a href="/admin/employee"><li>従業員</li></a>
+    <a href="/admin/sales"><li>売上</li></a>
+    <a href="/admin/history"><li>履歴</li></a>
+    <a href="/admin/order"><li>発注</li></a>
+    <a href="/admin/arrive"><li>入荷</li></a>
+    <a href="/admin/payment"><li>入金</li></a>
     </div>
       @yield('main')
   </body>
