@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+
+<html lang="ja">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>会員情報入力｜oicbook</title>
+    <meta name="title" content>
+    <meta name="description" content>
+    <meta name="keywords" content>
+
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+
+    <link rel="stylesheet" href="shared/css/stylesheet3.css">
+    <!-- <link rel="stylesheet" href="shared/css/oicbook%20mypage.css"> -->
+
+</head>
+
+<body id="pagetop">
+    <div class="layout" id="category">
+        <div align="center">
+            <img src="./img/11.png">
+        </div>
+        <div id="main2" style="float: right; width: 1010px;">
+            <div class="mb60">
+                <p class="mptxt05">新規会員登録の方は以下の情報の入力をお願いいたします。</p>
+                <div class="box_bg01 mb60">
+                    <div class="inbox group">
+                        <h3 class="mph3 fs20">会員情報入力</h3>
+                    </div>
+                    <div class="inbox group lineNone pdtnone mgbnone">
+                        <form name="form1" id="form1" action="" method="post">
+                            <input type="hidden" name="cart_route" value>
+                            <table class="mptable03 mpline01 mt40" summary="newmember_entry">
+
+                                <tbody>
+                                    <tr>
+                                        <th abbr="mail">
+                                            ログインID(メールアドレス)
+                                            <span class="mpiconbox">必須</span>
+                                        </th>
+                                        <td>
+                                            <div>
+                                                <p>
+                                                    <input maxlength="50" type="text" class="mpsizeB" style="color: #000000;" name="email" tabindex="1" accesskey="A" required="required" value placeholder="sample@oicbook.com ※半角英数字50文字まで" onfocus="HideFormGuide(this,'sample@oicbook.com  ※半角英数字50文字まで');">
+                                                </p>
+                                                <p class="note error"></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th abbr="pass">
+                                            パスワード
+                                            <span class="mpiconbox">必須</span>
+                                        </th>
+                                        <td class="pb">
+                                            <div>
+                                                <p>
+                                                    <input maxlength="50" type="password" class="mpsizeB" style="color: #000000;" name="password" tabindex="2" accesskey="A" required="required" value placeholder="oicbook01 ※半角英数字8文字以上12文字まで" onfocus="HideFormGuide(this,'oicbook01  ※半角英数字8文字以上12文字まで');">
+                                                </p>
+                                                <p class="note error"></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th abbr="pass">
+                                            パスワード再入力
+                                            <span class="mpiconbox">必須</span>
+                                        </th>
+                                        <td class="pb">
+                                            <div>
+                                                <p>
+                                                    <input maxlength="50" type="password" class="mpsizeB" style="color: #000000;" name="password" tabindex="2" accesskey="A" required="required" value placeholder="oicbook01 ※半角英数字8文字以上12文字まで" onfocus="HideFormGuide(this,'oicbook01  ※半角英数字8文字以上12文字まで');">
+                                                </p>
+                                                <p class="note error"></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th abbr="name">
+                                            氏名（姓・名）
+                                            <span class="mpiconbox">必須</span>
+                                        </th>
+                                        <td class="pb">
+                                            <div>
+                                                <p>
+                                                    <input maxlength="60" type="text" class="mpsizeB" style="color: #000000;" name="name01" tabindex="3" accesskey="A" required="required" value placeholder="山田太郎 ※60文字まで" onfocus="HideFormGuide(this,'山田太郎  ※60文字まで');">
+                                                </p>
+                                                <p class="note error"></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th abbr="kana">
+                                            氏名（ひらがな）
+                                            <span class="mpiconbox">必須</span>
+                                        </th>
+                                        <td class="pb">
+                                            <div>
+                                                <p>
+                                                    <input maxlength="60" type="text" class="mpsizeB" style="color: #000000;" name="name01" tabindex="4" accesskey="A" required="repuired" value placeholder="やまだたろう ※60文字まで" onfocus="HideFormGuide(this,'やまだたろう  ※60文字まで');">
+                                                </p>
+                                                <p class="note error"></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th abbr="gender">
+                                            性別
+                                            <span class="mpiconbox">必須</span>
+                                        </th>
+                                        <td class="pb">
+                                            <div class="inputNormal mpcbox01">
+                                                <p>
+                                                    <input type="radio" name="sex" value="1" id="men" tabindex="5" accesskey="A" checked="checked">
+                                                    <label for="men">
+                                                        男性
+                                                    </label>
+                                                    <input type="radio" name="sex" value="2" 　tabindex="6" accesskey="A">
+                                                    <label for="women">
+                                                        女性
+                                                    </label>
+                                                </p>
+                                                <p class="note error"></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th abbr="B.D.">
+                                            誕生日
+                                            <span class="mpiconbox">必須</span>
+                                        </th>
+                                        <td>
+                                            <div>
+                                                <p>
+                                                    <select class="mpselbox02 w180" tabindex="7" name="birth_year">
+                                                        <option value selected="selected">--</option>
+                                                        <option label="1990" value="1990">1990</option>
+                                                        <option label="1991" value="1991">1991</option>
+                                                        <option label="1992" value="1992">1992</option>
+                                                        <option label="1993" value="1993">1993</option>
+                                                        <option label="1994" value="1994">1994</option>
+                                                        <option label="1995" value="1995">1995</option>
+                                                        <option label="1996" value="1996">1996</option>
+                                                        <option label="1997" value="1997">1997</option>
+                                                        <option label="1998" value="1998">1998</option>
+                                                        <option label="1999" value="1999">1999</option>
+                                                        <option label="2000" value="2000">2000</option>
+                                                        <option label="2001" value="2001">2001</option>
+                                                        <option label="2002" value="2002">2002</option>
+                                                        <option label="2003" value="2003">2003</option>
+                                                        <option label="2004" value="2004">2004</option>
+                                                        <option label="2005" value="2005">2005</option>
+                                                        <option label="2006" value="2006">2006</option>
+                                                        <option label="2007" value="2007">2007</option>
+                                                        <option label="2008" value="2008">2008</option>
+                                                        <option label="2009" value="2009">2009</option>
+                                                        <option label="2010" value="2010">2010</option>
+                                                        <option label="2011" value="2011">2011</option>
+                                                        <option label="2012" value="2012">2012</option>
+                                                        <option label="2013" value="2013">2013</option>
+                                                        <option label="2014" value="2014">2014</option>
+                                                        <option label="2015" value="2015">2015</option>
+                                                        <option label="2016" value="2016">2016</option>
+                                                    </select>
+                                                    年
+                                                    <select class="mpselbox02 w100" tabindex="8" name="birth_month">
+                                                        <option value selected="selected">--</option>
+                                                        <option label="1" value="1">1</option>
+                                                        <option label="2" value="2">2</option>
+                                                        <option label="3" value="3">3</option>
+                                                        <option label="4" value="4">4</option>
+                                                        <option label="5" value="5">5</option>
+                                                        <option label="6" value="6">6</option>
+                                                        <option label="7" value="7">7</option>
+                                                        <option label="8" value="8">8</option>
+                                                        <option label="9" value="9">9</option>
+                                                        <option label="10" value="10">10</option>
+                                                        <option label="11" value="11">11</option>
+                                                        <option label="12" value="12">12</option>
+                                                    </select>
+                                                    月
+                                                    <select class="mpselbox02 w100" tabindex="9" name="birth_day">
+                                                        <option value selected="selected">--</option>
+                                                        <option label="1" value="1">1</option>
+                                                        <option label="2" value="2">2</option>
+                                                        <option label="3" value="3">3</option>
+                                                        <option label="4" value="4">4</option>
+                                                        <option label="5" value="5">5</option>
+                                                        <option label="6" value="6">6</option>
+                                                        <option label="7" value="7">7</option>
+                                                        <option label="8" value="8">8</option>
+                                                        <option label="9" value="9">9</option>
+                                                        <option label="10" value="10">10</option>
+                                                        <option label="11" value="11">11</option>
+                                                        <option label="12" value="12">12</option>
+                                                        <option label="13" value="13">13</option>
+                                                        <option label="14" value="14">14</option>
+                                                        <option label="15" value="15">15</option>
+                                                        <option label="16" value="16">16</option>
+                                                        <option label="17" value="17">17</option>
+                                                        <option label="18" value="18">18</option>
+                                                        <option label="19" value="19">19</option>
+                                                        <option label="20" value="20">20</option>
+                                                        <option label="21" value="21">21</option>
+                                                        <option label="22" value="22">22</option>
+                                                        <option label="23" value="23">23</option>
+                                                        <option label="24" value="24">24</option>
+                                                        <option label="25" value="25">25</option>
+                                                        <option label="26" value="26">26</option>
+                                                        <option label="27" value="27">27</option>
+                                                        <option label="28" value="28">28</option>
+                                                        <option label="29" value="29">29</option>
+                                                        <option label="30" value="30">30</option>
+                                                        <option label="31" value="31">31</option>
+                                                    </select>
+                                                    日
+                                                </p>
+                                                <p class="note error"></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th abbr="tel">
+                                            電話番号
+                                            <span class="mpiconbox">必須</span>
+                                        </th>
+                                        <td class="pb">
+                                            <div>
+                                                <p>
+                                                    <input maxlength="20" type="tel" class="mpsizeB" style="color: #000000;" name="tel01" tabindex="10" accesskey="A" required="required" value placeholder="0612345678 ※20文字まで" onfocus="HideFormGuide(this,'0612345678  ※20文字まで');">
+                                                </p>
+                                                <p class="note error"></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th abbr="zip">
+                                            郵便番号
+                                            <span class="mpiconbox">必須</span>
+                                        </th>
+                                        <td class="pb">
+                                            <div>
+                                                <p>
+                                                    <input type="text" class="mpsizeB" name="zip01" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','pref01','addr01');" style="color: #000000;" name="zip01" id="jsZip" tabindex="11" accesskey="A" required="required" value placeholder="1230976"
+                                                        onfocus="HideFormGuide(this,'1230976');">
+
+                                                    <!--     <input type="text" class="mpsizeB" >
+                <input type="hidden" id="jsIsJp" value="1"> -->
+                                                </p>
+                                                <p class="note error"></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th abbr="address">
+                                            都道府県
+                                            <span class="mpiconbox">必須</span>
+                                        </th>
+                                        <td class="pb">
+                                            <div>
+                                                <p>
+                                                    <input type="text" name="pref01" size="20" class="mpsizeB" tabindex="12" accesskey="A" required="required" style="color: #000000;" name="addr01" tabindex="13" accesskey="A" required="required" value placeholder="大阪府 ※5文字まで" onfocus="HideFormGuide(this,'大阪府  ※5文字まで');">
+                                                    <!--        <select>
+        <option value>選択してください</option>
+        <option id="jsPref1" value="1">北海道</option>
+        <option id="jsPref2" value="2">青森県</option>
+        <option id="jsPref3" value="3">岩手県</option>
+        <option id="jsPref4" value="4">宮城県</option>
+        <option id="jsPref5" value="5">秋田県</option>
+        <option id="jsPref6" value="6">山形県</option>
+        <option id="jsPref7" value="7">福島県</option>
+        <option id="jsPref8" value="8">茨城県</option>
+        <option id="jsPref9" value="9">栃木県</option>
+        <option id="jsPref10" value="10">群馬県</option>
+        <option id="jsPref11" value="11">埼玉県</option>
+        <option id="jsPref12" value="12">千葉県</option>
+        <option id="jsPref13" value="13">東京都</option>
+        <option id="jsPref14" value="14">神奈川県</option>
+        <option id="jsPref15" value="15">新潟県</option>
+        <option id="jsPref16" value="16">富山県</option>
+        <option id="jsPref17" value="17">石川県</option>
+        <option id="jsPref18" value="18">福井県</option>
+        <option id="jsPref19" value="19">山梨県</option>
+        <option id="jsPref20" value="20">長野県</option>
+        <option id="jsPref21" value="21">岐阜県</option>
+        <option id="jsPref22" value="22">静岡県</option>
+        <option id="jsPref23" value="23">愛知県</option>
+        <option id="jsPref24" value="24">三重県</option>
+        <option id="jsPref25" value="25">滋賀県</option>
+        <option id="jsPref26" value="26">京都府</option>
+        <option id="jsPref27" value="27">大阪府</option>
+        <option id="jsPref28" value="28">兵庫県</option>
+        <option id="jsPref29" value="29">奈良県</option>
+        <option id="jsPref30" value="30">和歌山県</option>
+        <option id="jsPref31" value="31">鳥取県</option>
+        <option id="jsPref32" value="32">島根県</option>
+        <option id="jsPref33" value="33">岡山県</option>
+        <option id="jsPref34" value="34">広島県</option>
+        <option id="jsPref35" value="35">山口県</option>
+        <option id="jsPref36" value="36">徳島県</option>
+        <option id="jsPref37" value="37">香川県</option>
+        <option id="jsPref38" value="38">愛媛県</option>
+        <option id="jsPref39" value="39">高知県</option>
+        <option id="jsPref40" value="40">福岡県</option>
+        <option id="jsPref41" value="41">佐賀県</option>
+        <option id="jsPref42" value="42">長崎県</option>
+        <option id="jsPref43" value="43">熊本県</option>
+        <option id="jsPref44" value="44">大分県</option>
+        <option id="jsPref45" value="45">宮崎県</option>
+        <option id="jsPref46" value="46">鹿児島県</option>
+        <option id="jsPref47" value="47">沖縄県</option>
+      </select> -->
+                                                </p>
+                                                <p class="note error"></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th abbr="address2">
+                                            住所
+                                            <span class="mpiconbox">必須</span>
+                                        </th>
+                                        <td class="pb">
+                                            <div>
+                                                <p>
+                                                    <input type="text" class="mpsizeC" name="addr01" size="60" style="color: #000000;" name="addr01" tabindex="13" accesskey="A" required="required" value placeholder="大阪府大阪市天王寺区 6丁目8−4○○ビル○階 ※200文字まで" onfocus="HideFormGuide(this,'大阪府大阪市天王寺区 6丁目8−4○○ビル○階 ※200文字まで');">
+                                                    <!-- <input id="jsAddress" type="text"  >  -->
+                                                </p>
+                                                <p class="note error"></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="final_btn">
+                                <input type="image" src="./img/09.jpg" alt="登録する">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

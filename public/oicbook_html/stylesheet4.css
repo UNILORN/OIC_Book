@@ -1,0 +1,43 @@
+
+p{
+    width: 650px;
+    height: 10px;
+    margin-left: 10px;
+}
+
+div{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.mpsizeB {
+	width: 400px;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+	border: 1px #ededed solid;
+	font-size: 108%;
+	height:50px;
+}
+
+.mypage .final_btn{
+    text-align:center;
+    font-size: 15px;
+    margin-right: 10px;
+    padding: 20px;
+}
+
+.mypage .box_bg01{
+    border: 1px #DEDEDE solid;
+    background-color: beige;
+    
+}
+
+.mypage .box_bg01_1{
+    border: 1px #DEDEDE solid;
+    background-color: cornsilk;
+    
+}
+
+
+

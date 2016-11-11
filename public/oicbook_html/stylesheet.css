@@ -1,0 +1,128 @@
+
+
+html{
+	margin: 0;
+	padding: 0;
+}
+
+.body{
+    margin: 10;
+	padding: 10;
+	width: 100%;
+	height: auto;
+	font-family: "Helvetica","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic ProN","hiragino kaku gothic pro","Meiryo","メイリオ", sans-serif !important;
+	background: #ffffff;
+	color: #333;
+/*    font-size: 0.813em; */
+	font-size: 0.78em;
+	line-height: 150%;
+}
+
+form#form1{
+    position: center;
+    width: 930px;
+    height: 969px;
+}
+
+.box_bg01 mb60{
+    background-color: darkgrey;
+}
+
+h3.mph3.fs20{
+    width: 930px;
+    height: 48px;
+	margin: 5px 0 30px;
+	padding: 0;
+	font-size: 1.3em;
+	line-height: 140%;
+	color: #000;
+	font-weight: normal;
+	letter-spacing: .02em;
+}
+
+div#main{
+    width: 1010px;
+    height: 1244px;
+}
+
+div.index.group{
+    width: 930px;
+    height: 93px;
+}
+
+div.inbox.group.lineNone.pdtnone.mgbnone{
+    width: 900px;
+    height: 991px;
+}
+
+div.box_bg01.mb60{
+    width: 1010px;
+    height: 1124px;
+}
+
+tr{
+    width: 930px;
+    height: 68px;
+}
+
+th{
+    width: 300px;
+    height: 86px;
+}
+
+table.mptable03.mplone01.mt40{
+	font-size: 1em;
+    width: 930px;
+    height: 878px;
+}
+
+form.outspace1{margin:50px 0px;}
+input.outspace2{margin-left:70px;}
+
+.mpiconbox{
+    color: crimson;
+}
+
+.mpsizeB{
+    height: 46px;
+    width: 380px;
+}
+
+.mpsizeC{
+    height: 46px;
+    width: 495px;
+}
+
+select.mpselbox02.w200{
+    width: 200px;
+    height: 44px;
+}
+
+select.mpselbox02.w180{
+    width: 140px;
+    height: 44px;
+}
+
+select.mpselbox02.w100{
+    width: 90px;
+    height: 44px;
+}
+
+div.final_btn{
+    width: 930px;
+    height: 68px;
+    text-align: center;
+    padding: 5px 0;
+    margin: 20px auto 0px;
+    font-size: 15px;
+}
+
+span.mpiconbox{
+    font-size: 11px;
+    color: #ffffff;
+    border-radius: 3px;
+    background-color: #ff0000;
+    padding: 3px 5px;
+    margin-left: 3px;
+    font-weight: bold;
+}
