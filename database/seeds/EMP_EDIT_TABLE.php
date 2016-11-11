@@ -22,7 +22,8 @@ class EMP_EDIT_TABLE extends Seeder
             'emp_edit_time'=>$faker->dateTimeThisCentury(),
             'emp_edit_password'=>$faker->password(),
             'emp_edit_auth_id'=>$i,
-            'employee_id'=>$i
+            'employee_id_from'=>$i,
+            'employee_id_to'=>$i
           ]);
       }
     }
