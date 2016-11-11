@@ -1,0 +1,19 @@
+html,body{
+  height:100%;
+}
+.sidebar{
+  height:100%;
+  width:15%;
+  text-align: center;
+  position: fixed;
+  text-decoration: none;
+  background-color: #3e313c;
+}
+.sidebar a{
+  text-decoration: none;
+}
+.sidebar li{
+  color:#ab9ba9;
+  list-style: none;
+  padding: 15%;
+}

@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\AUTHER;
-class AUTHER_TABLE extends Seeder
+use App\CART;
+class CART_TABLE extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,16 +11,17 @@ class AUTHER_TABLE extends Seeder
      */
     public function run()
     {
-      DB::table('AUTHER')->delete();
+      DB::table('CART')->delete();
 
        //faker使う。普通に使う場合と同じ。
       $faker = Faker\Factory::create('ja_JP');
 
       for($i=0; $i<100; $i++)
       {
-          DB::table('AUTHER')->insert([
-            'product_id'=>$i
-
+          DB::table('CART')->insert([
+            'user_id'=>$i,
+            'product_id'=>$i,
+            'product_cart_number'=>$faker->randomDigitNotNull()
           ]);
       }
     }
