@@ -10,7 +10,8 @@ use App\PRODUCT;
 class ProductpageController extends Controller
 {
     public function index(){
-      return view('Productpage');
+      $details=PRODUCT::where('product_id',1)->first();
+        return response()->json($details);
     }
 
 }
