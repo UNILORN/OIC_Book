@@ -1,8 +1,89 @@
+.search{
+  position: absolute;
+  width: 300px;
+  height:300px;
+  border: solid 1px;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  display: none;
+}
+.search p{
+  color:#e8e8e8;
+  margin-top: 40%;
+}
+.search input{
+  position: absolute;
+  width: 50%;
+  height:20px;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin: auto;
+}
+.search h2{
+  position: absolute;
+  bottom:30px;
+  right:30px;
+  color:#e8e8e8;
+}
+.add{
+  position: absolute;
+  width: 300px;
+  height:300px;
+  border: solid 1px;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  display: none;
+}
+.add p{
+color:#e8e8e8;
+margin-top: 20px;
+}
+.add h2{
+  position: absolute;
+  bottom:30px;
+  right:30px;
+  color:#e8e8e8;
+}
+.delete{
+  position: absolute;
+  width: 300px;
+  height:300px;
+  border: solid 1px;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  display: none;
+}
+.delete p{
+color:#e8e8e8;
+margin-top: 20%;
+}
+.delete h2{
+  position: absolute;
+  bottom:30px;
+  right:30px;
+  color:#e8e8e8;
+}
 .container{
   margin-left:16%;
   width:72%;
   color: #3e313c;
-
 }
 .product{
   border-bottom: solid 1px #e8e8e8;
