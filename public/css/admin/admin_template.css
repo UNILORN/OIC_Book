@@ -4,16 +4,16 @@ html,body{
 .sidebar{
   height:100%;
   width:15%;
-  border-right: solid 1px;
   text-align: center;
   position: fixed;
   text-decoration: none;
+  background-color: #3e313c;
 }
-
+.sidebar a{
+  text-decoration: none;
+}
 .sidebar li{
+  color:#ab9ba9;
   list-style: none;
-  height:7%;
-  margin-top:20px;
-  border-bottom: solid 1px;
-  color: black;
+  padding: 15%;
 }
