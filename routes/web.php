@@ -15,11 +15,25 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/', 'TOPpageController@index');
-Route::resource('/search', 'SearchpageController');
+
+//新規登録
+Route::resource('signup','SignupController@index');
+Route::get('signup_confirm','ConfirmController@signup');
+//商品
 Route::get('/product', 'ProductpageController@index');
-Route::resource('/cart', 'CartpageController@index');
-
-
+Route::resource('/search', 'SearchpageController');
+//カート
+Route::resource('/cart', 'CartpageController');
+//購入
+Route::get('buy','BuypageController@index');
+Route::get('buy_confirm','ConfirmController@buy');
+//ログイン
+Route::resource('login','LoginController');
+//マイページ
+Route::resource('mypage','MypageController');
+//退会処理
+Route::get('recede','RecedeController@index');
+Route::get('recede_confirm','ConfirmController@recode');
 //管理者ページ
 Route::get('/admin','AdmintopController@index');
 Route::resource('/admin/stock','AdminstockController');
