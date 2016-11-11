@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class AdminsalesController extends BaseController
 {
-  public function show(){
+  public function index(){
+      return view('/administer/admin_sales');
   }
 }

@@ -10,5 +10,6 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class AdminstockController extends BaseController
 {
   public function index(){
+      return view('/administer/admin_stock');
   }
 }

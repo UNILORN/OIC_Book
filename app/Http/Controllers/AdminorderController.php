@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class AdminorderController extends BaseController
 {
-  public function show(){
+  public function index(){
+      return view('/administer/admin_order');
   }
 }
