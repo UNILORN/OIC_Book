@@ -9,12 +9,12 @@
   <body>
     <div class="sidebar">
     <a href="#"><li>在庫</li></a>
-    <a href="#"><li>hoge</li></a>
-    <a href="#"><li>piyo</li></a>
-    <a href="#"><li>huga</li></a>
-    <a href="#"><li>aaa</li></a>
-    <a href="#"><li>iii</li></a>
-    <a href="#"><li>uuu</li></a>
+    <a href="#"><li>従業員</li></a>
+    <a href="#"><li>売上</li></a>
+    <a href="#"><li>履歴</li></a>
+    <a href="#"><li>発注</li></a>
+    <a href="#"><li>入荷</li></a>
+    <a href="#"><li>入金</li></a>
     </div>
       @yield('main')
   </body>
