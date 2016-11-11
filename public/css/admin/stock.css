@@ -5,23 +5,24 @@
 
 }
 .product{
+  border-bottom: solid 1px #e8e8e8;
+  text-align: center;
 }
 .product li{
   display: inline-block;
   font-size: 25px;
   padding: 10px;
-  width:30%;
-  border-right: solid 1px;
-
+  width:20%;
 }
 #products_header{
   border-bottom:solid 1px;
+  text-align: center;
 }
 #products_header li{
   display: inline-block;
   font-size: 25px;
   padding: 10px;
-  width:30%;
+  width:20%;
 }
 #product_edit{
   position: fixed;
