@@ -17,10 +17,10 @@ Route::get('/home', 'HomeController@index');
 Route::get('/', 'TOPpageController@index');
 
 //新規登録
-Route::resource('signup','SignupController@index');
+Route::resource('signup','SignupController');
 Route::get('signup_confirm','ConfirmController@signup');
 //商品
-Route::get('/product', 'ProductpageController@index');
+Route::resource('/product', 'ProductpageController');
 Route::resource('/search', 'SearchpageController');
 //カート
 Route::resource('/cart', 'CartpageController');

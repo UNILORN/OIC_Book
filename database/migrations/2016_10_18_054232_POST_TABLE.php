@@ -17,7 +17,7 @@ class POSTTABLE extends Migration
           $table->increments('post_id')->unique();
           $table->integer('product_id');
           $table->dateTime('show_start_time');
-          $table->dateTime('show_end_time');
+          $table->dateTime('show_end_time')->nullable();
         });
     }
 

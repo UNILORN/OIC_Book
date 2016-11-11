@@ -11,4 +11,8 @@ $(function(){
     console.log(data);
     vm.$set('products',data);
   });
+  $.get("/product",function(data){
+    console.log(data);
+    vm.$set('products',data);
+  });
 });
