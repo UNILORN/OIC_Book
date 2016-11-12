@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="/css/admin/admin_template.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="/css/reset.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="/css/@yield('css').css" media="screen" title="no title" charset="utf-8">
+    <script src="/js/jquery.min.js" charset="utf-8"></script>
     <title>@yield('title')</title>
   </head>
   <body>
