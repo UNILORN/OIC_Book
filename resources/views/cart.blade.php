@@ -3,5 +3,5 @@
 
 
 @section('main')
-
+  {{$product}}
 @endsection
