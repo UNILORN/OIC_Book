@@ -18,7 +18,8 @@ class EMPEDITTABLE extends Migration
           $table->dateTime('emp_edit_time');
           $table->string('emp_edit_password',45);
           $table->integer('emp_edit_auth_id');
-          $table->integer('employee_id');
+          $table->integer('employee_id_from');
+          $table->integer('employee_id_to');
         });
     }
 

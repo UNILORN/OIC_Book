@@ -1,0 +1,121 @@
+
+table.item {
+    width: 560px;
+    height: 200px;
+    border-bottom: 1px #DEDEDE solid;
+}
+
+tbody{
+    width: 600px;
+    height: 320px;
+}
+
+div.form_box{
+    width: 1000px;
+    height: 450px;
+    margin-right: 30px;
+    background-color: #ffebee;
+}
+
+tr.delete{
+    width: 600px;
+    height: 195px;
+}
+
+div.mptitle{
+    width: 1010px;
+    height: 55px;
+}
+
+div#content.group.mypage{
+    width: 1010px;
+    height: 600px;
+}
+
+div.under02colimn.mb230{
+    width: 1010px;
+    height: 381px;
+}
+
+div.under02column_cart{
+    width: 1010px;
+    height: 316px;
+    margin: 15px auto 0 auto;
+}
+
+div.under02column h2.title{
+    width: 1010px;
+    margin: 0 0 15px 0;
+}
+
+div.under02column table {
+    width: 430px;
+}
+
+td.mpt_c1_td02{
+    width: 105px;
+    height: 160px;
+}
+
+td{
+  width: 198px;
+  height: 160px; 
+}
+
+div.diplay_id{
+    width: 100px;
+    height: 51px;
+}
+
+div.mpinbox02.lineNone{
+    width: 347px;
+    height: 278px;
+}
+
+div.mpline01.mb15.pb15{
+    width: 347px;
+    height: 63px;
+}
+
+p.cart_totalprice{
+    width: 347px;
+    height: 23px;
+}
+
+span.mppricet{
+    width: 73.41px;
+    height: 27px;
+}
+
+div{
+    margin-left: 10px;
+}
+
+p{
+    width: 250px;
+    height: 19px;
+    margin-left: 10px;
+}
+
+div.unitFormBtn.final_btn.mppdnone{
+    width: 347px;
+    height: 48px;
+    margin-bottom: 10px;
+}
+
+.mprbox375{
+    margin-top: 0;
+    width: 373px!important;
+    float: right;
+    height: 300px;
+}
+
+.box_bg01{
+    border: 1px #DEDEDE solid;
+    background-color: #fafafa;
+    margin-right: 30px;
+}
+
+button{
+    margin-top: 10px;
+}
