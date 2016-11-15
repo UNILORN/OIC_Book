@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class CartpageController extends Controller
+class CartController extends Controller
 {
   public function index(){
 
