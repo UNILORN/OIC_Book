@@ -16,7 +16,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::get('/', 'TopController@index');
 Route::get('/product', 'ProductController@index');
+Route::get('detail','DetailController@index');
 Route::resource('/cart', 'CartController@index');
+
 
 
 //管理者ページ
