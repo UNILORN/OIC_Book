@@ -14,4 +14,11 @@ class PRODUCT extends Model
     public function productTrancelater(){
       return $this->hasMany('App\TRANCELATER','trancelater_id','trancelater_id');
     }
+    public function scopeID($query,$product_id){
+
+      if(!empty($product_id)){
+        $query = $query->where('product_id',$product_id);
+      }
+      return $query;
+    }
 }

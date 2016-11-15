@@ -10,7 +10,9 @@ use App\PRODUCT;
 class DetailController extends Controller
 {
     public function index(){
-      $product = PRODUCT::where('product_id',2)->first();
-        return view('detail',compact('product'));
+      $product = PRODUCT::ID(204)
+      ->with('productGenre')
+      ->first();
+        return view('detail',compact("product"));
     }
 }
