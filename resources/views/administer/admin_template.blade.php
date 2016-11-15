@@ -12,11 +12,10 @@
     <div class="sidebar">
     <a href="/admin/stock"><li>商品情報</li></a>
     <a href="/admin/employee"><li>従業員</li></a>
-    <a href="/admin/sales"><li>売上</li></a>
-    <a href="/admin/history"><li>履歴</li></a>
+    <a href="/admin/uoderdetail"><li>売上</li></a>
     <a href="/admin/order"><li>発注</li></a>
-    <a href="/admin/arrive"><li>入荷</li></a>
-    <a href="/admin/payment"><li>入金</li></a>
+    <a href="/admin/arrive"><li>入荷情報</li></a>
+    <a href="/admin/payment"><li>入金確認</li></a>
     </div>
       @yield('main')
   </body>

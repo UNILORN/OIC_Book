@@ -7,9 +7,16 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
-class AdminsalesController extends BaseController
+use App\UORDER_DETAIL;
+
+class AdminuoderdetailController extends BaseController
 {
   public function index(){
-      return view('/administer/admin_sales');
+
+      $sales = UORDER_DETAIL::with('uorderDetail')
+      ->with('uorderProduct')
+      ->get();
+
+      return view('/administer/admin_uoderdetail',compact('sales'));
   }
 }
