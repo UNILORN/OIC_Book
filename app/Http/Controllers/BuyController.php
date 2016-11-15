@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class TOPpageController extends Controller
+class BuyController extends Controller
 {
   public function index(){
 
