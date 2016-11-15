@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class TOPController extends Controller
+class TopController extends Controller
 {
   public function index(){
-
+    return view('top');
   }
 }

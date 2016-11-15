@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\PRODUCT;
 
-class ProductController extends Controller
+class ProductsController extends Controller
 {
     public function index(){
       $products = PRODUCT::with('productGenre')
@@ -15,7 +15,7 @@ class ProductController extends Controller
         ->get();
 
 
-      return view('product',compact('products'));
+      return view('products',compact('products'));
     }
 
 }

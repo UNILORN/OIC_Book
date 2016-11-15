@@ -15,31 +15,26 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/', 'TopController@index');
-Route::get('/product', 'ProductController@index');
-Route::get('detail','DetailController@index');
-Route::resource('/cart', 'CartController@index');
-
-
 
 
 //新規登録
-Route::resource('signup','SignupController');
-Route::get('signup_confirm','ConfirmController@signup');
+Route::resource('/signup','SignupController');
+Route::get('/signup_confirm','ConfirmController@signup');
 //商品
-Route::resource('/product', 'ProductpageController');
-Route::resource('/search', 'SearchpageController');
+Route::get('/product', 'ProductsController@index');
+Route::get('/detail','DetailController@index');
 //カート
-Route::resource('/cart', 'CartpageController');
+Route::resource('/cart', 'CartController');
 //購入
-Route::get('buy','BuypageController@index');
-Route::get('buy_confirm','ConfirmController@buy');
+Route::get('/buy','BuyController@index');
+Route::get('/buy_confirm','ConfirmController@buy');
 //ログイン
-Route::resource('login','LoginController');
+Route::resource('/login','LoginController');
 //マイページ
-Route::resource('mypage','MypageController');
+Route::resource('/mypage','MypageController');
 //退会処理
-Route::get('recede','RecedeController@index');
-Route::get('recede_confirm','ConfirmController@recode');
+Route::get('/recede','RecedeController@index');
+Route::get('/recede_confirm','ConfirmController@recode');
 
 //管理者ページ
 Route::get('/admin','AdmintopController@index');

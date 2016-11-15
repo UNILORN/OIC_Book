@@ -9,6 +9,6 @@ use App\Http\Requests;
 class BuyController extends Controller
 {
   public function index(){
-
+    return view('buy');
   }
 }

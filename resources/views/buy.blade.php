@@ -1,7 +1,7 @@
 @extends('template')
-@section('title','detail')
+@section('title','buy')
 
 
 @section('main')
-  {{$product}}
+
 @endsection

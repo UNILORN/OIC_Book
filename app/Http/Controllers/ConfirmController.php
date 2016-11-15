@@ -9,7 +9,7 @@ use App\Http\Requests;
 class ConfirmController extends Controller
 {
   public function index(){
-    return view('Confirm');
+    return view('confirm');
   }
   public function signup(){
 
@@ -18,6 +18,6 @@ class ConfirmController extends Controller
 
   }
   public function recede(){
-    
+
   }
 }
