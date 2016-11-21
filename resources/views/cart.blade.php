@@ -1,7 +1,12 @@
 @extends('template')
-@section('title','cart')
-
+@section('title','top')
+@section('css','cart')
 
 @section('main')
-  {{$product}}
+    <div class="container">
+        <div class="title"><h2>ショッピングカート</h2></div>
+        <div class="body">
+
+        </div>
+    </div>
 @endsection
