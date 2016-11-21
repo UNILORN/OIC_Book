@@ -22,7 +22,7 @@ class PRODUCT_TABLE extends Seeder
             'product_id'=>$i,
             'genre_id'=>$i,
             'product_name'=>$faker->streetName(),
-            'product_image'=>$faker->word(),
+            'product_image'=>$faker->imageUrl('800','600'),
             'product_price'=>$faker->randomDigitNotNull()*1000,
             'product_stock'=>$faker->randomDigitNotNull(),
             'ISBN'=>$faker->randomDigitNotNull(),
@@ -32,7 +32,7 @@ class PRODUCT_TABLE extends Seeder
             'product_depth'=>$faker->randomDigitNotNull(),
             'product_page'=>$faker->randomDigitNotNull(),
             'product_start_day'=>$faker->date(),
-            'product_explanation'=>$faker->word(),
+            'product_explanation'=>$faker->url,
             'product_browse＿number'=>$faker->randomDigitNotNull(),
             'product_order_number'=>$faker->randomDigitNotNull()
           ]);

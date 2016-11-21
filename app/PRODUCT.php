@@ -10,7 +10,7 @@ class PRODUCT extends Model
     protected $primaryKey = 'product_id';
 
     public function productGenre(){
-      return $this->hasMany('App\GENRE','genre_id','genre_id');
+      return $this->hasOne('App\GENRE','genre_id','genre_id');
     }
     public function productTrancelater(){
       return $this->hasMany('App\TRANCELATER','trancelater_id','trancelater_id');

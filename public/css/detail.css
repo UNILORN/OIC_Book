@@ -9,6 +9,7 @@ body {
   right: 0;
   width: 1010px;
   height: auto;
+  background-color: #fafafa;
 }
 
 .product_img {
@@ -35,17 +36,27 @@ body {
   float: right;
   box-sizing: border-box;
   padding: 15px;
+  padding-top: 20px;
+  color: #000;
 }
 
 .product_text h1{
+  color: #000;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 160%;
   border-bottom: 2px solid #dedede;
 }
+.product_text p{
+  padding-top: 5px;
+  padding-bottom: 5px;
 
+}
 .cart-form{
   position: relative;
   width: 470px;
   height: 48px;
+  padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 2px solid #dedede;
 }
@@ -62,5 +73,7 @@ body {
 }
 
 .price{
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 22px;
 }

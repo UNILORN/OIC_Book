@@ -16,10 +16,10 @@ class GENRE_TABLE extends Seeder
        //faker使う。普通に使う場合と同じ。
       $faker = Faker\Factory::create('ja_JP');
 
-      for($i=0; $i<100; $i++)
+      for($i=1; $i<=100; $i++)
       {
           DB::table('GENRE')->insert([
-
+            'genre_id'=>$i,
             'category'=>$faker->word(),
             'genre_1'=>$faker->word(),
             'genre_2'=>$faker->word()

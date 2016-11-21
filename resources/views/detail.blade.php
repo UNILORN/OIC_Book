@@ -5,20 +5,15 @@
 @section('main')
   <div class="product_content">
     <div class="product_img">
-      <img src="./img/20.jpg" alt="しろくまちゃんのほっとけーき">
+      <img src="{{$product->product_image}}" alt="しろくまちゃんのほっとけーき">
     </div>
     <div class="product_text">
         <h1 class="product_title">{{$product->product_name}}</h1>
-        <p>
-            <span>著者</span>
-            <span><a href=""></a></span>
-        </p>
-        <p>{{$product->productGenre}}</p>
-        <p>{{$product->product_explanation}}</p>
+        <p>{{$product->productGenre["category"]}}</p>
         <p class="price">
           ￥{{$product->product_price}}
         </p>
-        <from action="/cart?id=" method="POST">
+        <from action="/cart" method="POST">
             <div class="cart-form">
                 <div class="cart-num">
                   <select name="amount_" class="form-select hasCustomSelect">
@@ -31,10 +26,8 @@
                   <input type="image" class="btn" alt="カートに入れる" src="./img/03.png" style="margin-left: 14px;" id="jp_cart_btn">
                 </div>
               </div>
-                <p><b>アイテム説明</b></p>
-                <p>
-                  しろくまちゃんが、お母さんと一緒にホットケーキを作るお話。1970年の発売以来ロングセラーを続ける「こぐまちゃんえほん」シリーズのなかでも、特に人気の1冊。
-                </p>
+              <p><b>アイテム説明</b></p>
+              <p>{{$product->product_explanation}}</p>
         </from>
     </div>
   </div>
