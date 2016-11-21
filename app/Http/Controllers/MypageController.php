@@ -7,7 +7,12 @@ use Illuminate\Http\Request;
 class MypageController extends Controller
 {
     public function index(){
-      $user = Auth::user();
-      return view('mypage',compact('user'));
+      if(Auth::check()){
+        $user = Auth::user();
+        return view('mypage',compact('user'));
+      }
+      else{
+        return redirect('/login');
+      }
     }
 }
