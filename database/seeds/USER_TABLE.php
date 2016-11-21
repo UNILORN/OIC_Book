@@ -20,12 +20,12 @@ class USER_TABLE extends Seeder
       {
           DB::table('users')->insert([
               'name'=>$faker->name(),
-              'email'=>$faker->email(),
+              'email'=>NULL,
               'password'=>$faker->password(),
-              'user_post_code'=>$faker->postcode(),
-              'user_address'=>$faker->address(),
-              'user_phone_number'=>$faker->phoneNumber(),
-              'user_point'=>$faker->randomDigitNotNull(),
+              'user_post_code'=>NULL,
+              'user_address'=>NULL,
+              'user_phone_number'=>NULL,
+              'user_point'=>NULL,
               'employee_id'=>$i,
               'user_recede_flug'=>$faker->boolean()
           ]);

@@ -40,6 +40,7 @@ Route::get('/recede_confirm','ConfirmController@recode');
 Route::get('/admin','AdmintopController@index');
 Route::resource('/admin/stock','AdminstockController');
 Route::resource('/admin/employee','AdminemployeeController');
+Route::resource('/admin/user','AdminuserController');
 Route::get('/admin/uoderdetail','AdminuoderdetailController@index');
 Route::get('/admin/history','AdminhistoryController@index');
 Route::get('/admin/order','AdminorderController@index');
