@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class AdminemployeeController extends BaseController
 {
   public function index(){
+    
     return view('/administer/admin_employee');
   }
 }
