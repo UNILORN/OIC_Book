@@ -8,13 +8,15 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 use App\UORDER_DETAIL;
+use App\UORDER;
 
 class AdminuoderdetailController extends BaseController
 {
   public function index(){
 
-      $sales = UORDER_DETAIL::with('uorderDetail')
-      ->with('uorderProduct')
+      $sales = UORDER::with('uorderUser')
+      ->with('uorderDetail')
+      ->with('uorderDetail.uorderProduct')
       ->get();
 
       return view('/administer/admin_uoderdetail',compact('sales'));
