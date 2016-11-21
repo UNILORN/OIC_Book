@@ -24,6 +24,7 @@ class UORDERTABLE extends Migration
           $table->boolean('uorder_cancel');
           $table->boolean('uorder_auth_cancel');
           $table->integer('method_of_payment_id');
+          $table->timestamps();
         });
     }
 
