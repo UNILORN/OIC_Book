@@ -11,25 +11,37 @@ class USER_TABLE extends Seeder
      */
     public function run()
     {
-      DB::table('USER')->delete();
+      DB::table('users')->delete();
 
        //faker使う。普通に使う場合と同じ。
       $faker = Faker\Factory::create('ja_JP');
 
-      for($i=0; $i<100; $i++)
+      for($i=1; $i<=50; $i++)
       {
-          DB::table('USER')->insert([
-              'user_name'=>$faker->userName(),
-              'user_email'=>$faker->email(),
-              'user_password'=>$faker->password(),
+          DB::table('users')->insert([
+              'name'=>$faker->userName(),
+              'email'=>$faker->email(),
+              'password'=>$faker->password(),
               'user_post_code'=>$faker->postcode(),
               'user_address'=>$faker->address(),
               'user_phone_number'=>$faker->phoneNumber(),
               'user_point'=>$faker->randomDigitNotNull(),
-              'user_last_login'=>$faker->time(),
-              'employee_id'=>$faker->randomDigitNotNull(),
+              'employee_id'=>$i,
               'user_recede_flug'=>$faker->boolean()
-
+          ]);
+      }
+      for($i=51; $i<100; $i++)
+      {
+          DB::table('users')->insert([
+              'name'=>$faker->userName(),
+              'email'=>$faker->email(),
+              'password'=>$faker->password(),
+              'user_post_code'=>$faker->postcode(),
+              'user_address'=>$faker->address(),
+              'user_phone_number'=>$faker->phoneNumber(),
+              'user_point'=>$faker->randomDigitNotNull(),
+              'employee_id'=>NULL,
+              'user_recede_flug'=>$faker->boolean()
           ]);
       }
     }
