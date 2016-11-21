@@ -13,24 +13,28 @@
   </head>
   <body>
     <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">管理者画面</a>
-    </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="/admin/stock">商品情報</a></li>
-        <li><a href="/admin/employee">従業員</a></li>
-        <li><a href="/admin/uoderdetail">売上</a></li>
-        <li><a href="/admin/order">発注</a></li>
-        <li><a href="/admin/arrive">入荷情報</a></li>
-        <li><a href="/admin/payment">入金確認</a></li>
-        <li><a href="/admin/mailform">発注先メールフォーム</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">管理者画面</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li @yield('stock')><a href="/admin/stock">商品情報</a></li>
+            <li @yield('employee')><a href="/admin/employee">従業員</a></li>
+            <li @yield('uoderdetail')><a href="/admin/uoderdetail">売上</a></li>
+            <li @yield('order')><a href="/admin/order">発注</a></li>
+            <li @yield('arrive')><a href="/admin/arrive">入荷情報</a></li>
+            <li @yield('payment')><a href="/admin/payment" @yield('payment')>入金確認</a></li>
+            <li @yield('mailform')><a href="/admin/mailform" @yield('mailform')>発注先メールフォーム</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
       @yield('main')
+    </main>
+
   </body>
 </html>

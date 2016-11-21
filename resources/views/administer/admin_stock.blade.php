@@ -2,6 +2,7 @@
 
 @section('css','/admin/stock')
 @section('title','stock')
+@section('stock','class="active"')
 
 @section('main')
 <table class="table">

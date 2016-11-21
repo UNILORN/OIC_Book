@@ -2,6 +2,7 @@
 
 @section('css','/admin/employee')
 @section('title','従業員リスト')
+@section('employee','class="active"')
 
 @section('main')
   <table class="table">
