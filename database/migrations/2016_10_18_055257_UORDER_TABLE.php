@@ -14,7 +14,7 @@ class UORDERTABLE extends Migration
     public function up()
     {
         Schema::create('UORDER',function(Blueprint $table){
-          $table->increments('uorder')->unique();
+          $table->increments('uorder_id')->unique();
           $table->integer('user_id');
           $table->dateTime('uorder_day');
           $table->integer('uorder_price');
