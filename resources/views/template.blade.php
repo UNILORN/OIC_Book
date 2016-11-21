@@ -26,7 +26,7 @@
                       </div>
                       <div class="g-nav-container" id="GlobalNav">
                           <div class="logo">
-                              <a href="/jp/"><img src="/img/Logo.png" alt="oic-book" height="60" width="140"></a>
+                              <a href="/"><img src="/img/Logo.png" alt="oic-book" height="60" width="140"></a>
                           </div>
 
                           <div class="brand-search-group">
