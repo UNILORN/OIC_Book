@@ -13,7 +13,6 @@
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
 Route::get('/', 'TopController@index');
 
 
@@ -29,7 +28,7 @@ Route::resource('/cart', 'CartController');
 Route::get('/buy','BuyController@index');
 Route::get('/buy_confirm','ConfirmController@buy');
 //ログイン
-Route::resource('/login','LoginController');
+//Route::resource('/login','LoginController');
 //マイページ
 Route::resource('/mypage','MypageController');
 //退会処理
@@ -49,3 +48,7 @@ Route::get('/admin/payment','AdminpaymentController@index');
 
 //管理者用フォーム
 Route::get('/admin/payment_form','AdminpaymentController@submit');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

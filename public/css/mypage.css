@@ -29,7 +29,7 @@ sub{
   border-top: #dedede 1px solid;
   border-bottom: #dedede 1px solid;
 }
-.side01 h3{
+.side01 h2{
   position: absolute;
   margin: auto;
   top: 0;
@@ -96,7 +96,7 @@ main table{
   margin-right: 50px;
 }
 main table .status{
-  height: 200px;
+  height: auto;
   width: 100%;
   border-bottom: #dedede 1px solid;
 }
@@ -109,6 +109,8 @@ main table tr th {
 }
 main table tr td {
   width: 550px;
+  padding-top: 30px;
+  padding-bottom:30px;
   text-align: left;
   vertical-align: middle;
   list-style: none;

@@ -15,8 +15,8 @@
                       <div class="login-nav-section">
                           <div class="login-nav">
                               <ul>
-                                  <li><a href="sign.html">今すぐ会員登録</a></li>
-                                  <li class="login"><a href="login.html">ログイン</a></li>
+                                  <li><a href="/register">今すぐ会員登録</a></li>
+                                  <li class="login"><a href="/login">ログイン</a></li>
                               </ul>
                           </div>
                       </div>
@@ -35,13 +35,13 @@
                                       <div class="store-nav">
                                           <ul>
                                               <li>
-                                                  <a href="#"><img src="//hih67k1jnwfciz.cdn.jp.idcfcloud.com/images/favorite2.gif" width="45" height="40" alt="お気に入りアイテム"></a>
+                                                  <a href="/mypage"><img src="//hih67k1jnwfciz.cdn.jp.idcfcloud.com/images/favorite2.gif" width="45" height="40" alt="お気に入りアイテム"></a>
                                               </li>
                                           </ul>
                                       </div>
                                       <div id="BagWrap" class="bag-wrap">
                                           <div class="bag">
-                                              <a href="/jp/cart/?sid=" id="header_view_cart_link1"><img alt="bag" src="//hih67k1jnwfciz.cdn.jp.idcfcloud.com/images/cart3.gif"><span class="item-num-wrap"><span class="item-num">0</span></span>
+                                              <a href="/cart" id="header_view_cart_link1"><img alt="bag" src="//hih67k1jnwfciz.cdn.jp.idcfcloud.com/images/cart3.gif"><span class="item-num-wrap"><span class="item-num">0</span></span>
                                               </a>
                                           </div>
                                       </div>
