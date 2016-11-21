@@ -12,9 +12,9 @@ class ORDER extends Model
       return $this->hasMany('App\EMPLOYEE','employee_id','employee_id');
     }
     public function orderProduct(){
-      return $this->hasMany('App\PRODUCT', 'product_id', 'product_id');
+      return $this->hasOne('App\PRODUCT', 'product_id', 'product_id');
     }
     public function orderVendor(){
-      return $this->hasMany('App\VENDOR', 'vendor_id', 'vendor_id');
+      return $this->hasOne('App\VENDOR', 'vendor_id', 'vender_id');
     }
 }
