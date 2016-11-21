@@ -15,8 +15,12 @@
                       <div class="login-nav-section">
                           <div class="login-nav">
                               <ul>
-                                  <li><a href="/register">今すぐ会員登録</a></li>
-                                  <li class="login"><a href="/login">ログイン</a></li>
+                                  @if(Auth::check())
+                                    <li class="login"><a href="/logout">ログアウト</a></li>
+                                  @else
+                                    <li><a href="/register">今すぐ会員登録</a></li>
+                                    <li class="login"><a href="/login">ログイン</a></li>
+                                  @endif
                               </ul>
                           </div>
                       </div>
