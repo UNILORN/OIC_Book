@@ -24,7 +24,7 @@
         <td>{{$value->uorder_use_point}}</td>
         <td>{{$value->uorder_add_point}}</td>
         <td>{{$value->uorderDetail["uorderProduct"]["product_name"]}}</td>
-        <td>{{$value->uorderDetail["product_order_number"]}}</td>
+        <td>{{$value->uorderDetail["uorder_number"]}}</td>
       </tr>
     @endforeach
 
