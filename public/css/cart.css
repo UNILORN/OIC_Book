@@ -1,0 +1,89 @@
+.title {
+    font-size: 20px;
+    color: #343434;
+    margin-bottom: 35px;
+}
+
+.table th {
+    background-color: #171717;
+    font-size: 15px;
+    color: #fff;
+    font-family: monospace;
+    letter-spacing: 2px;
+    padding: 10px 0;
+    font-weight: normal;
+    text-align: center;
+    border: solid 1px #5d5d5d;
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 5px;
+    text-align: center;
+    border: solid 1px #fff;
+    background-color: #f9f9f9;
+}
+
+.table td:nth-child(1) {
+    width: 10%;
+}
+
+.table td:nth-child(2) {
+    width: 20%;
+}
+
+.table td:nth-child(3) {
+    width: 30%;
+}
+
+
+.total {
+    margin-top: 50px;
+    font-size: 15px;
+    text-align: right;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.total .inner {
+    display: inline-block;
+    background-color: #585858;
+    padding: 20px;
+}
+
+.button {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.button .back,.button .next{
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+}
+.button .back a {
+    padding: 20px;
+    display: block;
+    background-color: #e2e2e2;
+    border: solid 2px #8e8e8e;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.button .next a {
+    padding: 20px;
+    display: block;
+    background-color: #656565;
+    border: solid 2px #464646;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.button a {
+    transition: 0.2s;
+}
+
+.button a:hover {
+    opacity: 0.8;
+}
