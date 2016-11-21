@@ -50,7 +50,6 @@ else
     echo "mySQLのパスワードを入力"
     echo "====================================================="
     mysql -u root -p -e 'drop database `OIC_Book`;create database `OIC_Book`'
-	mysql -u root -p OIC_Book < OIC_Book.sql
 fi
 
 php artisan migrate
