@@ -45,3 +45,6 @@ Route::get('/admin/history','AdminhistoryController@index');
 Route::get('/admin/order','AdminorderController@index');
 Route::get('/admin/arrive','AdminarriveController@index');
 Route::get('/admin/payment','AdminpaymentController@index');
+
+//管理者用フォーム
+Route::get('/admin/payment_form','AdminpaymentController@submit');
