@@ -19,7 +19,7 @@ class USER_TABLE extends Seeder
       for($i=1; $i<=50; $i++)
       {
           DB::table('users')->insert([
-              'name'=>$faker->userName(),
+              'name'=>$faker->name(),
               'email'=>$faker->email(),
               'password'=>$faker->password(),
               'user_post_code'=>$faker->postcode(),
@@ -33,7 +33,7 @@ class USER_TABLE extends Seeder
       for($i=51; $i<100; $i++)
       {
           DB::table('users')->insert([
-              'name'=>$faker->userName(),
+              'name'=>$faker->name(),
               'email'=>$faker->email(),
               'password'=>$faker->password(),
               'user_post_code'=>$faker->postcode(),

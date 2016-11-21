@@ -23,7 +23,7 @@ class ARRIVE_TABLE extends Seeder
             'employee_id'=>$i,
             'arrive_number'=>$faker->randomDigitNotNull(),
             'arrive_day'=>$faker->dateTimeThisCentury(),
-            'inspection_id'=>$faker->randomDigitNotNull()*100
+            'arrive_price'=>$faker->randomDigitNotNull()*100
           ]);
       }
     }

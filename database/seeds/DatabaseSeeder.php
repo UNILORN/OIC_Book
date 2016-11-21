@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
       Model::unguard();
-      //$this->call(ARRIVE_TABLE::class);
+      $this->call(ARRIVE_TABLE::class);
       $this->call(AUTH_TABLE::class);
       $this->call(AUTHER_TABLE::class);
       $this->call(AUTHERCROSS_TABLE::class);
