@@ -6,3 +6,10 @@ main{
   padding-left: 60px;
   padding-right: 60px;
 }
+
+.searchform{
+  padding:30px;
+}
+.searchform .input-group{
+  margin-bottom:10px;
+}

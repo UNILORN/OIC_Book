@@ -26,4 +26,20 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    public function scopeEmployeeID($query,$employee_id){
+      if(!empty($employee_id)){
+        $query = $query->where('employee_id',$employee_id);
+      }
+      return $query;
+    }
+
+    public function scopeName($query,$name){
+      if(!empty($name)){
+        $query = $query->where('name','like',"%$name%");
+      }
+      return $query;
+    }
+
 }

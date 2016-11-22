@@ -5,6 +5,21 @@
 @section('employee','class="active"')
 
 @section('main')
+
+  <div class="searchform">
+    <form class="search" action="/admin/employee" method="GET">
+      <div class="input-group">
+        <span class="input-group-addon">従業員ID</span>
+        <input type="text" name="employee_id" class="form-control"  value="{{ array_get($request,'employee_id','') }}">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">従業員名</span>
+        <input type="text" name="employee_name" class="form-control"  value="{{array_get($request,'employee_name','') }}">
+      </div>
+      <input class="btn" type="submit" name="search" value="検索">
+    </form>
+  </div>
+
   <table class="table">
     <tr>
       <th>従業員ID</th>
