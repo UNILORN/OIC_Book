@@ -9,6 +9,8 @@
       <th>注文ID</th>
       <th>注文日付</th>
       <th>合計金額</th>
+      <th>注文者氏名</th>
+      <th>注文者電話番号</th>
       <th>入金確認</th>
     </tr>
     @foreach ($payment as $key => $value)
@@ -16,6 +18,8 @@
         <td>{{$value->uorder_id}}</td>
         <td>{{$value->uorder_day}}</td>
         <td>{{$value->uorder_price}}</td>
+        <th>{{$value->uorderUser["name"]}}</th>
+        <th>{{$value->uorderUser["user_phone_number"]}}</th>
         <td>
           @if($value->uorder_payment)
             <span>入金済み</span>
@@ -25,6 +29,7 @@
         </td>
       </tr>
     @endforeach
+    {{$payment->links()}}
 
   </table>
 

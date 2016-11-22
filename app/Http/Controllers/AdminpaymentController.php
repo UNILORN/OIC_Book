@@ -8,11 +8,16 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\UORDER;
+use DB;
+use App\Http\Controllers\Controller;
+
 
 class AdminpaymentController extends BaseController
 {
   public function index(){
-    $payment = UORDER::get();
+    $payment = UORDER::with('uorderUser')
+      ->paginate(20);
+
     return view('/administer/admin_payment',compact('payment'));
   }
 
