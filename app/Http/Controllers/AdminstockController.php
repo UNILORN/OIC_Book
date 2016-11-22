@@ -11,9 +11,13 @@ use App\PRODUCT;
 
 class AdminstockController extends BaseController
 {
-  public function index(){
-      $products = PRODUCT::all();
-      return view('/administer/product/admin_stock',compact('products'));
+  public function index(Request $request){
+      $products = PRODUCT::ID($request->input('product_id'))
+      ->Name($request->input('product_name'))
+      ->PriceFrom($request->input('product_price_from'))
+      ->PriceTo($request->input('product_price_to'))
+      ->get();
+      return view('/administer/product/admin_stock',["products"=>$products,"request"=>$request]);
   }
 
   public function create()
