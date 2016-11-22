@@ -2,9 +2,11 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .product_content{
   position: absolute;
   margin: auto;
+  margin-top: 30px;
   left:0;
   right: 0;
   width: 1010px;

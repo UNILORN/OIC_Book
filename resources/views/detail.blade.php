@@ -3,6 +3,7 @@
 @section('css','detail')
 
 @section('main')
+
   <div class="product_content">
     <div class="product_img">
       <img src="{{$product->product_image}}" alt="しろくまちゃんのほっとけーき">
