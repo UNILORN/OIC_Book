@@ -5,6 +5,25 @@
 @section('user','class="active"')
 
 @section('main')
+  <div class="searchform">
+    <form class="search" action="/admin/user" method="GET">
+      <div class="input-group">
+        <span class="input-group-addon">ユーザID</span>
+        <input type="text" name="id" class="form-control"  value="{{ array_get($request,'id','') }}">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">名前</span>
+        <input type="text" name="name" class="form-control"  value="{{array_get($request,'name','') }}">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">電話番号</span>
+        <input type="text" name="tel" class="form-control"  value="{{array_get($request,'tel','') }}">
+      </div>
+
+      <input class="btn" type="submit" name="search" value="検索">
+    </form>
+  </div>
+
   <table class="table">
     <tr>
       <th>ユーザID</th>

@@ -12,10 +12,14 @@ class AdminuserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $user = User::whereNull('employee_id')->get();
-        return view('/administer/admin_user',compact('user'));
+        $user = User::whereNull('employee_id')
+        ->ID($request->input('id'))
+        ->Name($request->input('name'))
+        ->Tel($request->input('tel'))
+        ->get();
+        return view('/administer/admin_user',compact('user','request'));
     }
 
     /**
