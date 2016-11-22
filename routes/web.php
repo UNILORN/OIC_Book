@@ -35,7 +35,7 @@ Route::resource('/mypage','MypageController');
 
 //購入
 Route::get('/buy','BuyController@index');
-Route::get('/buy_confirm','ConfirmController@buy');
+Route::post('/buy_confirm','ConfirmController@buy');
 
 //退会処理
 Route::get('/recede','RecedeController@index');
