@@ -43,7 +43,7 @@ if [ $ans = N ]; then
     echo "mySQLのパスワードを入力"
     echo "====================================================="
 
-	mysql -u root -p OIC_Book < OIC_Book.sql
+	#4mysql -u root -p OIC_Book < OIC_Book.sql
 else
     echo "====================================================="
     echo "[OIC_Book] Dump file write"

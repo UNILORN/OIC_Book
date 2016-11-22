@@ -51,8 +51,8 @@
 
         <div class="button">
             <div class="inner">
-                <div class="back"><a href="#">買い物を続ける</a></div>
-                <div class="next"><a href="#">レジに進む</a></div>
+                <div class="back"><a href="top">買い物を続ける</a></div>
+                <div class="next"><a href="buy">レジに進む</a></div>
             </div>
         </div>
     </div>

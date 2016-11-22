@@ -59,6 +59,29 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+                        <div class="form-group">
+                          <label for="user_post_code" class="col-md-4 control-label">郵便番号</label>
+
+                          <div class="col-md-6">
+                            <input id="user_post_code" type="text" class="form-control" name="user_post_code" required>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="user_address" class="col-md-4 control-label">住所</label>
+
+                          <div class="col-md-6">
+                            <input id="user_address" type="text" class="form-control" name="user_address" required>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="user_phone_number" class="col-md-4 control-label">電話番号</label>
+
+                          <div class="col-md-6">
+                            <input id="user_phone_number" type="text" class="form-control" name="user_phone_number" required>
+                          </div>
+                        </div>
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
