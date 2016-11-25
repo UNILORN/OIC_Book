@@ -90,6 +90,7 @@
                                       Register
                                       </button>
                                       <button type="button" class="confirm_button">確認</button>
+                                      <button type="button" style="display:none" class="confirm_button2">戻る</button>
 
                                 </div>
                         </div>
@@ -144,7 +145,12 @@
 $('.confirm_button').click(function(){
   $('.submitbutton').fadeIn();
   $('.confirm').fadeIn();
-  $('.formfadeout').fadeout();
+  $('.confirm_button2').fadeIn();
+})
+$('.confirm_button2').click(function(){
+  $('.submitbutton').fadeOut();
+  $('.confirm').fadeOut();
+  $('.confirm_button2').fadeOut();
 })
 
 </script>
