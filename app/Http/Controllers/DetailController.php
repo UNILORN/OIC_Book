@@ -9,10 +9,14 @@ use App\PRODUCT;
 
 class DetailController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
       $product = PRODUCT::find(20)
       ->with('productGenre')
       ->first();
-        return view('detail',compact("product"));
+
+      $reviews = new \App\Service\ReviewService;
+      $reviews = $reviews->getReview(1);
+
+        return view('detail',compact("product","reviews"));
     }
 }
