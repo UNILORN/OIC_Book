@@ -14,7 +14,8 @@ class AdminuoderdetailController extends BaseController
 {
   public function index(){
 
-      $sales = UORDER::with('uorderUser')
+      $sales = UORDER::where('uorder_payment','1')
+      ->with('uorderUser')
       ->with('uorderDetail')
       ->with('uorderDetail.uorderProduct')
       ->get();

@@ -13,3 +13,10 @@ main{
 .searchform .input-group{
   margin-bottom:10px;
 }
+
+table tr td {
+  border: solid 1px #e8e8e8;
+}
+table tr th {
+  border: solid 1px #e8e8e8;
+}
