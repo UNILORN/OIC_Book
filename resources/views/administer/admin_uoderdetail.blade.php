@@ -1,9 +1,30 @@
 @extends('/administer/admin_template')
 
 @section('css','/admin/uorder_detail')
-@section('title', 'uorderdetail')
+@section('title', '売上')
 
 @section('main')
+
+  <div class="searchform">
+    <form class="search" action="/admin/uoderdetail" method="GET">
+      <div class="input-group">
+        <span class="input-group-addon">注文ID</span>
+        <input type="text" name="uorder_id" class="form-control"  value="{{ array_get($request,'uorder_id','') }}">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">注文日付</span>
+        <input type="date" name="uorder_day_from" class="form-control"  value="{{array_get($request,'uorder_day_from','') }}">
+        <span class="input-group-addon">〜</span>
+        <input type="date" name="uorder_day_to"   class="form-control"  value="{{array_get($request,'uorder_day_to','') }}">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">注文者名</span>
+        <input type="text" name="uorder_name" class="form-control"  value="{{ array_get($request,'uorder_name','') }}">
+      </div>
+      <input class="btn" type="submit" name="search" value="検索">
+    </form>
+  </div>
+
   <table class="table">
     <tr>
       <th>注文ID</th>
