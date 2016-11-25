@@ -16,26 +16,35 @@ class PRODUCT_TABLE extends Seeder
        //faker使う。普通に使う場合と同じ。
       $faker = Faker\Factory::create('ja_JP');
 
-      for($i=1; $i<=100; $i++)
-      {
-          DB::table('PRODUCT')->insert([
-            'product_id'=>$i,
-            'genre_id'=>$i,
-            'product_name'=>$faker->streetName(),
-            'product_image'=>$faker->imageUrl('800','600'),
-            'product_price'=>$faker->randomDigitNotNull()*1000,
-            'product_stock'=>$faker->randomDigitNotNull(),
-            'ISBN'=>$faker->randomDigitNotNull(),
-            'trancelater_ID'=>$i,
-            'product_height'=>$faker->randomDigitNotNull(),
-            'product_width'=>$faker->randomDigitNotNull(),
-            'product_depth'=>$faker->randomDigitNotNull(),
-            'product_page'=>$faker->randomDigitNotNull(),
-            'product_start_day'=>$faker->date(),
-            'product_explanation'=>$faker->url,
-            'product_browse＿number'=>$faker->randomDigitNotNull(),
-            'product_order_number'=>$faker->randomDigitNotNull()
-          ]);
+      //ファイルポインタをオープン
+      $file = fopen("public/img/test.txt","r");
+
+      $i = 1;
+      //ファイルを一行ずつ出力
+      if($file){
+        while($line = fgets($file)){
+          $line = str_replace(PHP_EOL,'',$line);
+          $book = explode(" ",$line);
+              DB::table('PRODUCT')->insert([
+                'product_id'=>$i,
+                'genre_id'=>$i,
+                'product_name'=>$book[1],
+                'product_image'=>$book[0],
+                'product_price'=>$faker->randomDigitNotNull()*1000,
+                'product_stock'=>$faker->randomDigitNotNull(),
+                'ISBN'=>$faker->randomDigitNotNull(),
+                'trancelater_ID'=>$i,
+                'product_height'=>$faker->randomDigitNotNull(),
+                'product_width'=>$faker->randomDigitNotNull(),
+                'product_depth'=>$faker->randomDigitNotNull(),
+                'product_page'=>$faker->randomDigitNotNull(),
+                'product_start_day'=>$faker->date(),
+                'product_explanation'=>$book[2],
+                'product_browse＿number'=>$faker->randomDigitNotNull(),
+                'product_order_number'=>$faker->randomDigitNotNull()
+              ]);
+              $i = $i + 1;
+            }
+          }
       }
     }
-}
