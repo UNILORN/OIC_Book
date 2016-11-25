@@ -20,7 +20,7 @@ class ReviewService{
 
   public function addReview($product_id,$user_id,$star,$text){
 
-    DB::table('REVIEWS')->insert(
+    DB::table('REVIEW')->insert(
       [ 'product_id'=> $product_id,
         'user_id' => $user_id,
         'review' => $star,

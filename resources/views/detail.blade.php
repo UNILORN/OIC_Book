@@ -59,7 +59,6 @@
             <input type="submit" name="some_name" value="送信">
         </form>
     </div>
-
 </div>
 <script src="/js/detail/review.js" charset="utf-8"></script>
 @endsection
