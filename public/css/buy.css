@@ -1,0 +1,44 @@
+
+.buy_body{
+  width: 1010px;
+  margin: 0 auto;
+
+}
+.buy_contents{
+  display: flex;
+  flex-flow: row;
+}
+
+.buy_bank{
+  margin: 3px;
+  width: 50%;
+  height: 500px;
+  background: #d3d3d3;
+}
+.submit{
+  background-color: #fff;
+	color: #000;
+  border: none;
+  padding: 20px;
+}
+
+.submit:hover{
+  background-color:#9e0b0b;
+}
+.buy_credit{
+  margin: 3px;
+  width: 50%;
+  height: 500px;
+  background: #9e0b0b;
+}
+
+.buy_credit p{
+  margin-top: 150px;
+  text-align: center;
+  font-size: 100px;
+  line-height: 0.7;
+  transform: rotateZ( 40deg );
+    opacity: 0.5;
+
+
+}

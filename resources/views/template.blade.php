@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="/css/stylesheet/stylesheet3.css" media="screen" title="no title">
     <link rel="stylesheet" href="/css/@yield('css').css" media="screen" title="no title" charset="utf-8">
     <script src="/js/jquery.min.js" charset="utf-8"></script>
-  </head>
   <body>
       <div id="pagetop"></div>
           <div class="layout" id="Top">
