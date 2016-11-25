@@ -79,3 +79,52 @@ body {
   margin-bottom: 10px;
   font-size: 22px;
 }
+
+/*review*/
+.review_background_color{
+  background-color: brown;
+
+  margin-top: 500px;
+}
+.review{
+  width: 960px;
+  margin:0 auto;
+  padding-bottom:10px;
+}
+.customer_review{
+  padding: 20px;
+}
+.addreview{
+  text-align: center;
+  padding: 20px;
+}
+.addreview form{
+  padding: 20px;
+}
+.reviewer{
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+}
+.posted_date{
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+}
+.stars{
+  display: inline-block;
+}
+.stars .star{
+  display: inline-block;
+  height:10px;
+  width:10px;
+  background-color: black;
+}
+.posted_text{
+  padding: 10px;
+  text-align: center;
+  border-bottom: solid 1px ;
+}
+.review_form{
+  display: none;
+}
