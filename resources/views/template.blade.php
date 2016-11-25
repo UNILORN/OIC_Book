@@ -4,6 +4,7 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="/css/reset.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
+    <link rel="stylesheet" href="/css/stylesheet/stylesheet3.css" media="screen" title="no title">
     <link rel="stylesheet" href="/css/@yield('css').css" media="screen" title="no title" charset="utf-8">
     <script src="/js/jquery.min.js" charset="utf-8"></script>
   <body>

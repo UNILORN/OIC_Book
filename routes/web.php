@@ -27,6 +27,12 @@ Route::get('/signup_confirm','ConfirmController@signup');
 Route::get('/product', 'ProductsController@index');
 Route::get('/detail','DetailController@index');
 
+//レビュー
+Route::get('/addreview','ReviewController@add');
+
+//商品一覧
+Route::get('/search','SearchController@index');
+
 //カート
 Route::resource('/cart', 'CartController');
 

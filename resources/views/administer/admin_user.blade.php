@@ -1,7 +1,7 @@
 @extends('/administer/admin_template')
 
 @section('css','/admin/employee')
-@section('title','ユーザーリスト')
+@section('title','ユーザリスト')
 @section('user','class="active"')
 
 @section('main')
