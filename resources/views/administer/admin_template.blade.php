@@ -22,7 +22,7 @@
           <ul class="nav navbar-nav">
             <li @yield('stock')><a href="/admin/stock">商品情報</a></li>
             <li @yield('employee')><a href="/admin/employee">従業員</a></li>
-            <li @yield('user')><a href="/admin/user">ユーザー</a></li>
+            <li @yield('user')><a href="/admin/user">ユーザ</a></li>
             <li @yield('uoderdetail')><a href="/admin/uoderdetail">売上</a></li>
             <li @yield('order')><a href="/admin/order">発注</a></li>
             <li @yield('arrive')><a href="/admin/arrive">入荷情報</a></li>
