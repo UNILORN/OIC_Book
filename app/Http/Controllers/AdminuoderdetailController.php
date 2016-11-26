@@ -25,7 +25,7 @@ class AdminuoderdetailController extends BaseController
       ->with('uorderUser')
       ->with('uorderDetail')
       ->with('uorderDetail.uorderProduct')
-      ->get();
+      ->paginate(20);
 
       return view('/administer/admin_uoderdetail',compact('sales','request'));
   }

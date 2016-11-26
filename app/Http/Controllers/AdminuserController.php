@@ -18,7 +18,7 @@ class AdminuserController extends Controller
         ->ID($request->input('id'))
         ->Name($request->input('name'))
         ->Tel($request->input('tel'))
-        ->get();
+        ->paginate(20);
         return view('/administer/admin_user',compact('user','request'));
     }
 

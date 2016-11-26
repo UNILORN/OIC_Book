@@ -14,7 +14,7 @@ class AdminorderController extends BaseController
     $order = ORDER::with('orderEmployee')
       ->with('orderProduct')
       ->with('orderVendor')
-      ->get();
+      ->paginate(20);
     return view('/administer/admin_order',compact('order'));
   }
 }

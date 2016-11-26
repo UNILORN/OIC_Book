@@ -15,7 +15,7 @@ class AdminemployeeController extends BaseController
     $employee = User::whereNotNull('employee_id')
     ->EmployeeID($request->input('employee_id'))
     ->Name($request->input('employee_name'))
-    ->get();
+    ->paginate(20);
     return view('/administer/admin_employee',compact('employee','request'));
   }
 }

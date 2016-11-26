@@ -16,7 +16,7 @@ class AdminstockController extends BaseController
       ->Name($request->input('product_name'))
       ->PriceFrom($request->input('product_price_from'))
       ->PriceTo($request->input('product_price_to'))
-      ->get();
+      ->paginate(20);
       return view('/administer/product/admin_stock',["products"=>$products,"request"=>$request]);
   }
 

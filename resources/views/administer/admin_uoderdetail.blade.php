@@ -48,7 +48,7 @@
         <td>{{$value->uorderDetail["uorder_number"]}}</td>
       </tr>
     @endforeach
-
+    {{$sales->links()}}
   </table>
 
 @endsection

@@ -25,7 +25,7 @@
         <td>{{$value->arrive_price}}</td>
       </tr>
     @endforeach
-
+    {{$arrive->links()}}
   </table>
 
 @endsection

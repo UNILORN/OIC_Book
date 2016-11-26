@@ -28,7 +28,7 @@
         <td>{{$value->remaining_amount}}</td>
       </tr>
     @endforeach
-
+    {{$order->links()}}
   </table>
 
 @endsection

@@ -14,9 +14,9 @@ class AdminarriveController extends BaseController
     $arrive = ARRIVE::with('arriveOrder')
     ->with('arriveOrder.orderProduct')
     ->with('arriveEmployee')
-    ->get();
+    ->paginate(20);
 
-    $arrive = ARRIVE::all();
+    $arrive = ARRIVE::paginate(20);
     return view('/administer/admin_arrive',compact('arrive'));
   }
 }

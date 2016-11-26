@@ -31,7 +31,7 @@
         <td>{{$value->name}}</td>
       </tr>
     @endforeach
-
+    {{$employee->links()}}
   </table>
 
 @endsection
