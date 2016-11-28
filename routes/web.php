@@ -33,8 +33,11 @@ Route::get('/addreview','ReviewController@add');
 //商品一覧
 Route::get('/search','SearchController@index');
 
-//カート
-Route::resource('/cart', 'CartController');
+//sessionカート
+Route::get('/sessioncart', 'SessioncartController@index');
+
+//authカート
+Route::get('/authcart', 'AuthcartController@index');
 
 //マイページ
 Route::resource('/mypage','MypageController');

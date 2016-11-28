@@ -16,16 +16,19 @@
         </p>
         <from action="/cart" method="POST">
             <div class="cart-form">
+              <form id="form_id" action="/addsessioncart" method="post">
                 <div class="cart-num">
-                  <select name="amount_" class="form-select hasCustomSelect">
+                  <select name="quantity" class="form-select hasCustomSelect">
                     @foreach (range(1,$product->product_stock) as $key => $value)
                       <option value="{{$value}}">{{$value}}</option>
                     @endforeach
                   </select>
                 </div>
+                <input type="hidden" name="product_id" value="{{$product->$product_id}}">
                 <div class="cart-submit">
-                  <input type="image" class="btn" alt="カートに入れる" src="./img/03.png" style="margin-left: 14px;" id="jp_cart_btn">
+                  <input type="submit" value="">
                 </div>
+              </form>
               </div>
               <p><b>アイテム説明</b></p>
               <p>{{$product->product_explanation}}</p>
