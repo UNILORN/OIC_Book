@@ -56,9 +56,7 @@ class AdminstockController extends BaseController
       $products->product_explanation = $request->input('product_explanation');
       $products->save();
 
-
-
-
+      return redirect("/admin/stock/$id");
   }
 
   public function destroy($id)
