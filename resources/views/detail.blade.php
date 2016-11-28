@@ -5,34 +5,50 @@
 @section('main')
 
   <div class="product_content">
-    <div class="product_img">
-      <img src="{{$product->product_image}}" alt="しろくまちゃんのほっとけーき">
-    </div>
-    <div class="product_text">
-        <h1 class="product_title">{{$product->product_name}}</h1>
-        <p>{{$product->productGenre["category"]}}</p>
-        <p class="price">
-          ￥{{$product->product_price}}
-        </p>
-        <div class="cart-form">
-            <form action="/addsessioncart" method="post">
-                <div class="cart-num">
-                    <select name="quantity" class="form-select hasCustomSelect">
-                      @foreach (range(1,$product->product_stock) as $key => $value)
-                        <option value="{{$value}}">{{$value}}</option>
-                      @endforeach
-                    </select>
-                </div>
-                <input type="hidden" name="product_id" value="{{$product->product_id}}">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <div class="cart-submit">
-                  <input type="submit" value="カートに入れる">
-                </div>
-            </form>
-        </div>
-        <p><b>アイテム説明</b></p>
-        <p>{{$product->product_explanation}}</p>
-    </div>
+    <div class="product_img"><img src="{{$product->product_image}}"></div>
+      <div class="product_text">
+          <h1 class="product_title">{{$product->product_name}}</h1>
+          <p>{{$product->productGenre["category"]}}</p>
+          <p class="price">￥{{$product->product_price}}</p>
+
+          @if(Auth::check())
+            <div class="cart-form">
+                <form action="/addauthcart" method="post">
+                    <div class="cart-num">
+                        <select name="number" class="form-select hasCustomSelect">
+                          @foreach (range(1,$product->product_stock) as $key => $value)
+                            <option value="{{$value}}">{{$value}}</option>
+                          @endforeach
+                        </select>
+                    </div>
+                    <input type="hidden" name="product_id" value="{{$product->product_id}}">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <div class="cart-submit">
+                      <input type="submit" value="カートに入れる">
+                    </div>
+                </form>
+            </div>
+          @else
+            <div class="cart-form">
+                <form action="/addsessioncart" method="post">
+                    <div class="cart-num">
+                        <select name="number" class="form-select hasCustomSelect">
+                          @foreach (range(1,$product->product_stock) as $key => $value)
+                            <option value="{{$value}}">{{$value}}</option>
+                          @endforeach
+                        </select>
+                    </div>
+                    <input type="hidden" name="product_id" value="{{$product->product_id}}">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <div class="cart-submit">
+                      <input type="submit" value="カートに入れる">
+                    </div>
+                </form>
+            </div>
+          @endif
+          <p><b>アイテム説明</b></p>
+          <p>{{$product->product_explanation}}</p>
+      </div>
   </div>
 
 

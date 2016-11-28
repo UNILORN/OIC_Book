@@ -16,21 +16,20 @@ class AuthcartService{
         'product_cart_number'=>$number
       ]
     );
-    $items = $this->getItems($user_id);
+    $products = $this->getItems($user_id);
 
-    return $items;
+    return $products;
   }
 
   public function getSum(){
   }
 
   public function getItems($user_id){
-    $items = CART::with('cartProduct')
-    ->with('cartUsers')
-    ->where('user_id',$user_id)
+    $products = CART::where('user_id',$user_id)
+    ->with('cartProduct')
     ->get();
 
-    return $items;
+    return $products;
   }
 
   public function deleteItem($user_id,$product_id){
@@ -38,8 +37,8 @@ class AuthcartService{
     ->Where('product_id', $product_id)
     ->delete();
 
-    $items = $this->getItems($user_id);
-    return $items;
+    $products = $this->getItems($user_id);
+    return $products;
   }
 
   public function changeQuantity($index){

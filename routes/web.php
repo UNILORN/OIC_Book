@@ -39,6 +39,7 @@ Route::post('/addsessioncart','SessioncartController@add');
 
 //authカート
 Route::get('/authcart', 'AuthcartController@index');
+Route::post('/addauthcart','AuthcartController@add');
 
 //マイページ
 Route::resource('/mypage','MypageController');

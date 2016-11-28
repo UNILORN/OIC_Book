@@ -10,7 +10,7 @@ class CART extends Model
 
     public function cartUser()
    {
-     return $this->hasMany('App\USER','user_id','user_id');
+     return $this->hasMany('App\USER','id','user_id');
    }
    public function cartProduct(){
      return $this->hasMany('App\PRODUCT', 'product_id', 'product_id');
