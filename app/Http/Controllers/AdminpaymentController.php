@@ -16,9 +16,10 @@ class AdminpaymentController extends BaseController
 {
   public function index(){
     $payment = UORDER::with('uorderUser')
-      ->paginate(20);
+        ->orderBy('uorder_day','desc')
+        ->paginate(20);
 
-    return view('/administer/admin_payment',compact('payment'));
+    return view('/administer/payment/admin_payment',compact('payment'));
   }
 
   public function submit(Request $request){
@@ -26,6 +27,6 @@ class AdminpaymentController extends BaseController
     $payment->uorder_payment = 1;
     $payment->save();
 
-    return redirect('/admin/payment/payment');
+    return redirect('/admin/payment');
   }
 }
