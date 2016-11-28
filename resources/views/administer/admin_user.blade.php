@@ -49,7 +49,7 @@
         <td>{{$value->updated_at}}</td>
       </tr>
     @endforeach
-    {{$user->links()}}
+    {{$user->appends($request->toArray())->links()}}
   </table>
 
 @endsection

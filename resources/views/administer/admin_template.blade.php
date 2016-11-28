@@ -26,8 +26,8 @@
             <li @yield('uoderdetail')><a href="/admin/uoderdetail">売上</a></li>
             <li @yield('order')><a href="/admin/order">発注</a></li>
             <li @yield('arrive')><a href="/admin/arrive">入荷情報</a></li>
-            <li @yield('payment')><a href="/admin/payment" @yield('payment')>入金確認</a></li>
-            <li @yield('mailform')><a href="/admin/mailform" @yield('mailform')>発注先メールフォーム</a></li>
+            <li @yield('payment')><a href="/admin/payment">入金確認</a></li>
+            <li @yield('mailform')><a href="/admin/mailform">発注先メールフォーム</a></li>
           </ul>
         </div>
       </div>

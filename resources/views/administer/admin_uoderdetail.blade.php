@@ -2,7 +2,7 @@
 
 @section('css','/admin/uorder_detail')
 @section('title', '売上')
-
+@section('uoderdetail','class="active"')
 @section('main')
 
   <div class="searchform">
