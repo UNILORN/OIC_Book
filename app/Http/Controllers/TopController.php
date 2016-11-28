@@ -9,6 +9,9 @@ use App\Http\Requests;
 class TopController extends Controller
 {
   public function index(){
-    return view('top');
+    $top = new \App\Service\TopService;
+    $ranking_products = $top->getRanking();
+
+    return view('top',compact('ranking_products'));
   }
 }
