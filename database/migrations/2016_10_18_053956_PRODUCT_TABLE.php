@@ -28,7 +28,7 @@ class PRODUCTTABLE extends Migration
           $table->integer('product_page');
           $table->dateTime('product_start_day');
           $table->text('product_explanation',1000);
-          $table->integer('product_browse＿number');
+          $table->integer('product_browse_number');
           $table->integer('product_order_number');
             $table->timestamps();
         });

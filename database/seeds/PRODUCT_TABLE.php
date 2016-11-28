@@ -40,7 +40,7 @@ class PRODUCT_TABLE extends Seeder
                 'product_page'=>$faker->randomDigitNotNull(),
                 'product_start_day'=>$faker->date(),
                 'product_explanation'=>$book[2],
-                'product_browse＿number'=>$faker->randomDigitNotNull(),
+                'product_browse_number'=>$faker->randomDigitNotNull(),
                 'product_order_number'=>$faker->randomDigitNotNull()
               ]);
               $i = $i + 1;

@@ -5,7 +5,14 @@
 @section('stock','class="active"')
 
 @section('main')
+    <div class="row container">
+        <div class="col-md-11"></div>
+        <div class="col-md-1 right">
+            <button class="btn" type="button" onclick="location.href='/admin/stock/create'">新規登録</button>
+        </div>
+    </div>
 <div class="searchform">
+
   <form class="search" action="/admin/stock" method="GET">
     <div class="input-group">
       <span class="input-group-addon">商品ID</span>
@@ -24,7 +31,6 @@
     <input class="btn" type="submit" name="search" value="検索">
   </form>
 </div>
-
 <table class="table">
   <tr>
     <th>商品ID</th>

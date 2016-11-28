@@ -56,6 +56,7 @@ Route::get('/admin','AdmintopController@index');
 Route::resource('/admin/stock','AdminstockController');
 Route::post('/admin/stock/{id}/update','AdminstockController@update');
 Route::resource('/admin/employee','AdminemployeeController');
+Route::post('/admin/employee/{id}/update','AdminemployeeController@update');
 Route::resource('/admin/user','AdminuserController');
 Route::get('/admin/uoderdetail','AdminuoderdetailController@index');
 Route::get('/admin/order','AdminorderController@index');
