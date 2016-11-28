@@ -70,10 +70,11 @@
 
     <div class="addreview">
         <button class="display_review_form">レビューを書く</button>
-        <form class="review_form"action="/addreview" method="get">
+        <form class="review_form"action="/addreview" method="post">
         評価：<input type="number" name="star" value="" min="1" max="5">
             <input type="text" name="text" value="">
             <input type="hidden" name="product_id" value="{{$product->product_id}}">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="submit" name="some_name" value="送信">
         </form>
     </div>
