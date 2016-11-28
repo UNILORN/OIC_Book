@@ -13,11 +13,10 @@ class ReviewController extends Controller
       ->with('productGenre')
       ->first();
 
-       $reviews = new \App\Service\ReviewService;
-       $user = $request->user();
-       $reviews = $reviews->addReview($request->input('product_id'),$user->id,(int)$request->input('star'),$request->input('text'));
+      $reviews = new \App\Service\ReviewService;
+      $user = $request->user();
+      $reviews = $reviews->addReview($request->get('product_id'),$user->id,(int)$request->get('star'),$request->get('text'));
 
-
-       return view('detail',compact('product','reviews'));
+      return view('detail',compact('product','reviews'));
     }
 }

@@ -15,9 +15,6 @@ class TopService{
     ->limit(5)
     ->get();
 
-
-
-
     return $ranking;
   }
 }

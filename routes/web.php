@@ -28,16 +28,18 @@ Route::get('/product', 'ProductsController@index');
 Route::get('/detail','DetailController@index');
 
 //レビュー
-Route::get('/addreview','ReviewController@add');
+Route::post('/addreview','ReviewController@add');
 
 //商品一覧
 Route::get('/search','SearchController@index');
 
 //sessionカート
 Route::get('/sessioncart', 'SessioncartController@index');
+Route::post('/addsessioncart','SessioncartController@add');
 
 //authカート
 Route::get('/authcart', 'AuthcartController@index');
+Route::post('/addauthcart','AuthcartController@add');
 
 //マイページ
 Route::resource('/mypage','MypageController');
