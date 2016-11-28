@@ -3,7 +3,6 @@
 namespace App\Service;
 use App\PRODUCT;
 use App\CART;
-
 use DB;
 
 class AuthcartService{
@@ -21,10 +20,9 @@ class AuthcartService{
     return $products;
   }
 
-  public function getSum(){
-  }
 
   public function getItems($user_id){
+
     $products = CART::where('user_id',$user_id)
     ->with('cartProduct')
     ->get();
@@ -33,12 +31,17 @@ class AuthcartService{
   }
 
   public function deleteItem($user_id,$product_id){
-     CART::where('user_id',$user_id)
+
+    CART::where('user_id',$user_id)
     ->Where('product_id', $product_id)
     ->delete();
 
     $products = $this->getItems($user_id);
+
     return $products;
+  }
+
+  public function getSum(){
   }
 
   public function changeQuantity($index){
@@ -46,5 +49,4 @@ class AuthcartService{
 
   public function allDelete(){
   }
-
 }

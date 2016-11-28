@@ -5,6 +5,7 @@ use DB;
 
 class TopService{
   public function getRanking(){
+    
     $ranking = DB::table('UORDERDETAILS')
     ->join('UORDER','UORDERDETAILS.uorder_id' ,'=', 'UORDER.uorder_id')
     ->join('PRODUCT','UORDERDETAILS.product_id' ,'=', 'PRODUCT.product_id')
