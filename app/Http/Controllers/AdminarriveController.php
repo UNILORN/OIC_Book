@@ -17,6 +17,6 @@ class AdminarriveController extends BaseController
     ->paginate(20);
 
     $arrive = ARRIVE::paginate(20);
-    return view('/administer/admin_arrive',compact('arrive'));
+    return view('/administer/arrive/admin_arrive',compact('arrive'));
   }
 }

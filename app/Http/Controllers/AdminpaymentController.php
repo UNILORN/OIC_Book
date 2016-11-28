@@ -26,6 +26,6 @@ class AdminpaymentController extends BaseController
     $payment->uorder_payment = 1;
     $payment->save();
 
-    return redirect('/admin/payment');
+    return redirect('/admin/payment/payment');
   }
 }

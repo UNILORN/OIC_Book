@@ -23,6 +23,6 @@ class AdminorderController extends BaseController
       ->with('orderProduct')
       ->with('orderVendor')
       ->paginate(20);
-    return view('/administer/admin_order',compact('order','request'));
+    return view('/administer/order/admin_order',compact('order','request'));
   }
 }

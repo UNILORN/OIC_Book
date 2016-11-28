@@ -19,7 +19,7 @@ class AdminuserController extends Controller
         ->Name($request->input('name'))
         ->Tel($request->input('tel'))
         ->paginate(20);
-        return view('/administer/admin_user',compact('user','request'));
+        return view('/administer/user/admin_user',compact('user','request'));
     }
 
     /**

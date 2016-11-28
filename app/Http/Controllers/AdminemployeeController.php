@@ -16,6 +16,6 @@ class AdminemployeeController extends BaseController
     ->EmployeeID($request->input('employee_id'))
     ->Name($request->input('employee_name'))
     ->paginate(20);
-    return view('/administer/admin_employee',compact('employee','request'));
+    return view('/administer/employee/admin_employee',compact('employee','request'));
   }
 }
