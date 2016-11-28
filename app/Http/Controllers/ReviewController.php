@@ -9,7 +9,7 @@ use \App\PRODUCT;
 class ReviewController extends Controller
 {
     public function add(Request $request){
-      $product = PRODUCT::find(20)
+      $product = PRODUCT::where('product_id',$request->get('product_id'))
       ->with('productGenre')
       ->first();
 
