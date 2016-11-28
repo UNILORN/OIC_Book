@@ -12,24 +12,22 @@ class SessioncartController extends Controller
       $cart = new \App\Service\SessioncartService;
       $items = $cart->getItems();
       $sum = $cart->getSum();
-      return view('sessioncart',compact('items','sum'));
+      return view('sessioncart',compact('products'));
     }
 
     public function add(Request $request)
     {
       $cart = new \App\Service\SessioncartService;
-      $items = $cart->addItem($request->get("id"));
-      $sum = $cart->getSum();
+      $products = $cart->addProduct($request->get("product_id"));
 
-      return view('sessioncart',compact('items','sum'));
+      return view('sessioncart',compact('products'));
     }
 
     public function delete(Request $request)
     {
       $cart = new \App\Service\SessioncartService;
       $items = $cart->deleteItem($request->get('index'));
-      $sum = $cart->getSum();
 
-      return view('sessioncart',compact('items','sum'));
+      return view('sessioncart',compact('products'));
     }
 }

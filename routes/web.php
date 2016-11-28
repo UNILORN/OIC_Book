@@ -35,6 +35,7 @@ Route::get('/search','SearchController@index');
 
 //sessionカート
 Route::get('/sessioncart', 'SessioncartController@index');
+Route::post('/addsessioncart','SessioncartController@add');
 
 //authカート
 Route::get('/authcart', 'AuthcartController@index');

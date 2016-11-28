@@ -5,7 +5,7 @@ use App\PRODUCT;
 
 class SessioncartService{
 
-  public function addItem($product_id){
+  public function addProduct($product_id){
     $item =  PRODUCT::where('product_id',$product_id)
               ->first();
     $cart = session()->get("cart",[]);

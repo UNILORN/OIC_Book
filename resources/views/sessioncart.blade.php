@@ -21,23 +21,25 @@
                     </tr>
                 </thead>
                 <tbody>
+                  @foreach ($products as $product)
                     <tr>
-                        <td><img src="https://placehold.jp/150x150.png" alt="" /></td>
-                        <td>しろくまちゃんのほっとけーき</td>
-                        <td>テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります</td>
-                        <td>hoge</td>
-                        <td>2,200円</td>
-                        <td class="btn">
-                            <form class="" action="/cart/edit/" method="post">
-                                <select class="sum" name="sum">
-                                    @for ($i=1; $i <= 10; $i++)
-                                    <option value="{{$i}}">{{$i}}</option>
-                                    @endfor
-                                </select>
-                            </form>
-                        </td>
-                        <td>2,200円</td>
-                        <td><form action="/cart/clear/2" method="post"><div class="form-bottom"><a>x</a></div></form></td>
+                      <td><img src="{{$product->product_image}}" alt="" /></td>
+                      <td>{{$product->product_name}}</td>
+                      <td>テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります</td>
+                      <td>hoge</td>
+                      <td>2,200円</td>
+                      <td class="btn">
+                        <form class="" action="/cart/edit/" method="post">
+                          <select class="sum" name="sum">
+                            @for ($i=1; $i <= 10; $i++)
+                              <option value="{{$i}}">{{$i}}</option>
+                            @endfor
+                          </select>
+                        </form>
+                      </td>
+                      <td>2,200円</td>
+                      <td><form action="/cart/clear/2" method="post"><div class="form-bottom"><a>x</a></div></form></td>
+                  @endforeach
                     </tr>
                 </tbody>
             </table>

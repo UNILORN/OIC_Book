@@ -14,30 +14,29 @@
         <p class="price">
           ￥{{$product->product_price}}
         </p>
-        <from action="/cart" method="POST">
-            <div class="cart-form">
-              <form id="form_id" action="/addsessioncart" method="post">
+        <div class="cart-form">
+            <form action="/addsessioncart" method="post">
                 <div class="cart-num">
-                  <select name="quantity" class="form-select hasCustomSelect">
-                    @foreach (range(1,$product->product_stock) as $key => $value)
-                      <option value="{{$value}}">{{$value}}</option>
-                    @endforeach
-                  </select>
+                    <select name="quantity" class="form-select hasCustomSelect">
+                      @foreach (range(1,$product->product_stock) as $key => $value)
+                        <option value="{{$value}}">{{$value}}</option>
+                      @endforeach
+                    </select>
                 </div>
-                <input type="hidden" name="product_id" value="{{$product->$product_id}}">
+                <input type="hidden" name="product_id" value="{{$product->product_id}}">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="cart-submit">
-                  <input type="submit" value="">
+                  <input type="submit" value="カートに入れる">
                 </div>
-              </form>
-              </div>
-              <p><b>アイテム説明</b></p>
-              <p>{{$product->product_explanation}}</p>
-        </from>
+            </form>
+        </div>
+        <p><b>アイテム説明</b></p>
+        <p>{{$product->product_explanation}}</p>
     </div>
   </div>
 
 
-  <div class="review_background_color">
+<div class="review_background_color">
   <div class="review">
     <div class="customer_review"><h1>カスタマーレビュー</h1></div>
     @foreach ($reviews as $review)
