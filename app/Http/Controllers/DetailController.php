@@ -15,7 +15,7 @@ class DetailController extends Controller
       ->first();
 
       $reviews = new \App\Service\ReviewService;
-      $reviews = $reviews->getReview(1);
+      $reviews = $reviews->getReview($request->get('product_id'));
 
         return view('detail',compact("product","reviews"));
     }
