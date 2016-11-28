@@ -30,7 +30,8 @@ class PRODUCTTABLE extends Migration
           $table->text('product_explanation',1000);
           $table->integer('product_browse_number');
           $table->integer('product_order_number');
-            $table->timestamps();
+          $table->boolean('delete_flg');
+          $table->timestamps();
         });
     }
 

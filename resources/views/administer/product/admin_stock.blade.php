@@ -8,7 +8,7 @@
     <div class="row container">
         <div class="col-md-11"></div>
         <div class="col-md-1 right">
-            <button class="btn" type="button" onclick="location.href='/admin/stock/create'">新規登録</button>
+            <button class="btn btn-default" type="button" onclick="location.href='/admin/stock/create'">新規登録</button>
         </div>
     </div>
 <div class="searchform">
@@ -28,7 +28,7 @@
       <span class="input-group-addon">〜</span>
       <input type="text" name="product_price_to"   class="form-control"  value="{{array_get($request,'product_price_to','') }}">
     </div>
-    <input class="btn" type="submit" name="search" value="検索">
+    <input class="btn btn-default" type="submit" name="search" value="検索">
   </form>
 </div>
 <table class="table">
@@ -46,7 +46,7 @@
       <td>{{$value->product_price}}</td>
       <td>{{$value->product_stock}}</td>
       <td>
-          <button class="btn" type="button" name="button" onclick="location.href='/admin/stock/{{$value->product_id}}'">商品詳細</button>
+          <button class="btn btn-default" type="button" name="button" onclick="location.href='/admin/stock/{{$value->product_id}}'">商品詳細</button>
       </td>
     </tr>
   @endforeach

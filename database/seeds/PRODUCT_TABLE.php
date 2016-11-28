@@ -41,7 +41,8 @@ class PRODUCT_TABLE extends Seeder
                 'product_start_day'=>$faker->date(),
                 'product_explanation'=>$book[2],
                 'product_browse_number'=>$faker->randomDigitNotNull(),
-                'product_order_number'=>$faker->randomDigitNotNull()
+                'product_order_number'=>$faker->randomDigitNotNull(),
+                'delete_flg' => 0
               ]);
               $i = $i + 1;
             }

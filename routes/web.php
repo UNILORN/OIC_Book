@@ -57,6 +57,7 @@ Route::get('/recede_confirm','ConfirmController@recode');
 Route::get('/admin','AdmintopController@index');
 Route::resource('/admin/stock','AdminstockController');
 Route::post('/admin/stock/{id}/update','AdminstockController@update');
+Route::post('/admin/stock/{id}/delete','AdminstockController@destroy');
 Route::resource('/admin/employee','AdminemployeeController');
 Route::post('/admin/employee/{id}/update','AdminemployeeController@update');
 Route::resource('/admin/user','AdminuserController');

@@ -16,6 +16,10 @@ class PRODUCT extends Model
       return $this->hasMany('App\TRANCELATER','trancelater_id','trancelater_id');
     }
 
+    public function scopeActive($query){
+        return $query->where('delete_flg',0);
+    }
+
     public function scopeID($query,$product_id){
       if(!empty($product_id)){
         $query = $query->where('product_id',$product_id);

@@ -13,7 +13,8 @@ class AdminstockController extends BaseController
 {
     public function index(Request $request)
     {
-        $products = PRODUCT::ID($request->input('product_id'))
+        $products = PRODUCT::Active()
+            ->ID($request->input('product_id'))
             ->Name($request->input('product_name'))
             ->PriceFrom($request->input('product_price_from'))
             ->PriceTo($request->input('product_price_to'))
@@ -79,8 +80,11 @@ class AdminstockController extends BaseController
         return redirect("/admin/stock/$id");
     }
 
-    public function destroy($id)
+    public function destroy(Request $request,$id)
     {
-        //
+        $products = PRODUCT::find($id);
+        $products->delete_flg = 1;
+        $products->save();
+        return redirect('/admin/stock/');
     }
 }

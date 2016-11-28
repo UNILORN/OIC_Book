@@ -7,8 +7,9 @@
 @section('main')
 
     <h2>商品編集画面</h2>
-    <form class="form-horizontal" action="/admin/stock/{{$id}}/edit" method="GET">
+    <form class="form-horizontal" action="/admin/stock/{{$id}}/delete" method="POST">
         {{csrf_field()}}
+
         <div class="input-group">
             <span class="input-group-addon" >商品ID</span>
             <input type="text" name="product_id" class="form-control"  value="{{$products->product_id}}" disabled>
@@ -50,6 +51,7 @@
             <textarea id="textarea" type="textarea" name="product_explanation" class="form-control" placeholder="ProductName" disabled>{{$products->product_explanation}}</textarea>
         </div>
 
-        <button class="btn btn-default" type="submit" name="submit">編集</button>
+        <button class="btn btn-default" type="button" name="submit" onclick="location.href='/admin/stock/{{$id}}/edit'">編集</button>
+        <input class="btn btn-danger" type="submit" value="削除">
     </form>
 @endsection
