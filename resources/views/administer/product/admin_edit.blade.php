@@ -7,7 +7,7 @@
 @section('main')
 
   <h2>商品編集画面</h2>
-  <form class="form-horizontal" action="/admin/stock" method="post">
+  <form class="form-horizontal" action="/admin/stock/{{$id}}/update" method="post">
     {{csrf_field()}}
     <div class="input-group">
       <span class="input-group-addon" >商品ID</span>

@@ -40,7 +40,7 @@
       <td>{{$value->product_price}}</td>
       <td>{{$value->product_stock}}</td>
       <td>
-          <button type="button" name="button" onclick="location.href='/admin/stock/{{$value->product_id}}/edit'">編集</button>
+          <button class="btn" type="button" name="button" onclick="location.href='/admin/stock/{{$value->product_id}}'">商品詳細</button>
       </td>
     </tr>
   @endforeach
