@@ -5,6 +5,7 @@
 @section('main')
 <div id="main" style="position: relative;">
         <div class="search_body">
+
                 <div class="search_side01">
                     <div class="itemlist">
                         <ul>
@@ -20,7 +21,17 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="search_side02">
+                  @if (count($errors) > 0)
+                  <div class="alert alert-danger">
+                    <ul>
+                      @foreach ($errors->all() as $error)
+                      <li style="color:red">いずれかの値が間違っています。</li>
+                      @endforeach
+                    </ul>
+                  </div>
+                  @endif
                     <div id="sidebar">
                         <div class="keyword-section" style="margin-top: 0px !important;">
                             <div class="category-section">
