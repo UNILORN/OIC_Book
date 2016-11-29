@@ -46,7 +46,6 @@ class PRODUCT_TABLE extends Seeder
                 'delete_flg' => 0,
               ]);
               $i = $i + 1;
-              echo $i;
             }
           }
       }
