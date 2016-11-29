@@ -79,7 +79,7 @@
                                     </li>
                                     </ul>
                                     </form>
-                                    
+
                                     <div class="title">並び替え</div>
                                     <div class="sort">
                                     <p>
