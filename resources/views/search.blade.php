@@ -25,23 +25,24 @@
                         <div class="keyword-section" style="margin-top: 0px !important;">
                             <div class="category-section">
                               <div class="title">ジャンルから絞り込む</div>
-                              <form action="cgi-bin/abc.cgi" method="post">
+                              <form action="/search" method="GET">
                                  <ul>
                                   <li class="love-category">
-                                  <input type="checkbox" name="cotegory" value="1">恋愛</li>
+                                  <input type="radio" name="cotegory" value="1">恋愛</li>
                                 <li class="politics-category">
-                                    <input type="checkbox" name="cotegory" value="2">政治</li>
+                                    <input type="radio" name="cotegory" value="2">政治</li>
                                     <li class="adlut-category">
-                                <input type="checkbox" name="cotegory" value="3">アダルト</li>
+                                <input type="radio" name="cotegory" value="3">アダルト</li>
                                 </ul>
                                 </form>
                                 </div>
                                 <div class="price-section">
                                 <div class="title">価格帯から絞り込む</div>
-                                <form action="cgi-bin/abc.cgi" method="post">
+                                <form action="/search" method="GET">
                                    <ul class="local-nav">
                                     <li class="price-range">
-                                    <input type="checkbox" name="price" value="1">指定なし
+                                      価格下限<input type="text" name="price_sort_from" class="form-control"  value="{{array_get($request,'price_sort_from','') }}"><br>
+                                      価格上限<input type="text" name="price_sort_to"   class="form-control"  value="{{array_get($request,'price_soro_to','') }}">
                                     </li>
                                     <li class="price-range">
                                         <input type="checkbox" name="price" value="2">~500円
@@ -78,14 +79,20 @@
                                     </li>
                                     </ul>
                                     </form>
+                                    
                                     <div class="title">並び替え</div>
                                     <div class="sort">
-                                    <form action="#" method="post">
                                     <p>
-                                       <ul>
-                                           <li><input type="checkbox" name="sort" value="1">作者順（あ〜Z）</li>
-                                           <li><input type="checkbox" name="sort" value="2">商品名順（あ〜Z）</li>
-                                           <li><input type="checkbox" name="sort" value="3">価格順</li>
+                                      <ul>
+                                           <li><input type="radio" name="sort" value="auther_name">作者順（あ〜Z）</li>
+                                           <li><input type="radio" name="sort" value="product_name">商品名順（あ〜Z）</li>
+                                           <li><input type="radio" name="sort" value="product_price">価格順</li>
+                                      </ul>
+                                      <div class="title">昇順、降順</div>
+                                      <ul>
+                                           <li><input type="radio" name="sort_order" value="desc">降順</li>
+                                           <li><input type="radio" name="sort_order" value="asc">昇順</li>
+                                      </ul>
                                     </p>
                                             <input type="submit" name="submit" class="submit" value="検索">
                                     </form>
