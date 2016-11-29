@@ -59,16 +59,22 @@
                                         <input type="checkbox" name="price" value="6">2000~2500円
                                     </li>
                                     <li class="price-range">
-                                        <input type="checkbox" name="price" value="1">3000~3500円
+                                        <input type="checkbox" name="price" value="7">2500~3000円
                                     </li>
                                     <li class="price-range">
-                                        <input type="checkbox" name="price" value="1">3500~4000円
+                                        <input type="checkbox" name="price" value="8">3000~3500円
                                     </li>
                                     <li class="price-range">
-                                        <input type="checkbox" name="price" value="1">4500~5000円
+                                        <input type="checkbox" name="price" value="9">3500~4000円
                                     </li>
                                     <li class="price-range">
-                                        <input type="checkbox" name="price" value="1">5000円~
+                                        <input type="checkbox" name="price" value="10">4000~4500円
+                                    </li>
+                                    <li class="price-range">
+                                        <input type="checkbox" name="price" value="11">4500~5000円
+                                    </li>
+                                    <li class="price-range">
+                                        <input type="checkbox" name="price" value="12">5000円~
                                     </li>
                                     </ul>
                                     </form>
