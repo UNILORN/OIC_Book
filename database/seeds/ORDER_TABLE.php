@@ -21,7 +21,7 @@ class ORDER_TABLE extends Seeder
           DB::table('ORDER')->insert([
             'order_id'=>$i,
             'vender_id'=>$i,
-            'employee_id'=>$i,
+            'employee_id'=>$i%50,
             'product_id'=>$i,
             'order_number'=>$faker->randomDigitNotNull(),
             'order_day'=>$faker->dateTimeThisCentury(),
