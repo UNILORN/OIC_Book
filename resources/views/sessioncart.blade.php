@@ -25,7 +25,7 @@
                       <td><img src="{{$product->product_image}}" alt="" /></td>
                       <td>{{$product->product_name}}</td>
                       <td>{{$product->auther_name}}</td>
-                      <td>2,200円</td>
+                      <td>{{$product->product_price}}</td>
                       <td class="btn">
                         <form class="" action="/cart/edit/" method="post">
                           <select class="sum" name="sum">
