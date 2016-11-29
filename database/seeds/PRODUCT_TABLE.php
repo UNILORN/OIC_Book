@@ -17,7 +17,7 @@ class PRODUCT_TABLE extends Seeder
       $faker = Faker\Factory::create('ja_JP');
 
       //ファイルポインタをオープン
-      $file = fopen("public/img/test.txt","r");
+      $file = fopen("public/img/Seed_book.txt","r");
 
       $i = 1;
       //ファイルを一行ずつ出力
@@ -27,7 +27,7 @@ class PRODUCT_TABLE extends Seeder
           $book = explode(" ",$line);
               DB::table('PRODUCT')->insert([
                 'product_id'=>$i,
-                'genre_id'=>$i,
+                'genre_id'=>$book[4],
                 'product_name'=>$book[1],
                 'product_image'=>$book[0],
                 'product_price'=>$book[3],
