@@ -1,5 +1,5 @@
 @extends('template')
-@section('title','recede')
+@section('title','search')
 
 
 @section('main')

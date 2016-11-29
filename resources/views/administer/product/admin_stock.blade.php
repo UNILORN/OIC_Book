@@ -11,6 +11,15 @@
             <button class="btn btn-default" type="button" onclick="location.href='/admin/stock/create'">新規登録</button>
         </div>
     </div>
+    @if (count($errors) > 0)
+    <div class="alert alert-danger">
+      <ul>
+        @foreach ($errors->all() as $error)
+        <li style="color:red">いずれかの値が間違っています。</li>
+        @endforeach
+      </ul>
+    </div>
+    @endif
 <div class="searchform">
 
   <form class="search" action="/admin/stock" method="GET">

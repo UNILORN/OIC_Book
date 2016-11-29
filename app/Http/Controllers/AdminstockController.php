@@ -13,6 +13,12 @@ class AdminstockController extends BaseController
 {
     public function index(Request $request)
     {
+      // $this->validate($request, [
+      //     'product_id' => 'max:5',
+      //     'product_name' => 'max:50',
+      //     'product_price_from' => 'integer|max:10',
+      //     'product_price_to' => 'integer|max:10'
+      // ]);
         $products = PRODUCT::Active()
             ->ID($request->input('product_id'))
             ->Name($request->input('product_name'))
@@ -53,6 +59,7 @@ class AdminstockController extends BaseController
 
     public function show($id)
     {
+
         $products = PRODUCT::find($id);
         return view('/administer/product/admin_detail', compact('products', 'id'));
     }
