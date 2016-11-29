@@ -13,6 +13,8 @@ class AUTHER_TABLE extends Seeder
     {
       DB::table('AUTHER')->delete();
 
+      $file = fopen("public/img/Seed_book.txt","r");
+
        //faker使う。普通に使う場合と同じ。
       $faker = Faker\Factory::create('ja_JP');
 

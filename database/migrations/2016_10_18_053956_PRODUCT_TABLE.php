@@ -17,6 +17,7 @@ class PRODUCTTABLE extends Migration
           $table->increments('product_id')->unique();
           $table->string('product_name');
           $table->integer('genre_id');
+          $table->string('auther_name');
           $table->string('product_image',45);
           $table->integer('product_price');
           $table->integer('product_stock');
