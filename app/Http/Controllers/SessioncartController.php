@@ -10,8 +10,8 @@ class SessioncartController extends Controller
     public function index()
     {
       $cart = new \App\Service\SessioncartService;
-      $items = $cart->getItems();
-      $sum = $cart->getSum();
+      $products = $cart->getItems();
+
       return view('sessioncart',compact('products'));
     }
 
