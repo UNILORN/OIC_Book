@@ -34,52 +34,15 @@
                                     <li class="adlut-category">
                                 <input type="radio" name="cotegory" value="3">アダルト</li>
                                 </ul>
-                                </form>
+
                                 </div>
                                 <div class="price-section">
                                 <div class="title">価格帯から絞り込む</div>
-                                <form action="/search" method="GET">
                                    <ul class="local-nav">
                                     <li class="price-range">
                                       価格下限<input type="text" name="price_sort_from" class="form-control"  value="{{array_get($request,'price_sort_from','') }}"><br>
                                       価格上限<input type="text" name="price_sort_to"   class="form-control"  value="{{array_get($request,'price_soro_to','') }}">
                                     </li>
-                                    <li class="price-range">
-                                        <input type="checkbox" name="price" value="2">~500円
-                                    </li>
-                                    <li class="price-range">
-                                        <input type="checkbox" name="price" value="3">500~1000円
-                                    </li>
-                                    <li class="price-range">
-                                        <input type="checkbox" name="price" value="4">1000~1500円
-                                    </li>
-                                    <li class="price-range">
-                                        <input type="checkbox" name="price" value="5">1500~2000円
-                                    </li>
-                                    <li class="price-range">
-                                        <input type="checkbox" name="price" value="6">2000~2500円
-                                    </li>
-                                    <li class="price-range">
-                                        <input type="checkbox" name="price" value="7">2500~3000円
-                                    </li>
-                                    <li class="price-range">
-                                        <input type="checkbox" name="price" value="8">3000~3500円
-                                    </li>
-                                    <li class="price-range">
-                                        <input type="checkbox" name="price" value="9">3500~4000円
-                                    </li>
-                                    <li class="price-range">
-                                        <input type="checkbox" name="price" value="10">4000~4500円
-                                    </li>
-                                    <li class="price-range">
-                                        <input type="checkbox" name="price" value="11">4500~5000円
-                                    </li>
-                                    <li class="price-range">
-                                        <input type="checkbox" name="price" value="12">5000円~
-                                    </li>
-                                    </ul>
-                                    </form>
-                                    
                                     <div class="title">並び替え</div>
                                     <div class="sort">
                                     <p>
