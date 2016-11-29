@@ -28,6 +28,7 @@ class PRODUCT_TABLE extends Seeder
               DB::table('PRODUCT')->insert([
                 'product_id'=>$i,
                 'genre_id'=>$book[4],
+                'auther_name'=>$book[5],
                 'product_name'=>$book[1],
                 'product_image'=>$book[0],
                 'product_price'=>$book[3],
@@ -42,9 +43,10 @@ class PRODUCT_TABLE extends Seeder
                 'product_explanation'=>$book[2],
                 'product_browse_number'=>$faker->randomDigitNotNull(),
                 'product_order_number'=>$faker->randomDigitNotNull(),
-                'delete_flg' => 0
+                'delete_flg' => 0,
               ]);
               $i = $i + 1;
+              echo $i;
             }
           }
       }
