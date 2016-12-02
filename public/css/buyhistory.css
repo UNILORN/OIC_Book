@@ -1,13 +1,16 @@
-main .table{
-  margin:0px;
-}
 .histories{
-  color:white;
   width:720px;
+  text-align: center;
 }
 .histories img{
   height:200px;
   width:200px;
+}
+main{
+  margin-bottom: 50px;
+}
+main .table{
+  margin:0px;
 }
 .histories table{
 
