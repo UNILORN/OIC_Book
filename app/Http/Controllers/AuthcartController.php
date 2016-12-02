@@ -10,6 +10,16 @@ class AuthcartController extends Controller
       {
         $user = $request->user();
         $cart = new \App\Service\AuthcartService;
+
+        /****
+        *   ログイン時のsession情報の引き継ぎ
+        ****/
+        if (!empty(session()->get("cart",[])))
+        {
+          $products = session()->get("cart",[]);
+          $cart->sessionTakeover($user->id,$products);
+        }
+
         $products = $cart->getItems($user->id);
 
         return view('authcart',compact('products'));

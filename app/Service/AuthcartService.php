@@ -21,7 +21,6 @@ class AuthcartService{
     return $products;
   }
 
-
   public function getItems($user_id)
   {
     $products = CART::where('user_id',$user_id)
@@ -40,8 +39,8 @@ class AuthcartService{
     return $quantity;
   }
 
-  public function deleteItem($user_id,$product_id){
-
+  public function deleteItem($user_id,$product_id)
+  {
     CART::where('user_id',$user_id)
     ->Where('product_id', $product_id)
     ->delete();
@@ -49,6 +48,15 @@ class AuthcartService{
     $products = $this->getItems($user_id);
 
     return $products;
+  }
+
+  public function sessionTakeover($user_id,$products)
+  {
+    foreach ($products as $product)
+    {
+      $product_id = $product->product_id;
+      $this->addItem($user_id,$product_id,1);
+    }
   }
 
   public function getSum(){
