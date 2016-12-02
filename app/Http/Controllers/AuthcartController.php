@@ -10,15 +10,6 @@ class AuthcartController extends Controller
       {
         $user = $request->user();
         $cart = new \App\Service\AuthcartService;
-        /****
-        *   ログイン時のsession情報の引き継ぎ
-        ****/
-        if (!empty(session()->get("cart",[])))
-        {
-          $products = session()->get("cart",[]);
-          $cart->sessionTakeover($user->id,$products);
-        }
-        
         $products = $cart->getItems($user->id);
         $sum = $cart->getSum($user->id);
 
@@ -29,13 +20,6 @@ class AuthcartController extends Controller
       {
         $user = $request->user();
         $cart = new \App\Service\AuthcartService;
-
-        if (!empty(session()->get("cart",[])))
-        {
-          $products = session()->get("cart",[]);
-          $cart->sessionTakeover($user->id,$products);
-        }
-
         $products = $cart->addItem($user->id,$request->get('product_id'),$request->get('number'));
         $sum = $cart->getSum($user->id);
 
