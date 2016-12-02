@@ -15,11 +15,14 @@
   height: 500px;
   background: #d3d3d3;
 }
+
+
 .submit{
   background-color: #fff;
 	color: #000;
   border: none;
-  padding: 20px;
+  margin-top: 50px;
+  margin-left: 170px;
 }
 
 .submit:hover{
