@@ -6,7 +6,7 @@
 
 @section('main')
 
-    <h2>商品編集画面</h2>
+    <h2>商品新規登録画面</h2>
     <form class="form-horizontal" action="/admin/stock" method="post">
         {{csrf_field()}}
         <div class="input-group">
@@ -36,6 +36,10 @@
             <input type="text" name="product_width" class="form-control"  value="">
             <span class="input-group-addon" >奥行き</span>
             <input type="text" name="product_depth" class="form-control" value="">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" >ISBN</span>
+            <input type="text" name="product_ISBN" class="form-control" value="">
         </div>
         <div class="input-group">
             <span class="input-group-addon" >ページ数</span>
