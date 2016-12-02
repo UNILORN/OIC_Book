@@ -21,7 +21,7 @@
         <span class="input-group-addon">注文者名</span>
         <input type="text" name="uorder_name" class="form-control"  value="{{ array_get($request,'uorder_name','') }}">
       </div>
-      <input class="btn" type="submit" name="search" value="検索">
+      <input class="btn btn-default" type="submit" name="search" value="検索">
     </form>
   </div>
 

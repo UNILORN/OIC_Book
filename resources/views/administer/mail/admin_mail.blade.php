@@ -19,8 +19,8 @@
                 <span class="input-group-addon">本文</span>
                 <textarea id="textarea" type="textarea" name="message" class="form-control"></textarea>
             </div>
-            <input class="btn btn-dafault" type="submit" value="送信">
-            <input class="btn btn-dafault" type="reset" value="取り消し">
+            <input class="btn btn-default" type="submit" value="送信">
+            <input class="btn btn-default" type="reset" value="取り消し">
         </form>
     </div>
 @endsection
