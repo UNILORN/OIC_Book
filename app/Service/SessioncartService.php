@@ -16,7 +16,7 @@ class SessioncartService{
     return $items;
   }
 
-  public function getSum(){
+  public function getTotalfee(){
 
     $items = session()->get("cart",[]);
     $sum = 0;
@@ -30,6 +30,7 @@ class SessioncartService{
   public function getItems(){
 
     $items = session()->get("cart",[]);
+
     return $items;
   }
 

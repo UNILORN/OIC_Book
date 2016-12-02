@@ -46,6 +46,7 @@
                                       <div id="BagWrap" class="bag-wrap">
                                           <div class="bag">
                                               @if(Auth::check())
+
                                               <a href="/authcart" id="header_view_cart_link1">
                                                 <img alt="bag" src="//hih67k1jnwfciz.cdn.jp.idcfcloud.com/images/cart3.gif">
                                                 <span class="item-num-wrap"><span class="item-num">0</span></span>
@@ -53,7 +54,7 @@
                                               @else
                                                 <a href="/sessioncart" id="header_view_cart_link1">
                                                   <img alt="bag" src="//hih67k1jnwfciz.cdn.jp.idcfcloud.com/images/cart3.gif">
-                                                  <span class="item-num-wrap"><span class="item-num">0</span></span>
+                                                  <span class="item-num-wrap"><span class="item-num">{{count(session()->get("cart",[]))}}</span></span>
                                                 </a>
                                               @endif
                                           </div>

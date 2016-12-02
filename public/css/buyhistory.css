@@ -1,0 +1,137 @@
+main .table{
+  margin:0px;
+}
+.histories{
+  color:white;
+  width:720px;
+}
+.histories img{
+  height:200px;
+  width:200px;
+}
+.histories table{
+
+}
+.histories th{
+  background-color: #171717;
+  border: solid 1px #5d5d5d;
+  font-size: 15px;
+  height:50px;
+  color: white;
+}
+
+
+.maincontent{
+  width: 100%;
+  position: relative;
+}
+sub{
+  position: absolute;
+  width:228px;
+  height: 500px;
+}
+.content{
+  position: relative;
+  padding: 5px;
+  margin: auto;
+  left:0;
+  right:0;
+  width: 1010px;
+}
+.content h2{
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.side01{
+  position: relative;
+  height: 93px;
+  padding: 10px 0px;
+  border-top: #dedede 1px solid;
+  border-bottom: #dedede 1px solid;
+}
+.side01 h2{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  height: 30px;
+}
+
+.side02{
+  margin-top: 20px;
+  list-style: none;
+}
+
+.side02 li{
+  margin: 0;
+  padding: 5px 0px!important;
+  font-size: 1em;
+  line-height: 120%;
+  position: relative;
+}
+
+.side02 li a{
+  font-size: 12px;
+  margin: 0;
+  padding: 6px 0 6px 30px;
+  display: block;
+  background: url(/img/arr.png) no-repeat 15px center;
+  transition: background-color .1s linear, background-image .1s linear;
+  -webkit-transition: background-color .1s linear, background-image .1s linear;
+}
+
+main{
+  float: right;
+  margin-left:39px;
+  width: 720px;
+  border: 1px #DEDEDE solid;
+  background-color: #fafafa;
+}
+
+.box-title{
+  position: relative;
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 93px;
+  padding: 10px 0px;
+  border-bottom: #dedede 1px solid;
+}
+
+.box-title h3{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+}
+main table .status{
+  height: auto;
+  width: 100%;
+  border-bottom: #dedede 1px solid;
+}
+
+main table tr th {
+  width: 100px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: normal;
+}
+main table tr td {
+  width: 550px;
+  padding-top: 30px;
+  padding-bottom:30px;
+  text-align: left;
+  vertical-align: middle;
+  list-style: none;
+}
+main table tr td li{
+  height: 25px;
+}

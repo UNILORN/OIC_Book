@@ -43,6 +43,7 @@ Route::post('/addauthcart','AuthcartController@add');
 
 //マイページ
 Route::resource('/mypage','MypageController');
+Route::get('buyhistory','BuyhistoryController@index');
 
 //購入
 Route::get('/buy','BuyController@index');
