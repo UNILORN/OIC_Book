@@ -41,7 +41,7 @@ class AdminstockController extends BaseController
             'product_image'         => "text",
             'product_price'         => $request->input('product_price'),
             'product_stock'         => $request->input('product_stock'),
-            'ISBN'                  => 1,
+            'ISBN'                  => $request->input('ISBN'),
             'trancelater_id'        => 1,
             'product_height'        => $request->input('product_height'),
             'product_width'         => $request->input('product_width'),

@@ -29,4 +29,13 @@ class AdminpaymentController extends BaseController
 
     return redirect('/admin/payment');
   }
+
+  public function cancel(Request $request){
+    $payment = UORDER::find($request->input('id'));
+    $payment->uorder_payment = 0;
+    $payment->save();
+
+    return redirect('/admin/payment');
+
+  }
 }

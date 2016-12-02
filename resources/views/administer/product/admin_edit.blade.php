@@ -38,6 +38,10 @@
       <input type="text" name="product_depth" class="form-control" placeholder="ProductName"  value="{{$products->product_depth}}">
     </div>
     <div class="input-group">
+      <span class="input-group-addon" >ISBN</span>
+      <input type="text" name="ISBN" class="form-control" placeholder="ProductName"  value="{{$products->ISBN}}">
+    </div>
+    <div class="input-group">
       <span class="input-group-addon" >ページ数</span>
       <input type="text" name="product_page" class="form-control" placeholder="ProductName"  value="{{$products->product_page}}">
     </div>

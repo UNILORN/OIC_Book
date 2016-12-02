@@ -16,7 +16,7 @@
         <span class="input-group-addon">従業員名</span>
         <input type="text" name="employee_name" class="form-control"  value="{{array_get($request,'employee_name','') }}">
       </div>
-      <input class="btn" type="submit" name="search" value="検索">
+      <input class="btn btn-default" type="submit" name="search" value="検索">
     </form>
   </div>
 

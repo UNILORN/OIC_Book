@@ -32,8 +32,9 @@
                           <div class="brand-search-group">
                               <div class="header-nav-other">
                                   <div class="search-section">
+
                                       <form class="search-form" action="/search">
-                                          <input type="text" placeholder="アイテム検索" class="f-query" name="word" id="q">
+                                          <input type="text" placeholder="アイテム検索" class="f-query" name="product_name" id="q">
                                           <input type="submit" class="btn" value="">
                                       </form>
                                       <div class="store-nav">
