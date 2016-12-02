@@ -9,6 +9,14 @@ class SearchController extends Controller
 {
   public function index(Request $request)
   {
+      $this->validate($request, [
+          'cotegory' => 'max:10',
+          'price' => 'max:10',
+          'sort' => 'max:10',
+          'sort_order' => 'max:10',
+          'price_sort_from' => 'integer:max:10',
+          'price_sort_to' => 'integer:max:10'
+    ]);
     $search = new \App\Service\SearchService;
 
       $cotegory = $request->input('cotegory');
