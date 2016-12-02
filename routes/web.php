@@ -66,5 +66,6 @@ Route::get('/admin/order','AdminorderController@index');
 Route::get('/admin/arrive','AdminarriveController@index');
 Route::get('/admin/payment','AdminpaymentController@index');
 Route::get('/admin/payment_form','AdminpaymentController@submit');
+Route::get('/admin/pay_form','AdminpaymentController@cancel');
 Route::get('/admin/mailform','AdminmailController@index');
 Route::post('/admin/mailform','AdminmailController@send');
