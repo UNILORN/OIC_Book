@@ -17,7 +17,7 @@ class SessioncartController extends Controller
     public function add(Request $request)
     {
       $cart = new \App\Service\SessioncartService;
-      $products = $cart->addProduct($request->get("product_id"));
+      $products = $cart->addProduct($request->get("product_id"),$request->get("number"));
 
       return view('sessioncart',compact('products','quantity'));
     }

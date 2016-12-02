@@ -25,8 +25,8 @@
                       <td class="product_name">{{$product->cartProduct[0]->product_name}}</td>
                       <td class="auther_name">著者</td>
                       <td class="product_price">{{$product->cartProduct[0]->product_price}}円</td>
-                      <td class="btn">
-                        <form class="quantity" action="/cart/edit/" method="post">
+                      <td class="quantity">
+                        <form action="/cart/edit/" method="post">
                             <input type="number" min="1" max="{{$product->cartProduct[0]->product_stock}}" value="{{$product->product_cart_number}}">冊
                         </form>
                       </td>

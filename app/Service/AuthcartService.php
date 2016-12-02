@@ -52,7 +52,8 @@ class AuthcartService{
     foreach ($products as $product)
     {
       $product_id = $product->product_id;
-      $this->addItem($user_id,$product_id,null);
+      $number = $product->number;
+      $this->addItem($user_id,$product_id,$number);
     }
 
     for($i = 0;$i < count($products);$i++){ session()->forget("cart.$i"); }
@@ -82,7 +83,7 @@ class AuthcartService{
   }
   *
   */
-  
+
   public function changeQuantity($index){
   }
 

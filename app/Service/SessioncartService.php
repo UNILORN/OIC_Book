@@ -5,23 +5,25 @@ use App\PRODUCT;
 
 class SessioncartService{
 
-  public function addProduct($product_id){
+  public function addProduct($product_id,$number){
 
-    $item =  PRODUCT::where('product_id',$product_id)->first();
+    $product =  PRODUCT::where('product_id',$product_id)->first();
+    $product["number"] = $number;
     $cart = session()->get("cart",[]);
-    $cart[] = $item;
-    session()->put("cart",$cart);
-    $items = session()->get("cart",[]);
+    $cart[] = $product;
 
-    return $items;
+    session()->put("cart",$cart);
+    $products = session()->get("cart",[]);
+
+    return $products;
   }
 
   public function getTotalfee(){
 
-    $items = session()->get("cart",[]);
+    $products = session()->get("cart",[]);
     $sum = 0;
-    foreach ($items as $item) {
-      $sum += $item->price;
+    foreach ($products as $product) {
+      $sum += $product->price;
     }
 
     return $sum;
@@ -29,17 +31,17 @@ class SessioncartService{
 
   public function getItems(){
 
-    $items = session()->get("cart",[]);
+    $products = session()->get("cart",[]);
 
-    return $items;
+    return $products;
   }
 
   public function deleteItem($index){
 
     session()->forget("cart.$index");
-    $items = session()->get("cart",[]);
+    $products = session()->get("cart",[]);
 
-    return $items;
+    return $products;
   }
 
   public function changeQuantity($index){

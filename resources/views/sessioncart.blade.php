@@ -25,12 +25,9 @@
                       <td class="auther_name">{{$product->auther_name}}</td>
                       <td class="product_price">{{$product->product_price}}</td>
                       <td class="quantity">
-                        <form class="" action="/cart/edit/" method="post">
-                          <select class="sum" name="sum">
-                            @for ($i=1; $i <= 10; $i++)
-                              <option value="{{$i}}">{{$i}}</option>
-                            @endfor
-                          </select>
+                        <form action="/cart/edit/" method="post">
+                              残り在庫 : {{$product->product_stock}}
+                              <input type="number" min="1" max="{{$product->product_stock}}" value="{{$product->number}}">
                         </form>
                       </td>
                       <td class="subtotal">2,200円</td>

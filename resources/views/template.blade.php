@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
     <link rel="stylesheet" href="/css/stylesheet/stylesheet3.css" media="screen" title="no title">
     <link rel="stylesheet" href="/css/@yield('css').css" media="screen" title="no title" charset="utf-8">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="/js/jquery.min.js" charset="utf-8"></script>
   <body>
       <div id="pagetop"></div>
