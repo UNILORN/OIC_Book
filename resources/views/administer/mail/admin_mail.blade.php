@@ -7,6 +7,7 @@
 @section('main')
     <div class="searchform">
         <form class="search" action="/admin/mailform" method="post">
+            {{csrf_field()}}
             <div class="input-group">
                 <span class="input-group-addon">宛先メールアドレス</span>
                 <input type="email" name="email" class="form-control" >

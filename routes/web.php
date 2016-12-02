@@ -64,7 +64,7 @@ Route::post('/admin/employee/{id}/update','AdminemployeeController@update');
 Route::resource('/admin/user','AdminuserController');
 Route::get('/admin/uoderdetail','AdminuoderdetailController@index');
 Route::get('/admin/order','AdminorderController@index');
-Route::get('/admin/arrive','AdminarriveController@index');
+Route::resource('/admin/arrive','AdminarriveController');
 Route::get('/admin/payment','AdminpaymentController@index');
 Route::get('/admin/payment_form','AdminpaymentController@submit');
 Route::get('/admin/pay_form','AdminpaymentController@cancel');

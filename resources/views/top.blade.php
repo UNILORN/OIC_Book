@@ -15,7 +15,7 @@
           <li>
             <a href="/detail?product_id={{$product->product_id}}">
               <span class="rank rank{{$key+1}}">No.{{$key+1}}</span>
-              <span><img src="{{$product->product_image}}" /></span>
+              <span><img class="ranking_img" src="{{$product->product_image}}" /></span>
               <span class="item-name">{{$product->product_name}}</span>
               <span class="price">&yen;{{$product->product_price}}</span>
             </a>
