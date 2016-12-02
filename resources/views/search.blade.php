@@ -22,7 +22,7 @@
                     </div>
                 </div>
 
-                <div class="search_side02">
+                <div class="search_side02" style="position:fixed">
                   @if (count($errors) > 0)
                   <div class="alert alert-danger">
                     <ul>
@@ -59,11 +59,11 @@
                                     <div class="sort">
                                     <p>
                                       <ul>
-                                           <li><input type="radio" name="sort" value="auther_name">作者順（あ〜Z）</li>
+                                           <!-- <li><input type="radio" name="sort" value="auther_name">作者順（あ〜Z）</li> -->
                                            <li><input type="radio" name="sort" value="product_name">商品名順（あ〜Z）</li>
                                            <li><input type="radio" name="sort" value="product_price">価格順</li>
                                       </ul>
-                                      <div class="title">昇順、降順</div>
+                                      <div class="title">昇順・降順</div>
                                       <ul>
                                            <li><input type="radio" name="sort_order" value="desc">降順</li>
                                            <li><input type="radio" name="sort_order" value="asc">昇順</li>
