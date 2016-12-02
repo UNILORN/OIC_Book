@@ -9,7 +9,7 @@ use Carbon\Carbon;
 class ReviewService{
 
   public function getReview($product_id){
-    
+
     $reviews = REVIEW::with('reviewProduct')
     ->with('reviewUsers')
     ->where('product_id',$product_id)

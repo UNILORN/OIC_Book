@@ -3,8 +3,6 @@
 @section('css','cart')
 @section('main')
 <div class="container">
-    <div class="title">
-        <h2>ショッピングカート</h2></div>
     <div class="contents">
         <div class="content">
             <table class="table">
@@ -22,11 +20,11 @@
                 <tbody>
                   @foreach ($products as $index => $product)
                     <tr>
-                      <td><img src="{{$product->product_image}}" alt="" /></td>
-                      <td>{{$product->product_name}}</td>
-                      <td>{{$product->auther_name}}</td>
-                      <td>{{$product->product_price}}</td>
-                      <td class="btn">
+                      <td class="product_img"><img src="{{$product->product_image}}" alt="" /></td>
+                      <td class="product_name">{{$product->product_name}}</td>
+                      <td class="auther_name">{{$product->auther_name}}</td>
+                      <td class="product_price">{{$product->product_price}}</td>
+                      <td class="quantity">
                         <form class="" action="/cart/edit/" method="post">
                           <select class="sum" name="sum">
                             @for ($i=1; $i <= 10; $i++)
@@ -35,8 +33,8 @@
                           </select>
                         </form>
                       </td>
-                      <td>2,200円</td>
-                      <td>
+                      <td class="subtotal">2,200円</td>
+                      <td class="del_btn">
                           <div class="form-bottom">
                             <form action="/delsessioncart" method="post">
                               <input type="hidden" name="index" value="{{$index}}">
