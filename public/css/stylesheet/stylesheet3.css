@@ -454,7 +454,7 @@ content
     margin: 0;
     padding: 0;
     position: absolute;
-    width: 1000px;
+    width: 1080px;
     overflow: hidden;
     zoom: 1;
     border: 1px solid #dedede;
@@ -463,7 +463,7 @@ content
     display: block;
 	position: relative;
 	float: left;
-	width: 1010px;
+	width: 1060px;
 	overflow: hidden;
 }
 .ranking-list ul li{
