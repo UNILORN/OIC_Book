@@ -6,9 +6,8 @@ use Illuminate\Http\Request;
 
 class SessioncartController extends Controller
 {
+    public function index(){
 
-    public function index()
-    {
       $cart = new \App\Service\SessioncartService;
       $products = $cart->getItems();
 
@@ -20,7 +19,7 @@ class SessioncartController extends Controller
       $cart = new \App\Service\SessioncartService;
       $products = $cart->addProduct($request->get("product_id"));
 
-      return view('sessioncart',compact('products'));
+      return view('sessioncart',compact('products','quantity'));
     }
 
     public function delete(Request $request)
