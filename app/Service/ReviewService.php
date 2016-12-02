@@ -13,7 +13,7 @@ class ReviewService{
     $reviews = REVIEW::with('reviewProduct')
     ->with('reviewUsers')
     ->where('product_id',$product_id)
-    ->get();
+    ->paginate(5);
 
     return $reviews;
   }

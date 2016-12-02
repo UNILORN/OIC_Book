@@ -66,6 +66,7 @@
     </div>
     <div class="posted_text">{{$review->review_text}}</div>
     @endforeach
+    {!! $reviews->render() !!}
   </div>
 
     <div class="addreview">
