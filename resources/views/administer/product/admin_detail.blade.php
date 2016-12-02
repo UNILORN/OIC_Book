@@ -6,7 +6,7 @@
 
 @section('main')
 
-    <h2>商品編集画面</h2>
+    <h2>商品詳細画面</h2>
     <form class="form-horizontal" action="/admin/stock/{{$id}}/delete" method="POST">
         {{csrf_field()}}
 
@@ -37,6 +37,10 @@
             <input type="text" name="product_width" class="form-control" placeholder="ProductName"  value="{{$products->product_width}}" disabled>
             <span class="input-group-addon" >奥行き</span>
             <input type="text" name="product_depth" class="form-control" placeholder="ProductName"  value="{{$products->product_depth}}" disabled>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" >ISBN</span>
+            <input type="text" name="ISBN" class="form-control" placeholder="ProductName"  value="{{$products->ISBN}}" disabled>
         </div>
         <div class="input-group">
             <span class="input-group-addon" >ページ数</span>

@@ -39,7 +39,7 @@
         </div>
         <div class="input-group">
             <span class="input-group-addon" >ISBN</span>
-            <input type="text" name="product_ISBN" class="form-control" value="">
+            <input type="text" name="ISBN" class="form-control" value="">
         </div>
         <div class="input-group">
             <span class="input-group-addon" >ページ数</span>
