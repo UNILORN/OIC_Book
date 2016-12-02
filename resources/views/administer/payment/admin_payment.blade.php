@@ -23,6 +23,7 @@
         <td>
           @if($value->uorder_payment)
             <span>入金済み</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn-danger" name="button" onclick="location.href='/admin/pay_form?id={{$value->uorder_id}}'">取り消し</button>
           @else
             <button type="button" name="button" onclick="location.href='/admin/payment_form?id={{$value->uorder_id}}'">入金確認</button>
           @endif
