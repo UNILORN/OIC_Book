@@ -20,7 +20,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                  @foreach ($products as $product)
+                  @foreach ($products as $index => $product)
                     <tr>
                       <td><img src="{{$product->product_image}}" alt="" /></td>
                       <td>{{$product->product_name}}</td>
@@ -36,7 +36,15 @@
                         </form>
                       </td>
                       <td>2,200円</td>
-                      <td><form action="/cart/clear/2" method="post"><div class="form-bottom"><a>x</a></div></form></td>
+                      <td>
+                          <div class="form-bottom">
+                            <form action="/delsessioncart" method="post">
+                              <input type="hidden" name="index" value="{{$index}}">
+                              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                              <input type="submit" value="x">
+                            </form>
+                          </div>
+                      </td>
                   @endforeach
                     </tr>
                 </tbody>

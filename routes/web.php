@@ -36,10 +36,12 @@ Route::get('/search','SearchController@index');
 //sessionカート
 Route::get('/sessioncart', 'SessioncartController@index');
 Route::post('/addsessioncart','SessioncartController@add');
+Route::post('/delsessioncart','SessioncartController@delete');
 
 //authカート
 Route::get('/authcart', 'AuthcartController@index');
 Route::post('/addauthcart','AuthcartController@add');
+Route::post('/delauthcart','AuthcartController@delete');
 
 //マイページ
 Route::resource('/mypage','MypageController');

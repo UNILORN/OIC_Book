@@ -28,7 +28,7 @@ class AuthcartController extends Controller
       {
           $user = $request->user();
           $cart = new \App\Service\AuthcartService;
-          $products = $cart->deleteItem($user->id,$request->get('id'));
+          $products = $cart->deleteItem($user->id,$request->get('product_id'));
 
         return view('authcart',compact('products'));
       }

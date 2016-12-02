@@ -25,7 +25,8 @@ class SessioncartController extends Controller
     public function delete(Request $request)
     {
       $cart = new \App\Service\SessioncartService;
-      $items = $cart->deleteItem($request->get('index'));
+
+      $products = $cart->deleteItem($request->get('index'));
 
       return view('sessioncart',compact('products'));
     }

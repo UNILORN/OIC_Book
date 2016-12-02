@@ -39,7 +39,14 @@
                         </form>
                       </td>
                       <td>2,200円</td>
-                      <td><form action="/cart/clear/2" method="post"><div class="form-bottom"><a>x</a></div></form></td>
+                      <td><form action="/delauthcart" method="post">
+                              <div class="form-bottom">
+                                <input type="hidden" name="product_id" value="{{$product->product_id}}">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="submit" value="x">
+                              </div>
+                          </form>
+                      </td>
                   @endforeach
                     </tr>
                 </tbody>
