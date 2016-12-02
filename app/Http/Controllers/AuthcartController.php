@@ -20,8 +20,9 @@ class AuthcartController extends Controller
         }
         
         $products = $cart->getItems($user->id);
+        $sum = $cart->getSum($user->id);
 
-        return view('authcart',compact('products'));
+        return view('authcart',compact('products','sum'));
       }
 
       public function add(Request $request)
@@ -36,16 +37,18 @@ class AuthcartController extends Controller
         }
 
         $products = $cart->addItem($user->id,$request->get('product_id'),$request->get('number'));
+        $sum = $cart->getSum($user->id);
 
-        return view('authcart',compact('products'));
+        return view('authcart',compact('products','sum'));
       }
 
       public function delete(Request $request)
       {
-          $user = $request->user();
-          $cart = new \App\Service\AuthcartService;
-          $products = $cart->deleteItem($user->id,$request->get('product_id'));
+        $user = $request->user();
+        $cart = new \App\Service\AuthcartService;
+        $products = $cart->deleteItem($user->id,$request->get('product_id'));
+        $sum = $cart->getSum($user->id);
 
-        return view('authcart',compact('products'));
+        return view('authcart',compact('products','sum'));
       }
 }
