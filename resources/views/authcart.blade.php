@@ -13,7 +13,6 @@
                         <th></th>
                         <th>商品名</th>
                         <th>著者</th>
-                        <th>出版社</th>
                         <th>金額</th>
                         <th>数量</th>
                         <th>小計</th>
@@ -26,9 +25,8 @@
                     <tr>
                       <td><img src="{{$product->cartProduct[0]->product_image}}" alt="" /></td>
                       <td>{{$product->cartProduct[0]->product_name}}</td>
-                      <td>テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります</td>
-                      <td>hoge</td>
-                      <td>2,200円</td>
+                      <td>{{$product->cartProduct[0]->auther_name}}</td>
+                      <td>{{$product->cartProduct[0]->product_price}}円</td>
                       <td class="btn">
                         <form class="" action="/cart/edit/" method="post">
                           <select class="sum" name="sum">
