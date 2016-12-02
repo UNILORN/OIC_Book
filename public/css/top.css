@@ -450,7 +450,7 @@ content
     margin: 0;
     padding: 0;
     position: absolute;
-    width: 1080px;
+    width: 1010px;
     overflow: hidden;
     zoom: 1;
     border: 1px solid #dedede;
@@ -459,7 +459,7 @@ content
     display: block;
 	position: relative;
 	float: left;
-	width: 1060px;
+	width: 990px;
 	overflow: hidden;
 }
 .ranking-list ul li{
@@ -506,10 +506,15 @@ content
 .ranking-list .item-name {
 	padding: 7px 0 0 0;
 	font-size: .9em;
+
 	line-height: 140%;
     display: block;
 }
 
+.ranking_img{
+	height: 216px;
+	width: 216px;
+}
 
 /***********************
 
