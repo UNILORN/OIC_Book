@@ -27,7 +27,7 @@
                       <td class="quantity">
                         <form action="/cart/edit/" method="post">
                               残り在庫 : {{$product->product_stock}}
-                              <input type="number" min="1" max="{{$product->product_stock}}" value="{{$product->number}}">
+                              <input class="number" type="number" min="1" max="{{$product->product_stock}}" value="{{$product->number}}" index="{{$index}}">
                         </form>
                       </td>
                       <td class="subtotal">2,200円</td>
@@ -60,4 +60,5 @@
         </div>
     </div>
 </div>
+<script src="/js/cart/cart.js" charset="utf-8"></script>
 @endsection

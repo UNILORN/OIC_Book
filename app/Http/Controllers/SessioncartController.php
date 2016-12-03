@@ -29,4 +29,12 @@ class SessioncartController extends Controller
 
       return view('sessioncart',compact('products'));
     }
+
+    public function numChange(Request $request)
+    {
+      $number = $request->get('number');
+      $index = $request->get('index');
+      $cart = new \App\Service\SessioncartService;
+      $cart->numChange($number,$index);
+    }
 }

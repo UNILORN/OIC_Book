@@ -37,6 +37,7 @@ Route::get('/search','SearchController@index');
 Route::get('/sessioncart', 'SessioncartController@index');
 Route::post('/addsessioncart','SessioncartController@add');
 Route::post('/delsessioncart','SessioncartController@delete');
+Route::get('/sessionnumchange','SessioncartController@numChange');
 
 //authカート
 Route::get('/authcart', 'AuthcartController@index');

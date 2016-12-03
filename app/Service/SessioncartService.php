@@ -11,20 +11,20 @@ class SessioncartService{
     $insert_product["number"] = $number;
     $current_cart = session()->get("cart",[]);
 
-    foreach ($current_cart as $current_cart)
+    foreach ($current_cart as $cart)
     {
-      if($insert_product->product_id === $current_cart->product_id)
-      {
-          $products = session()->get("cart",[]);
-          return $products;
-      }
-    }
+       if($insert_product->product_id == $cart->product_id)
+       {
+           $products = session()->get("cart",[]);
+           return $products;
+       }
+     }
 
-    $cart[] = $insert_product;
-    session()->put("cart",$cart);
-    $products = session()->get("cart",[]);
+           $current_cart[] = $insert_product;
+           session()->put("cart",$current_cart);
+           $products = session()->get("cart",[]);
 
-    return $products;
+           return $products;
   }
 
   public function getTotalfee()
@@ -53,7 +53,11 @@ class SessioncartService{
     return $products;
   }
 
-  public function changeQuantity($index){}
+  public function numChange($number,$index)
+  {
+    $cart = session()->get("cart",[]);
+    $cart[$index]['number'] = $number;
+  }
 
   public function allDelete()
   {
