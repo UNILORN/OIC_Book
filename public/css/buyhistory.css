@@ -3,8 +3,8 @@
   text-align: center;
 }
 .histories img{
-  height:200px;
-  width:200px;
+  height:170px;
+  width:170px;
 }
 main{
   margin-bottom: 50px;
@@ -115,6 +115,7 @@ main{
   right: 0;
   height: 30px;
 }
+}
 main table .status{
   height: auto;
   width: 100%;
@@ -123,7 +124,7 @@ main table .status{
 
 main table tr th {
   width: 100px;
-  text-align: left;
+  text-align: center;
   vertical-align: middle;
   font-weight: normal;
 }
@@ -131,9 +132,10 @@ main table tr td {
   width: 550px;
   padding-top: 30px;
   padding-bottom:30px;
-  text-align: left;
+  text-align: center;
   vertical-align: middle;
   list-style: none;
+  border: solid 1px #fff;
 }
 main table tr td li{
   height: 25px;

@@ -29,12 +29,12 @@ body {
   right:0;
   margin: auto;
   width :400px;
-  height: auto;
+  height: 400px;
 }
 
 .product_text{
   width: 500px;
-  height: auto;
+  height: 450px;
   float: right;
   box-sizing: border-box;
   padding: 15px;
@@ -81,9 +81,9 @@ body {
 }
 
 /*review*/
-.review_background_color{
+.review_background{
   background-color: white;
-  margin-top: 500px;
+  margin-top: 580px;
 }
 .review{
   width: 960px;
@@ -91,21 +91,25 @@ body {
   padding-bottom:10px;
 }
 .customer_review{
-  padding: 20px;
+}
+.customer_review h1{
+  font-size: 25px;
 }
 .addreview{
   text-align: center;
   padding: 20px;
+  margin-bottom: 40px;
 }
 .addreview form{
   padding: 20px;
 }
 .reviewer{
-  text-align: center;
   padding: 10px;
   display: inline-block;
+  width:200px;
 }
 .posted_date{
+  width:150px;
   text-align: center;
   padding: 10px;
   display: inline-block;
@@ -120,9 +124,9 @@ body {
   background-color: black;
 }
 .posted_text{
-  padding: 10px;
+  margin-top: 15px;
   text-align: center;
-  border-bottom: solid 1px ;
+  border-bottom: solid 1px #dedede;
 }
 .review_form{
   display: none;

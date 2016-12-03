@@ -4,8 +4,7 @@
 
 @section('main')
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <div class="product_content">
     <div class="product_img"><img src="{{$product->product_image}}"></div>
       <div class="product_text">
@@ -54,7 +53,7 @@
   </div>
 
 
-<div class="review_background_color">
+<div class="review_background">
   <div class="review">
     <div class="customer_review"><h1>カスタマーレビュー</h1></div>
     @foreach ($reviews as $review)
@@ -70,7 +69,6 @@
     @endforeach
     {!! $reviews->render() !!}
   </div>
-
     <div class="addreview">
         <button class="display_review_form">レビューを書く</button>
         <form class="review_form"action="/addreview" method="post">
@@ -82,5 +80,6 @@
         </form>
     </div>
 </div>
+
 <script src="/js/detail/review.js" charset="utf-8"></script>
 @endsection
