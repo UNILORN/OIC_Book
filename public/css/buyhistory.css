@@ -130,8 +130,8 @@ main table tr th {
 }
 main table tr td {
   width: 550px;
-  padding-top: 30px;
-  padding-bottom:30px;
+  padding-top: 5px;
+  padding-bottom:5px;
   text-align: center;
   vertical-align: middle;
   list-style: none;

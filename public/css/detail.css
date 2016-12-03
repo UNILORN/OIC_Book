@@ -6,7 +6,7 @@ body {
 .product_content{
   position: absolute;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 50px;
   left:0;
   right: 0;
   width: 1010px;
@@ -86,7 +86,7 @@ body {
   margin-top: 580px;
 }
 .review{
-  width: 960px;
+  width: 860px;
   margin:0 auto;
   padding-bottom:10px;
 }
@@ -106,10 +106,10 @@ body {
 .reviewer{
   padding: 10px;
   display: inline-block;
-  width:200px;
+  width:170px;
 }
 .posted_date{
-  width:150px;
+  width:170px;
   text-align: center;
   padding: 10px;
   display: inline-block;

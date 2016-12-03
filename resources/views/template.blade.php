@@ -74,5 +74,14 @@
               </div>
           </div>
       </div>
+      <footer>
+        <div id="adress">
+          0IC-BOOK<br>
+          adress:〒<br>
+                 大阪市天王寺区上本町６−８−４<br>
+
+              E-mail:oic.book.sm2@gmail.com<br>
+        </div>
+      </footer>
   </body>
 </html>
