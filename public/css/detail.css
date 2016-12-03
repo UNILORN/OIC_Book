@@ -82,12 +82,14 @@ body {
 
 /*review*/
 .review_background{
+  border-top: solid 2px #eee;
   background-color: white;
-  margin-top: 580px;
+  margin-top: 600px;
 }
 .review{
   width: 860px;
   margin:0 auto;
+  padding-top:30px;
   padding-bottom:10px;
 }
 .customer_review{
@@ -98,7 +100,7 @@ body {
 .addreview{
   text-align: center;
   padding: 20px;
-  margin-bottom: 40px;
+  position: relative;
 }
 .addreview form{
   padding: 20px;
@@ -130,4 +132,9 @@ body {
 }
 .review_form{
   display: none;
+  position: absolute;
+  top:40px;
+  right:0;
+  bottom:0;
+  left:0;
 }
