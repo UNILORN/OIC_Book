@@ -10,11 +10,11 @@
             {{csrf_field()}}
             <div class="input-group">
                 <span class="input-group-addon">宛先メールアドレス</span>
-                <input type="email" name="email" class="form-control" >
+                <input type="email" name="email" class="form-control" placeholder="発注先メールアドレス">
             </div>
             <div class="input-group">
                 <span class="input-group-addon">件名</span>
-                <input type="text" name="title" class="form-control" value="書籍注文の件" >
+                <input type="text" name="title" class="form-control" value="書籍注文の件" placeholder="件名" >
             </div>
             <div class="input-group">
                 <span class="input-group-addon">本文</span>
