@@ -15,4 +15,6 @@ class CART extends Model
    public function cartProduct(){
      return $this->hasMany('App\PRODUCT', 'product_id', 'product_id');
    }
+
+   public $timestamps = false; 
 }

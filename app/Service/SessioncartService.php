@@ -8,7 +8,7 @@ class SessioncartService{
   public function addProduct($product_id,$number)
   {
     $insert_product =  PRODUCT::where('product_id',$product_id)->first();
-    $insert_product["number"] = $number;
+    $insert_product["product_cart_number"] = $number;
     $current_cart = session()->get("cart",[]);
     /**
     * 選択した商品がすでにカートに入っているかの確認
@@ -58,9 +58,9 @@ class SessioncartService{
   public function getSum(){
     $products = session()->get("cart",[]);
     $sum = 0;
-    
+
     foreach ($products as $key => $product) {
-      $sum += $product->product_price*$product->number;
+      $sum += $product->product_price*$product->product_cart_number;
     }
 
     return $sum;
@@ -69,9 +69,7 @@ class SessioncartService{
   public function numChange($number,$index)
   {
     $cart = session()->get("cart",[]);
-    $cart[$index]['number'] = $number;
-
-    return $cart;
+    $cart[$index]['product_cart_number'] = $number;
   }
 
   public function allDelete()

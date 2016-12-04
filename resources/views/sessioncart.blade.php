@@ -4,11 +4,6 @@
 @section('main')
 
 <div class="container">
-
-  <div v-for="item in cart">
-    @{{item}}
-  </div>
-
     <div class="contents">
         <div class="content">
             <table class="table">
@@ -33,10 +28,10 @@
                       <td class="quantity">
                         <form action="/cart/edit/" method="post">
                               残り在庫 : {{$product->product_stock}}
-                              <input class="number" type="number" min="1" max="{{$product->product_stock}}" value="{{$product->number}}" index="{{$index}}">
+                              <input class="number" type="number" min="1" max="{{$product->product_stock}}" value="{{$product->product_cart_number}}" index="{{$index}}">
                         </form>
                       </td>
-                      <td class="subtotal"></td>
+                      <td class="subtotal">{{$product->product_price*$product->product_cart_number}}円</td>
                       <td class="del_btn">
                           <div class="form-bottom">
                             <form action="/delsessioncart" method="post">
