@@ -67,8 +67,8 @@
     </div>
     <div class="posted_text">{{$review->review_text}}</div>
     @endforeach
-    {!! $reviews->render() !!}
   </div>
+  @if(Auth::check())
     <div class="addreview">
         <button class="display_review_form">レビューを書く</button>
         <form class="review_form"action="/addreview" method="post">
@@ -79,6 +79,7 @@
             <input type="submit" name="some_name" value="送信">
         </form>
     </div>
+  @endif
 </div>
 
 <script src="/js/detail/review.js" charset="utf-8"></script>

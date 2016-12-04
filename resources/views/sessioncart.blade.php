@@ -2,7 +2,13 @@
 @section('title','cart')
 @section('css','cart')
 @section('main')
+
 <div class="container">
+
+  <div v-for="item in cart">
+    @{{item}}
+  </div>
+
     <div class="contents">
         <div class="content">
             <table class="table">
@@ -30,7 +36,7 @@
                               <input class="number" type="number" min="1" max="{{$product->product_stock}}" value="{{$product->number}}" index="{{$index}}">
                         </form>
                       </td>
-                      <td class="subtotal">2,200円</td>
+                      <td class="subtotal"></td>
                       <td class="del_btn">
                           <div class="form-bottom">
                             <form action="/delsessioncart" method="post">
@@ -48,7 +54,7 @@
 
         <div class="total">
             <div class="inner">
-                合計金額 <span>2,200円</span>
+                合計金額 <span>{{$sum}}円</span>
             </div>
         </div>
 
@@ -60,5 +66,5 @@
         </div>
     </div>
 </div>
-<script src="/js/cart/cart.js" charset="utf-8"></script>
+<script src="/js/cart/sessioncart.js" charset="utf-8"></script>
 @endsection

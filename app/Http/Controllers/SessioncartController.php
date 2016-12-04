@@ -10,24 +10,27 @@ class SessioncartController extends Controller
     {
       $cart = new \App\Service\SessioncartService;
       $products = $cart->getItems();
+      $sum = $cart->getSum();
 
-      return view('sessioncart',compact('products'));
+      return view('sessioncart',compact('products','sum'));
     }
 
     public function add(Request $request)
     {
       $cart = new \App\Service\SessioncartService;
       $products = $cart->addProduct($request->get("product_id"),$request->get("number"));
+      $sum = $cart->getSum();
 
-      return view('sessioncart',compact('products','quantity'));
+      return view('sessioncart',compact('products','sum'));
     }
 
     public function delete(Request $request)
     {
       $cart = new \App\Service\SessioncartService;
       $products = $cart->deleteItem($request->get('index'));
+      $sum = $cart->getSum();
 
-      return view('sessioncart',compact('products'));
+      return view('sessioncart',compact('products','sum'));
     }
 
     public function numChange(Request $request)
@@ -35,6 +38,8 @@ class SessioncartController extends Controller
       $number = $request->get('number');
       $index = $request->get('index');
       $cart = new \App\Service\SessioncartService;
-      $cart->numChange($number,$index);
+      $cart = $cart->numChange($number,$index);
+
+      return $cart;
     }
 }
