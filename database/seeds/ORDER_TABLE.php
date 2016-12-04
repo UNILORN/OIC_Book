@@ -26,7 +26,7 @@ class ORDER_TABLE extends Seeder
             'order_number'=>9,
             'order_day'=>$faker->dateTimeThisCentury(),
             'arrive_plan'=>$faker->dateTimeThisCentury(),
-            'remaining_amount'=>$faker->randomDigitNotNull(),
+            'remaining_amount'=>$faker->randomDigit(),
             'order_flug'=>$faker->boolean
           ]);
       }
