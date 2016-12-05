@@ -19,58 +19,82 @@ Route::get('/logout',function(){
   return redirect('/');
 });
 
-//新規登録
-Route::resource('/signup','SignupController');
-Route::get('/signup_confirm','ConfirmController@signup');
+//
+//メイン画面
+//
 
-//商品
-Route::get('/product', 'ProductsController@index');
-Route::get('/detail','DetailController@index');
+    //新規登録
+    Route::resource('/signup','SignupController');
+    Route::get('/signup_confirm','ConfirmController@signup');
 
-//レビュー
-Route::post('/addreview','ReviewController@add');
+    //商品
+    Route::get('/product', 'ProductsController@index');
+    Route::get('/detail','DetailController@index');
 
-//商品一覧
-Route::get('/search','SearchController@index');
+    //レビュー
+    Route::post('/addreview','ReviewController@add');
 
-//sessionカート
-Route::get('/sessioncart', 'SessioncartController@index');
-Route::post('/addsessioncart','SessioncartController@add');
-Route::post('/delsessioncart','SessioncartController@delete');
-Route::get('/sessionnumchange','SessioncartController@numChange');
+    //商品一覧
+    Route::get('/search','SearchController@index');
 
-//authカート
-Route::get('/authcart', 'AuthcartController@index');
-Route::post('/addauthcart','AuthcartController@add');
-Route::post('/delauthcart','AuthcartController@delete');
-Route::get('/authnumchange','AuthcartController@numChange');
+    //sessionカート
+    Route::get('/sessioncart', 'SessioncartController@index');
+    Route::post('/addsessioncart','SessioncartController@add');
+    Route::post('/delsessioncart','SessioncartController@delete');
+    Route::get('/sessionnumchange','SessioncartController@numChange');
 
-//マイページ
-Route::resource('/mypage','MypageController');
-Route::get('buyhistory','BuyhistoryController@index');
+    //authカート
+    Route::get('/authcart', 'AuthcartController@index');
+    Route::post('/addauthcart','AuthcartController@add');
+    Route::post('/delauthcart','AuthcartController@delete');
+    Route::get('/authnumchange','AuthcartController@numChange');
 
-//購入
-Route::get('/buy','BuyController@index');
-Route::post('/buy_confirm','ConfirmController@buy');
+    //マイページ
+    Route::resource('/mypage','MypageController');
+    Route::get('buyhistory','BuyhistoryController@index');
 
-//退会処理
-Route::get('/recede','RecedeController@index');
-Route::get('/recede_confirm','ConfirmController@recode');
+    //購入
+    Route::get('/buy','BuyController@index');
+    Route::post('/buy_confirm','ConfirmController@buy');
 
+    //退会処理
+    Route::get('/recede','RecedeController@index');
+    Route::get('/recede_confirm','ConfirmController@recode');
 
+//
 //管理者ページ
-Route::get('/admin','AdmintopController@index');
-Route::resource('/admin/stock','AdminstockController');
-Route::post('/admin/stock/{id}/update','AdminstockController@update');
-Route::post('/admin/stock/{id}/delete','AdminstockController@destroy');
-Route::resource('/admin/employee','AdminemployeeController');
-Route::post('/admin/employee/{id}/update','AdminemployeeController@update');
-Route::resource('/admin/user','AdminuserController');
-Route::get('/admin/uoderdetail','AdminuoderdetailController@index');
-Route::get('/admin/order','AdminorderController@index');
-Route::resource('/admin/arrive','AdminarriveController');
-Route::get('/admin/payment','AdminpaymentController@index');
-Route::get('/admin/payment_form','AdminpaymentController@submit');
-Route::get('/admin/pay_form','AdminpaymentController@cancel');
-Route::get('/admin/mailform','AdminmailController@index');
-Route::post('/admin/mailform','AdminmailController@send');
+//
+
+    //管理者トップページ
+    Route::get('/admin','AdmintopController@index');
+
+    //管理者商品情報
+    Route::resource('/admin/stock','AdminstockController');
+    Route::post('/admin/stock/{id}/update','AdminstockController@update');
+    Route::post('/admin/stock/{id}/delete','AdminstockController@destroy');
+
+    //管理者従業員情報
+    Route::resource('/admin/employee','AdminemployeeController');
+    Route::post('/admin/employee/{id}/update','AdminemployeeController@update');
+
+    //ユーザ情報
+    Route::resource('/admin/user','AdminuserController');
+
+    //ユーザ注文情報
+    Route::get('/admin/uoderdetail','AdminuoderdetailController@index');
+
+    //店舗発注情報
+    Route::get('/admin/order','AdminorderController@index');
+
+        //発注メールフォーム
+        Route::get('/admin/mailform','AdminmailController@index');
+        Route::post('/admin/mailform','AdminmailController@send');
+
+    //店舗入荷情報
+    Route::resource('/admin/arrive','AdminarriveController');
+
+    //入金確認情報
+    Route::get('/admin/payment','AdminpaymentController@index');
+    Route::get('/admin/payment_form','AdminpaymentController@submit');
+    Route::get('/admin/pay_form','AdminpaymentController@cancel');
+
