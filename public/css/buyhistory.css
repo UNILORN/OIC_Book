@@ -137,6 +137,9 @@ main table tr td {
   list-style: none;
   border: solid 1px #fff;
 }
+main table tr td .img{
+  text-align: left;
+}
 main table tr td li{
   height: 25px;
 }

@@ -43,6 +43,7 @@ Route::get('/sessionnumchange','SessioncartController@numChange');
 Route::get('/authcart', 'AuthcartController@index');
 Route::post('/addauthcart','AuthcartController@add');
 Route::post('/delauthcart','AuthcartController@delete');
+Route::get('/authnumchange','AuthcartController@numChange');
 
 //マイページ
 Route::resource('/mypage','MypageController');

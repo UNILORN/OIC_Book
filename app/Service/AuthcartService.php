@@ -52,7 +52,7 @@ class AuthcartService{
     foreach ($products as $product)
     {
       $product_id = $product->product_id;
-      $number = $product->number;
+      $number = $product->product_cart_number;
       $this->addItem($user_id,$product_id,$number);
     }
 
@@ -70,6 +70,14 @@ class AuthcartService{
 
    return $sum;
   }
+
+  public function numChange($number,$product_id,$user_id)
+  {
+    $cart = CART::where('user_id',$user_id)
+    ->where('product_id',$product_id)
+    ->update(['product_cart_number' => $number]);
+  }
+
 
   /*  使ってる場所不明なので一時コメントアウト
   *
