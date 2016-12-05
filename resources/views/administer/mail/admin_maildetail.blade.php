@@ -44,7 +44,9 @@ mail：oic.book.sm2@gmail.co.jp
 ------------------------------------------------------
                 </textarea>
             </div>
+            <input type="hidden" name="vendor_id" value="{{$vendor->vendor_id}}">
             <input type="hidden" name="vendor_name" value="{{$vendor->vendor_name}}">
+            <input type="hidden" name="product_id" value="{{$product->product_id}}">
             <input type="hidden" name="product_name" value="{{$product->product_name}}">
             <input type="hidden" name="ISBN" value="{{$product->ISBN}}">
             <input type="hidden" name="num" value="{{$num}}">
