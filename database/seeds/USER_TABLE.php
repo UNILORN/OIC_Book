@@ -31,7 +31,7 @@ class USER_TABLE extends Seeder
               'user_recede_flug'=>$faker->boolean()
           ]);
       }
-      for($i=51; $i<100; $i++)
+      for($i=51; $i<=100; $i++)
       {
           DB::table('users')->insert([
               'id'=>$i,
