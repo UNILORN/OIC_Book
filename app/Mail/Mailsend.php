@@ -35,7 +35,7 @@ class Mailsend extends Mailable
         return $this->view('administer.mail.admin_mailcontent')
             ->subject($this->request->title)
             ->with([
-                'content' => $this->request->message
+                'request' => $this->request
             ]);
     }
 }

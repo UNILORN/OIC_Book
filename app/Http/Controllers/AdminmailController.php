@@ -7,6 +7,8 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\ORDER;
+use App\PRODUCT;
+use App\VENDOR;
 use Illuminate\Http\Request;
 use Mail; // 追加
 use App\Mail\Mailsend; // 追加
@@ -16,7 +18,21 @@ class AdminmailController extends BaseController
 
     public function index()
     {
-        return view('administer/mail/admin_mail');
+        $vendor = VENDOR::all();
+        $product = PRODUCT::all();
+        return view('administer/mail/admin_mail',compact('vendor','product'));
+    }
+
+    public function detail(Request $request){
+
+        $vendor  = VENDOR::where('vendor_id',$request->input('vendor'))->first();
+        $title   = $request->input('title');
+        $product = PRODUCT::where('product_id',$request->input('product'))->first();
+        $num     = $request->input('num');
+        $date    = $request->input('date');
+
+        return view('administer/mail/admin_maildetail',compact('vendor','title','product','num','date'));
+
     }
 
     public function send(Request $request)

@@ -86,9 +86,10 @@ Route::get('/logout',function(){
     //店舗発注情報
     Route::get('/admin/order','AdminorderController@index');
 
-        //発注メールフォーム
-        Route::get('/admin/mailform','AdminmailController@index');
-        Route::post('/admin/mailform','AdminmailController@send');
+    //発注メールフォーム
+    Route::get('/admin/mailform','AdminmailController@index');
+    Route::post('/admin/mailformdetail','AdminmailController@detail');
+    Route::post('/admin/mailform','AdminmailController@send');
 
     //店舗入荷情報
     Route::resource('/admin/arrive','AdminarriveController');
