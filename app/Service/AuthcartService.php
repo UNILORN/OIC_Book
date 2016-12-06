@@ -46,6 +46,12 @@ class AuthcartService{
 
     return $products;
   }
+  public function deleteAllItem($user,$cartarray)
+  {
+    CART::whereIn('user_id',$user)
+    ->WhereIn('product_id', $cartarray)
+    ->delete();
+  }
 
   public function sessionTakeover($user_id,$products)
   {

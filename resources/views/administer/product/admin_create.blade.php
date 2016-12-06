@@ -79,12 +79,19 @@
         new Vue({
           e1:'body',
           date:{
-            name:'name',
-            email:'email',
-            user_post_code:'user_post_code',
-            user_address:'user_address',
-            user_phone_number:'user_phone_number'
-          }
+            name:'product_id',
+            email:'product_name',
+            user_post_code:'product_image',
+            user_address:'product_price',
+            user_phone_number:'product_stock',
+            trancelater_ID:'trancelater_ID',
+            product_height:'product_height',
+            product_width:'product_width',
+            product_depth:'product_depth',
+            product_page:'product_page',
+            product_start_day:'product_start_day',
+            product_explanation:'product_explanation'
+                }
 
         })
         </script>
@@ -99,9 +106,11 @@
         width:700px;
         background: rgba(1, 1, 1, 0.8);
         margin: 0 auto;
+        z-index: 99;
       }
       .confirm_text{
         text-align: center;
+        z-index: 100;
 
       }
     </style>
