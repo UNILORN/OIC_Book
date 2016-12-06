@@ -80,6 +80,9 @@ Route::get('/logout',function(){
     //ユーザ情報
     Route::resource('/admin/user','AdminuserController');
 
+    //仕入先情報
+    Route::resource('/admin/vendor','AdminvendorController');
+
     //ユーザ注文情報
     Route::get('/admin/uoderdetail','AdminuoderdetailController@index');
 
@@ -98,4 +101,5 @@ Route::get('/logout',function(){
     Route::get('/admin/payment','AdminpaymentController@index');
     Route::get('/admin/payment_form','AdminpaymentController@submit');
     Route::get('/admin/pay_form','AdminpaymentController@cancel');
+
 
