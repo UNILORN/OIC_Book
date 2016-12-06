@@ -1,24 +1,43 @@
-$(function(){
+$(function () {
     var sales;
     $.ajax({
         url: "/api/admin/sales"
-    }).done(function(data){ //ajaxの通信に成功した場合
+    }).done(function (data) { //ajaxの通信に成功した場合
         sales = data;
-        var data = [];
-        for (key in sales){
-            data[data.length] = {"ジャンル":key , "価格":sales[key]}
+
+        var salesdata = [
+            ['Element', '売上/円', { role: 'style' }, { role: 'annotation' } ]
+        ];
+
+        for (key in sales) {
+            salesdata[salesdata.length] = [key, sales[key]["price"],"",sales[key]["num"]+"冊"];
         }
 
-        var chart = new tauCharts.Chart({
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawBasic);
 
-            data: data,  //表示するデータ
-            type: 'bar',  //グラフの種類
-            x: 'ジャンル',  //X軸の要素
-            y: '価格',  //Y軸の要素
-            color: '月'  //カラーの基準要素
+        function drawBasic() {
 
-        });
-        chart.renderTo('#stage');
+            var data = new google.visualization.arrayToDataTable(salesdata);
+
+            var options = {
+                title: 'ジャンル別総合売上',
+                hAxis: {
+                    title: 'ジャンル',
+                    viewWindow: {
+                        min: [7, 30, 0],
+                        max: [17, 30, 0]
+                    }
+                },
+                vAxis: {
+                    title: '売上'
+                }
+            };
+
+            var chart = new google.visualization.ColumnChart(
+                document.getElementById('genre_sales'));
+
+            chart.draw(data, options);
+        }
     });
-
 });

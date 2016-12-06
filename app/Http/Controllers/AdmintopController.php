@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\PRODUCT;
 use App\UORDER;
 use App\GENRE;
+use App\REVIEW;
 
 class AdmintopController extends BaseController
 {
@@ -17,7 +18,7 @@ class AdmintopController extends BaseController
         return view('/administer/admin_top');
     }
 
-    public function sales()
+    public function genre_sales()
     {
         $uorder = UORDER::with('uorderDetail')
             ->with('uorderDetail.uorderProduct')
@@ -28,16 +29,23 @@ class AdmintopController extends BaseController
 
 //        ジャンルの数だけ初期化
         foreach ($genre as $key => $value){
-            $genre_sales[$value->category] = 0;
+            $genre_sales[$value->category] = [];
+            $genre_sales[$value->category]["price"] = 0;
+            $genre_sales[$value->category]["num"] = 0;
         }
 
         foreach ($uorder as $u_value){
             foreach ($u_value->uorderDetail as $value){
                 $genre_name = GENRE::find($value->uorderProduct->genre_id);
-                $genre_sales[$genre_name->category] += intval($value->uorderProduct->product_price) * intval($value->uorder_number);
+                $genre_sales[$genre_name->category]["price"] += intval($value->uorderProduct->product_price) * intval($value->uorder_number);
+                $genre_sales[$genre_name->category]["num"] += 1;
             }
 
         }
         return response()->json($genre_sales);
+    }
+
+    public function product_review(){
+
     }
 }
