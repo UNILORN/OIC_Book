@@ -27,4 +27,7 @@ class AdminorderController extends BaseController
             ->paginate(20);
         return view('/administer/order/admin_order', compact('order', 'request'));
     }
+    public function create(){
+      return view('/administer/order/admin_create');
+    }
 }

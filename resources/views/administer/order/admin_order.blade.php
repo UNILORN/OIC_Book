@@ -6,7 +6,13 @@
 
 @section('main')
 
+<div class="row container">
   <div class="searchform">
+    <div class="col-md-1 right">
+        <button class="btn btn-default" type="button" onclick="location.href='/admin/order/create'">新規登録</button>
+    </div>
+  </div>
+</div>
     <form class="search" action="/admin/order" method="GET">
       <div class="input-group">
         <span class="input-group-addon">発注ID</span>
