@@ -16,11 +16,11 @@ class UORDERDETAILS_TABLE extends Seeder
        //faker使う。普通に使う場合と同じ。
       $faker = Faker\Factory::create('ja_JP');
 
-      for($i=1; $i<=500; $i++)
+      for($i=1; $i<=2000; $i++)
       {
           DB::table('UORDERDETAILS')->insert([
-            'uorder_id'=>$i,
-            'product_id'=>$i%100,
+            'uorder_id'=>$i%1500 + 1,
+            'product_id'=>rand(1,100),
             'uorder_number'=>$faker->randomDigitNotNull(),
             'uorder_details_flug'=>$faker->boolean()
           ]);
