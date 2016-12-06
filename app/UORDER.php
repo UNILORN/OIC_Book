@@ -16,7 +16,7 @@ class UORDER extends Model
 
     public function uorderDetail()
     {
-        return $this->hasOne('App\UORDER_DETAIL', 'uorder_id');
+        return $this->hasMany('App\UORDER_DETAIL', 'uorder_id');
     }
 
     public function scopeID($query, $id)
