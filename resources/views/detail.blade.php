@@ -49,12 +49,9 @@
           <p><b>アイテム説明</b></p>
           <p>{{$product->product_explanation}}</p>
       </div>
-  </div>
 
 
-<div class="review_background_color">
   <div class="review">
-    <div class="customer_review"><h1>カスタマーレビュー</h1></div>
     @foreach ($reviews as $review)
     <div class="reviewer">投稿者：{{$review->reviewUsers[0]->name}}</div>
     <div class="posted_date">{{$review->entry_time}}</div>
@@ -78,6 +75,6 @@
             <input type="submit" name="some_name" value="送信">
         </form>
     </div>
-</div>
+  </div>
 <script src="/js/detail/review.js" charset="utf-8"></script>
 @endsection
