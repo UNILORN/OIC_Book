@@ -52,7 +52,7 @@
         <td>{{$value->arrive_price}}</td>
       </tr>
     @endforeach
-    {{$arrive->links()}}
+    {{$arrive->appends($request->toArray())->links()}}
   </table>
 
 @endsection

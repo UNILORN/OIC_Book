@@ -60,7 +60,7 @@
         <td>{{$value->remaining_amount}}</td>
       </tr>
     @endforeach
-    {{$order->links()}}
+    {{$order->appends($request->toArray())->links()}}
   </table>
 
 @endsection

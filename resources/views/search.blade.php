@@ -35,7 +35,7 @@
                     <div id="sidebar">
                         <div class="keyword-section" style="margin-top: 0px !important;">
                             <div class="category-section">
-                              <div class="title">ジャンルから絞り込む</div>
+                              <!-- <div class="title">ジャンルから絞り込む</div>
                               <form action="/search" method="GET">
                                  <ul>
                                   <li class="love-category">
@@ -44,7 +44,7 @@
                                     <input type="radio" name="cotegory" value="2">政治</li>
                                     <li class="adlut-category">
                                 <input type="radio" name="cotegory" value="3">アダルト</li>
-                                </ul>
+                                </ul> -->
 
                                 </div>
                                 <div class="price-section">
