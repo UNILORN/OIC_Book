@@ -4,6 +4,30 @@
 @section('payment','class="active"')
 
 @section('main')
+    <div class="searchform">
+
+        <form class="search" action="/admin/payment" method="GET">
+            <div class="input-group">
+                <span class="input-group-addon">注文ID</span>
+                <input type="text" name="payment_id" class="form-control"
+                       value="{{ array_get($request,'payment_id','') }}">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">注文者電話番号</span>
+                <input type="text" name="user_phonenum" class="form-control"
+                       value="{{array_get($request,'user_phonenum','') }}">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">注文日付</span>
+                <input type="text" name="uorder_from" class="form-control"
+                       value="{{array_get($request,'uorder_from','') }}">
+                <span class="input-group-addon">〜</span>
+                <input type="text" name="uorder_to" class="form-control"
+                       value="{{array_get($request,'uorder_to','') }}">
+            </div>
+            <input class="btn btn-default" type="submit" name="search" value="検索">
+        </form>
+    </div>
   <table class="table">
     <tr>
       <th>注文ID</th>

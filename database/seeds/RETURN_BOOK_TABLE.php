@@ -16,7 +16,7 @@ class RETURN_BOOK_TABLE extends Seeder
        //faker使う。普通に使う場合と同じ。
       $faker = Faker\Factory::create('ja_JP');
 
-      for($i=0; $i<100; $i++)
+      for($i=1; $i<=100; $i++)
       {
           DB::table('RETURN_BOOK')->insert([
             'vender_id'=>$i,

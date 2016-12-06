@@ -32,6 +32,7 @@ class AdminarriveController extends BaseController
     public function create()
     {
 
+      return view('/administer/arrive/admin_create');
 
     }
 
