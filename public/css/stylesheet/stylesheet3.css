@@ -50,7 +50,6 @@ h1 {
 	padding: 0;
 	font-size: 3.5em;
 	font-weight: normal;
-	color: #fff;
 }
 h2 {
 	margin: 20px 0 40px;
@@ -715,12 +714,11 @@ search.html
 
 
 footer{
-margin: 0;
-padding:0;
-height: 100px;
-width: 1010px;
+	margin-top: 50px;
+	border-top: solid 2px #eee;
+	padding: 30px;
 }
 #adress{
-    margin-left:190px;
+    padding-left:190px;
 }
 Contact GitHub API Training Shop Blog About

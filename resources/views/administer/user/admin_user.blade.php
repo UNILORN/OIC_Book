@@ -20,7 +20,7 @@
         <input type="text" name="tel" class="form-control"  value="{{array_get($request,'tel','') }}">
       </div>
 
-      <input class="btn" type="submit" name="search" value="検索">
+      <input class="btn btn-default" type="submit" name="search" value="検索">
     </form>
   </div>
 

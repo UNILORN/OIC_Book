@@ -32,7 +32,7 @@
         <span class="input-group-addon">〜</span>
         <input type="date" name="arrive_day_to"   class="form-control"  value="{{array_get($request,'arrive_day_to','') }}">
       </div>
-      <input class="btn" type="submit" name="search" value="検索">
+      <input class="btn btn-default" type="submit" name="search" value="検索">
     </form>
   </div>
 

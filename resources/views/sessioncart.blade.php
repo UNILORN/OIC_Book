@@ -2,9 +2,8 @@
 @section('title','cart')
 @section('css','cart')
 @section('main')
+
 <div class="container">
-    <div class="title">
-        <h2>ショッピングカート</h2></div>
     <div class="contents">
         <div class="content">
             <table class="table">
@@ -20,23 +19,28 @@
                     </tr>
                 </thead>
                 <tbody>
-                  @foreach ($products as $product)
+                  @foreach ($products as $index => $product)
                     <tr>
-                      <td><img src="{{$product->product_image}}" alt="" /></td>
-                      <td>{{$product->product_name}}</td>
-                      <td>{{$product->auther_name}}</td>
-                      <td>{{$product->product_price}}</td>
-                      <td class="btn">
-                        <form class="" action="/cart/edit/" method="post">
-                          <select class="sum" name="sum">
-                            @for ($i=1; $i <= 10; $i++)
-                              <option value="{{$i}}">{{$i}}</option>
-                            @endfor
-                          </select>
+                      <td class="product_img"><img src="{{$product->product_image}}" alt="" /></td>
+                      <td class="product_name">{{$product->product_name}}</td>
+                      <td class="auther_name">{{$product->auther_name}}</td>
+                      <td class="product_price">{{$product->product_price}}</td>
+                      <td class="quantity">
+                        <form action="/cart/edit/" method="post">
+                              残り在庫 : {{$product->product_stock}}
+                              <input class="number" type="number" min="1" max="{{$product->product_stock}}" value="{{$product->product_cart_number}}" index="{{$index}}">
                         </form>
                       </td>
-                      <td>2,200円</td>
-                      <td><form action="/cart/clear/2" method="post"><div class="form-bottom"><a>x</a></div></form></td>
+                      <td class="subtotal">{{$product->product_price*$product->product_cart_number}}円</td>
+                      <td class="del_btn">
+                          <div class="form-bottom">
+                            <form action="/delsessioncart" method="post">
+                              <input type="hidden" name="index" value="{{$index}}">
+                              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                              <input type="submit" value="x">
+                            </form>
+                          </div>
+                      </td>
                   @endforeach
                     </tr>
                 </tbody>
@@ -45,7 +49,7 @@
 
         <div class="total">
             <div class="inner">
-                合計金額 <span>2,200円</span>
+                合計金額 <span>{{$sum}}円</span>
             </div>
         </div>
 
@@ -57,4 +61,5 @@
         </div>
     </div>
 </div>
+<script src="/js/cart/sessioncart.js" charset="utf-8"></script>
 @endsection

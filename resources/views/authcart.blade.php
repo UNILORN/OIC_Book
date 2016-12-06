@@ -3,8 +3,6 @@
 @section('css','cart')
 @section('main')
 <div class="container">
-    <div class="title">
-        <h2>ショッピングカート</h2></div>
     <div class="contents">
         <div class="content">
             <table class="table">
@@ -13,7 +11,6 @@
                         <th></th>
                         <th>商品名</th>
                         <th>著者</th>
-                        <th>出版社</th>
                         <th>金額</th>
                         <th>数量</th>
                         <th>小計</th>
@@ -24,40 +21,45 @@
 
                   @foreach ($products as $product)
                     <tr>
-                      <td><img src="{{$product->cartProduct[0]->product_image}}" alt="" /></td>
-                      <td>{{$product->cartProduct[0]->product_name}}</td>
-                      <td>テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります</td>
-                      <td>hoge</td>
-                      <td>2,200円</td>
-                      <td class="btn">
-                        <form class="" action="/cart/edit/" method="post">
-                          <select class="sum" name="sum">
-                            @for ($i=1; $i <= 10; $i++)
-                              <option value="{{$i}}">{{$i}}</option>
-                            @endfor
-                          </select>
+                      <td class="product_img"><img src="{{$product->cartProduct[0]->product_image}}" alt="" /></td>
+                      <td class="product_name">{{$product->cartProduct[0]->product_name}}</td>
+                      <td class="auther_name">著者</td>
+                      <td class="product_price">{{$product->cartProduct[0]->product_price}}円</td>
+                      <td class="quantity">
+                        <form action="/cart/edit/" method="post">
+                            残り在庫 : {{$product->cartProduct[0]->product_stock}}
+                            <input class="number" type="number" min="1" max="{{$product->cartProduct[0]->product_stock}}" value="{{$product->product_cart_number}}" index="{{$product->product_id}}">
                         </form>
                       </td>
-                      <td>2,200円</td>
-                      <td><form action="/cart/clear/2" method="post"><div class="form-bottom"><a>x</a></div></form></td>
-                  @endforeach
+                      <td class="subtotal">{{$product->cartProduct[0]->product_price*$product->product_cart_number}}円</td>
+                      <td class="del_btn">
+                          <form action="/delauthcart" method="post">
+                              <div class="form-bottom">
+                                <input type="hidden" name="product_id" value="{{$product->product_id}}">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="submit" value="x">
+                              </div>
+                          </form>
+                      </td>
                     </tr>
+                  @endforeach
                 </tbody>
             </table>
         </div>
 
         <div class="total">
             <div class="inner">
-                合計金額 <span>2,200円</span>
+                合計金額 <span>{{$sum}}円</span>
             </div>
         </div>
 
         <div class="button">
-            <div class="inner">
+            <div class="back_or_next">
                 <div class="back"><a href="/">買い物を続ける</a></div>
                 <div class="next"><a href="buy">レジに進む</a></div>
             </div>
         </div>
     </div>
 </div>
+<script src="/js/cart/authcart.js" charset="utf-8"></script>
 @endsection

@@ -6,7 +6,7 @@ body {
 .product_content{
   position: absolute;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 50px;
   left:0;
   right: 0;
   width: 1010px;
@@ -29,12 +29,12 @@ body {
   right:0;
   margin: auto;
   width :400px;
-  height: auto;
+  height: 400px;
 }
 
 .product_text{
   width: 500px;
-  height: auto;
+  height: 450px;
   float: right;
   box-sizing: border-box;
   padding: 15px;
@@ -81,25 +81,37 @@ body {
 }
 
 /*review*/
+.review_background{
+  border-top: solid 2px #eee;
+  background-color: white;
+  margin-top: 600px;
+}
 .review{
-  margin-top: 500px;
-  width: 960px;
+  width: 860px;
   margin:0 auto;
+  padding-top:30px;
   padding-bottom:10px;
+}
+.customer_review{
+}
+.customer_review h1{
+  font-size: 25px;
 }
 .addreview{
   text-align: center;
   padding: 20px;
+  position: relative;
 }
 .addreview form{
   padding: 20px;
 }
 .reviewer{
-  text-align: center;
   padding: 10px;
   display: inline-block;
+  width:170px;
 }
 .posted_date{
+  width:170px;
   text-align: center;
   padding: 10px;
   display: inline-block;
@@ -114,10 +126,15 @@ body {
   background-color: black;
 }
 .posted_text{
-  padding: 10px;
+  margin-top: 15px;
   text-align: center;
-  border-bottom: solid 1px ;
+  border-bottom: solid 1px #dedede;
 }
 .review_form{
   display: none;
+  position: absolute;
+  top:40px;
+  right:0;
+  bottom:0;
+  left:0;
 }

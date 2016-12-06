@@ -3,7 +3,8 @@
 @section('css','detail')
 
 @section('main')
-
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <div class="product_content">
     <div class="product_img"><img src="{{$product->product_image}}"></div>
       <div class="product_text">
@@ -51,6 +52,10 @@
       </div>
 
 
+<<<<<<< HEAD
+=======
+<div class="review_background">
+>>>>>>> 48db0dba3aff980c3676c3b73b316212d29ee8a7
   <div class="review">
     @foreach ($reviews as $review)
     <div class="reviewer">投稿者：{{$review->reviewUsers[0]->name}}</div>
@@ -64,7 +69,7 @@
     <div class="posted_text">{{$review->review_text}}</div>
     @endforeach
   </div>
-
+  @if(Auth::check())
     <div class="addreview">
         <button class="display_review_form">レビューを書く</button>
         <form class="review_form"action="/addreview" method="post">
@@ -75,6 +80,12 @@
             <input type="submit" name="some_name" value="送信">
         </form>
     </div>
+<<<<<<< HEAD
   </div>
+=======
+  @endif
+</div>
+
+>>>>>>> 48db0dba3aff980c3676c3b73b316212d29ee8a7
 <script src="/js/detail/review.js" charset="utf-8"></script>
 @endsection

@@ -1,5 +1,5 @@
 @extends('template')
-@section('title','mypage')
+@section('title','buyhistory')
 @section('css','buyhistory')
 
 
@@ -36,7 +36,7 @@
             <tbody>
             @foreach ($histories as $history)
                   <tr>
-                    <td><a href="detail/?product_id={{$history->product_id}}"><img src="{{$history->product_image}}" alt="" /></a></td>
+                    <td><div class="img"><a href="detail/?product_id={{$history->product_id}}"><img src="{{$history->product_image}}" alt="" /></a></div></td>
                     <td><a href="detail/?product_id={{$history->product_id}}">{{$history->product_name}}</a></td>
                     <td>{{$history->product_start_day}}</td>
                   </tr>

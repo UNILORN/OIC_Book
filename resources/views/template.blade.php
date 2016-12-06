@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/stylesheet/stylesheet3.css" media="screen" title="no title">
     <link rel="stylesheet" href="/css/@yield('css').css" media="screen" title="no title" charset="utf-8">
     <script src="/js/jquery.min.js" charset="utf-8"></script>
+    <script src="/js/vue.min.js" charset="utf-8"></script>
   <body>
       <div id="pagetop"></div>
           <div class="layout" id="Top">
@@ -32,8 +33,9 @@
                           <div class="brand-search-group">
                               <div class="header-nav-other">
                                   <div class="search-section">
+
                                       <form class="search-form" action="/search">
-                                          <input type="text" placeholder="アイテム検索" class="f-query" name="word" id="q">
+                                          <input type="text" placeholder="アイテム検索" class="f-query" name="product_name" id="q">
                                           <input type="submit" class="btn" value="">
                                       </form>
                                       <div class="store-nav">
@@ -46,10 +48,14 @@
                                       <div id="BagWrap" class="bag-wrap">
                                           <div class="bag">
                                               @if(Auth::check())
-
                                               <a href="/authcart" id="header_view_cart_link1">
                                                 <img alt="bag" src="//hih67k1jnwfciz.cdn.jp.idcfcloud.com/images/cart3.gif">
-                                                <span class="item-num-wrap"><span class="item-num">0</span></span>
+                                                <?php
+                                                  $user = Auth::user();
+                                                  $cart = new \App\Service\AuthcartService;
+                                                  $products = $cart->getItems($user->id);
+                                                ?>
+                                                  <span class="item-num-wrap"><span class="item-num">{{count($products)}}</span></span>
                                               </a>
                                               @else
                                                 <a href="/sessioncart" id="header_view_cart_link1">
@@ -69,5 +75,14 @@
               </div>
           </div>
       </div>
+      <footer>
+        <div id="adress">
+          OIC-BOOK<br>
+          adress:〒<br>
+                 大阪市天王寺区上本町６−８−４<br>
+
+              E-mail:oic.book.sm2@gmail.com<br>
+        </div>
+      </footer>
   </body>
 </html>
