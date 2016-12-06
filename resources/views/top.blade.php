@@ -24,5 +24,6 @@
         </ul>
       </div>
     </div>
+    <a href="search">→商品一覧へ</a>
 </div>
 @endsection
