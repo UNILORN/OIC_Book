@@ -23,7 +23,7 @@
         @endforeach
         </ul>
       </div>
-      <a href="search">→商品一覧へ</a>
     </div>
+    <a href="search">→商品一覧へ</a>
 </div>
 @endsection
