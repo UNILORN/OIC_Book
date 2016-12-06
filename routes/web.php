@@ -98,3 +98,4 @@ Route::get('/logout',function(){
     Route::get('/admin/payment','AdminpaymentController@index');
     Route::get('/admin/payment_form','AdminpaymentController@submit');
     Route::get('/admin/pay_form','AdminpaymentController@cancel');
+

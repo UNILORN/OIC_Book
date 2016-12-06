@@ -1,0 +1,8 @@
+.content_title {
+    border-bottom: solid 2px #bbbbbb;
+}
+#stage {
+    position: absolute;
+    width: 80vh;
+    height: 250px;
+}

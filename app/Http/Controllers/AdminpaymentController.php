@@ -21,8 +21,8 @@ class AdminpaymentController extends BaseController
         $payment = UORDER::ID($request->input('payment_id'))
             ->DayFrom($request->input('uorder_from'))
             ->DayTo($request->input('uorder_to'))
+            //->ManyUserID($user)
             ->with('uorderUser')
-            ->UserManyUserID($user)
             ->orderBy('uorder_day', 'desc')
             ->paginate(20);
 

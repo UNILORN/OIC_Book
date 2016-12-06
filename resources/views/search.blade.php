@@ -90,18 +90,12 @@
                     <div id="sidebar">
                         <div class="keyword-section" style="margin-top: 0px !important;">
                             <div class="category-section">
-                              <!-- <div class="title">ジャンルから絞り込む</div>
+                              <div class="title">ジャンルから絞り込む</div>
                               <form action="/search" method="GET">
                                  <ul>
                                   <li class="love-category">
                                   <input type="radio" name="cotegory" value="1">恋愛</li>
-                                <li class="politics-category">
-                                    <input type="radio" name="cotegory" value="2">政治</li>
-                                    <li class="adlut-category">
-                                <input type="radio" name="cotegory" value="3">アダルト</li>
-                                </ul> -->
-
-                                </div>
+                                </ul>
                                 <div class="price-section">
                                 <div class="title">価格帯から絞り込む</div>
                                    <ul class="local-nav">
