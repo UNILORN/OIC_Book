@@ -54,7 +54,7 @@
         </td>
       </tr>
     @endforeach
-    {{$payment->links()}}
+    {{$payment->appends($request->toArray())->links()}}
 
   </table>
 
