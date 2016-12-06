@@ -46,6 +46,7 @@ class UORDER extends Model
     public function scopeManyUserID($query, $userid)
     {
         if (!empty($userid)) {
+            $array = [];
             foreach ($userid as $value) {
                 $array[] = $value->id;
             }
