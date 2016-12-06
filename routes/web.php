@@ -84,7 +84,7 @@ Route::get('/logout',function(){
     Route::get('/admin/uoderdetail','AdminuoderdetailController@index');
 
     //店舗発注情報
-    Route::get('/admin/order','AdminorderController@index');
+    Route::resource('/admin/order','AdminorderController');
 
     //発注メールフォーム
     Route::get('/admin/mailform','AdminmailController@index');
@@ -98,4 +98,3 @@ Route::get('/logout',function(){
     Route::get('/admin/payment','AdminpaymentController@index');
     Route::get('/admin/payment_form','AdminpaymentController@submit');
     Route::get('/admin/pay_form','AdminpaymentController@cancel');
-
