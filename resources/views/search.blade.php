@@ -102,13 +102,6 @@
                                 </ul> -->
 
                                 </div>
-                                <div class="price-section">
-                                <div class="title">価格帯から絞り込む</div>
-                                   <ul class="local-nav">
-                                    <li class="price-range">
-                                      価格下限<input type="text" name="price_sort_from" class="form-control"  value="{{array_get($request,'price_sort_from','') }}"><br>
-                                      価格上限<input type="text" name="price_sort_to"   class="form-control"  value="{{array_get($request,'price_soro_to','') }}">
-                                    </li>
             </div>
         </div>
     </div>
