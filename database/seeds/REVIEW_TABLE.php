@@ -18,7 +18,7 @@ class REVIEW_TABLE extends Seeder
         $faker = Faker\Factory::create('ja_JP');
 
         $exp = ["面白かった","とても良かった","良かった","微妙"];
-
+        $cnt = 0;
         for ($i = 1; $i <= 100; $i++) {
             for ($j = 1; $j <= 10; $j++) {
                 DB::table('REVIEW')->insert([
@@ -28,6 +28,10 @@ class REVIEW_TABLE extends Seeder
                     'review_text' => $exp[ $j % 4 ],
                     'entry_time' => $faker->dateTimeThisCentury()
                 ]);
+                if($cnt%200 == 0){
+                    echo "REVIEW : $cnt OK\n";
+                }
+                $cnt++;
             }
 
         }
