@@ -5,8 +5,9 @@
 @section('vendor','class="active"')
 
 @section('main')
-    <h2>商品編集画面</h2>
+    <h2>仕入先編集画面</h2>
     <form class="search" action="/admin/vendor/{{$id}}/update" method="POST">
+        {{csrf_field()}}
         <div class="input-group">
             <span class="input-group-addon">仕入先ID</span>
             <input type="text" name="vendor_id" class="form-control" value="{{ array_get($vendor,'vendor_id','') }}">
