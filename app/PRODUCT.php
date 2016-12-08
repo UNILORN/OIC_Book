@@ -30,6 +30,13 @@ class PRODUCT extends Model
       return $query;
     }
 
+    public function scopeISBN($query,$product_id){
+        if(!empty($product_id)){
+            $query = $query->where('ISBN',$product_id);
+        }
+        return $query;
+    }
+
     public function scopeSort($query,$sort,$sort_order){
       if(!empty($sort)){
         $query = $query->orderBy($sort,$sort_order);

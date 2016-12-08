@@ -49,6 +49,19 @@ class ORDER extends Model
         return $query;
     }
 
+    public function scopeProductIDquery($query, $product_id)
+    {
+        if (!empty($product_id)) {
+            $product_array = [];
+
+            foreach ($product_id as $value) {
+                $product_array[] = $value->product_id;
+            }
+            $query = $query->whereIn('product_id', $product_array);
+        }
+        return $query;
+    }
+
     public function scopeEmployee($query, $employee_name)
     {
         if (!empty($employee_name)) {
