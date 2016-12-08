@@ -28,7 +28,7 @@ class AdminvendorController extends Controller
      */
     public function create()
     {
-        //
+        return view('administer/vendor/admin_create');
     }
 
     /**
@@ -50,7 +50,8 @@ class AdminvendorController extends Controller
      */
     public function show($id)
     {
-        //
+        $vendor = VENDOR::find($id);
+        return view('administer/vendor/admin_detail', compact('id', 'vendor'));
     }
 
     /**
@@ -61,7 +62,8 @@ class AdminvendorController extends Controller
      */
     public function edit($id)
     {
-        //
+        $vendor = VENDOR::find($id);
+        return view('administer/vendor/admin_edit', compact('id', 'vendor'));
     }
 
     /**
