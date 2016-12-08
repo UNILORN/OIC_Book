@@ -31,7 +31,7 @@ class UORDER_TABLE extends Seeder
             'uorder_auth_cancel'=>$faker->boolean(),
             'method_of_payment_id'=>$i
           ]);
-          if($i%500 == 0){
+          if($i%200 == 0){
               echo "UORDER : $i OK\n";
           }
       }
