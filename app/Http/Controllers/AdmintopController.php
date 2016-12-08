@@ -20,6 +20,9 @@ class AdmintopController extends BaseController
         return view('/administer/admin_top');
     }
 
+    //
+    // ジャンル別売上推移
+    //
     public function genre_sales()
     {
         $uorder = UORDER::with('uorderDetail')
@@ -47,7 +50,11 @@ class AdmintopController extends BaseController
         return response()->json($genre_sales);
     }
 
+    //
+    // 月間売上API
+    //
     public function monthly_sales(){
+
         $uorder = UORDER::select(DB::raw("DATE_FORMAT(`uorder_day`,'%Y-%m') as uorder_day"),'uorder_id')
             ->where('uorder_day','like',Carbon::now()->year.'%')
             ->with('uorderDetail')

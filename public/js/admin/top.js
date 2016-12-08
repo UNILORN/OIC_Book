@@ -10,6 +10,8 @@ $(function () {
 
         // 売上情報整形
         var salesdata = [ ['Element', '売上/円', {role: 'style'}, {role: 'annotation'}]];
+
+        // 表示するデータ　[横軸,縦軸,スタイル,棒グラフ内データ]
         for (key in sales) {
             salesdata[salesdata.length] = [key, sales[key]["price"], "", sales[key]["num"] + "冊"];
         }
@@ -33,6 +35,7 @@ $(function () {
                 }
             };
             var chart = new google.visualization.ColumnChart(
+                //描画するElementId
                 document.getElementById('genre_sales'));
             chart.draw(data, options);
         }
@@ -48,6 +51,8 @@ $(function () {
 
         // 売上情報整形
         var salesdata = [ ['Element', '売上/円', {role: 'style'}]];
+
+        // 表示するデータ　[横軸,縦軸,スタイル]
         for (key in monthlysales) {
             monthname = parseInt(key) + 1;
             salesdata[salesdata.length] = [monthname+"月", monthlysales[key], ""];
