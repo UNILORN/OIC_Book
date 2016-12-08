@@ -97,6 +97,7 @@ Route::get('/logout',function(){
     Route::post('/admin/mailform','AdminmailController@send');
 
     //店舗入荷情報
+    Route::get('/admin/arrive/product','AdminarriveController@product_search');
     Route::resource('/admin/arrive','AdminarriveController');
 
     //入金確認情報
