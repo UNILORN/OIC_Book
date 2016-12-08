@@ -50,8 +50,10 @@
           <p><b>アイテム説明</b></p>
           <p>{{$product->product_explanation}}</p>
       </div>
+    </div>
 
 
+<div class="review_background">
   <div class="review">
     @foreach ($reviews as $review)
     <div class="reviewer">投稿者：{{$review->reviewUsers[0]->name}}</div>
