@@ -67,7 +67,8 @@ Route::get('/logout',function(){
 
     //管理者トップページ
     Route::get('/admin','AdmintopController@index');
-    Route::get('/api/admin/sales','AdmintopController@genre_sales');
+    Route::get('/api/admin/genresales','AdmintopController@genre_sales');
+    Route::get('/api/admin/monthlysales','AdmintopController@monthly_sales');
 
     //管理者商品情報
     Route::resource('/admin/stock','AdminstockController');

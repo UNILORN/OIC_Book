@@ -6,6 +6,8 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 use App\PRODUCT;
 use App\UORDER;
 use App\GENRE;
@@ -43,6 +45,36 @@ class AdmintopController extends BaseController
 
         }
         return response()->json($genre_sales);
+    }
+
+    public function monthly_sales(){
+        $uorder = UORDER::select(DB::raw("DATE_FORMAT(`uorder_day`,'%Y-%m') as uorder_day"),'uorder_id')
+            ->where('uorder_day','like',Carbon::now()->year.'%')
+            ->with('uorderDetail')
+            ->with('uorderDetail.uorderProduct')
+            ->orderBy('uorder_day')
+            ->get();
+
+        $uorder_day = UORDER::select(DB::raw("distinct DATE_FORMAT(`uorder_day`,'%Y-%m') as uorder_day"))
+            ->groupBy('uorder_day')
+            ->get();
+
+        $monthly_sales = [];
+        foreach ($uorder_day as $key => $value){
+            $monthly_sales[$key] = 0;
+        }
+
+        foreach ($uorder as $value) {
+            foreach ($uorder_day as $key => $month){
+                if($month->uorder_day == $value->uorder_day){
+                    foreach($value->uorderDetail as $detailvalue){
+                        $monthly_sales[$key] += intval($detailvalue->uorderProduct->product_price) * intval($detailvalue->uorder_number);
+                    }
+                }
+            }
+        }
+
+        return response()->json($monthly_sales);
     }
 
     public function product_review(){
