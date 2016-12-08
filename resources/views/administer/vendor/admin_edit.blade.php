@@ -1,7 +1,7 @@
 @extends('/administer/admin_template')
 
 @section('css','/admin/employee')
-@section('title','仕入先')
+@section('title','仕入先編集')
 @section('vendor','class="active"')
 
 @section('main')

@@ -1,11 +1,11 @@
 @extends('/administer/admin_template')
 
 @section('css','/admin/employee')
-@section('title','仕入先')
+@section('title','仕入先詳細')
 @section('vendor','class="active"')
 
 @section('main')
-    <h2>仕入先編集画面</h2>
+    <h2>仕入先詳細画面</h2>
     <form class="search" action="/admin/vendor/{{$id}}/delete" method="POST">
         {{csrf_field()}}
         <div class="input-group">
