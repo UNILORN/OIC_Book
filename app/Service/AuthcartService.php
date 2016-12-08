@@ -14,13 +14,20 @@ class AuthcartService{
     ->where('product_id',$product_id)
     ->first();
 
+    /***
+    *　カートに商品がなければ追加すでに入っていれば数量更新
+    ***/
     if (empty($already)) {
       DB::table('CART')->insert(
-        [ 'user_id'=> $user_id,
+        [ 'user_id' => $user_id,
         'product_id' => $product_id,
-        'product_cart_number'=>$number
-      ]
-    );
+        'product_cart_number' => $number
+        ]
+      );
+    }else{
+      CART::where('user_id', $user_id)
+      ->where('product_id', $product_id)
+      ->update(['product_cart_number' => $number]);
     }
 
     $products = $this->getItems($user_id);

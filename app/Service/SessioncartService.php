@@ -11,17 +11,18 @@ class SessioncartService{
     $insert_product["product_cart_number"] = $number;
     $current_cart = session()->get("cart",[]);
     /**
-    * 選択した商品がすでにカートに入っているかの確認
+    * カートに商品がなければ追加すでに入っていれば数量更新
     **/
-    foreach ($current_cart as $cart)
+    foreach ($current_cart as $index => $cart)
     {
        if($insert_product->product_id == $cart->product_id)
        {
+           $cart['product_cart_number'] = $number;
+
            $products = session()->get("cart",[]);
            return $products;
        }
      }
-
            $current_cart[] = $insert_product;
            session()->put("cart",$current_cart);
            $products = session()->get("cart",[]);
