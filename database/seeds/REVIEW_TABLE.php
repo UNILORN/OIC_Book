@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\REVIEW;
+use Carbon\Carbon;
 
 class REVIEW_TABLE extends Seeder
 {
@@ -26,7 +27,7 @@ class REVIEW_TABLE extends Seeder
                     'user_id' => $j,
                     'review' => $faker->randomDigitNotNull(),
                     'review_text' => $exp[ $j % 4 ],
-                    'entry_time' => $faker->dateTimeThisCentury()
+                    'entry_time' => Carbon::create(2016,rand(1,12),rand(1,28),rand(0,23),rand(0,59),rand(0,59))
                 ]);
                 if($cnt%200 == 0){
                     echo "REVIEW : $cnt OK\n";

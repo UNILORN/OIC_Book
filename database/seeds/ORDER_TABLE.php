@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\ORDER;
+use Carbon\Carbon;
 class ORDER_TABLE extends Seeder
 {
     /**
@@ -24,7 +25,7 @@ class ORDER_TABLE extends Seeder
             'employee_id'=>$i%50,
             'product_id'=>$i,
             'order_number'=>9,
-            'order_day'=>$faker->dateTimeThisCentury(),
+            'order_day'=>Carbon::create(2016,rand(1,12),rand(1,28),rand(0,23),rand(0,59),rand(0,59)),
             'arrive_plan'=>$faker->dateTimeThisCentury(),
             'remaining_amount'=>$faker->randomDigit(),
             'order_flug'=>$faker->boolean
