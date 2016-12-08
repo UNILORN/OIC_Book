@@ -1,8 +1,59 @@
 .content_title {
     border-bottom: solid 2px #bbbbbb;
 }
-#stage {
+
+.graf {
+    position: relative;
+    width:500px;
+    height: 300px;
+}
+.loading-text{
     position: absolute;
-    width: 80vh;
-    height: 250px;
+    text-align: center;
+    width:150px;
+    height:50px;
+    margin: auto;
+    top:100px;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.loading{
+    position: absolute;
+    width:50px;
+    height:50px;
+    margin: auto;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    -webkit-animation: spin 1.5s linear infinite;
+    -moz-animation: spin 1.5s linear infinite;
+    -ms-animation: spin 1.5s linear infinite;
+    -o-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(-360deg);}
+}
+@-moz-keyframes spin {
+    0% {-moz-transform: rotate(0deg);}
+    100% {-moz-transform: rotate(-360deg);}
+}
+@-ms-keyframes spin {
+    0% {-ms-transform: rotate(0deg);}
+    100% {-ms-transform: rotate(-360deg);}
+}
+@-o-keyframes spin {
+    0% {-o-transform: rotate(0deg);}
+    100% {-o-transform: rotate(-360deg);}
+}
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+}
+.loading i{
+    font-size: 50px;
 }

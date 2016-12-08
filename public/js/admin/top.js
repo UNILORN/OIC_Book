@@ -1,22 +1,88 @@
-$(function(){
-    var data = [
-        {"月": "１月", "数量": 65},
-        {"月": "２月", "数量": 59},
-        {"月": "３月", "数量": 80},
-        {"月": "４月", "数量": 81},
-        {"月": "５月", "数量": 56},
-        {"月": "６月", "数量": 55},
-        {"月": "７月", "数量": 48}
-    ];
+$(function () {
 
-    var chart = new tauCharts.Chart({
+    //
+    // 売上　ジャンル別売上総数
+    //
+    $.ajax({
+        url: "/api/admin/genresales"
+    }).done(function (data) {
+        sales = data;
 
-        data: data,  //表示するデータ
-        type: 'bar',  //グラフの種類
-        x: '数量',  //X軸の要素
-        y: '月',  //Y軸の要素
-        color: '月'  //カラーの基準要素
+        // 売上情報整形
+        var salesdata = [ ['Element', '売上/円', {role: 'style'}, {role: 'annotation'}]];
 
+        // 表示するデータ　[横軸,縦軸,スタイル,棒グラフ内データ]
+        for (key in sales) {
+            salesdata[salesdata.length] = [key, sales[key]["price"], "", sales[key]["num"] + "冊"];
+        }
+
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawSales);
+
+        function drawSales() {
+            var data = new google.visualization.arrayToDataTable(salesdata);
+            var options = {
+                title: 'ジャンル別総合売上',
+                hAxis: {
+                    title: 'ジャンル',
+                    viewWindow: {
+                        min: [7, 30, 0],
+                        max: [17, 30, 0]
+                    }
+                },
+                vAxis: {
+                    title: '売上'
+                }
+            };
+            var chart = new google.visualization.ColumnChart(
+                //描画するElementId
+                document.getElementById('genre_sales'));
+            chart.draw(data, options);
+        }
     });
-    chart.renderTo('#stage');
+
+    //
+    // 売上　ジャンル別売上総数
+    //
+    $.ajax({
+        url: "/api/admin/monthlysales"
+    }).done(function (data) {
+        monthlysales = data;
+
+        // 売上情報整形
+        var salesdata = [ ['Element', '売上/円', {role: 'style'}]];
+
+        // 表示するデータ　[横軸,縦軸,スタイル]
+        for (key in monthlysales) {
+            monthname = parseInt(key) + 1;
+            salesdata[salesdata.length] = [monthname+"月", monthlysales[key], ""];
+        }
+
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawSales);
+
+        function drawSales() {
+            var data = new google.visualization.arrayToDataTable(salesdata);
+            var options = {
+                title: '月間売上',
+                hAxis: {
+                    title: '月',
+                    viewWindow: {
+                        min: [7, 30, 0],
+                        max: [17, 30, 0]
+                    }
+                },
+                vAxis: {
+                    title: '売上'
+                }
+            };
+            var chart = new google.visualization.ColumnChart(
+
+                //描画するElementId
+                document.getElementById('monthly_sales'));
+            chart.draw(data, options);
+        }
+    });
+
+
 });
