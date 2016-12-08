@@ -77,7 +77,7 @@
       </div>
       <footer>
         <div id="adress">
-          0IC-BOOK<br>
+          OIC-BOOK<br>
           adress:〒<br>
                  大阪市天王寺区上本町６−８−４<br>
 

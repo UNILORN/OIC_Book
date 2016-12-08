@@ -59,6 +59,6 @@
       </td>
     </tr>
   @endforeach
-  {{$products->links()}}
+  {{$products->appends($request->toArray())->links()}}
 </table>
 @endsection
