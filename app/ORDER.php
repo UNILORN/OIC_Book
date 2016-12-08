@@ -10,6 +10,7 @@ use App\User;
 class ORDER extends Model
 {
     protected $table = 'ORDER';
+    protected $primaryKey = 'order_id';
 
     public function orderEmployee()
     {

@@ -36,36 +36,46 @@ class AdminarriveController extends BaseController
     {
         $product = [];
         $order = [];
-        return view('/administer/arrive/admin_create',compact('product','request','order'));
+        return view('/administer/arrive/admin_create', compact('product', 'request', 'order'));
 
     }
 
     public function store(Request $request)
     {
         $date = Carbon::now();
+        $order = ORDER::find($request->input('order_id'));
+        if ($order->remaining_amount >= $request->input('arrive_number')) {
+            $order->remaining_amount = $order->remaining_amount - $request->input('arrive_number');
+            $order->save();
+        }
+        else{
+            return redirect('/admin/arrive/create');
+        }
         ARRIVE::insert([
-            'order_id' => 1,
+            'order_id' => $request->input('order_id'),
             'employee_id' => 1,
-            'arrive_number' => 1,
+            'arrive_number' => $request->input('arrive_number'),
             'arrive_day' => $date,
-            'arrive_price' => 100
+            'arrive_price' => $request->input('arrive_price')
         ]);
         return redirect('/admin/arrive/create');
     }
 
-    public function product_search(Request $request){
+    public function product_search(Request $request)
+    {
         $product = PRODUCT::Active()
             ->ID($request->input('product_id'))
             ->Name($request->input('product_name'))
             ->ISBN($request->input('ISBN'))
             ->get();
 
-        $order = ORDER::ProductIDquery($product)
+        $order = ORDER::where('remaining_amount', '<>', '0')
+            ->ProductIDquery($product)
             ->with('orderVendor')
             ->with('orderProduct')
             ->get();
 
-        return view('/administer/arrive/admin_create',compact('request','product','order'));
+        return view('/administer/arrive/admin_create', compact('request', 'product', 'order'));
     }
 
 }
