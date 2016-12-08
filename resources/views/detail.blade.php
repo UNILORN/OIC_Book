@@ -52,10 +52,6 @@
       </div>
 
 
-<<<<<<< HEAD
-=======
-<div class="review_background">
->>>>>>> 48db0dba3aff980c3676c3b73b316212d29ee8a7
   <div class="review">
     @foreach ($reviews as $review)
     <div class="reviewer">投稿者：{{$review->reviewUsers[0]->name}}</div>
@@ -81,12 +77,8 @@
             <input type="submit" name="some_name" value="送信">
         </form>
     </div>
-<<<<<<< HEAD
   </div>
-=======
   @endif
-</div>
 
->>>>>>> 48db0dba3aff980c3676c3b73b316212d29ee8a7
 <script src="/js/detail/review.js" charset="utf-8"></script>
 @endsection
