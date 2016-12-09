@@ -2,27 +2,35 @@
 
 composer install
 
-cp .env.example .env
-
 echo "====================================================="
-echo "DatabaseNameをOIC_Bookとして.envを更新します"
-sed -i -e 's/DB_DATABASE=homestead/DB_DATABASE=OIC_Book/' .env
-
+echo "ENVを更新しますか？(Y/N)"
+read envans
 echo "====================================================="
-echo "DBのユーザ名を入力"
-read username
 
-echo "====================================================="
-echo "DBのパスワードを入力"
-read userpass
+if [ $envans = Y ]; then
 
-sed -i -e 's/DB_USERNAME=homestead/DB_USERNAME='$username'/' .env
-sed -i -e 's/DB_PASSWORD=secret/DB_PASSWORD='$userpass'/' .env
+    cp .env.example .env
 
-echo "====================================================="
-echo "!! key:generate !!"
-echo "====================================================="
-php artisan key:generate
+    echo "====================================================="
+    echo "DatabaseNameをOIC_Bookとして.envを更新します"
+    sed -i -e 's/DB_DATABASE=homestead/DB_DATABASE=OIC_Book/' .env
+
+    echo "====================================================="
+    echo "DBのユーザ名を入力"
+    read username
+
+    echo "====================================================="
+    echo "DBのパスワードを入力"
+    read userpass
+
+    sed -i -e 's/DB_USERNAME=homestead/DB_USERNAME='$username'/' .env
+    sed -i -e 's/DB_PASSWORD=secret/DB_PASSWORD='$userpass'/' .env
+
+    echo "====================================================="
+    echo "!! key:generate !!"
+    echo "====================================================="
+    php artisan key:generate
+fi
 
 echo "====================================================="
 echo "OIC_Book を一度作成しましたか？(Y/N)"
@@ -43,7 +51,6 @@ if [ $ans = N ]; then
     echo "mySQLのパスワードを入力"
     echo "====================================================="
 
-	#4mysql -u root -p OIC_Book < OIC_Book.sql
 else
     echo "====================================================="
     echo "[OIC_Book] Dump file write"
