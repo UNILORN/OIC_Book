@@ -56,7 +56,7 @@ Route::get('/logout',function(){
     //購入
     Route::get('/buy','BuyController@index');
     Route::post('/buy_confirm','ConfirmController@buy');
-
+    Route::post('/buy_done','BuydoneController@index');
     //退会処理
     Route::get('/recede','RecedeController@index');
     Route::get('/recede_confirm','ConfirmController@recode');
@@ -104,5 +104,3 @@ Route::get('/logout',function(){
     Route::get('/admin/payment','AdminpaymentController@index');
     Route::get('/admin/payment_form','AdminpaymentController@submit');
     Route::get('/admin/pay_form','AdminpaymentController@cancel');
-
-
