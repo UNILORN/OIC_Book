@@ -18,8 +18,8 @@ class EMPLOYEE_TABLE extends Seeder
 
         DB::table('EMPLOYEE')->insert([
             'employee_id'=>1,
-            'employee_email'=>'oic.book.sm2@gamil.com',
-                'employee_password'=>sha1('masakage77'),
+            'employee_email'=>'oic.book.sm2@gmail.com',
+            'employee_password'=>sha1('masakage77'),
             'employee_auth_id'=>1
           ]);
 
