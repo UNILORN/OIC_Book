@@ -7,7 +7,7 @@
 @section('main')
 
     <h2>商品新規登録画面</h2>
-    <form class="form-horizontal" action="/admin/stock" method="post">
+    <form class="form-horizontal vuestock" action="/admin/stock" method="post">
         {{csrf_field()}}
         <div class="input-group">
             <span class="input-group-addon" >商品ID</span>
@@ -15,7 +15,7 @@
         </div>
         <div class="input-group">
             <span class="input-group-addon" >商品名</span>
-            <input type="text" name="product_name" v-model="product_name" class="form-control" value="">
+            <input type="text" name="product_name" v-model="product_name" class="form-control" value="" required>
         </div>
         <div class="input-group">
             <span class="input-group-addon" >商品画像</span>
@@ -23,40 +23,40 @@
         </div>
         <div class="input-group">
             <span class="input-group-addon" >値段</span>
-            <input type="text" name="product_price" v-model="product_price" class="form-control" value="">
+            <input type="text" name="product_price" v-model="product_price" class="form-control" value="" required>
             <span class="input-group-addon" >在庫数</span>
-            <input type="text" name="product_stock" v-model="product_stock" class="form-control" value="">
+            <input type="text" name="product_stock" v-model="product_stock" class="form-control" value="" required>
             <span class="input-group-addon" >翻訳者</span>
             <input type="text" name="trancelater_ID" v-model="trancelater_ID" class="form-control" value="" disabled>
         </div>
         <div class="input-group">
             <span class="input-group-addon" >高さ</span>
-            <input type="text" name="product_height" v-model="product_height"class="form-control" value="">
+            <input type="text" name="product_height" v-model="product_height"class="form-control" value="" required>
             <span class="input-group-addon" >幅</span>
-            <input type="text" name="product_width" v-model="product_width" class="form-control"  value="">
+            <input type="text" name="product_width" v-model="product_width" class="form-control"  value="" required>
             <span class="input-group-addon" >奥行き</span>
-            <input type="text" name="product_depth" v-model="product_depth" class="form-control" value="">
+            <input type="text" name="product_depth" v-model="product_depth" class="form-control" value="" required>
         </div>
         <div class="input-group">
             <span class="input-group-addon" >ISBN</span>
-            <input type="text" name="ISBN" class="form-control" value="">
+            <input type="text" name="ISBN" class="form-control" value="" required>
         </div>
         <div class="input-group">
             <span class="input-group-addon" >ページ数</span>
-            <input type="text" name="product_page" v-model="product_page" class="form-control" value="">
+            <input type="text" name="product_page" v-model="product_page" class="form-control" value="" required>
         </div>
         <div class="input-group">
             <span class="input-group-addon" >発売日</span>
-            <input type="date" name="product_start_day" v-model="product_start_day" class="form-control" value="">
+            <input type="date" name="product_start_day" v-model="product_start_day" class="form-control" value="" required>
         </div>
         <div class="input-group">
             <span class="input-group-addon" >商品説明</span>
-            <textarea id="textarea" type="textarea" v-model="product_explanation" name="product_explanation" class="form-control" ></textarea>
+            <textarea id="textarea" type="textarea" v-model="product_explanation" name="product_explanation" class="form-control" required></textarea>
         </div>
 
         <button class="btn btn-default submitbutton" style="display:none" type="submit" name="submit">新規登録</button>
-        <button type="button" class="confirm_button">確認</button>
-        <button type="button" style="display:none" class="confirm_button2">戻る</button>
+        <button type="button" class="btn btn-default confirm_button">確認</button>
+        <button type="button" style="display:none" class="btn btn-default confirm_button2">戻る</button>
     </form>
     <div class="confirm" style="display:none">
       <div class="confirm_text">
@@ -77,20 +77,20 @@
 
         <script type="text/javascript">
         new Vue({
-          e1:'body',
-          date:{
-            name:'product_id',
-            email:'product_name',
-            user_post_code:'product_image',
-            user_address:'product_price',
-            user_phone_number:'product_stock',
-            trancelater_ID:'trancelater_ID',
-            product_height:'product_height',
-            product_width:'product_width',
-            product_depth:'product_depth',
-            product_page:'product_page',
-            product_start_day:'product_start_day',
-            product_explanation:'product_explanation'
+          el:'main',
+          data:{
+            product_id:'',
+            product_name:'',
+            product_image:'',
+            product_price:'',
+            product_stock:'',
+            trancelater_ID:'',
+            product_height:'',
+            product_width:'',
+            product_depth:'',
+            product_page:'',
+            product_start_day:'',
+            product_explanation:''
                 }
 
         })
@@ -111,7 +111,9 @@
       .confirm_text{
         text-align: center;
         z-index: 100;
-
+      }
+      .confirm_text p{
+        color: white;
       }
     </style>
     <script type="text/javascript">
