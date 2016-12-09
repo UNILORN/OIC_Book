@@ -23,7 +23,7 @@
                     <tr>
                       <td class="product_img"><img src="{{$product->cartProduct[0]->product_image}}" alt="" /></td>
                       <td class="product_name">{{$product->cartProduct[0]->product_name}}</td>
-                      <td class="auther_name"></td>
+                      <td class="auther_name">{{$product->cartProduct[0]->auther_name}}</td>
                       <td class="product_price">{{$product->cartProduct[0]->product_price}}円</td>
                       <td class="quantity">
                           残り在庫 : {{$product->cartProduct[0]->product_stock}}
