@@ -16,7 +16,7 @@ class AdminauthController extends Controller
     public function check(Request $request)
     {
         //admin/loginからのRequest
-        $q = DB::table('EMPLOYEE')->where('employee_email',$request->email)->where('employee_password',$request->password)->first();
+        $q = DB::table('EMPLOYEE')->where('employee_email',$request->email)->where('employee_password',sha1($request->password))->first();
 
         //セッションに
         if(count($q) === 1){
