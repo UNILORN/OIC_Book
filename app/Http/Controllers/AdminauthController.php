@@ -28,4 +28,11 @@ class AdminauthController extends Controller
         return redirect('/admin/login');
 
     }
+
+    public function logout()
+    {
+        session()->put('employee',null);
+
+        return redirect('/');
+    }
 }

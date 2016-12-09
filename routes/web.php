@@ -109,3 +109,5 @@ Route::get('/logout',function(){
     Route::get('/admin/login', 'AdminauthController@index');
     Route::post('/admin/login', 'AdminauthController@check');
 
+    Route::get('/admin/logout', 'AdminauthController@logout');
+
