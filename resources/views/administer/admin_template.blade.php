@@ -33,9 +33,19 @@
             <li @yield('mail')><a href="/admin/mailform">発注メールフォーム</a></li>
             <li @yield('arriveform')><a href="/admin/arrive/create">入荷登録フォーム</a></li>
           </ul>
+          <ul class="nav navbar-right">
+            <li @yield('arriveform')><a href="/admin/logout">ログアウト</a></li>
+          </ul>
         </div>
       </div>
     </nav>
+
+    <?php
+    if(is_null(session()->get('employee'))) {
+      header('Location: http://' . $_SERVER['HTTP_HOST']);
+      exit;
+    }
+    ?>
 
     <main>
       @yield('main')

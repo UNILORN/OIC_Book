@@ -104,3 +104,7 @@ Route::get('/logout',function(){
     Route::get('/admin/payment','AdminpaymentController@index');
     Route::get('/admin/payment_form','AdminpaymentController@submit');
     Route::get('/admin/pay_form','AdminpaymentController@cancel');
+
+    Route::get('/admin/login', 'AdminauthController@index');
+    Route::post('/admin/login', 'AdminauthController@check');
+    Route::get('/admin/logout', 'AdminauthController@logout');

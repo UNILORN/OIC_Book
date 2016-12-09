@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -17,6 +18,11 @@ class AdminarriveController extends BaseController
 
     public function index(Request $request)
     {
+        /*if(is_null(session()->get('employee'))) {
+            header('Location: http://' . $_SERVER['HTTP_HOST']);
+            exit;
+        }*/
+
         $arrive = ARRIVE::ID($request->input('arrive_id'))
             ->OrderID($request->input('order_id'))
             ->PlanFrom($request->input('arrive_plan_from'))
