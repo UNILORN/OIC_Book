@@ -4,13 +4,12 @@ body {
 }
 
 .product_content{
-  position: absolute;
   margin: auto;
   margin-top: 50px;
   left:0;
   right: 0;
   width: 1010px;
-  height: auto;
+  height:500px;
   background-color: #fafafa;
 }
 
@@ -81,15 +80,10 @@ body {
 }
 
 /*review*/
-.review_background{
-  border-top: solid 2px #eee;
-  background-color: white;
-  margin-top: 600px;
-}
 .review{
   width: 860px;
   margin:0 auto;
-  padding-top:30px;
+  padding-top:80px;
   padding-bottom:10px;
 }
 .customer_review{

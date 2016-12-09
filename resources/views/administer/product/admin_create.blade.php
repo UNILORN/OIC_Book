@@ -1,7 +1,7 @@
 @extends('/administer/admin_template')
 
 @section('css','/admin/product/edit')
-@section('title','商品編集')
+@section('title','商品新規登録')
 @section('stock','class="active"')
 
 @section('main')

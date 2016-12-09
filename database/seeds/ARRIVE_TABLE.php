@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\ARRIVE;
+use Carbon\Carbon;
 class ARRIVE_TABLE extends Seeder
 {
     /**
@@ -22,7 +23,7 @@ class ARRIVE_TABLE extends Seeder
             'order_id'=>$i,
             'employee_id'=>$i,
             'arrive_number'=>$faker->randomDigitNotNull(),
-            'arrive_day'=>$faker->dateTimeThisCentury(),
+            'arrive_day'=>Carbon::create(2016,rand(1,12),rand(1,28),rand(0,23),rand(0,59),rand(0,59)),
             'arrive_price'=>$faker->randomDigitNotNull()*100
           ]);
       }

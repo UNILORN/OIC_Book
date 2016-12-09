@@ -26,10 +26,8 @@
                       <td class="auther_name">{{$product->auther_name}}</td>
                       <td class="product_price">{{$product->product_price}}</td>
                       <td class="quantity">
-                        <form action="/cart/edit/" method="post">
-                              残り在庫 : {{$product->product_stock}}
-                              <input class="number" type="number" min="1" max="{{$product->product_stock}}" value="{{$product->product_cart_number}}" index="{{$index}}">
-                        </form>
+                        残り在庫 : {{$product->product_stock}}
+                        <input class="number" type="number" min="1" max="{{$product->product_stock}}" value="{{$product->product_cart_number}}" index="{{$index}}">
                       </td>
                       <td class="subtotal">{{$product->product_price*$product->product_cart_number}}円</td>
                       <td class="del_btn">

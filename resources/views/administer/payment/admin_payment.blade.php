@@ -19,10 +19,10 @@
             </div>
             <div class="input-group">
                 <span class="input-group-addon">注文日付</span>
-                <input type="text" name="uorder_from" class="form-control"
+                <input type="date" name="uorder_from" class="form-control"
                        value="{{array_get($request,'uorder_from','') }}">
                 <span class="input-group-addon">〜</span>
-                <input type="text" name="uorder_to" class="form-control"
+                <input type="date" name="uorder_to" class="form-control"
                        value="{{array_get($request,'uorder_to','') }}">
             </div>
             <input class="btn btn-default" type="submit" name="search" value="検索">
@@ -54,7 +54,7 @@
         </td>
       </tr>
     @endforeach
-    {{$payment->links()}}
+    {{$payment->appends($request->toArray())->links()}}
 
   </table>
 

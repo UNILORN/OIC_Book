@@ -17,11 +17,11 @@ class AdminpaymentController extends BaseController
 {
     public function index(Request $request)
     {
-        $user = User::Tel($request->input('user_phonenum'))->first();
+        $user = User::Tel($request->input('user_phonenum'))->get();
         $payment = UORDER::ID($request->input('payment_id'))
             ->DayFrom($request->input('uorder_from'))
             ->DayTo($request->input('uorder_to'))
-            //->ManyUserID($user)
+            ->ManyUserID($user)
             ->with('uorderUser')
             ->orderBy('uorder_day', 'desc')
             ->paginate(20);

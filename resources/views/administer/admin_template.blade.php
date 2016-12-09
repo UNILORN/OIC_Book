@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="/css/@yield('css').css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/d3js/latest/d3.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/underscorejs/latest/underscore-min.js"></script>
-    <script src="https://cdn.jsdelivr.net/taucharts/latest/tauCharts.min.js"></script>
-    <link rel="stylesheet"  href="//cdn.jsdelivr.net/taucharts/latest/tauCharts.min.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="/js/jquery.min.js" charset="utf-8"></script>
     <title>@yield('title')</title>
@@ -27,6 +25,7 @@
             <li @yield('stock')><a href="/admin/stock">商品情報</a></li>
             <li @yield('employee')><a href="/admin/employee">従業員情報</a></li>
             <li @yield('user')><a href="/admin/user">ユーザ情報</a></li>
+            <li @yield('vendor')><a href="/admin/vendor">仕入先情報</a></li>
             <li @yield('uoderdetail')><a href="/admin/uoderdetail">売上情報</a></li>
             <li @yield('order')><a href="/admin/order">発注情報</a></li>
             <li @yield('arrive')><a href="/admin/arrive">入荷情報</a></li>

@@ -67,6 +67,8 @@ Route::get('/logout',function(){
 
     //管理者トップページ
     Route::get('/admin','AdmintopController@index');
+    Route::get('/api/admin/genresales','AdmintopController@genre_sales');
+    Route::get('/api/admin/monthlysales','AdmintopController@monthly_sales');
 
     //管理者商品情報
     Route::resource('/admin/stock','AdminstockController');
@@ -80,6 +82,9 @@ Route::get('/logout',function(){
     //ユーザ情報
     Route::resource('/admin/user','AdminuserController');
 
+    //仕入先情報
+    Route::resource('/admin/vendor','AdminvendorController');
+
     //ユーザ注文情報
     Route::get('/admin/uoderdetail','AdminuoderdetailController@index');
 
@@ -92,6 +97,7 @@ Route::get('/logout',function(){
     Route::post('/admin/mailform','AdminmailController@send');
 
     //店舗入荷情報
+    Route::get('/admin/arrive/product','AdminarriveController@product_search');
     Route::resource('/admin/arrive','AdminarriveController');
 
     //入金確認情報
