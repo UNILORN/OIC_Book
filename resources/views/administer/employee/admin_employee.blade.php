@@ -28,7 +28,7 @@
     @foreach ($employee as $key => $value)
       <tr>
         <td>{{$value->employee_id}}</td>
-        <td>{{$value->name}}</td>
+        <td>{{$value->employee_name}}</td>
       </tr>
     @endforeach
     {{$employee->appends($request->toArray())->links()}}

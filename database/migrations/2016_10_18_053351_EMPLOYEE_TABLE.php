@@ -19,6 +19,7 @@ class EMPLOYEETABLE extends Migration
             $table->string('employee_name');
             $table->string('employee_password', 45)->unique();
             $table->integer('employee_auth_id');
+            $table->boolean('delete_flg')->default(0);
         });
     }
 

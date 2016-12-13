@@ -25,7 +25,7 @@ class EMPLOYEE_TABLE extends Seeder
             'employee_auth_id' => 1
         ]);
 
-        for ($i = 2; $i <= 50; $i++) {
+        for ($i = 2; $i <= 100; $i++) {
             DB::table('EMPLOYEE')->insert([
                 'employee_id' => $i,
                 'employee_name'=>"Employee".$i,
