@@ -50,7 +50,6 @@ h1 {
 	padding: 0;
 	font-size: 3.5em;
 	font-weight: normal;
-	color: #fff;
 }
 h2 {
 	margin: 20px 0 40px;
@@ -58,7 +57,6 @@ h2 {
 	font-size: 1.8em;
 	line-height: 140%;
 	font-weight: normal;
-	color: #fff;
 }
 h2 span.exp {
 	margin: 0 0 0 20px;
@@ -416,7 +414,6 @@ content
     overflow: hidden;
     background: #fff;
     cursor: default;
-    position: absolute;
     left: 0;
     z-index: 0;
 }
@@ -427,7 +424,6 @@ content
 ランキング
 ****************/
 #ranking{
-	padding-top:450px;
 	padding-bottom:15px;
 }
 .ranking{
@@ -615,3 +611,116 @@ footer ul li{
 .pay{
     border: 1px solid #000;
 }*/
+
+
+/******
+* カテゴリ
+*******/
+.category{
+	margin-top:70px;
+	margin-bottom:70px;
+}
+#category_title{
+	width:100px;
+	height:50;
+	margin: 30px auto;
+}
+.category #politics h2{
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin: auto;
+	width:100px;
+	height:50px;
+}
+.category #politics{
+	height:200px;
+	width:200px;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 50px;
+	text-align: center;
+	border:solid 2px #8e8e8e;
+}
+
+.category #politics:hover{
+	background-color: #e2e2e2;
+}
+.category #politics_img{
+	height:100px;
+	width:250px;
+	position: absolute;
+	margin-left:330px;
+	font-size: 25px;
+}
+.category #politics_img img{
+	height:200px;
+	width:200px;
+}
+.category #love{
+	height:200px;
+	width:200px;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 50px;
+	text-align: center;
+	background-color: #e2e2e2;
+	border:solid 2px #8e8e8e;
+}
+.category #love h2{
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin: auto;
+	width:100px;
+	height:50px;
+}
+.category #love_img{
+	height:100px;
+	width:250px;
+	position: absolute;
+	margin-left:-360px;
+	font-size: 25px;
+}
+.category #love_img img{
+	height:200px;
+	width:200px;
+}
+.category #adult{
+	height:200px;
+	width:200px;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 50px;
+	text-align: center;
+	border:solid 2px #8e8e8e;
+}
+.category #adult:hover{
+	background-color: #e2e2e2;
+}
+
+.category #adult h2{
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin: auto;
+	width:100px;
+	height:50px;
+}
+.category #adult_img{
+	height:100px;
+	width:250px;
+	position: absolute;
+	margin-left:330px;
+	font-size: 25px;
+}
+.category #adult_img img{
+	height:200px;
+	width:200px;
+}
