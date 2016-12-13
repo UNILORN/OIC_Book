@@ -37,7 +37,7 @@
             <th>メールアドレス</th>
             <th>住所</th>
             <th>電話番号</th>
-            <th>仕入先編集</th>
+            <th>仕入先詳細</th>
         </tr>
         @foreach ($vendor as $key => $value)
             <tr>
