@@ -9,8 +9,6 @@ use Auth;
 class TopController extends Controller
 {
   public function index(Request $request){
-    $top = new \App\Service\TopService;
-    $ranking_products = $top->getRanking();
     /****
     *   ログイン時のsession情報の引き継ぎ
     ****/
@@ -24,6 +22,14 @@ class TopController extends Controller
       }
     }
 
-    return view('top',compact('ranking_products'));
+    $top = new \App\Service\TopService;
+    $genre = new \App\Service\GenreService;
+    $ranking_products = $top->getRanking();
+    $novels = $genre->getNovels();
+    $mangas = $genre->getMangas();
+    $picturebooks = $genre->getPicturebooks();
+    $specialties = $genre->getSpecialties();
+
+    return view('top',compact('ranking_products','novels','mangas','picturebooks','specialties'));
   }
 }

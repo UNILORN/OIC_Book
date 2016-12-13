@@ -617,15 +617,29 @@ footer ul li{
 * カテゴリ
 *******/
 .category{
+	padding-top: 70px;
+	padding-bottom: 100px;
+	border: solid 2px #8e8e8e;
+	width:80%;
+	margin:0 auto;
 	margin-top:70px;
 	margin-bottom:70px;
 }
-#category_title{
-	width:100px;
-	height:50;
-	margin: 30px auto;
+.category #specialty_container{
+border-bottom: solid 2px #8e8e8e;
+width:730px;
+margin: 0 auto;
 }
-.category #politics h2{
+.category #specialty{
+	height:150px;
+	width:150px;
+	position: relative;
+	text-align: center;
+	border:solid 2px #8e8e8e;
+	border-bottom:0px;
+	display: inline-block;
+}
+.category #specialty h2{
 	position: absolute;
 	top:0;
 	right:0;
@@ -635,75 +649,69 @@ footer ul li{
 	width:100px;
 	height:50px;
 }
-.category #politics{
-	height:200px;
-	width:200px;
+.category #specialty_products{
+	display: inline-block;
+}
+.category #specialty_products .specialty_product{
+	display: inline-block;
+	height:120px;
+	margin-right: 50px;
+}
+.category #picturebook_container{
+	width:730px;
 	margin: 0 auto;
+	margin-top: 30px;
+	border-bottom: solid 2px #8e8e8e;
+}
+.category #picturebook{
+	height:150px;
+	width:150px;
 	position: relative;
-	margin-bottom: 50px;
 	text-align: center;
+	background-color: #e2e2e2;
 	border:solid 2px #8e8e8e;
+	border-bottom:0px;
+	display: inline-block;
+	margin-top: 10px;
+}
+.category #picturebook h2{
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin: auto;
+	width:100px;
+	height:50px;
+	display: inline-block;
+}
+.category #picturebook_products{
+	display: inline-block;
+}
+.category #picturebook_products .picturebook_product{
+	display: inline-block;
+	height:120px;
+	margin-left: 50px;
 }
 
-.category #politics:hover{
-	background-color: #e2e2e2;
-}
-.category #politics_img{
-	height:100px;
-	width:250px;
-	position: absolute;
-	margin-left:330px;
-	font-size: 25px;
-}
-.category #politics_img img{
-	height:200px;
-	width:200px;
-}
-.category #love{
-	height:200px;
-	width:200px;
+.category #manga_container{
+	border-bottom: solid 2px #8e8e8e;
+	width:730px;
 	margin: 0 auto;
+	margin-top: 30px;
+}
+.category #manga{
+	height:150px;
+	width:150px;
 	position: relative;
-	margin-bottom: 50px;
-	text-align: center;
-	background-color: #e2e2e2;
-	border:solid 2px #8e8e8e;
-}
-.category #love h2{
-	position: absolute;
-	top:0;
-	right:0;
-	bottom:0;
-	left:0;
-	margin: auto;
-	width:100px;
-	height:50px;
-}
-.category #love_img{
-	height:100px;
-	width:250px;
-	position: absolute;
-	margin-left:-360px;
-	font-size: 25px;
-}
-.category #love_img img{
-	height:200px;
-	width:200px;
-}
-.category #adult{
-	height:200px;
-	width:200px;
-	margin: 0 auto;
-	position: relative;
-	margin-bottom: 50px;
 	text-align: center;
 	border:solid 2px #8e8e8e;
-}
-.category #adult:hover{
-	background-color: #e2e2e2;
+	border-bottom:0px;
+	display: inline-block;
+	margin-top:10px;
 }
 
-.category #adult h2{
+.category #manga h2{
 	position: absolute;
 	top:0;
 	right:0;
@@ -713,14 +721,47 @@ footer ul li{
 	width:100px;
 	height:50px;
 }
-.category #adult_img{
-	height:100px;
-	width:250px;
-	position: absolute;
-	margin-left:330px;
-	font-size: 25px;
+
+.category #manga_products{
+	display: inline-block;
 }
-.category #adult_img img{
-	height:200px;
-	width:200px;
+.category #manga_products .manga_product{
+	display: inline-block;
+	height:120px;
+	margin-right: 50px;
+}
+
+.category #novel_container{
+	border-bottom: solid 2px #8e8e8e;
+	width:730px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.category #novel{
+	height:150px;
+	width:150px;
+	position: relative;
+	text-align: center;
+	background-color: #e2e2e2;
+	border:solid 2px #8e8e8e;
+	border-bottom:0px;
+	display: inline-block;
+}
+.category #novel h2{
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin: auto;
+	width:100px;
+	height:50px;
+}
+.category #novel_products{
+	display: inline-block;
+}
+.category #novel_products .novel_product{
+	display: inline-block;
+	height:120px;
+	margin-left: 50px;
 }
