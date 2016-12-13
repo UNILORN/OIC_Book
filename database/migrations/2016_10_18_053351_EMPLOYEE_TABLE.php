@@ -18,7 +18,7 @@ class EMPLOYEETABLE extends Migration
             $table->string('employee_email')->unique();
             $table->string('employee_name');
             $table->string('employee_password', 45)->unique();
-            $table->integer('employee_auth_id');
+            $table->string('employee_phone_number');
             $table->boolean('delete_flg')->default(0);
         });
     }
