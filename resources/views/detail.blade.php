@@ -1,5 +1,5 @@
 @extends('template')
-@section('title','detail')
+@section('title','商品詳細')
 @section('css','detail')
 
 @section('main')

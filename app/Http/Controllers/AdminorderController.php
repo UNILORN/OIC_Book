@@ -21,7 +21,7 @@ class AdminorderController extends BaseController
             ->OrderDayTo($request->input('order_day_to'))
             ->ArriveDayFrom($request->input('arrive_day_from'))
             ->ArriveDayTo($request->input('arrive_day_to'))
-            ->with('orderEmployee.user')
+            ->with('orderEmployee')
             ->with('orderProduct')
             ->with('orderVendor')
             ->paginate(20);

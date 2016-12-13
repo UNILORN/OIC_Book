@@ -1,5 +1,5 @@
 @extends('template')
-@section('title','cart')
+@section('title','ショッピングカート')
 @section('css','cart')
 @section('main')
 <div class="container">

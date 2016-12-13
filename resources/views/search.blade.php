@@ -1,5 +1,5 @@
 @extends('template')
-@section('title','search')
+@section('title','検索結果')
 @section('css','search')
 
 
