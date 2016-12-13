@@ -30,17 +30,17 @@ class USER_TABLE extends Seeder
                 'user_recede_flug' => $faker->boolean()
             ]);
 
-            DB::table('users')->insert([
-                'name'=>'Admin',
-                'email'=>'admin@admin.admin',
-                'password'=>'$2y$10$.Uqg7T2gx0vMg2Vb6X1LKesiRkKX3wH8upReAj/2fgeErlyQokESu',
-                'user_post_code' => '3954936',
-                'user_address' => 'おーさかふだよ',
-                'user_phone_number' => '06456565645',
-                'user_point' => '0',
-                'employee_id' => NULL,
-                'user_recede_flug' => $faker->boolean()
-            ]);
         }
+        DB::table('users')->insert([
+            'name'=>'Admin',
+            'email'=>'admin@admin.admin',
+            'password'=>'$2y$10$.Uqg7T2gx0vMg2Vb6X1LKesiRkKX3wH8upReAj/2fgeErlyQokESu',
+            'user_post_code' => '3954936',
+            'user_address' => 'おーさかふだよ',
+            'user_phone_number' => '06456565645',
+            'user_point' => '0',
+            'employee_id' => NULL,
+            'user_recede_flug' => $faker->boolean()
+        ]);
     }
 }
