@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>@yield('title')</title>
+    <title>@yield('title') - OICBook</title>
     <link rel="stylesheet" href="/css/reset.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
     <link rel="stylesheet" href="/css/stylesheet/stylesheet3.css" media="screen" title="no title">
