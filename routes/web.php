@@ -56,7 +56,7 @@ Route::get('/logout',function(){
     //購入
     Route::get('/buy','BuyController@index');
     Route::post('/buy_confirm','ConfirmController@buy');
-
+    Route::post('/buy_done','BuydoneController@index');
     //退会処理
     Route::get('/recede','RecedeController@index');
     Route::get('/recede_confirm','ConfirmController@recode');
@@ -67,6 +67,8 @@ Route::get('/logout',function(){
 
     //管理者トップページ
     Route::get('/admin','AdmintopController@index');
+    Route::get('/api/admin/genresales','AdmintopController@genre_sales');
+    Route::get('/api/admin/monthlysales','AdmintopController@monthly_sales');
 
     //管理者商品情報
     Route::resource('/admin/stock','AdminstockController');
@@ -95,6 +97,7 @@ Route::get('/logout',function(){
     Route::post('/admin/mailform','AdminmailController@send');
 
     //店舗入荷情報
+    Route::get('/admin/arrive/product','AdminarriveController@product_search');
     Route::resource('/admin/arrive','AdminarriveController');
 
     //入金確認情報
@@ -102,4 +105,6 @@ Route::get('/logout',function(){
     Route::get('/admin/payment_form','AdminpaymentController@submit');
     Route::get('/admin/pay_form','AdminpaymentController@cancel');
 
-
+    Route::get('/admin/login', 'AdminauthController@index');
+    Route::post('/admin/login', 'AdminauthController@check');
+    Route::get('/admin/logout', 'AdminauthController@logout');

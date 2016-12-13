@@ -44,8 +44,16 @@
         <td>{{$value->uorder_price}}</td>
         <td>{{$value->uorder_use_point}}</td>
         <td>{{$value->uorder_add_point}}</td>
-        <td>{{$value->uorderDetail["uorderProduct"]["product_name"]}}</td>
-        <td>{{$value->uorderDetail["uorder_number"]}}</td>
+        <td>
+          @foreach($value->uorderDetail as $uorderProduct)
+            <li>{{$uorderProduct["uorderProduct"]["product_name"]}}</li>
+          @endforeach
+        </td>
+        <td>
+          @foreach($value->uorderDetail as $uorderProduct)
+            <li style="list-style: none;">{{$uorderProduct["uorder_number"]}}</li>
+          @endforeach
+        </td>
       </tr>
     @endforeach
     {{$sales->appends($request->toArray())->links()}}

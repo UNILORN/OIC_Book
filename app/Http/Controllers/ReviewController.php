@@ -17,6 +17,6 @@ class ReviewController extends Controller
       $user = $request->user();
       $reviews = $reviews->addReview($request->get('product_id'),$user->id,(int)$request->get('star'),$request->get('text'));
 
-      return view('detail',compact('product','reviews'));
+      return view('detail',compact('product','reviews','request'));
     }
 }

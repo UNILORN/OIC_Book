@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\EMPLOYEE;
+
 class EMPLOYEE_TABLE extends Seeder
 {
     /**
@@ -11,18 +12,27 @@ class EMPLOYEE_TABLE extends Seeder
      */
     public function run()
     {
-      DB::table('EMPLOYEE')->delete();
+        DB::table('EMPLOYEE')->delete();
 
-       //faker使う。普通に使う場合と同じ。
-      $faker = Faker\Factory::create('ja_JP');
+        //faker使う。普通に使う場合と同じ。
+        $faker = Faker\Factory::create('ja_JP');
 
-      for($i=1; $i<=50; $i++)
-      {
-          DB::table('EMPLOYEE')->insert([
-            'employee_id'=>$i,
-            'employee_password'=>$faker->password(),
-            'employee_auth_id'=>$i%3
-          ]);
-      }
+        DB::table('EMPLOYEE')->insert([
+            'employee_id' => 1,
+            'employee_name'=>"Admin",
+            'employee_email' => 'oic.book.sm2@gmail.com',
+            'employee_password' => sha1('masakage77'),
+            'employee_auth_id' => 1
+        ]);
+
+        for ($i = 2; $i <= 50; $i++) {
+            DB::table('EMPLOYEE')->insert([
+                'employee_id' => $i,
+                'employee_name'=>"Employee".$i,
+                'employee_email' => $i.'@aaa.aaa',
+                'employee_password' => sha1($i.rand(1,1000)),
+                'employee_auth_id' => $i % 3
+            ]);
+        }
     }
 }

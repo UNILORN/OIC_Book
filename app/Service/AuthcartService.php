@@ -14,13 +14,20 @@ class AuthcartService{
     ->where('product_id',$product_id)
     ->first();
 
+    /***
+    *　カートに商品がなければ追加すでに入っていれば数量更新
+    ***/
     if (empty($already)) {
       DB::table('CART')->insert(
-        [ 'user_id'=> $user_id,
+        [ 'user_id' => $user_id,
         'product_id' => $product_id,
-        'product_cart_number'=>$number
-      ]
-    );
+        'product_cart_number' => $number
+        ]
+      );
+    }else{
+      CART::where('user_id', $user_id)
+      ->where('product_id', $product_id)
+      ->update(['product_cart_number' => $number]);
     }
 
     $products = $this->getItems($user_id);
@@ -34,6 +41,17 @@ class AuthcartService{
     ->with('cartProduct')
     ->get();
 
+/*  dataがシードだから整合性取れてなくて動かせない
+    $a = DB::table('CART')
+    ->join('PRODUCT','CART.product_id' ,'=', 'PRODUCT.product_id')
+    ->join('AUTHERCROSS','AUTHERCROSS.product_id' ,'=', 'PRODUCT.product_id')
+    ->join('AUTHER','AUTHERCROSS.auther_id' ,'=', 'AUTHER.auther_id')
+    ->select('PRODUCT.*','CART.*','AUTHERCROSS.*')
+    ->where('CART.user_id' ,'=', $user_id)
+    ->get();
+
+    var_dump($a);
+*/
     return $products;
   }
   public function deleteItem($user_id,$product_id)
@@ -45,6 +63,12 @@ class AuthcartService{
     $products = $this->getItems($user_id);
 
     return $products;
+  }
+  public function deleteAllItem($user,$cartarray)
+  {
+    CART::where('user_id',$user)
+    ->WhereIn('product_id', $cartarray)
+    ->delete();
   }
 
   public function sessionTakeover($user_id,$products)

@@ -30,7 +30,8 @@ class AdminstockController extends BaseController
 
     public function create()
     {
-        return view('/administer/product/admin_create');
+        $vendor = [];
+        return view('/administer/product/admin_create',compact('vendor'));
     }
 
     public function store(Request $request)

@@ -10,6 +10,7 @@ use App\User;
 class ORDER extends Model
 {
     protected $table = 'ORDER';
+    protected $primaryKey = 'order_id';
 
     public function orderEmployee()
     {
@@ -39,6 +40,19 @@ class ORDER extends Model
         if (!empty($product_name)) {
             $product_id = PRODUCT::Name($product_name)
                 ->get();
+            $product_array = [];
+
+            foreach ($product_id as $value) {
+                $product_array[] = $value->product_id;
+            }
+            $query = $query->whereIn('product_id', $product_array);
+        }
+        return $query;
+    }
+
+    public function scopeProductIDquery($query, $product_id)
+    {
+        if (!empty($product_id)) {
             $product_array = [];
 
             foreach ($product_id as $value) {

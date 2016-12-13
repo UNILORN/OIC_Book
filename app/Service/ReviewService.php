@@ -13,6 +13,7 @@ class ReviewService{
     $reviews = REVIEW::with('reviewProduct')
     ->with('reviewUsers')
     ->where('product_id',$product_id)
+    ->orderBy('entry_time','desc')
     ->paginate(4);
 
     return $reviews;

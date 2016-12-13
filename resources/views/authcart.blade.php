@@ -23,13 +23,11 @@
                     <tr>
                       <td class="product_img"><img src="{{$product->cartProduct[0]->product_image}}" alt="" /></td>
                       <td class="product_name">{{$product->cartProduct[0]->product_name}}</td>
-                      <td class="auther_name">著者</td>
+                      <td class="auther_name">{{$product->cartProduct[0]->auther_name}}</td>
                       <td class="product_price">{{$product->cartProduct[0]->product_price}}円</td>
                       <td class="quantity">
-                        <form action="/cart/edit/" method="post">
-                            残り在庫 : {{$product->cartProduct[0]->product_stock}}
-                            <input class="number" type="number" min="1" max="{{$product->cartProduct[0]->product_stock}}" value="{{$product->product_cart_number}}" index="{{$product->product_id}}">
-                        </form>
+                          残り在庫 : {{$product->cartProduct[0]->product_stock}}
+                          <input class="number" type="number" min="1" max="{{$product->cartProduct[0]->product_stock}}" value="{{$product->product_cart_number}}" index="{{$product->product_id}}">
                       </td>
                       <td class="subtotal">{{$product->cartProduct[0]->product_price*$product->product_cart_number}}円</td>
                       <td class="del_btn">

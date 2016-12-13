@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="/css/@yield('css').css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/d3js/latest/d3.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/underscorejs/latest/underscore-min.js"></script>
-    <script src="https://cdn.jsdelivr.net/taucharts/latest/tauCharts.min.js"></script>
-    <link rel="stylesheet"  href="//cdn.jsdelivr.net/taucharts/latest/tauCharts.min.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="/js/jquery.min.js" charset="utf-8"></script>
     <title>@yield('title')</title>
@@ -35,9 +33,19 @@
             <li @yield('mail')><a href="/admin/mailform">発注メールフォーム</a></li>
             <li @yield('arriveform')><a href="/admin/arrive/create">入荷登録フォーム</a></li>
           </ul>
+          <ul class="nav navbar-right">
+            <li @yield('arriveform')><a href="/admin/logout">ログアウト</a></li>
+          </ul>
         </div>
       </div>
     </nav>
+
+    <?php
+    if(is_null(session()->get('employee'))) {
+      header('Location: http://' . $_SERVER['HTTP_HOST']);
+      exit;
+    }
+    ?>
 
     <main>
       @yield('main')

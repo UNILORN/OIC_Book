@@ -67,6 +67,7 @@
   </tr>
 </div>
 
+<<<<<<< HEAD
 <div class="input">
 <tr>
     <th><span class="input-span">E-mail</span></th>
@@ -101,5 +102,8 @@
 </tbody>
 </table>
 </div>
+=======
+
+>>>>>>> bbbcdd1dd418fccd0c0473d77e3f40d115a16cd0
 
 @endsection
