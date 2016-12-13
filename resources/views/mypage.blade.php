@@ -1,5 +1,5 @@
 @extends('template')
-@section('title','mypage')
+@section('title','マイページ')
 @section('css','mypage')
 
 

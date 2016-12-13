@@ -1,5 +1,5 @@
 @extends('template')
-@section('title','buy')
+@section('title','購入画面')
 @section('css','buy')
 @section('main')
 
@@ -10,7 +10,7 @@
       <h1>Bank transfer</h1>
     <form class="buy_form" action="{{url('/buy_confirm')}}" method="post">
   {{csrf_field()}}
-  <input type="radio" name="buy" value="1">OIC銀行
+  <input type="radio" name="buy" value="1" checked>OIC銀行
   <p>※振込先はOIC銀行のみとなります。<br>
     他社銀行からのお振込の場合、振込手数料がかかる場合がりますので、ご了承くださいませ。</p>
   <input class="submit" type="submit" name="submit" value="確定">

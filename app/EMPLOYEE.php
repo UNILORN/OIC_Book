@@ -19,5 +19,9 @@ class EMPLOYEE extends Model
     }
 
 
+    public function scopeactive($query){
+        $query = $query->where('delete_flg',0);
+        return $query;
+    }
 
 }

@@ -61,7 +61,7 @@
             <tr>
                 <td>{{$value->order_id}}</td>
                 <td>{{$value->orderVendor->vendor_name}}</td>
-                <td>{{$value->orderEmployee->user->name}}</td>
+                <td>{{$value->orderEmployee->employee_name}}</td>
                 <td>{{$value->orderProduct->product_name}}</td>
                 <td>{{$value->order_number}}</td>
                 <td>{{$value->order_day}}</td>

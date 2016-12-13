@@ -64,11 +64,30 @@
   padding: 0;
   background-color: #dedede;
 }
+
 .buy_profile{
   margin: auto;
   margin-top: 10px;
   height: 300px;
-  width:  310px;
+  width:  300px;
   padding: 0;
   background-color: #e4e321;
+}
+.input input{
+  margin-top: 5px;
+}
+.input-span{
+  width: 100px;
+
+}
+
+.form{
+  border:0;
+  padding:5px;
+  font-size:1.3em;
+  margin:0 0 10px;
+  width:200px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
