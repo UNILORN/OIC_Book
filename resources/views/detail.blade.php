@@ -61,7 +61,7 @@
     <div class="stars">
       評価:
       @foreach (range(1,$review->review) as $index)
-        <div class="star"></div>
+        <div class="stars">☆</div>
       @endforeach
     </div>
     <div class="posted_text">{{$review->review_text}}</div>
