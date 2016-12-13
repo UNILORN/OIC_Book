@@ -43,13 +43,11 @@
  <div class="buy_method">
    <table>
      <tbody>
-   <form class="method_from">
-   <div class="input">
      <tr>
+       <form class="method_from">
      <th><span class="input-span">支払い方法</span></th>
      <td><input type="text" name="buy" class="form" value="{{$buy}}"></td>
    </tr>
-   </div>
  </form>
  </tbody>
  </table>
