@@ -84,13 +84,54 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-
-
+                              <!-- モーダルウィンドウの中身 -->
+                              <div class="modal fade" id="myModal">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                      <h4 class="modal-title">Modal タイトル</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="confirm" style="display:none">
+                                        <div class="confirm_text">
+                                          <div class="input-group">
+                                            <span class="input-group-addon">name</span>
+                                            <input class="form-control" type="text" name="name" value="@{{name}}" disabled></p>
+                                          </div>
+                                          <div class="input-group">
+                                            <span class="input-group-addon">Email</span>
+                                            <input class="form-control" type="text" name="email" value="@{{email}}" disabled></p>
+                                          </div>
+                                          <div class="input-group">
+                                            <span class="input-group-addon">郵便番号</span>
+                                            <input class="form-control" type="text" name="user_post_code" value="@{{user_post_code}}" disabled></p>
+                                          </div>
+                                          <div class="input-group">
+                                            <span class="input-group-addon">住所</span>
+                                            <input class="form-control" type="text" name="user_address" value="@{{user_address}}" disabled></p>
+                                          </div>
+                                          <div class="input-group">
+                                            <span class="input-group-addon">電話番号</span>
+                                            <input class="form-control" type="text" name="user_phone_number" value="@{{user_phone_number}}" disabled></p>
+                                          </div>
+                                        </div>
+                                      </div>
                                       <button  style="display:none" type="submit" class="btn btn-primary submitbutton">
                                       Register
                                       </button>
-                                      <button type="button" class="confirm_button">確認</button>
-                                      <button type="button" style="display:none" class="confirm_button2">戻る</button>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-primary" data-dismiss="modal">閉じる</button>
+                                     </div>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                                      <!-- モーダルウィンドウを呼び出すボタン -->
+                                      <button type="button" class="btn btn-primary confirm_button" data-toggle="modal" data-target="#myModal">確認</button>
 
                                 </div>
                         </div>
@@ -101,15 +142,7 @@
     </div>
 </div>
 
-<div class="confirm" style="display:none">
-  <div class="confirm_text">
-    <p>name:@{{name}}</p>
-    <p>email:@{{email}}</p>
-    <p>郵便番号:@{{user_post_code}}</p>
-    <p>住所:@{{user_address}}</p>
-    <p>電話番号:@{{user_phone_number}}</p>
-  </div>
-</div>
+
 
     <script type="text/javascript">
     new Vue({
@@ -124,22 +157,7 @@
 
     })
     </script>
-<style media="screen">
-  .confirm{
-    position: fixed;
-    top: 100px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height:350px;
-    width:700px;
-    background: rgba(1, 1, 1, 0.8);
-    margin: 0 auto;
-  }
-  .confirm_text{
-    text-align: center;
 
-  }
 </style>
 <script type="text/javascript">
 $('.confirm_button').click(function(){
