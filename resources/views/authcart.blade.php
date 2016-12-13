@@ -53,7 +53,7 @@
 
         <div class="button">
             <div class="back_or_next">
-                <div class="back"><a href="/">買い物を続ける</a></div>
+                <div class="back"><a href="search">買い物を続ける</a></div>
                 <div class="next"><a href="buy">レジに進む</a></div>
             </div>
         </div>
