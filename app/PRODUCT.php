@@ -45,7 +45,7 @@ class PRODUCT extends Model
     }
     public function scopeCotegory($query,$cotegory){
       if(!empty($cotegory)){
-        $query = $query->orderBy($cotegory);
+        $query = $query->where('genre_id',$cotegory);
       }
       return $query;
     }

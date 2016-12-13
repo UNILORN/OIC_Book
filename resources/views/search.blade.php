@@ -23,13 +23,16 @@
                             <form action="/search" method="GET">
                                 <ul>
                                     <li class="love-category">
-                                        <input type="radio" name="cotegory" value="1">恋愛
+                                        <input type="radio" name="cotegory" value="1">小説
                                     </li>
                                     <li class="politics-category">
-                                        <input type="radio" name="cotegory" value="2">政治
+                                        <input type="radio" name="cotegory" value="2">漫画
                                     </li>
                                     <li class="adlut-category">
-                                        <input type="radio" name="cotegory" value="3">アダルト
+                                        <input type="radio" name="cotegory" value="3">専門書
+                                    </li>
+                                    <li class="adlut-category">
+                                        <input type="radio" name="cotegory" value="4">絵本
                                     </li>
                                 </ul>
 
