@@ -54,79 +54,12 @@
             <textarea id="textarea" type="textarea" v-model="product_explanation" name="product_explanation" class="form-control" required></textarea>
         </div>
 
-        <button class="btn btn-default submitbutton" style="display:none" type="submit" name="submit">新規登録</button>
-        <button type="button" class="btn btn-default confirm_button">確認</button>
-        <button type="button" style="display:none" class="btn btn-default confirm_button2">戻る</button>
+        <button class="btn btn-default "  type="submit" name="submit">新規登録</button>
     </form>
-    <div class="confirm" style="display:none">
-      <div class="confirm_text">
-        <p>商品ID:@{{product_id}}</p>
-        <p>商品名:@{{product_name}}</p>
-        <p>商品画像:@{{product_image}}</p>
-        <p>商品価格:@{{product_price}}</p>
-        <p>商品在庫数:@{{product_stock}}</p>
-        <p>翻訳者ID:@{{trancelater_ID}}</p>
-        <p>高さ:@{{product_height}}</p>
-        <p>幅:@{{product_width}}</p>
-        <p>奥行き:@{{product_depth}}</p>
-        <p>ページ数:@{{product_page}}</p>
-        <p>発売日:@{{product_start_day}}</p>
-        <p>商品説明:@{{product_explanation}}</p>
-      </div>
-    </div>
 
-        <script type="text/javascript">
-        new Vue({
-          el:'main',
-          data:{
-            product_id:'',
-            product_name:'',
-            product_image:'',
-            product_price:'',
-            product_stock:'',
-            trancelater_ID:'',
-            product_height:'',
-            product_width:'',
-            product_depth:'',
-            product_page:'',
-            product_start_day:'',
-            product_explanation:''
-                }
 
-        })
-        </script>
-    <style media="screen">
-      .confirm{
-        position: fixed;
-        top: 100px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height:570px;
-        width:700px;
-        background: rgba(1, 1, 1, 0.8);
-        margin: 0 auto;
-        z-index: 99;
-      }
-      .confirm_text{
-        text-align: center;
-        z-index: 100;
-      }
-      .confirm_text p{
-        color: white;
-      }
-    </style>
-    <script type="text/javascript">
-    $('.confirm_button').click(function(){
-      $('.submitbutton').fadeIn();
-      $('.confirm').fadeIn();
-      $('.confirm_button2').fadeIn();
-    })
-    $('.confirm_button2').click(function(){
-      $('.submitbutton').fadeOut();
-      $('.confirm').fadeOut();
-      $('.confirm_button2').fadeOut();
-    })
-    </script>
+
+
+    
 
 @endsection
