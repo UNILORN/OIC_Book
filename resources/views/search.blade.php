@@ -54,8 +54,8 @@
                                     </ul>
                                     <div class="title">昇順・降順</div>
                                     <ul>
+                                        <li><input type="radio" name="sort_order" value="asc" checked>昇順</li>
                                         <li><input type="radio" name="sort_order" value="desc">降順</li>
-                                        <li><input type="radio" name="sort_order" value="asc">昇順</li>
                                     </ul>
                                     </p>
                                     <input type="submit" name="submit" class="submit" value="検索">
