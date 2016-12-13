@@ -16,6 +16,10 @@
         <span class="input-group-addon">従業員名</span>
         <input type="text" name="employee_name" class="form-control"  value="{{array_get($request,'employee_name','') }}">
       </div>
+      <div class="input-group">
+        <span class="input-group-addon">従業員メールアドレス</span>
+        <input type="text" name="employee_email" class="form-control"  value="{{array_get($request,'employee_email','') }}">
+      </div>
       <input class="btn btn-default" type="submit" name="search" value="検索">
     </form>
   </div>
@@ -24,11 +28,15 @@
     <tr>
       <th>従業員ID</th>
       <th>従業員名</th>
+      <th>従業員メールアドレス</th>
+      <th>従業員電話番号</th>
     </tr>
     @foreach ($employee as $key => $value)
       <tr>
         <td>{{$value->employee_id}}</td>
         <td>{{$value->employee_name}}</td>
+        <td>{{$value->employee_email}}</td>
+        <td>{{$value->employee_phone_number}}</td>
       </tr>
     @endforeach
     {{$employee->appends($request->toArray())->links()}}
