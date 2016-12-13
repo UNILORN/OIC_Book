@@ -84,6 +84,8 @@ Route::get('/logout',function(){
 
     //仕入先情報
     Route::resource('/admin/vendor','AdminvendorController');
+    Route::post('/admin/vendor/{id}/update','AdminvendorController@update');
+    Route::post('/admin/vendor/{id}/delete','AdminvendorController@destroy');
 
     //ユーザ注文情報
     Route::get('/admin/uoderdetail','AdminuoderdetailController@index');
