@@ -1,0 +1,26 @@
+
+.done_body{
+    margin: 0;
+    padding: 0;
+    positiion: relative;
+    min-width: 600px;
+    min-height: 400px;
+}
+
+.message{
+    margin: -200px 0 0 -300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 400px;
+    text-align: center;
+}
+
+.to_top{
+  margin-top: 50px;
+}
+h1{
+  font-family: 'Dekko', cursive;
+
+}

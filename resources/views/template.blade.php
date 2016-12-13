@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
     <link rel="stylesheet" href="/css/stylesheet/stylesheet3.css" media="screen" title="no title">
     <link rel="stylesheet" href="/css/@yield('css').css" media="screen" title="no title" charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Dekko" rel="stylesheet">
     <script src="/js/jquery.min.js" charset="utf-8"></script>
     <script src="/js/vue.min.js" charset="utf-8"></script>
   <body>
