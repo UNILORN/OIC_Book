@@ -22,7 +22,7 @@ class ORDER_TABLE extends Seeder
           DB::table('ORDER')->insert([
             'order_id'=>$i,
             'vender_id'=>$i,
-            'employee_id'=>$i%50,
+            'employee_id'=>rand(1,100),
             'product_id'=>$i,
             'order_number'=>9,
             'order_day'=>Carbon::create(2016,rand(1,12),rand(1,28),rand(0,23),rand(0,59),rand(0,59)),
