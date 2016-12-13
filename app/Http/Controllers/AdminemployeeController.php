@@ -14,11 +14,6 @@ class AdminemployeeController extends BaseController
 {
     public function index(Request $request)
     {
-        $employee = User::whereNotNull('employee_id')
-            ->EmployeeID($request->input('employee_id'))
-            ->Name($request->input('employee_name'))
-            ->paginate(20);
-
         $employee = EMPLOYEE::active()
             ->paginate(20);
 
