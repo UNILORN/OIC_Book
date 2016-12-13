@@ -18,7 +18,7 @@ class USER_TABLE extends Seeder
         $faker = Faker\Factory::create('ja_JP');
         for ($i = 1; $i <= 100; $i++) {
             DB::table('users')->insert([
-                //'id' => $i,
+                'id' => $i,
                 'name' => $faker->name(),
                 'email' => $i . $faker->email(),
                 'password' => $faker->password(),
