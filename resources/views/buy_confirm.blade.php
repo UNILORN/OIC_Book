@@ -41,9 +41,10 @@
 </div>
 <div class="buy_cont">
   <div class="buy_button">
-    <form action="/buy_done">
-    <button class="button_enter" type="submit" name="button">確定</button>
-  </form>
+    <form  action="/buy_done" method="post">
+<input type="hidden" name="_token" value="{{ csrf_token() }}">
+      <input class="button_enter" type="submit" value="確定">
+    </form>
   </div>
  <div class="buy_method">
        <form class="method_from">
