@@ -41,17 +41,6 @@ class AuthcartService{
     ->with('cartProduct')
     ->get();
 
-/*  dataがシードだから整合性取れてなくて動かせない
-    $a = DB::table('CART')
-    ->join('PRODUCT','CART.product_id' ,'=', 'PRODUCT.product_id')
-    ->join('AUTHERCROSS','AUTHERCROSS.product_id' ,'=', 'PRODUCT.product_id')
-    ->join('AUTHER','AUTHERCROSS.auther_id' ,'=', 'AUTHER.auther_id')
-    ->select('PRODUCT.*','CART.*','AUTHERCROSS.*')
-    ->where('CART.user_id' ,'=', $user_id)
-    ->get();
-
-    var_dump($a);
-*/
     return $products;
   }
   public function deleteItem($user_id,$product_id)
