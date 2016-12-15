@@ -10,12 +10,12 @@
         <form class="search" action="/admin/employee/{{$id}}/update" method="POST">
             {{csrf_field()}}
             <div class="input-group">
-                <span class="input-group-addon">仕入先ID</span>
+                <span class="input-group-addon">従業員ID</span>
                 <input type="text" name="employee_id" class="form-control"
                        value="{{ array_get($employee,'employee_id','') }}">
             </div>
             <div class="input-group">
-                <span class="input-group-addon">仕入先名</span>
+                <span class="input-group-addon">従業員名</span>
                 <input type="text" name="employee_name" class="form-control"
                        value="{{array_get($employee,'employee_name','') }}">
             </div>
