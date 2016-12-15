@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->integer('user_point')->nullable();
             $table->integer('employee_id')->nullable();
             $table->boolean('user_recede_flug')->nullable();
+            $table->boolean('delete_flg')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });
