@@ -11,25 +11,25 @@
             {{csrf_field()}}
             <div class="input-group">
                 <span class="input-group-addon">ユーザID</span>
-                <input type="text" name="user_id" class="form-control" value="{{ array_get($user,'user_id','') }}"
+                <input type="text" name="user_id" class="form-control" value="{{ array_get($user,'id','') }}"
                        disabled>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">ユーザ名</span>
                 <input type="text" name="user_name" class="form-control"
-                       value="{{array_get($user,'user_name','') }}" disabled>
+                       value="{{array_get($user,'name','') }}" disabled>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">郵便番号</span>
-                <input type="text" name="user_postcode" class="form-control" value="" required>
+                <input type="text" name="user_postcode" class="form-control" value="{{array_get($user,'user_post_code','') }}" disabled>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">住所</span>
-                <input type="text" name="user_address" class="form-control" value="" required>
+                <input type="text" name="user_address" class="form-control" value="{{array_get($user,'user_address','') }}" disabled>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">メールアドレス</span>
-                <input type="text" name="user_email" class="form-control" value="{{array_get($user,'user_email','')
+                <input type="text" name="user_email" class="form-control" value="{{array_get($user,'email','')
             }}" disabled>
             </div>
             <div class="input-group">

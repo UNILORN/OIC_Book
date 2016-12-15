@@ -40,7 +40,7 @@ class AdminuserController extends Controller
         $user = User::active()
             ->find($id);
 
-        return view('/administer/user/admin_detail', compact('user', 'id'));
+        return view('/administer/user/admin_edit', compact('user', 'id'));
     }
 
     public function update(Request $request, $id)
