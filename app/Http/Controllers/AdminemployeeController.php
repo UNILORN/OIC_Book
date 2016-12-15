@@ -27,7 +27,14 @@ class AdminemployeeController extends BaseController
 
     public function store(Request $request)
     {
+        EMPLOYEE::insert([
+            'employee_name'         => $request->input('employee_name'),
+            'employee_email'        => $request->input('employee_email'),
+            'employee_phone_number' => $request->input('employee_phone_number'),
+            'employee_password'     => sha1($request->input('employee_pass'))
+        ]);
 
+        return redirect('/admin/employee');
     }
 
     public function show($id)
@@ -35,7 +42,7 @@ class AdminemployeeController extends BaseController
         $employee = EMPLOYEE::active()
             ->find($id);
 
-        return view('/administer/employee/admin_detail',compact('employee','id'));
+        return view('/administer/employee/admin_detail', compact('employee', 'id'));
     }
 
     public function edit($id)
@@ -43,7 +50,7 @@ class AdminemployeeController extends BaseController
         $employee = EMPLOYEE::active()
             ->find($id);
 
-        return view('/administer/employee/admin_edit',compact('employee','id'));
+        return view('/administer/employee/admin_edit', compact('employee', 'id'));
     }
 
     public function update(Request $request)

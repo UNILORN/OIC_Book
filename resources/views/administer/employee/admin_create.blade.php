@@ -7,15 +7,19 @@
 @section('main')
     <h2>従業員新規作成</h2>
     <div class="searchform">
-        <form class="search" action="/admin/employee/create" method="POST">
+        <form class="search" action="/admin/employee" method="POST">
             {{csrf_field()}}
             <div class="input-group">
-                <span class="input-group-addon">仕入先ID</span>
-                <input type="text" name="employee_id" class="form-control" value="" required>
+                <span class="input-group-addon">従業員ID</span>
+                <input type="text" name="employee_id" class="form-control" value="" disabled required>
             </div>
             <div class="input-group">
-                <span class="input-group-addon">仕入先名</span>
+                <span class="input-group-addon">従業員名</span>
                 <input type="text" name="employee_name" class="form-control" value="" required>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">パスワード</span>
+                <input type="password" name="employee_pass" class="form-control" value="" required>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">メールアドレス</span>
