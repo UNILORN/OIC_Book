@@ -8,13 +8,13 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th></th>
-                        <th>商品名</th>
-                        <th>著者</th>
-                        <th>金額</th>
-                        <th>数量</th>
-                        <th>小計</th>
-                        <th>削除</th>
+                        <th style="width:170px;"></th>
+                        <th style="width:240px;">商品名</th>
+                        <th style="width:150px;">著者</th>
+                        <th style="width:100px;">金額</th>
+                        <th style="width:100px;">数量</th>
+                        <th style="width:100px;">小計</th>
+                        <th style="width:100px;">削除</th>
                     </tr>
                 </thead>
                 <tbody>
