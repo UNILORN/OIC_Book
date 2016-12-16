@@ -37,7 +37,7 @@
             <th>メールアドレス</th>
             <th>住所</th>
             <th>電話番号</th>
-            <th>仕入先編集</th>
+            <th>仕入先詳細</th>
         </tr>
         @foreach ($vendor as $key => $value)
             <tr>
@@ -48,7 +48,7 @@
                 <td>{{$value->vendor_phone_number}}</td>
                 <td>
                     <button class="btn btn-default" type="button" name="button" onclick="location
-                            .href='/admin/vendor/{{$value->vendor_id}}'">商品詳細</button>
+                            .href='/admin/vendor/{{$value->vendor_id}}'">仕入先詳細</button>
                 </td>
             </tr>
         @endforeach

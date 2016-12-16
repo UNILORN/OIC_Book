@@ -1,10 +1,16 @@
 @extends('/administer/admin_template')
 
 @section('css','/admin/employee')
-@section('title','ユーザリスト')
+@section('title','ユーザ情報')
 @section('user','class="active"')
 
 @section('main')
+    <div class="row container">
+        <div class="col-md-11"></div>
+        <div class="col-md-1 right">
+            <button class="btn btn-default" type="button" onclick="location.href='/admin/user/create'">新規登録</button>
+        </div>
+    </div>
   <div class="searchform">
     <form class="search" action="/admin/user" method="GET">
       <div class="input-group">
@@ -35,6 +41,7 @@
       <th>ポイント</th>
       <th>作成日時</th>
       <th>更新日時</th>
+        <th>ユーザ詳細</th>
     </tr>
     @foreach ($user as $key => $value)
       <tr>
@@ -47,6 +54,10 @@
         <td>{{$value->user_point}}</td>
         <td>{{$value->created_at}}</td>
         <td>{{$value->updated_at}}</td>
+          <td>
+              <button class="btn btn-default" type="button" name="button" onclick="location
+                      .href='/admin/user/{{$value->id}}'">ユーザ詳細</button>
+          </td>
       </tr>
     @endforeach
     {{$user->appends($request->toArray())->links()}}

@@ -20,6 +20,7 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" charset="utf-8"></script>
 </head>
 <body>
     <div id="app">

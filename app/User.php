@@ -28,6 +28,11 @@ class User extends Authenticatable
     ];
 
 
+    public function scopeactive($query){
+        $query = $query->where('delete_flg',0);
+        return $query;
+    }
+
     public function scopeEmployeeID($query,$employee_id){
       if(!empty($employee_id)){
         $query = $query->where('employee_id',$employee_id);

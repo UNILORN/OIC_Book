@@ -38,8 +38,6 @@
                             <input type="tel" name="user_phone_number" required="required" placeholder="Tel"></input>
                           </div>
 
-
-
                         <input class="btn" type="submit" value="確認">
                       </div>
                     </form>

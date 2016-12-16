@@ -13,13 +13,13 @@ class VENDORTABLE extends Migration
      */
     public function up()
     {
-        Schema::create('VENDOR',function(Blueprint $table){
-          $table->increments('vendor_id')->unique();
-          $table->string('vendor_name',45);
-          $table->string('vendor_email',45);
-          $table->string('vendor_address',45);
-          $table->string('vendor_phone_number',45);
-
+        Schema::create('VENDOR', function (Blueprint $table) {
+            $table->increments('vendor_id')->unique();
+            $table->string('vendor_name', 45);
+            $table->string('vendor_email', 45);
+            $table->string('vendor_address', 45);
+            $table->string('vendor_phone_number', 45);
+            $table->boolean('delete_flg')->default(0);
         });
     }
 

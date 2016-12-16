@@ -8,13 +8,13 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th></th>
-                        <th>商品名</th>
-                        <th>著者</th>
-                        <th>金額</th>
-                        <th>数量</th>
-                        <th>小計</th>
-                        <th>削除</th>
+                        <th style="width:170px;"></th>
+                        <th style="width:240px;">商品名</th>
+                        <th style="width:150px;">著者</th>
+                        <th style="width:100px;">金額</th>
+                        <th style="width:100px;">数量</th>
+                        <th style="width:100px;">小計</th>
+                        <th style="width:100px;">削除</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,7 +27,7 @@
                       <td class="product_price">{{$product->cartProduct[0]->product_price}}円</td>
                       <td class="quantity">
                           残り在庫 : {{$product->cartProduct[0]->product_stock}}
-                          <input class="number" type="number" min="1" max="{{$product->cartProduct[0]->product_stock}}" value="{{$product->product_cart_number}}" index="{{$product->product_id}}">
+                          <input class="number" type="number" min="1" max="{{$product->cartProduct[0]->product_stock}}" value="{{$product->product_cart_number}}" index="{{$product->product_id}}" required>
                       </td>
                       <td class="subtotal">{{$product->cartProduct[0]->product_price*$product->product_cart_number}}円</td>
                       <td class="del_btn">
@@ -53,7 +53,7 @@
 
         <div class="button">
             <div class="back_or_next">
-                <div class="back"><a href="/">買い物を続ける</a></div>
+                <div class="back"><a href="search">買い物を続ける</a></div>
                 <div class="next"><a href="buy">レジに進む</a></div>
             </div>
         </div>

@@ -50,7 +50,6 @@ h1 {
 	padding: 0;
 	font-size: 3.5em;
 	font-weight: normal;
-	color: #fff;
 }
 h2 {
 	margin: 20px 0 40px;
@@ -58,7 +57,6 @@ h2 {
 	font-size: 1.8em;
 	line-height: 140%;
 	font-weight: normal;
-	color: #fff;
 }
 h2 span.exp {
 	margin: 0 0 0 20px;
@@ -416,7 +414,6 @@ content
     overflow: hidden;
     background: #fff;
     cursor: default;
-    position: absolute;
     left: 0;
     z-index: 0;
 }
@@ -427,7 +424,6 @@ content
 ランキング
 ****************/
 #ranking{
-	padding-top:450px;
 	padding-bottom:15px;
 }
 .ranking{
@@ -615,3 +611,157 @@ footer ul li{
 .pay{
     border: 1px solid #000;
 }*/
+
+
+/******
+* カテゴリ
+*******/
+.category{
+	padding-top: 70px;
+	padding-bottom: 100px;
+	border: solid 2px #8e8e8e;
+	width:80%;
+	margin:0 auto;
+	margin-top:70px;
+	margin-bottom:70px;
+}
+.category #specialty_container{
+border-bottom: solid 2px #8e8e8e;
+width:730px;
+margin: 0 auto;
+}
+.category #specialty{
+	height:150px;
+	width:150px;
+	position: relative;
+	text-align: center;
+	border:solid 2px #8e8e8e;
+	border-bottom:0px;
+	display: inline-block;
+}
+.category #specialty h2{
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin: auto;
+	width:100px;
+	height:50px;
+}
+.category #specialty_products{
+	display: inline-block;
+}
+.category #specialty_products .specialty_product{
+	display: inline-block;
+	height:120px;
+	margin-right: 50px;
+}
+.category #picturebook_container{
+	width:730px;
+	margin: 0 auto;
+	margin-top: 30px;
+	border-bottom: solid 2px #8e8e8e;
+}
+.category #picturebook{
+	height:150px;
+	width:150px;
+	position: relative;
+	text-align: center;
+	background-color: #e2e2e2;
+	border:solid 2px #8e8e8e;
+	border-bottom:0px;
+	display: inline-block;
+	margin-top: 10px;
+}
+.category #picturebook h2{
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin: auto;
+	width:100px;
+	height:50px;
+	display: inline-block;
+}
+.category #picturebook_products{
+	display: inline-block;
+}
+.category #picturebook_products .picturebook_product{
+	display: inline-block;
+	height:120px;
+	margin-left: 50px;
+}
+
+.category #manga_container{
+	border-bottom: solid 2px #8e8e8e;
+	width:730px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.category #manga{
+	height:150px;
+	width:150px;
+	position: relative;
+	text-align: center;
+	border:solid 2px #8e8e8e;
+	border-bottom:0px;
+	display: inline-block;
+	margin-top:10px;
+}
+
+.category #manga h2{
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin: auto;
+	width:100px;
+	height:50px;
+}
+
+.category #manga_products{
+	display: inline-block;
+}
+.category #manga_products .manga_product{
+	display: inline-block;
+	height:120px;
+	margin-right: 50px;
+}
+
+.category #novel_container{
+	border-bottom: solid 2px #8e8e8e;
+	width:730px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.category #novel{
+	height:150px;
+	width:150px;
+	position: relative;
+	text-align: center;
+	background-color: #e2e2e2;
+	border:solid 2px #8e8e8e;
+	border-bottom:0px;
+	display: inline-block;
+}
+.category #novel h2{
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin: auto;
+	width:100px;
+	height:50px;
+}
+.category #novel_products{
+	display: inline-block;
+}
+.category #novel_products .novel_product{
+	display: inline-block;
+	height:120px;
+	margin-left: 50px;
+}

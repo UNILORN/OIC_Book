@@ -22,7 +22,7 @@ class EMPLOYEE_TABLE extends Seeder
             'employee_name'=>"Admin",
             'employee_email' => 'oic.book.sm2@gmail.com',
             'employee_password' => sha1('masakage77'),
-            'employee_auth_id' => 1
+            'employee_phone_number' => $faker->phoneNumber()
         ]);
 
         for ($i = 2; $i <= 100; $i++) {
@@ -31,7 +31,7 @@ class EMPLOYEE_TABLE extends Seeder
                 'employee_name'=>"Employee".$i,
                 'employee_email' => $i.'@aaa.aaa',
                 'employee_password' => sha1($i.rand(1,1000)),
-                'employee_auth_id' => $i % 3
+                'employee_phone_number' => $faker->phoneNumber()
             ]);
         }
     }

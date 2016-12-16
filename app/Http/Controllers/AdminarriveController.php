@@ -32,6 +32,7 @@ class AdminarriveController extends BaseController
             ->with('arriveOrder')
             ->with('arriveOrder.orderProduct')
             ->with('arriveEmployee')
+            ->orderBy('arrive_day','desc')
             ->paginate(20);
 
 
