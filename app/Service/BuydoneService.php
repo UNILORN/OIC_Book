@@ -8,7 +8,7 @@ use Carbon\Carbon;
 use \App\UORDER;
 use \App\UORDER_DETAIL;
 class BuydoneService{
-  public function uorderadd($user,$sum,$timestamp){
+  public function uorderadd($user,$sum,$timestamp,$point){
     $today = Carbon::now();
     UORDER::insert([
         'uorder_id'=>$timestamp,
@@ -16,7 +16,7 @@ class BuydoneService{
         'uorder_day'=>$today,
         'uorder_price'=>$sum,
         'uorder_use_point'=>0,
-        'uorder_add_point'=>0,
+        'uorder_add_point'=>$point,
         'uorder_payment'=>0,
         'uorder_cancel'=>0,
         'uorder_auth_cancel'=>0,
