@@ -11,7 +11,7 @@
   <h1>Sign In</h1>
 
   <form action="/login" method="post">
-    {{ csfr_field() }}
+    {{ csrf_field() }}
     <div class="form-item">
       <label for="email"></label>
       <input type="email" name="email" required="required" placeholder="Email Address"></input>
