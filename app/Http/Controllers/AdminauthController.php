@@ -10,7 +10,10 @@ class AdminauthController extends Controller
 {
     public function index()
     {
-        return view('administer.auth.login');
+        if(session()->get('employee', null) === null){
+            return view('administer.auth.login');
+        }
+        return redirect('/admin');
     }
 
     public function check(Request $request)
