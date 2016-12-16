@@ -52,6 +52,7 @@ Route::get('/logout',function(){
     //マイページ
     Route::resource('/mypage','MypageController');
     Route::get('buyhistory','BuyhistoryController@index');
+    Route::get('buyhistory_point','BuyhistoryController@point');
 
     //購入
     Route::get('/buy','BuyController@index');

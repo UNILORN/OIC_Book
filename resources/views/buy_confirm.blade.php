@@ -18,12 +18,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                      @foreach($products as $value)
+                      @foreach($products as $key => $value)
                         <tr>
                           <td class="product_img"><img src="{{ $value->product_image }}" alt="" /></td>
                           <td class="product_name">{{ $value->product_name }}</td>
                           <td class="product_price">{{ $value->product_price}}円</td>
-                          <td>{{$value->product_order_number}}</td>
+                          <td>{{$cart[$key]->product_cart_number}}</td>
                         </tr>
                           @endforeach
                     </tbody>
@@ -106,9 +106,5 @@
 </table>
 </div>
 
-<form class="" action="/buy_done" method="post">
-  {{ csrf_field() }}
-  <button type="submit" name="button">kakutei</button>
-</form>
 
 @endsection

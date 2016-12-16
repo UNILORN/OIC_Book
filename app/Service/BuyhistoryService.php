@@ -13,7 +13,6 @@ class BuyhistoryService{
     ->select('PRODUCT.*','UORDER.*')
     ->where('UORDER.user_id','=', $user_id)
     ->get();
-
     return $histories;
   }
 }
