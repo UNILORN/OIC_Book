@@ -13,11 +13,9 @@ class BuyhistoryController extends Controller
   public function index(Request $request)
   {
     $mypage = new \App\Service\BuyhistoryService;
-    $histories = $mypage->getHistory();
     $user = $request->user();
-
-
-
+    $histories = $mypage->getHistory($user->id);
+    
     return view('buyhistory',compact('histories','user'));
   }
 }
