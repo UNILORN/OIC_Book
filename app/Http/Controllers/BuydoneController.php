@@ -22,17 +22,20 @@ class BuydoneController extends Controller
         $cartarray[] =  $value->product_id;
       }
       $timestamp = Carbon::now()->timestamp;
-
       $products = PRODUCT::whereIn('product_id',$cartarray)->get();
       $sum = new \App\Service\AuthcartService;
       $sum = $sum->getSum($user->id);
 
-      $uorder = new \App\Service\BuydoneService;
-      $uorderadd = $uorder -> uorderadd($user,$sum,$timestamp);
-      $uorderdetailadd = $uorder -> uorderdetailadd($cart,$timestamp);
 
+      $uorder = new \App\Service\BuydoneService;
+      $point = $request->input('point');
+      $point = floor( $sum/100 );
+      $uorderadd = $uorder -> uorderadd($user,$sum,$timestamp,$point);
+      $uorderdetailadd = $uorder -> uorderdetailadd($cart,$timestamp);
+      // $stockupdata = $uorder -> stockupdate();
       $cartdel = new \App\Service\AuthcartService;
       $cartdel -> deleteAllItem($user->id,$cartarray);
+
 
 
       return view('buydone');

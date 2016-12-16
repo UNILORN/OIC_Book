@@ -102,8 +102,9 @@
 </tbody>
 </table>
 </div>
-=======
-
->>>>>>> bbbcdd1dd418fccd0c0473d77e3f40d115a16cd0
+<form class="" action="/buy_done" method="post">
+  {{ csrf_field() }}
+  <button type="submit" name="button">kakutei</button>
+</form>
 
 @endsection
