@@ -14,7 +14,6 @@ class BuyhistoryService{
     ->where('UORDER.uorder_payment' ,'=', 1)
     ->where('UORDER.user_id','=', 1)
     ->get();
-
     return $histories;
   }
 }

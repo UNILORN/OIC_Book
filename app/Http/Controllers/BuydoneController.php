@@ -33,6 +33,7 @@ class BuydoneController extends Controller
       $uorderadd = $uorder -> uorderadd($user,$sum,$timestamp,$point);
       $uorderdetailadd = $uorder -> uorderdetailadd($cart,$timestamp);
       $stockupdata = $uorder -> stockupdate($cart);
+      $pointadd = $uorder -> pointadd($user,$point);
       $cartdel = new \App\Service\AuthcartService;
       $cartdel -> deleteAllItem($user->id,$cartarray);
 

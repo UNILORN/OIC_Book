@@ -7,6 +7,7 @@ use \App\CART;
 use Carbon\Carbon;
 use \App\UORDER;
 use \App\UORDER_DETAIL;
+use \App\User;
 
 class BuydoneService{
   public function uorderadd($user,$sum,$timestamp,$point){
@@ -18,7 +19,7 @@ class BuydoneService{
         'uorder_price'=>$sum,
         'uorder_use_point'=>0,
         'uorder_add_point'=>$point,
-        'uorder_payment'=>0,
+        'uorder_payment'=>1,
         'uorder_cancel'=>0,
         'uorder_auth_cancel'=>0,
         'method_of_payment_id'=>1
@@ -47,6 +48,10 @@ class BuydoneService{
       $products->save();
 
     };
+  }
+  public function pointadd($user,$point){
+    $user->user_point = $point + intval($user->user_point);
+    $user->save();
   }
 
 }
