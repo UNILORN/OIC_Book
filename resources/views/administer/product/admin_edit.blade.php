@@ -15,7 +15,7 @@
     </div>
     <div class="input-group">
       <span class="input-group-addon" >商品名</span>
-      <input type="text" name="product_name" class="form-control" placeholder="ProductName"  value="{{$products->product_name}}">
+      <input type="text" name="product_name" class="form-control" placeholder="ProductName"  value="{{$products->product_name}}"required>
     </div>
     <div class="input-group">
       <span class="input-group-addon" >商品画像</span>
@@ -23,35 +23,35 @@
     </div>
     <div class="input-group">
       <span class="input-group-addon" >値段</span>
-      <input type="text" name="product_price" class="form-control" placeholder="ProductName"  value="{{$products->product_price}}">
+      <input type="text" name="product_price" class="form-control" placeholder="ProductName"  value="{{$products->product_price}}"required>
       <span class="input-group-addon" >在庫数</span>
-      <input type="text" name="product_stock" class="form-control" placeholder="ProductName"  value="{{$products->product_stock}}">
+      <input type="text" name="product_stock" class="form-control" placeholder="ProductName"  value="{{$products->product_stock}}"required>
       <span class="input-group-addon" >翻訳者</span>
       <input type="text" name="trancelater_ID" class="form-control" placeholder="ProductName"  value="{{$products->trancelater_ID}}" disabled>
     </div>
     <div class="input-group">
       <span class="input-group-addon" >高さ</span>
-      <input type="text" name="product_height" class="form-control" placeholder="ProductName"  value="{{$products->product_height}}">
+      <input type="text" name="product_height" class="form-control" placeholder="ProductName"  value="{{$products->product_height}}"required>
       <span class="input-group-addon" >幅</span>
-      <input type="text" name="product_width" class="form-control" placeholder="ProductName"  value="{{$products->product_width}}">
+      <input type="text" name="product_width" class="form-control" placeholder="ProductName"  value="{{$products->product_width}}"required>
       <span class="input-group-addon" >奥行き</span>
-      <input type="text" name="product_depth" class="form-control" placeholder="ProductName"  value="{{$products->product_depth}}">
+      <input type="text" name="product_depth" class="form-control" placeholder="ProductName"  value="{{$products->product_depth}}"required>
     </div>
     <div class="input-group">
       <span class="input-group-addon" >ISBN</span>
-      <input type="text" name="ISBN" class="form-control" placeholder="ProductName"  value="{{$products->ISBN}}">
+      <input type="text" name="ISBN" class="form-control" placeholder="ProductName"  value="{{$products->ISBN}}"required>
     </div>
     <div class="input-group">
       <span class="input-group-addon" >ページ数</span>
-      <input type="text" name="product_page" class="form-control" placeholder="ProductName"  value="{{$products->product_page}}">
+      <input type="text" name="product_page" class="form-control" placeholder="ProductName"  value="{{$products->product_page}}"required>
     </div>
     <div class="input-group">
       <span class="input-group-addon" >発売日</span>
-      <input type="datetime" name="product_start_day" class="form-control" placeholder="ProductName"  value="{{$products->product_start_day}}">
+      <input type="datetime" name="product_start_day" class="form-control" placeholder="ProductName"  value="{{$products->product_start_day}}"required>
     </div>
     <div class="input-group">
       <span class="input-group-addon" >商品説明</span>
-      <textarea id="textarea" type="textarea" name="product_explanation" class="form-control" placeholder="ProductName">{{$products->product_explanation}}</textarea>
+      <textarea id="textarea" type="textarea" name="product_explanation" class="form-control" placeholder="ProductName"required>{{$products->product_explanation}}</textarea>
     </div>
 
     <button class="btn btn-default" type="submit" name="submit">更新</button>
