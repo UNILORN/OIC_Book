@@ -7,10 +7,11 @@ use \App\CART;
 use Carbon\Carbon;
 use \App\UORDER;
 use \App\UORDER_DETAIL;
+
 class BuydoneService{
   public function uorderadd($user,$sum,$timestamp,$point){
     $today = Carbon::now();
-    UORDER::insert([
+    $dadada = UORDER::insert([
         'uorder_id'=>$timestamp,
         'user_id'=>$user->id,
         'uorder_day'=>$today,
@@ -35,6 +36,17 @@ class BuydoneService{
         'uorder_details_flug'=>0
     ]);
   }
+  }
+  public function stockupdate($cart){
+
+
+    foreach ($cart as $key => $value) {
+      $products = PRODUCT::find($cart[$key]->product_id);
+      $stock = $products->product_stock - $cart[$key]->product_cart_number;
+      $products->product_stock = $stock;
+      $products->save();
+
+    };
   }
 
 }
