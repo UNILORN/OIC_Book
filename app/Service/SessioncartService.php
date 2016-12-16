@@ -59,18 +59,24 @@ class SessioncartService{
   public function getSum(){
     $products = session()->get("cart",[]);
     $sum = 0;
-
-    foreach ($products as $key => $product) {
-      $sum += $product->product_price*$product->product_cart_number;
+    foreach ($products as $product){
+     $sum += $product->product_price*$product->product_cart_number;
     }
-
     return $sum;
   }
 
   public function numChange($number,$index)
   {
     $cart = session()->get("cart",[]);
-    $cart[$index]['product_cart_number'] = $number;
+    foreach ($cart as $cart_product) {
+        if($cart_product->product_id == $index)
+        {
+          $cart_product['product_cart_number'] = $number;
+        }
+    }
+    session()->put("cart",$cart);
+    $products = $this->getItems();
+    return $products;
   }
 
   public function allDelete()

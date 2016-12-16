@@ -38,8 +38,7 @@ class SessioncartController extends Controller
       $number = $request->get('number');
       $index = $request->get('index');
       $cart = new \App\Service\SessioncartService;
-      $cart->numChange($number,$index);
-      $products = $cart->getItems();
+      $products = $cart->numChange($number,$index);
       $sum = $cart->getSum();
 
 
