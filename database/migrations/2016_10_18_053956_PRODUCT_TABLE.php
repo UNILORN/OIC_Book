@@ -21,7 +21,7 @@ class PRODUCTTABLE extends Migration
           $table->string('product_image',45);
           $table->integer('product_price');
           $table->integer('product_stock');
-          $table->integer('ISBN');
+          $table->string('ISBN');
           $table->integer('trancelater_id');
           $table->integer('product_height');
           $table->integer('product_width');
