@@ -38,7 +38,7 @@
                   <tr>
                     <td><div class="img"><a href="detail/?product_id={{$history->product_id}}"><img src="{{$history->product_image}}" alt="" /></a></div></td>
                     <td><a href="detail/?product_id={{$history->product_id}}">{{$history->product_name}}</a></td>
-                    <td>{{$history->product_start_day}}</td>
+                    <td>{{$history->uorder_day}}</td>
                   </tr>
             @endforeach
             </tbody>

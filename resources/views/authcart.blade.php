@@ -27,7 +27,7 @@
                       <td class="product_price">{{$product->cartProduct[0]->product_price}}円</td>
                       <td class="quantity">
                           残り在庫 : {{$product->cartProduct[0]->product_stock}}
-                          <input class="number" type="number" min="1" max="{{$product->cartProduct[0]->product_stock}}" value="{{$product->product_cart_number}}" index="{{$product->product_id}}">
+                          <input class="number" type="number" min="1" max="{{$product->cartProduct[0]->product_stock}}" value="{{$product->product_cart_number}}" index="{{$product->product_id}}" required>
                       </td>
                       <td class="subtotal">{{$product->cartProduct[0]->product_price*$product->product_cart_number}}円</td>
                       <td class="del_btn">
