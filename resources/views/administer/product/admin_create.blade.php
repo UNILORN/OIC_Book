@@ -7,7 +7,7 @@
 @section('main')
 
     <h2>商品新規登録画面</h2>
-    <form class="form-horizontal" action="/admin/stock" method="post">
+    <form class="form-horizontal" action="/admin/stock" method="post" enctype="multipart/form-data">
         {{csrf_field()}}
         <div class="input-group">
             <span class="input-group-addon" >商品ID</span>
@@ -19,7 +19,7 @@
         </div>
         <div class="input-group">
             <span class="input-group-addon" >商品画像</span>
-            <input type="text" name="product_image" v-model="product_image" class="form-control" placeholder="保留" value="" disabled>
+            <input type="file" name="product_image" v-model="product_image" class="form-control" placeholder="保留" value="">
         </div>
         <div class="input-group">
             <span class="input-group-addon" >値段</span>

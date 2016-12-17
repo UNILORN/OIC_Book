@@ -8,6 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
 use App\PRODUCT;
+use Image;
 
 class AdminstockController extends BaseController
 {
@@ -36,6 +37,17 @@ class AdminstockController extends BaseController
 
     public function store(Request $request)
     {
+
+        $image = $request->product_image;
+
+        $fileName = sha1(uniqid(rand(), true));
+
+        $path = Image::make($image->getRealPath());
+
+        $path->save(public_path() . '/img/' . $fileName . '.jpg');
+
+        exit;
+
         PRODUCT::insert([
             'product_name'          => $request->input('product_name'),
             'genre_id'              => 1,
