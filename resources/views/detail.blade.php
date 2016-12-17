@@ -6,7 +6,11 @@
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <div class="product_content">
-    <div class="product_img"><img src="{{$product->product_image}}"></div>
+    <div class="product_img">
+        <div class="product_img_inner"
+             style="background-image: url('{{$product->product_image}}');">
+        </div>
+    </div>
       <div class="product_text">
           <h1 class="product_title">{{$product->product_name}}</h1>
           <p>{{$product->productGenre["category"]}}</p>
