@@ -18,7 +18,7 @@ class PRODUCTTABLE extends Migration
           $table->string('product_name');
           $table->integer('genre_id');
           $table->string('auther_name');
-          $table->string('product_image',45);
+          $table->string('product_image',200);
           $table->integer('product_price');
           $table->integer('product_stock');
           $table->string('ISBN');
