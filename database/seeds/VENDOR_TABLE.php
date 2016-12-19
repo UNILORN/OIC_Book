@@ -16,15 +16,16 @@ class VENDOR_TABLE extends Seeder
 
         //faker使う。普通に使う場合と同じ。
         $faker = Faker\Factory::create('ja_JP');
-
+        $data = [];
         for ($i = 1; $i <= 100; $i++) {
-            DB::table('VENDOR')->insert([
+            $data[] = [
                 'vendor_id' => $i,
                 'vendor_name' => $faker->company(),
                 'vendor_email' => $faker->email(),
                 'vendor_address' => $faker->address(),
                 'vendor_phone_number' => $faker->phoneNumber()
-            ]);
+            ];
         }
+        DB::table('VENDOR')->insert($data);
     }
 }
