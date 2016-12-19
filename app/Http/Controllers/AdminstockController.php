@@ -40,21 +40,43 @@ class AdminstockController extends BaseController
 
         $image = $request->product_image;
 
+        //一意の画像の名前をつける
         $fileName = sha1(uniqid(rand(), true));
 
         $path = Image::make($image->getRealPath());
 
-        $path->save(public_path() . '/img/' . $fileName . '.jpg');
+        $genre = null;
 
-        exit;
+
+        //ジャンルによって保存先を変更する
+        switch ($request->product_genre){
+            case '1' :
+                $genre = 'novel/';
+                break;
+            case '2' :
+                $genre = 'comic/';
+                break;
+            case '3' :
+                $genre = 'technical/';
+                break;
+            case '4' :
+                $genre = 'picture_book/';
+                break;
+        }
+
+        //画像自体の保存
+        $path->save(public_path() . '/img/book_img/' . $genre . $fileName . '.jpg');
+
 
         PRODUCT::insert([
             'product_name'          => $request->input('product_name'),
-            'genre_id'              => 1,
-            'product_image'         => "text",
+            'genre_id'              => $request->input('product_genre'),
+            //画像のpathを保存
+            'product_image'         => '/img/book_img/' . $genre . $fileName . '.jpg',
             'product_price'         => $request->input('product_price'),
             'product_stock'         => $request->input('product_stock'),
             'ISBN'                  => $request->input('ISBN'),
+            'auther_name'           => $request->input('product_authername'),
             'trancelater_id'        => 1,
             'product_height'        => $request->input('product_height'),
             'product_width'         => $request->input('product_width'),
