@@ -22,11 +22,11 @@
             </div>
             <p class="loading-text">Now Loading...</p>
         </div>
-
     </div>
+
+    <h3 class="content_title">商品</h3>
     <div class="row">
-        <h3 class="content_title">売上</h3>
-        <div class="graf" id="genre_sales"></div>
+        
     </div>
     <script src="/js/admin/top.js"></script>
 @endsection
