@@ -24,9 +24,6 @@ class UORDERDETAILS_TABLE extends Seeder
                 'uorder_number' => $faker->randomDigitNotNull(),
                 'uorder_details_flug' => $faker->boolean()
             ];
-            if ($i % 200 == 0) {
-                echo "UORDERDETAILS : $i OK\n";
-            }
         }
         DB::table('UORDERDETAILS')->insert($data);
     }
