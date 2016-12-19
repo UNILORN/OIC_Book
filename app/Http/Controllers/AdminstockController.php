@@ -107,9 +107,46 @@ class AdminstockController extends BaseController
 
     public function update(Request $request, $id)
     {
+        $result = 0;
+        if($request->image === null) {
+            $image = $request->product_image;
+
+            //一意の画像の名前をつける
+            $fileName = sha1(uniqid(rand(), true));
+
+            $path = Image::make($image->getRealPath());
+
+            $genre = null;
+
+
+            //ジャンルによって保存先を変更する
+            switch ($request->product_genre) {
+                case '1' :
+                    $genre = 'novel/';
+                    break;
+                case '2' :
+                    $genre = 'comic/';
+                    break;
+                case '3' :
+                    $genre = 'technical/';
+                    break;
+                case '4' :
+                    $genre = 'picture_book/';
+                    break;
+            }
+
+            //画像自体の保存
+            $path->save(public_path() . '/img/book_img/' . $genre . $fileName . '.jpg');
+
+            $result = 1;
+        }
+
         $products = PRODUCT::find($id);
         $products->product_name = $request->input('product_name');
+        $products->genre_id = $request->input('product_genre');
+        $products->auther_name = $request->input('product_authername');
         $products->product_price = $request->input('product_price');
+        $products->ISBN = $request->input('ISBN');
         $products->product_stock = $request->input('product_stock');
         $products->product_height = $request->input('product_height');
         $products->product_width = $request->input('product_width');
@@ -117,6 +154,9 @@ class AdminstockController extends BaseController
         $products->product_page = $request->input('product_page');
         $products->product_start_day = $request->input('product_start_day');
         $products->product_explanation = $request->input('product_explanation');
+        if($result === 1){
+            $products->product_image = '/img/book_img/' . $genre . $fileName . '.jpg';
+        }
         $products->save();
 
         return redirect("/admin/stock/$id");
