@@ -400,8 +400,8 @@ h3 {
 content
 *************/
 .contents{
-    margin: 0 auto 60px;
     padding: 0 5px;
+    margin: 20px auto 60px;
     width: 1010px;
     clear: both;
 }

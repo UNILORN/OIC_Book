@@ -14,19 +14,27 @@ class AdminstockController extends BaseController
 {
     public function index(Request $request)
     {
-      // $this->validate($request, [
-      //     'product_id' => 'max:5',
-      //     'product_name' => 'max:50',
-      //     'product_price_from' => 'integer|max:10',
-      //     'product_price_to' => 'integer|max:10'
-      // ]);
         $products = PRODUCT::Active()
             ->ID($request->input('product_id'))
             ->Name($request->input('product_name'))
             ->PriceFrom($request->input('product_price_from'))
             ->PriceTo($request->input('product_price_to'))
             ->paginate(20);
-        return view('/administer/product/admin_stock', ["products" => $products, "request" => $request]);
+
+        $progress = [
+            50 => "progress-bar-success",
+            20 => "progress-bar-warning",
+            0  => "progress-bar-danger"
+        ];
+
+        $maxstock = 0;
+        foreach($products as $value){
+            if($maxstock < $value->product_stock){
+                $maxstock = $value->product_stock;
+            }
+        }
+
+        return view('/administer/product/admin_stock', compact('request','products','maxstock','progress'));
     }
 
     public function create()
