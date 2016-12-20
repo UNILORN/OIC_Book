@@ -11,7 +11,7 @@
             {{csrf_field()}}
             <div class="input-group">
                 <span class="input-group-addon">仕入先ID</span>
-                <input type="text" name="vendor_id" class="form-control" value="" required>
+                <input type="text" name="vendor_id" class="form-control" value="" disabled required>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">仕入先名</span>
