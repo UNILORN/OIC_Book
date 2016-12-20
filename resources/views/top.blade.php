@@ -8,6 +8,9 @@
       <img src="/img/banner.png">
     </div>
 
+<div id="osusume">
+  <h2>おすすめ書籍</h2>
+</div>
     <div class="category">
       <div id="specialty_container">
         <div id="specialty_products">
@@ -70,7 +73,9 @@
     </div>
 
     <div class="ranking" id="ranking">
-      <h2>人気ランキング</h2>
+      <div id="ranking_headline">
+        <h2>人気ランキング</h2>
+      </div>
       <div class="ranking-list">
         <ul>
           @foreach ($ranking_products as $key => $product)
