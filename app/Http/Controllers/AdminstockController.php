@@ -108,7 +108,7 @@ class AdminstockController extends BaseController
     public function update(Request $request, $id)
     {
         $result = 0;
-        if($request->image === null) {
+        if($request->image !== null) {
             $image = $request->product_image;
 
             //一意の画像の名前をつける

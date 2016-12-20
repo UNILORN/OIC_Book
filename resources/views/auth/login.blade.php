@@ -25,8 +25,7 @@
     </div>
   </form>
   <div class="form-footer">
-    <p><a href="#">Create an account</a></p>
-    <p><a href="#">Forgot password?</a></p>
+    <p><a href="/register">Create an account</a></p>
   </div>
 </div>
   </body>
