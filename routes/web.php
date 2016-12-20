@@ -33,6 +33,7 @@ Route::get('/logout',function(){
 
     //レビュー
     Route::post('/addreview','ReviewController@add');
+    Route::get('/getreview','ReviewController@index');
 
     //商品一覧
     Route::get('/search','SearchController@index');

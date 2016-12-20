@@ -71,6 +71,7 @@ body {
 .cart-form .cart-submit{
   box-sizing: border-box;
   display: inline-block;
+
 }
 
 .price{
@@ -124,10 +125,31 @@ body {
   text-align: center;
   border-bottom: solid 1px #dedede;
 }
+.more{
+  margin: 0 auto;
+    padding: 10px;
+    display: block;
+    background-color: #656565;
+    border: solid 2px #464646;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 3px;
+    margin-top:30px;
+}
+.display_review_form{
+    padding: 10px;
+    display: block;
+    background-color: #e2e2e2;
+    border: solid 2px #8e8e8e;
+    text-decoration: none;
+    letter-spacing: 3px;
+    margin:0 auto;
+    margin-bottom:40px;
+}
 .review_form{
   display: none;
   position: absolute;
-  top:40px;
+  top:70px;
   right:0;
   bottom:0;
   left:0;

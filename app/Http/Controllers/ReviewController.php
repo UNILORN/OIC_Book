@@ -8,6 +8,15 @@ use \App\PRODUCT;
 
 class ReviewController extends Controller
 {
+
+    public function index(Request $request){
+      $reviews = new \App\Service\ReviewService;
+      $product_id = $request->get("product_id");
+      $reviews = $reviews->getReview($product_id);
+
+      return $reviews;
+    }
+
     public function add(Request $request){
       $product = PRODUCT::where('product_id',$request->get('product_id'))
       ->with('productGenre')

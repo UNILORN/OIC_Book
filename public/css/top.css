@@ -743,7 +743,7 @@ footer ul li{
 * カテゴリ
 *******/
 
-#osusume {
+#osusume_headline {
     position: relative;
     background-color: #651B28;
     height: 40px;
@@ -751,12 +751,12 @@ footer ul li{
     color: #EAEAEA;
     width: 80%;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 70px;
     font-size: 10px;
     position: relative
 }
 
-#osusume h2 {
+#osusume_headline h2 {
     font-size: 1.86em;
 }
 

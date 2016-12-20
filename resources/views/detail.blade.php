@@ -64,18 +64,13 @@
 
     <div class="review_background">
         <div class="review">
-            @foreach ($reviews as $review)
-                <div class="reviewer">投稿者：{{$review->reviewUsers[0]->name}}</div>
-                <div class="posted_date">{{$review->entry_time}}</div>
-                <div class="stars">
-                    評価:
-                    @foreach (range(1,$review->review) as $index)
-                        <div class="stars">☆</div>
-                    @endforeach
-                </div>
-                <div class="posted_text">{{$review->review_text}}</div>
-            @endforeach
-            {!! $reviews->appends($request->toArray())->links() !!}
+          <div v-for="review in display_reviews">
+            <div class="reviewer">投稿者：@{{review.review_users[0].name}}</div>
+            <div class="posted_date">@{{review.entry_time}}</div>
+            <div class="stars" v-for="@{{review.review}}">☆</div>
+            <div class="posted_text">@{{review.review_text}}</div>
+          </div>
+          <button class="more" @click="displayReviews" v-if="more">もっと見る</button>
         </div>
         @if(Auth::check())
             <div class="addreview">

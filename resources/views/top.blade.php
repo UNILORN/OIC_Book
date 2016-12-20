@@ -8,7 +8,7 @@
       <img src="/img/banner.png">
     </div>
 
-<div id="osusume">
+<div id="osusume_headline">
   <h2>おすすめ書籍</h2>
 </div>
     <div class="category">
