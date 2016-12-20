@@ -33,7 +33,7 @@ class Mailsend extends Mailable
     public function build()
     {
         return $this->view('administer.mail.admin_mailcontent')
-            ->subject($this->request->title)
+            ->subject('書籍注文の件')
             ->with([
                 'request' => $this->request
             ]);
