@@ -408,7 +408,7 @@ content
 
 .contents .topimg{
     text-align: center;
-    margin: 0;
+    margin-top:70px;
     width: 100%;
     height: 400px;
     overflow: hidden;
@@ -624,6 +624,9 @@ footer ul li{
 	margin:0 auto;
 	margin-top:70px;
 	margin-bottom:70px;
+}
+.category img:hover{
+	opacity: 0.5;
 }
 .category #specialty_container{
 border-bottom: solid 2px #8e8e8e;

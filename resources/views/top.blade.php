@@ -17,15 +17,19 @@
             </a>
           @endforeach
         </div>
-        <div id="specialty">
-          <h2>専門書</h2>
-        </div>
+        <a href="#">
+          <div id="specialty">
+            <h2>専門書</h2>
+          </div>
+        </a>
       </div>
 
       <div id="picturebook_container">
-        <div id="picturebook">
-          <h2>絵本</h2>
-        </div>
+        <a href="#">
+          <div id="picturebook">
+            <h2>絵本</h2>
+          </div>
+        </a>
         <div id="picturebook_products">
           @foreach ($picturebooks as $picturebook)
               <a href="/detail?product_id={{$picturebook->product_id}}">
@@ -43,14 +47,18 @@
             </a>
           @endforeach
         </div>
-        <div id="manga">
-          <h2>漫画</h2>
-        </div>
+        <a href="#">
+          <div id="manga">
+            <h2>漫画</h2>
+          </div>
+        </a>
       </div>
       <div id="novel_container">
-        <div id="novel">
-          <h2>小説</h2>
-        </div>
+        <a href="#">
+          <div id="novel">
+            <h2>小説</h2>
+          </div>
+        </a>
         <div id="novel_products">
           @foreach ($novels as $novel)
             <a href="/detail?product_id={{$novel->product_id}}">
