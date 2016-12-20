@@ -26,6 +26,8 @@ class USERTABLE extends Migration
             $table->integer('employee_id');
             $table->boolean('user_recede_flug');
             $table->boolean('delete_flg')->default(0);
+            $table->timestamps();
+
         });
 
     }
