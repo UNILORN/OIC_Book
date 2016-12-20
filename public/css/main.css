@@ -391,3 +391,7 @@ h3 {
     margin: 0 auto;
 	padding: 50px 0;
 }
+
+.header-container{
+	box-shadow: 0px 7px 7px rgba(0,0,0,0.3);
+}

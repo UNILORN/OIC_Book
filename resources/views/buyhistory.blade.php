@@ -1,5 +1,5 @@
 @extends('template')
-@section('title','buyhistory')
+@section('title','購入履歴')
 @section('css','buyhistory')
 
 
@@ -15,8 +15,8 @@
         </div>
         <ul class="side02">
           <li><a href="/mypage">会員登録情報</a></li>
-          <li><a href="#">購入履歴</a></li>
-          <li><a href="#">ポイント履歴</a></li>
+          <li><a href="buyhistory">購入履歴</a></li>
+          <li><a href="/buyhistory_point">ポイント履歴</a></li>
         </ul>
       </sub>
       <main>
@@ -36,7 +36,8 @@
             <tbody>
             @foreach ($histories as $history)
                   <tr>
-                    <td><div class="img"><a href="detail/?product_id={{$history->product_id}}"><img src="{{$history->product_image}}" alt="" /></a></div></td>
+                    <td><div class="img"><a href="detail/?product_id={{$history->product_id}}">
+                      <img src="{{$history->product_image}}" alt="" /></a></div></td>
                     <td><a href="detail/?product_id={{$history->product_id}}">{{$history->product_name}}</a></td>
                     <td>{{$history->uorder_day}}</td>
                   </tr>

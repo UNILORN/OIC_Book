@@ -84,7 +84,26 @@ class AdmintopController extends BaseController
         return response()->json($monthly_sales);
     }
 
-    public function product_review(){
 
+    //
+    // レビューが高い商品
+    //
+    public function product_review(){
+        return response()->json();
     }
+
+    //
+    // 売上が高い本ランキング
+    //
+    public function product_ranking(){
+        return response()->json();
+    }
+
+    //
+    //
+    //
+    //
+    //
+    //
+
 }

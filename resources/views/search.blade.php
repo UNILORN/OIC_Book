@@ -64,6 +64,7 @@
                                     <input type="submit" name="submit" class="submit" value="検索">
                                     </form>
                                 </div>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -75,7 +76,7 @@
                             <li class="date-path">
                                 <span class="image">
                                   <a href="detail?product_id={{$product->product_id}}"><img
-                                              src="{{$product->product_image}}" height="160px" width="160px"></a>
+                                              src="{{$product->product_image}}" height="160px"></a>
                                 </span>
                                 <span class="item-name">{{$product->product_name}}</span>
                                 <span class="search_price">¥{{$product->product_price}}</span>
@@ -86,8 +87,8 @@
             </div>
 
 
-          </div>
         </div>
+    </div>
 
 
 

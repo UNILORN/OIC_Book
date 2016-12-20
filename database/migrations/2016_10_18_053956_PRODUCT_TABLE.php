@@ -18,10 +18,10 @@ class PRODUCTTABLE extends Migration
           $table->string('product_name');
           $table->integer('genre_id');
           $table->string('auther_name');
-          $table->string('product_image',45);
+          $table->string('product_image',200);
           $table->integer('product_price');
           $table->integer('product_stock');
-          $table->integer('ISBN');
+          $table->string('ISBN');
           $table->integer('trancelater_id');
           $table->integer('product_height');
           $table->integer('product_width');
@@ -31,7 +31,7 @@ class PRODUCTTABLE extends Migration
           $table->text('product_explanation',1000);
           $table->integer('product_browse_number');
           $table->integer('product_order_number');
-          $table->boolean('delete_flg');
+          $table->boolean('delete_flg')->default(0);
           $table->timestamps();
         });
     }

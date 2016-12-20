@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\UORDERDETAILS;
+
 class UORDERDETAILS_TABLE extends Seeder
 {
     /**
@@ -11,22 +12,19 @@ class UORDERDETAILS_TABLE extends Seeder
      */
     public function run()
     {
-      DB::table('UORDERDETAILS')->delete();
+        DB::table('UORDERDETAILS')->delete();
 
-       //faker使う。普通に使う場合と同じ。
-      $faker = Faker\Factory::create('ja_JP');
-
-      for($i=1; $i<=2000; $i++)
-      {
-          DB::table('UORDERDETAILS')->insert([
-            'uorder_id'=>$i%1500 + 1,
-            'product_id'=>rand(1,100),
-            'uorder_number'=>$faker->randomDigitNotNull(),
-            'uorder_details_flug'=>$faker->boolean()
-          ]);
-          if($i%200 == 0){
-              echo "UORDERDETAILS : $i OK\n";
-          }
-      }
+        //faker使う。普通に使う場合と同じ。
+        $faker = Faker\Factory::create('ja_JP');
+        $data = [];
+        for ($i = 1; $i <= 2000; $i++) {
+            $data[] = [
+                'uorder_id' => $i % 1500 + 1,
+                'product_id' => rand(1, 100),
+                'uorder_number' => $faker->randomDigitNotNull(),
+                'uorder_details_flug' => $faker->boolean()
+            ];
+        }
+        DB::table('UORDERDETAILS')->insert($data);
     }
 }

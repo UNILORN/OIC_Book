@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\PROUSER;
+
 class PROUSER_TABLE extends Seeder
 {
     /**
@@ -11,18 +12,18 @@ class PROUSER_TABLE extends Seeder
      */
     public function run()
     {
-      DB::table('PROUSER')->delete();
+        DB::table('PROUSER')->delete();
 
-       //faker使う。普通に使う場合と同じ。
-      $faker = Faker\Factory::create('ja_JP');
-
-      for($i=1; $i<=100; $i++)
-      {
-          DB::table('PROUSER')->insert([
-          'e-mail'=>$faker->email(),
-          'time_limit'=>$faker->dateTime(),
-          'pro_token'=>$faker->md5()
-          ]);
-      }
+        //faker使う。普通に使う場合と同じ。
+        $faker = Faker\Factory::create('ja_JP');
+        $data = [];
+        for ($i = 1; $i <= 100; $i++) {
+            $data[] = [
+                'e-mail' => $faker->email(),
+                'time_limit' => $faker->dateTime(),
+                'pro_token' => $faker->md5()
+            ];
+        }
+        DB::table('PROUSER')->insert($data);
     }
 }
