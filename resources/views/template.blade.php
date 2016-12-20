@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Dekko" rel="stylesheet">
     <script src="/js/jquery.min.js" charset="utf-8"></script>
     <script src="/js/vue.min.js" charset="utf-8"></script>
+      <script src="/js/top.js"></script>
   <body>
       <div id="pagetop"></div>
           <div class="layout" id="Top">
@@ -85,5 +86,8 @@
               E-mail:oic.book.sm2@gmail.com<br>
         </div>
       </footer>
+      <div class="page-top-icon">
+          <div class="page-top-link"></div>
+      </div>
   </body>
 </html>
