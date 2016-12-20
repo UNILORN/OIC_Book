@@ -20,11 +20,11 @@
         </ul>
       </sub>
       <main>
+      @if(empty($histories))
         <div class="histories">
           <table>
             <thead>
               <th>
-
               </th>
               <th>
                 商品名
@@ -44,6 +44,11 @@
             </tbody>
           </table>
         </div>
+      @else
+        <div id="none_history">
+          <span>購入履歴がありません</span>
+        </div>
+      @endif
       </main>
     </div>
   </div>
