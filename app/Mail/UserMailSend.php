@@ -6,23 +6,21 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Http\Request; // 追加
 
-
-class Mailsend extends Mailable
+class UserMailSend extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected $request;
+    public $products;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Request $request)
+    public function __construct($products)
     {
-        $this->request = $request;
+        $this->products = $products;
     }
 
     /**
@@ -32,10 +30,10 @@ class Mailsend extends Mailable
      */
     public function build()
     {
-        return $this->view('administer.mail.admin_mailcontent')
-            ->subject('書籍注文の件')
-            ->with([
-                'request' => $this->request
-            ]);
+        return $this->view('mail.buyed')
+                    ->subject('oicbook ご注文の確認')
+                    ->with([
+                        'products' => $this->products,
+                    ]);
     }
 }

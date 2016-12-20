@@ -1,5 +1,5 @@
 @extends('template')
-@section('title','購入履歴')
+@section('title','ポイント履歴')
 @section('css','buyhistory')
 
 
@@ -24,19 +24,23 @@
           <table>
             <thead>
               <th>
-
+                購入日
               </th>
               <th>
                 利用ポイント
               </th>
               <th>
-                利用日付
+                付加ポイント
               </th>
             </thead>
             <tbody>
-         <!-- @foreach ($ as $history)
-
-            @endforeach -->
+              @foreach ($histories as $key => $value)
+                <tr>
+                  <td>{{$value->uorder_day}}</td>
+                  <td>{{$value->uorder_use_point}}</td>
+                  <td>{{$value->uorder_add_point}}</td>
+                </tr>
+                    @endforeach
             </tbody>
           </table>
         </div>

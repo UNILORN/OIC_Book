@@ -15,14 +15,14 @@ class BuyhistoryController extends Controller
     $mypage = new \App\Service\BuyhistoryService;
     $user = $request->user();
     $histories = $mypage->getHistory($user->id);
-    
+
     return view('buyhistory',compact('histories','user'));
   }
   public function point(Request $request)
   {
     $mypage = new \App\Service\BuyhistoryService;
     $user = $request->user();
-    $histories = $mypage->getHistory();
+    $histories = $mypage->getHistory($user->id);
 
     return view('buyhistory_point',compact('user','histories'));
   }

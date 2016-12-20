@@ -5,5 +5,5 @@
 @section('mail','class="active"')
 
 @section('main')
-    <h1>送信完了</h1>
+    <h1 style="text-align: center">送信完了しました</h1>
 @endsection
