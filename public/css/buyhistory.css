@@ -143,3 +143,22 @@ main table tr td .img{
 main table tr td li{
   height: 25px;
 }
+
+#none_history{
+  height:300px;
+  width:720;
+  position: relative;
+  text-align: center;
+}
+#none_history span{
+  position: absolute;
+  height:20px;
+  width:350px;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin: auto;
+  font-size: 30px;
+  color:gray;
+}
