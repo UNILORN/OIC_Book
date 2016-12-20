@@ -8,6 +8,9 @@ use App\PRODUCT;
 use App\CART;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Mail;
+use App\Mail\UserMailSend; // 追加
+
 
 
 
@@ -26,8 +29,8 @@ class BuydoneController extends Controller
       $sum = new \App\Service\AuthcartService;
       $sum = $sum->getSum($user->id);
 
-
       $uorder = new \App\Service\BuydoneService;
+
       $point = $request->input('point');
       $point = floor( $sum/100 );
       $uorderadd = $uorder -> uorderadd($user,$sum,$timestamp,$point);
@@ -37,7 +40,9 @@ class BuydoneController extends Controller
       $cartdel = new \App\Service\AuthcartService;
       $cartdel -> deleteAllItem($user->id,$cartarray);
 
+      $send_to_email = Auth::user()['attributes']['email'];
 
+      Mail::to($send_to_email)->send(new \App\Mail\UserMailsend($products));
 
       return view('buydone');
     }
