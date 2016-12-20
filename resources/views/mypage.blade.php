@@ -14,7 +14,7 @@
         <ul class="side02">
           <li><a href="/mypage">会員登録情報</a></li>
           <li><a href="/buyhistory">購入履歴</a></li>
-          <li><a href="#">ポイント履歴</a></li>
+          <li><a href="/buyhistory_point">ポイント履歴</a></li>
 
         </ul>
       </sub>

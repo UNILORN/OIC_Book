@@ -95,6 +95,7 @@ main{
   width: 720px;
   border: 1px #DEDEDE solid;
   background-color: #fafafa;
+  min-height: 500px;
 }
 
 .box-title{
