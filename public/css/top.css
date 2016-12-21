@@ -515,6 +515,17 @@ content
     z-index: 0;
 }
 
+.topimg{
+    margin-top: 20px;
+}
+
+.bxslider li img{
+    margin: auto;
+    right: 0;
+    left: 0;
+
+}
+
 
 /****************
 
