@@ -79,9 +79,11 @@ Route::get('/logout',function(){
     //管理者従業員情報
     Route::resource('/admin/employee','AdminemployeeController');
     Route::post('/admin/employee/{id}/update','AdminemployeeController@update');
-
+    Route::post('/admin/employee/{id}/delete','AdminemployeeController@destroy');
     //ユーザ情報
     Route::resource('/admin/user','AdminuserController');
+    Route::post('/admin/user/{id}/update','AdminuserController@update');
+    Route::post('/admin/user/{id}/delete','AdminuserController@destroy');
 
     //仕入先情報
     Route::resource('/admin/vendor','AdminvendorController');
