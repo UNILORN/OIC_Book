@@ -63,11 +63,11 @@
 
 
     <div class="review_background">
-        <div class="review">
+        <div id="review">
           <div v-for="review in display_reviews">
             <div class="reviewer">投稿者：@{{review.review_users[0].name}}</div>
             <div class="posted_date">@{{review.entry_time}}</div>
-            <div class="stars" v-for="@{{review.review}}">☆</div>
+            <div class="stars" v-for="n in review.review">☆</div>
             <div class="posted_text">@{{review.review_text}}</div>
           </div>
           <button class="more" @click="displayReviews" v-if="more">もっと見る</button>
