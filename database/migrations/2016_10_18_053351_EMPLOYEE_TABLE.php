@@ -20,6 +20,7 @@ class EMPLOYEETABLE extends Migration
             $table->string('employee_password', 45)->unique();
             $table->string('employee_phone_number');
             $table->boolean('delete_flg')->default(0);
+            $table->timestamps();
         });
     }
 

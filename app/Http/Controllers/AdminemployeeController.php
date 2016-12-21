@@ -14,7 +14,11 @@ class AdminemployeeController extends BaseController
 {
     public function index(Request $request)
     {
-        $employee = EMPLOYEE::active()
+            $employee = EMPLOYEE::Active()
+            ->ID($request->input('employee_id'))
+            ->Name($request->input('employee_name'))
+            ->Tel($request->input('employee_phone_number'))
+            ->Email($request->input('employee_email'))
             ->paginate(20);
 
         return view('/administer/employee/admin_employee', compact('employee', 'request'));
@@ -53,14 +57,22 @@ class AdminemployeeController extends BaseController
         return view('/administer/employee/admin_edit', compact('employee', 'id'));
     }
 
-    public function update(Request $request)
+    public function update(Request $request,$id)
     {
+      $employee = EMPLOYEE::find($id);
+      $employee->employee_name = $request->input('employee_name');
+      $employee->employee_email = $request->input('employee_email');
+      $employee->employee_phone_number = $request->input('employee_phone_number');
+      $employee->save();
 
+      return redirect('/admin/employee');
     }
 
-    public function destroy(Request $request)
+    public function destroy(Request $request,$id)
     {
-
+      $employee = EMPLOYEE::find($id);
+      $employee->delete_flg = 1;
+      $employee->save();
+      return redirect('/admin/employee/');
     }
 }
-

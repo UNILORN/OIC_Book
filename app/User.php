@@ -61,5 +61,12 @@ class User extends Authenticatable
       }
       return $query;
     }
+    public function scopeEmail($query, $email)
+    {
+        if (!empty($email)) {
+            $query = $query->where('employee_email','like', "%$email%");
+        }
+        return $query;
+    }
 
 }
