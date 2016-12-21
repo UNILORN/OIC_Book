@@ -20,7 +20,7 @@
         </ul>
       </sub>
       <main>
-      @if(empty($histories))
+      @if(!empty($histories->toArray()))
         <div class="histories">
           <table>
             <thead>
