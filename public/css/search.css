@@ -2,10 +2,9 @@
 search.html
 ****************************************/
 .search_body{
-    margin: 20px 0 0;
     padding: 0;
     height: auto;
-    width: 100%;
+    width: 1080px;
 }
 .search_side01{
     margin-top: 10px;
@@ -15,18 +14,23 @@ search.html
 }
 
 .search_side02{
-  margin: 10px;
+  margin-left: 50px;
+  margin-top:30px;
     width: 20%;
     display: inline-block;
 }
 
 .itemlist{
-    width: 950px;
-    margin-right: 130px;
+
+    width: 1000px;
+}
+.itemlist ul{
+  margin-left:80px;
+  margin-top:50px;
 }
 .itemlist li{
-    margin: 0 0 0 40px;
-    width: 160px;
+    margin-left: 30px;
+    width: 140px;
     height: 250px;
     display: inline-block;
 
