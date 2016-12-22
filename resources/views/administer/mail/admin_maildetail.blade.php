@@ -14,11 +14,11 @@
             </div>
             <div class="input-group">
                 <span class="input-group-addon">件名</span>
-                <input type="text" name="title" class="form-control" value="書籍注文の件" placeholder="件名" disabled>
+                <input type="text" name="title" class="form-control" value="{{$title}}" placeholder="件名" disabled>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">この本文が送信されます</span>
-                <textarea id="textarea" type="textarea" name="message" class="form-control" style="height:60vh;" disabled>
+                <textarea id="textarea" type="textarea" name="message" class="form-control" style="height:60vh;">
 {{$vendor->vendor_name}}様
 いつもお世話になっております。OIC-Bookです
 
