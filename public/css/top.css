@@ -515,10 +515,6 @@ content
     z-index: 0;
 }
 
-.topimg{
-    margin-top: 20px;
-}
-
 .bxslider li img{
     margin: auto;
     right: 0;
@@ -754,7 +750,7 @@ footer ul li{
 * カテゴリ
 *******/
 
-#osusume_headline {
+#Recommended_headline {
     position: relative;
     background-color: #651B28;
     height: 40px;
@@ -762,7 +758,7 @@ footer ul li{
     color: #EAEAEA;
     width: 805px;
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 90px;
     font-size: 10px;
     position: relative
 }
