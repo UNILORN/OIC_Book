@@ -1,11 +1,11 @@
 @extends('/administer/admin_template')
 
 @section('css','/admin/employee')
-@section('title','仕入先新規作成')
+@section('title','仕入先新規登録')
 @section('vendor','class="active"')
 
 @section('main')
-    <h2>仕入先新規作成</h2>
+    <h2>仕入先新規登録</h2>
     <div class="searchform">
         <form class="search" action="/admin/vendor/create" method="POST">
             {{csrf_field()}}
