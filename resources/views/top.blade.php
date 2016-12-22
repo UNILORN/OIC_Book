@@ -6,7 +6,7 @@
     <div class="topimg">
         <ul class="bxslider">
             <li><img class="top_center_pict" src="/img/banner.png"></li>
-            <li><img class="top_center_pict" src="/img/banner.png"></li>
+            <li><img class="top_center_pict" src="/img/banner2.png"></li>
         </ul>
     </div>
 <div class="contents">
