@@ -3,10 +3,16 @@
 @section('css','top')
 
 @section('main')
-<div class="contents">
     <div class="topimg">
-      <img src="/img/banner.png">
+        <ul class="bxslider">
+            <li><img class="top_center_pict" src="/img/banner.png"></li>
+            <li><img class="top_center_pict" src="/img/banner.png"></li>
+        </ul>
     </div>
+<div class="contents">
+
+
+
 
 
     <div id="ladder" style="position:absolute;left:130px; bottom:-970px; z-index:999 ">
