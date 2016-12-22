@@ -8,9 +8,9 @@ var vm = new Vue({
     data: {
         all_reviews: [],//全てのレビュー
         display_reviews: [],//画面に表示するレビュー
-        display_count: 3,//画面に表示するレビューの数を決めるためのカウンタ
+        display_count: 6,//画面に表示するレビューの数を決めるためのカウンタ
         more:true,//もっと見るボタンを表示するかどうかの判定用
-        i:0
+        i:3
     },
     created: function () {
       this.setReviews();
@@ -20,6 +20,10 @@ var vm = new Vue({
           var self = this;
           $.get("/getreview?product_id=" + $(':hidden[name="product_id"]').val(), function(review_data){
             self.$set(self.all_reviews, self.all_reviews.length, review_data);
+
+            for (var i = 0; i < 3; i++) {
+             self.display_reviews.push(self.all_reviews[0][i])
+            }
           });
         },
         displayReviews: function() {
