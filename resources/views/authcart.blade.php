@@ -2,6 +2,8 @@
 @section('title','ショッピングカート')
 @section('css','cart')
 @section('main')
+  @if ($products->toArray())
+
 <div class="container">
     <div class="contents">
         <div class="content">
@@ -70,5 +72,11 @@
         </div>
     </div>
 </div>
+@else
+  <div class="none_cart">
+    <span>カートに商品がありません</span>
+  </div>
+@endif
+
 <script src="/js/cart/authcart.js" charset="utf-8"></script>
 @endsection

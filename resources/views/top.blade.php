@@ -8,6 +8,10 @@
       <img src="/img/banner.png">
     </div>
 
+
+    <div id="ladder" style="position:absolute;left:130px; bottom:-970px; z-index:999 ">
+      <img style="width:180px;height:650px; " src="/img/ladder.png" alt="" />
+    </div>
 <div id="osusume_headline">
   <h2>おすすめ書籍</h2>
 </div>
@@ -40,6 +44,7 @@
               </a>
           @endforeach
         </div>
+
       </div>
 
       <div id="manga_container">

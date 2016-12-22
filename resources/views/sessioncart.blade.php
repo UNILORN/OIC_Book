@@ -2,6 +2,7 @@
 @section('title','ショッピングカート')
 @section('css','cart')
 @section('main')
+@if ($products)
 
 <div class="container">
     <div class="contents">
@@ -67,5 +68,11 @@
         </div>
     </div>
 </div>
+@else
+  <div class="none_cart">
+    <span>カートに商品がありません</span>
+  </div>
+@endif
+
 <script src="/js/cart/sessioncart.js" charset="utf-8"></script>
 @endsection

@@ -103,3 +103,25 @@
 .button a:hover {
     opacity: 0.8;
 }
+
+.none_cart{
+  height:350px;
+  width:960px;
+  border:solid 2px #dedede;
+  background-color: #e8e8e8;
+  margin: 0 auto;
+  margin-top:50px;
+  position: relative;
+}
+.none_cart span{
+  font-size:30px;
+  width:330px;
+  height:20px;
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin: auto;
+  color:gray;
+}
