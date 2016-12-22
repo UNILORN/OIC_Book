@@ -15,6 +15,7 @@ $(function () {
 
     $('.bxslider').bxSlider({
         auto: true,
-        speed: 2000
+        speed: 2500,
+        pause: 7000
     });
 });
