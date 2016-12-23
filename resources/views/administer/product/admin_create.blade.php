@@ -6,7 +6,7 @@
 
 @section('main')
 
-    <h2>商品新規登録画面</h2>
+    <h2>商品新規登録</h2>
     <form class="form-horizontal" action="/admin/stock" method="post" enctype="multipart/form-data">
         {{csrf_field()}}
         <div class="input-group">
