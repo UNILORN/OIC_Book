@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\VENDOR;
+use Carbon\Carbon;
 
 class AdminvendorController extends Controller
 {
@@ -14,7 +15,8 @@ class AdminvendorController extends Controller
      */
     public function index(Request $request)
     {
-        $vendor = VENDOR::ID($request->input('id'))
+        $vendor = VENDOR::Active()
+            ->ID($request->input('id'))
             ->Name($request->input('name'))
             ->Tel($request->input('tel'))
             ->paginate(20);
@@ -26,8 +28,9 @@ class AdminvendorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+
         return view('administer/vendor/admin_create');
     }
 
@@ -39,7 +42,13 @@ class AdminvendorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      VENDOR::insert([
+          'vendor_name'         => $request->input('vendor_name'),
+          'vendor_email'        => $request->input('vendor_email'),
+          'vendor_phone_number' => $request->input('vendor_phone_number'),
+          'vendor_address'     => $request->input('vendor_address')
+      ]);
+      return redirect('/admin/vendor');
     }
 
     /**
@@ -75,7 +84,14 @@ class AdminvendorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $vendor = VENDOR::find($id);
+      $vendor->vendor_name = $request->input('vendor_name');
+      $vendor->vendor_email = $request->input('vendor_email');
+      $vendor->vendor_phone_number = $request->input('vendor_phone_number');
+      $vendor->vendor_address = $request->input('vendor_address');
+      $vendor->save();
+
+      return redirect('/admin/vendor');
     }
 
     /**
@@ -84,8 +100,11 @@ class AdminvendorController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request,$id)
     {
-        //
+      $vendor = VENDOR::find($id);
+      $vendor->delete_flg = 1;
+      $vendor->save();
+      return redirect('/admin/vendor');
     }
 }

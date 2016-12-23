@@ -7,7 +7,7 @@
 @section('main')
     <h2>仕入先新規登録</h2>
     <div class="searchform">
-        <form class="search" action="/admin/vendor/create" method="POST">
+        <form class="search" action="/admin/vendor" method="POST">
             {{csrf_field()}}
             <div class="input-group">
                 <span class="input-group-addon">仕入先ID</span>
