@@ -12,7 +12,7 @@
             <div class="input-group">
                 <span class="input-group-addon">従業員ID</span>
                 <input type="text" name="employee_id" class="form-control"
-                       value="{{ array_get($employee,'employee_id','') }}"required>
+                       value="{{ array_get($employee,'employee_id','') }}"disabled>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">従業員名</span>

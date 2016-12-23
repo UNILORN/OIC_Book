@@ -12,7 +12,7 @@
             <div class="input-group">
                 <span class="input-group-addon">ユーザID</span>
                 <input type="text" name="user_id" class="form-control"
-                       value="{{ array_get($user,'id','') }}"required>
+                       value="{{ array_get($user,'id','') }}"disabled>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">ユーザ名</span>
