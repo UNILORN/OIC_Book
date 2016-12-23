@@ -17,6 +17,11 @@ class DatabaseSeeder extends Seeder
       $this->call(EMPLOYEE_TABLE::class);
       $this->call(GENRE_TABLE::class);
       $this->call(VENDOR_TABLE::class);
+      $this->call(UORDER_TABLE::class);
+      $this->call(ORDER_TABLE::class);
+      $this->call(UORDER_PAID_TABLE::class);
+      $this->call(VENDOR_TABLE::class);
+      $this->call(UORDERDETAILS_TABLE::class);
       Model::reguard();
     }
 }
