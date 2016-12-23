@@ -83,19 +83,17 @@
         <ul>
           @foreach ($ranking_products as $key => $product)
             <li>
-              <a href="/detail?product_id={{$product->product_id}}">
+              <a href="/detail?product_id={{$product[0]->product_id}}">
                 <span class="rank rank{{$key+1}}">No.{{$key+1}}</span>
-                <span><img class="ranking_img" src="{{$product->product_image}}" /></span>
-                <span class="item-name">{{$product->product_name}}</span>
-                <span class="price">&yen;{{$product->product_price}}</span>
+                <span><img class="ranking_img" src="{{$product[0]->product_image}}" /></span>
+                <span class="item-name">{{$product[0]->product_name}}</span>
+                <span class="price">&yen;{{$product[0]->product_price}}</span>
               </a>
             </li>
           @endforeach
         </ul>
       </div>
     </div>
-
-
 
     <a href="search">→商品一覧へ</a>
 </div>
