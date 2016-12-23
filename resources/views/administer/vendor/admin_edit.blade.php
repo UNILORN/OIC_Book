@@ -12,7 +12,7 @@
             <div class="input-group">
                 <span class="input-group-addon">仕入先ID</span>
                 <input type="text" name="vendor_id" class="form-control"
-                       value="{{ array_get($vendor,'vendor_id','') }}"required>
+                       value="{{ array_get($vendor,'vendor_id','') }}"disabled required>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">仕入先名</span>

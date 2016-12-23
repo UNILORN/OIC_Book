@@ -9,7 +9,7 @@ class AdminuserController extends Controller
 {
     public function index(Request $request)
     {
-        $user = User::whereNull('employee_id')
+        $user = User::active()
         ->ID($request->input('id'))
         ->Name($request->input('name'))
         ->Tel($request->input('tel'))

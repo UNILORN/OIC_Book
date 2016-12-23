@@ -9,6 +9,11 @@ class VENDOR extends Model
     protected $table = 'VENDOR';
     protected $primaryKey = 'vendor_id';
 
+    public function scopeactive($query)
+    {
+        $query = $query->where('delete_flg', 0);
+        return $query;
+    }
     public function scopeID($query,$vendor_id){
         if (!empty($vendor_id)){
             $query = $query->where('vendor_id',$vendor_id);
@@ -29,5 +34,7 @@ class VENDOR extends Model
         }
         return $query;
     }
+    public $timestamps = false;
+
 
 }
