@@ -45,25 +45,25 @@
             <th>商品ID</th>
             <th>商品名称</th>
             <th>価格</th>
-            <th>在庫数（個）</th>
+            <th>在庫数（個）/ 前2ヶ月間（個）</th>
             <th>商品編集</th>
         </tr>
-        @foreach ($products as $key => $value)
+        @foreach ($products as $value)
             <tr>
                 <td>{{$value->product_id}}</td>
                 <td>{{$value->product_name}}</td>
                 <td>{{$value->product_price}}</td>
-                <td>{{$value->product_stock}}個
+                <td>{{$value->product_stock}}個 / {{$maxstock[$value->product_id]}}個
                     <div class="progress">
                         <div class="progress-bar
                         @foreach($progress as $key => $progressvalue)
-                            @if($value->product_stock/$maxstock*100 > $key)
+                            @if($value->product_stock/$maxstock[$value->product_id]*100 >= $key)
                                 {{$progressvalue}}
                                 @break
                             @endif
                         @endforeach
-                                " role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{round($value->product_stock/$maxstock*100,1)}}%;">
-                            {{round($value->product_stock/$maxstock*100,1)}} %
+                                " role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{min(round($value->product_stock/$maxstock[$value->product_id]*50,1),100)}}%;">
+                            {{round($value->product_stock/$maxstock[$value->product_id]*100,1)}} %
                         </div>
                     </div>
                 </td>

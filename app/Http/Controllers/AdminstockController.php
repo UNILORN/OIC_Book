@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\UORDER;
+use Carbon\Carbon;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -22,18 +24,29 @@ class AdminstockController extends BaseController
             ->paginate(20);
 
         $progress = [
-            50 => "progress-bar-success",
-            20 => "progress-bar-warning",
+            100 => "progress-bar-success",
+            50 => "progress-bar-warning",
             0  => "progress-bar-danger"
         ];
 
-        $maxstock = 0;
-        foreach($products as $value){
-            if($maxstock < $value->product_stock){
-                $maxstock = $value->product_stock;
-            }
+        $product_sales = UORDER::DayFrom(Carbon::now()->subMonth(2))
+            ->DayTo(Carbon::now())
+            ->with('uorderDetail')
+            ->get();
+
+
+        $maxstock = array();
+        $products_all = PRODUCT::Active()->get();
+        foreach ($products_all as $product) {
+            $maxstock[$product->product_id] = 1;
         }
 
+        foreach ($product_sales as $product_sale) {
+            foreach ($product_sale->uorderDetail as $item) {
+                $maxstock[$item->product_id] += $item->uorder_number;
+            }
+        }
+//        dd($maxstock);
         return view('/administer/product/admin_stock', compact('request','products','maxstock','progress'));
     }
 

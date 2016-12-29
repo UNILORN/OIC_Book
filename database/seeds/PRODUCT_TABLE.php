@@ -33,7 +33,7 @@ class PRODUCT_TABLE extends Seeder
                     'product_name' => $book[1],
                     'product_image' => $book[0],
                     'product_price' => $book[3],
-                    'product_stock' => rand(0, 500),
+                    'product_stock' => rand(0, 50),
                     'ISBN' => $book[6],
                     'trancelater_ID' => $i,
                     'product_height' => $faker->randomDigitNotNull(),
