@@ -21,7 +21,7 @@ class EMPLOYEE_TABLE extends Seeder
             'employee_id' => 1,
             'employee_name'=>"Admin",
             'employee_email' => 'oic.book.sm2@gmail.com',
-            'employee_password' => sha1('masakage77'),
+            'employee_password' => sha1('password'),
             'employee_phone_number' => $faker->phoneNumber()
         ]);
         $data = [];
