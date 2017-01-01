@@ -17,7 +17,7 @@ class EMPLOYEETABLE extends Migration
             $table->increments('employee_id')->unique();
             $table->string('employee_email')->unique();
             $table->string('employee_name');
-            $table->string('employee_password', 45)->unique();
+            $table->string('employee_password', 255);
             $table->string('employee_phone_number');
             $table->boolean('delete_flg')->default(0);
             $table->timestamps();
