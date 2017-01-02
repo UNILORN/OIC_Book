@@ -5,6 +5,13 @@
 @section('mail','class="active"')
 
 @section('main')
+    <?php
+    if(session()->get('authority') > 1) {
+        header('Location: http://' . $_SERVER['HTTP_HOST'] . '/admin');
+        exit;
+    }
+    ?>
+
     <div class="searchform">
         <form class="search" action="/admin/mailform" method="post">
             {{csrf_field()}}
