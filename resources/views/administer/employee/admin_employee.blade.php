@@ -5,6 +5,14 @@
 @section('employee','class="active"')
 
 @section('main')
+
+  <?php
+  if(session()->get('authority') != 3) {
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . '/admin');
+    exit;
+  }
+  ?>
+
   <div class="row container">
     <div class="col-md-11"></div>
     <div class="col-md-1 right">

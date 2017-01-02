@@ -25,6 +25,8 @@ class AdminauthController extends Controller
         if(count($q) === 1){
             session()->put('employee',$q->employee_id);
 
+            session()->put('authority',$q->employee_authority);
+
             return redirect('/admin');
         }
 
@@ -35,6 +37,8 @@ class AdminauthController extends Controller
     public function logout()
     {
         session()->put('employee',null);
+
+        session()->put('authority',null);
 
         return redirect('/');
     }
