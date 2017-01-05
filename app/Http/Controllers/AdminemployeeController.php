@@ -21,6 +21,7 @@ class AdminemployeeController extends BaseController
             ->Email($request->input('employee_email'))
             ->paginate(20);
 
+
         return view('/administer/employee/admin_employee', compact('employee', 'request'));
     }
 
@@ -35,6 +36,7 @@ class AdminemployeeController extends BaseController
             'employee_name'         => $request->input('employee_name'),
             'employee_email'        => $request->input('employee_email'),
             'employee_phone_number' => $request->input('employee_phone_number'),
+            'employee_authority'    => $request->input('employee_authority'),
             'employee_password'     => sha1($request->input('employee_pass'))
         ]);
 
@@ -63,7 +65,12 @@ class AdminemployeeController extends BaseController
       $employee->employee_name = $request->input('employee_name');
       $employee->employee_email = $request->input('employee_email');
       $employee->employee_phone_number = $request->input('employee_phone_number');
+      $employee->employee_authority = $request->input('employee_authority');
       $employee->save();
+
+      if(session()->get('employee') == $id){
+          session()->put('authority', $request->input('employee_authority'));
+      }
 
       return redirect('/admin/employee');
     }

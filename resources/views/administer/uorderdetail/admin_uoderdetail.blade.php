@@ -4,6 +4,12 @@
 @section('title', '売上')
 @section('uoderdetail','class="active"')
 @section('main')
+    <?php
+    if(session()->get('authority') == 1) {
+        header('Location: http://' . $_SERVER['HTTP_HOST'] . '/admin');
+        exit;
+    }
+    ?>
 
   <div class="searchform">
     <form class="search" action="/admin/uoderdetail" method="GET">
