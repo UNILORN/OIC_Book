@@ -24,6 +24,7 @@
             @if(Auth::check())
                 <div class="cart-form">
                     <form action="/addauthcart" method="post">
+                      @if(!$product->product_stock <= 0)
                         <div class="cart-num">
                             <select name="number" class="form-select hasCustomSelect">
                                 @foreach (range(1,$product->product_stock) as $key => $value)
@@ -34,11 +35,10 @@
                         <input type="hidden" name="product_id" value="{{$product->product_id}}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="cart-submit">
-                            @if(!$product->product_stock <= 0)
                               <input type="submit" value="カートに入れる" @if($product->product_stock <= 0) disabled @endif>
-                            @else
-                              <p>在庫がありません</p>
-                            @endif
+                        @else
+                          <p>在庫がありません</p>
+                        @endif
                         </div>
                     </form>
                 </div>
