@@ -5,12 +5,11 @@
 @section('mail','class="active"')
 
 @section('main')
-    <?php
-    if(session()->get('authority') > 1) {
-        header('Location: http://' . $_SERVER['HTTP_HOST'] . '/admin');
-        exit;
-    }
-    ?>
+    @if(session()->get('authority') > 1)
+
+        <h1 style="text-align: center">権限がありません</h1>
+
+    @else
 
     <div class="searchform">
         <form class="search" action="/admin/mailformdetail" method="post">
@@ -47,4 +46,6 @@
             <input class="btn btn-default" type="reset" value="取り消し">
         </form>
     </div>
+
+    @endif
 @endsection

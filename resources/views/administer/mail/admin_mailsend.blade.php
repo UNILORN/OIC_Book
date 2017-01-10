@@ -5,12 +5,15 @@
 @section('mail','class="active"')
 
 @section('main')
-    <?php
-    if(session()->get('authority') > 1) {
-        header('Location: http://' . $_SERVER['HTTP_HOST'] . '/admin');
-        exit;
-    }
-    ?>
 
-    <h1 style="text-align: center">送信完了しました</h1>
+    @if(session()->get('authority') > 1)
+
+        <h1 style="text-align: center">権限がありません</h1>
+
+    @else
+
+
+        <h1 style="text-align: center">送信完了しました</h1>
+
+    @endif
 @endsection

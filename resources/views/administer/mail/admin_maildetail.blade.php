@@ -5,12 +5,11 @@
 @section('mail','class="active"')
 
 @section('main')
-    <?php
-    if(session()->get('authority') > 1) {
-        header('Location: http://' . $_SERVER['HTTP_HOST'] . '/admin');
-        exit;
-    }
-    ?>
+    @if(session()->get('authority') > 1)
+
+        <h1 style="text-align: center">権限がありません</h1>
+
+    @else
 
     <div class="searchform">
         <form class="search" action="/admin/mailform" method="post">
@@ -62,4 +61,6 @@ mail：oic.book.sm2@gmail.co.jp
             <button class="btn btn-default" type="button" onclick="location.href='/admin/mailform'">戻る</button>
         </form>
     </div>
+
+    @endif
 @endsection

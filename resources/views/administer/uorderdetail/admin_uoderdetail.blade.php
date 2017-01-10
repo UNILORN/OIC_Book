@@ -4,12 +4,12 @@
 @section('title', '売上')
 @section('uoderdetail','class="active"')
 @section('main')
-    <?php
-    if(session()->get('authority') == 1) {
-        header('Location: http://' . $_SERVER['HTTP_HOST'] . '/admin');
-        exit;
-    }
-    ?>
+
+    @if(session()->get('authority') == 1)
+
+        <h1 style="text-align: center">権限がありません</h1>
+
+    @else
 
   <div class="searchform">
     <form class="search" action="/admin/uoderdetail" method="GET">
@@ -64,5 +64,7 @@
     @endforeach
     {{$sales->appends($request->toArray())->links()}}
   </table>
+
+    @endif
 
 @endsection

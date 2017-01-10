@@ -5,12 +5,12 @@
 @section('employee','class="active"')
 
 @section('main')
-    <?php
-    if(session()->get('authority') != 3) {
-        header('Location: http://' . $_SERVER['HTTP_HOST'] . '/admin');
-        exit;
-    }
-    ?>
+
+    @if(session()->get('authority') != 3)
+
+        <h1 style="text-align: center">権限がありません</h1>
+
+    @else
 
     <h2>従業員新規登録</h2>
     <div class="searchform">
@@ -47,5 +47,7 @@
             <input class="btn btn-default" type="submit" name="search" value="登録">
         </form>
     </div>
+
+    @endif
 
 @endsection
