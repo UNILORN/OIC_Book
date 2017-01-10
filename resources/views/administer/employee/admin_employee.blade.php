@@ -6,12 +6,11 @@
 
 @section('main')
 
-  <?php
-  if(session()->get('authority') != 3) {
-    header('Location: http://' . $_SERVER['HTTP_HOST'] . '/admin');
-    exit;
-  }
-  ?>
+  @if(session()->get('authority') != 3)
+
+    <h1 style="text-align: center">権限がありません</h1>
+
+  @else
 
   <div class="row container">
     <div class="col-md-11"></div>
@@ -59,5 +58,7 @@
     @endforeach
     {{$employee->appends($request->toArray())->links()}}
   </table>
+
+  @endif
 
 @endsection
