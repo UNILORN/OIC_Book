@@ -34,7 +34,11 @@
                         <input type="hidden" name="product_id" value="{{$product->product_id}}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="cart-submit">
-                            <input type="submit" value="カートに入れる" @if($product->product_stock <= 0) disabled @endif>
+                            @if(!$product->product_stock <= 0)
+                              <input type="submit" value="カートに入れる" @if($product->product_stock <= 0) disabled @endif>
+                            @else
+                              <p>在庫がありません</p>
+                            @endif
                         </div>
                     </form>
                 </div>
