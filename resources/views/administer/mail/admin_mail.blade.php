@@ -5,7 +5,7 @@
 @section('mail','class="active"')
 
 @section('main')
-    @if(session()->get('authority') > 1)
+    @if(session()->get('authority') == 1)
 
         <h1 style="text-align: center">権限がありません</h1>
 
