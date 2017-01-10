@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-  </head>
-  <body>
+@extends('template')
+@section('title','新規登録')
+@section('css','bootstrap.min')
+@section('main')
+
     <form action="/register" method="post" class="center-block">
                         {{ csrf_field() }}
                         <div class="form">
@@ -41,5 +38,4 @@
                         <input class="btn" type="submit" value="確認">
                       </div>
                     </form>
-                  </body>
-                </html>
+@endsection

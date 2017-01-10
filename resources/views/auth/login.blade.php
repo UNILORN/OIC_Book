@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>ログイン -OICbook</title>
-    <link rel="stylesheet" type="text/css" href="/css/login.css">
+@extends('template')
+@section('title','ログイン')
+@section('css','login')
+@section('main')
 
-  </head>
-  <body>
     <div class="form-wrapper">
   <h1>Sign In</h1>
 
@@ -28,5 +24,4 @@
     <p><a href="/register">Create an account</a></p>
   </div>
 </div>
-  </body>
-</html>
+@endsection
