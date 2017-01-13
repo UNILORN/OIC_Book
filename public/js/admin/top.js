@@ -58,8 +58,10 @@ $(function () {
         // 表示するデータ　[横軸,縦軸,スタイル]
         for (key in monthlysales) {
             var date = new Date();
+            console.log('d ' + d);
             date.setMonth(date.getMonth() - d--);
             monthname = date.getMonth() + 1;
+            console.log('monthname ' + monthname);
             salesdata[salesdata.length] = [monthname + "月", monthlysales[key], ""];
         }
 
