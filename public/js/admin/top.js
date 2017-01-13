@@ -53,6 +53,8 @@ $(function () {
         // 売上情報整形
         var salesdata = [ ['Element', '売上/円', {role: 'style'}]];
 
+        console.log(new Date());
+
         var d = 12;
 
         // 表示するデータ　[横軸,縦軸,スタイル]
