@@ -4,9 +4,13 @@ $(function () {
     // 売上　ジャンル別売上総数
     //
     $.ajax({
-        url: "/api/admin/genresales"
+        type: "GET",
+        dataType:'json',
+        url: "/api/admin/genresales",
     }).done(function (data) {
         sales = data;
+
+        console.log('/genresales ' + JSON.stringify(sales));
 
         // 売上情報整形
         var salesdata = [ ['Element', '売上/円', {role: 'style'}, {role: 'annotation'}]];
@@ -48,6 +52,8 @@ $(function () {
         url: "/api/admin/monthlysales"
     }).done(function (data) {
         monthlysales = data;
+
+        console.log('/monrhlysales' + monthlysales);
 
         // 売上情報整形
         var salesdata = [ ['Element', '売上/円', {role: 'style'}]];
