@@ -12,6 +12,7 @@ use App\PRODUCT;
 use App\UORDER;
 use App\GENRE;
 use App\REVIEW;
+use App\ChromePhp;
 
 class AdmintopController extends BaseController
 {
@@ -25,7 +26,9 @@ class AdmintopController extends BaseController
     //
     public function genre_sales()
     {
-        $uorder = UORDER::with('uorderDetail')
+        ChromePhp::log('aa');
+
+         $uorder = UORDER::with('uorderDetail')
             ->with('uorderDetail.uorderProduct')
             ->get();
 
@@ -48,6 +51,7 @@ class AdmintopController extends BaseController
 
         }
         return response()->json($genre_sales);
+
     }
 
     //

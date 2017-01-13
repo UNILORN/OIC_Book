@@ -4,13 +4,11 @@ $(function () {
     // 売上　ジャンル別売上総数
     //
     $.ajax({
-        type: "GET",
-        dataType:'json',
         url: "/api/admin/genresales",
     }).done(function (data) {
         sales = data;
 
-        console.log('/genresales ' + JSON.stringify(sales));
+        console.log('/genresales ' + sales);
 
         // 売上情報整形
         var salesdata = [ ['Element', '売上/円', {role: 'style'}, {role: 'annotation'}]];
