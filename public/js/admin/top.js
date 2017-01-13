@@ -57,7 +57,7 @@ $(function () {
 
         // 表示するデータ　[横軸,縦軸,スタイル]
         for (key in monthlysales) {
-            var date = new Date(2017, 3, 1);
+            var date = new Date();
             date.setMonth(date.getMonth() - d--);
             monthname = date.getMonth() + 1;
             salesdata[salesdata.length] = [monthname + "月", monthlysales[key], ""];
