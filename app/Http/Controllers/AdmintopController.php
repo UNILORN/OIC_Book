@@ -35,7 +35,7 @@ class AdmintopController extends BaseController
         $genre  = GENRE::all();
         $genre_sales = [];
 
-        ChromePhp::log($genre);
+        ChromePhp::log('bbb');
 
          /*
 //        ジャンルの数だけ初期化
