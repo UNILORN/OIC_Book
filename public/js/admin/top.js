@@ -55,11 +55,11 @@ $(function () {
 
         console.log(new Date());
 
-        var d = 11;
+        var d = 12;
 
         // 表示するデータ　[横軸,縦軸,スタイル]
         for (key in monthlysales) {
-            var date = new Date();
+            var date = new Date(2017, 3, 1);
             console.log('d ' + d);
             date.setMonth(date.getMonth() - d--);
             monthname = date.getMonth() + 1;
