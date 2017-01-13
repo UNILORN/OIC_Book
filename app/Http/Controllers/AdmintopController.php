@@ -26,15 +26,18 @@ class AdmintopController extends BaseController
     //
     public function genre_sales()
     {
-        ChromePhp::log('aa');
 
-         /*$uorder = UORDER::with('uorderDetail')
+
+         $uorder = UORDER::with('uorderDetail')
             ->with('uorderDetail.uorderProduct')
             ->get();
 
         $genre  = GENRE::all();
         $genre_sales = [];
 
+        ChromePhp::log($genre);
+
+         /*
 //        ジャンルの数だけ初期化
         foreach ($genre as $key => $value){
             $genre_sales[$value->category] = [];
@@ -50,8 +53,9 @@ class AdmintopController extends BaseController
             }
 
         }
-        return response()->json($genre_sales);*/
+        return response()->json($genre_sales);
 
+         */
     }
 
     //
