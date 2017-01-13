@@ -53,17 +53,13 @@ $(function () {
         // 売上情報整形
         var salesdata = [ ['Element', '売上/円', {role: 'style'}]];
 
-        console.log(new Date());
-
         var d = 12;
 
         // 表示するデータ　[横軸,縦軸,スタイル]
         for (key in monthlysales) {
             var date = new Date(2017, 3, 1);
-            console.log('d ' + d);
             date.setMonth(date.getMonth() - d--);
             monthname = date.getMonth() + 1;
-            console.log('monthname ' + monthname);
             salesdata[salesdata.length] = [monthname + "月", monthlysales[key], ""];
         }
 
