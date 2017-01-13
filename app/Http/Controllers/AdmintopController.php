@@ -67,25 +67,26 @@ class AdmintopController extends BaseController
     public function monthly_sales(){
 
         $uorder = UORDER::select(DB::raw("DATE_FORMAT(`uorder_day`,'%Y-%m') as uorder_day"),'uorder_id')
-            ->where('uorder_day','like',Carbon::now()->year.'%')
+            ->where('uorder_day','>',Carbon::now()->subYear()->addMonth()->format('Y-m'))
             ->with('uorderDetail')
             ->with('uorderDetail.uorderProduct')
             ->orderBy('uorder_day')
             ->get();
 
         $uorder_day = UORDER::select(DB::raw("distinct DATE_FORMAT(`uorder_day`,'%Y-%m') as uorder_day"))
+            ->where('uorder_day', '>', Carbon::now()->subYear()->addMonth()->format('Y-m'))
             ->groupBy('uorder_day')
             ->get();
 
         $monthly_sales = [];
         foreach ($uorder_day as $key => $value){
-            $monthly_sales[$key] = 0;
+                $monthly_sales[$key] = 0;
         }
 
         foreach ($uorder as $value) {
             foreach ($uorder_day as $key => $month){
                 if($month->uorder_day == $value->uorder_day){
-                    foreach($value->uorderDetail as $detailvalue){
+                    foreach($value->uorderDetail as $detailvalue) {
                         $monthly_sales[$key] += intval($detailvalue->uorderProduct->product_price) * intval($detailvalue->uorder_number);
                     }
                 }
