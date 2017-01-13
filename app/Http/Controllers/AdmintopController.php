@@ -27,14 +27,12 @@ class AdmintopController extends BaseController
     public function genre_sales()
     {
 
-
          $uorder = UORDER::with('uorderDetail')
             ->with('uorderDetail.uorderProduct')
             ->get();
 
         $genre  = GENRE::all();
         $genre_sales = [];
-
 
 //        ジャンルの数だけ初期化
         foreach ($genre as $key => $value){
@@ -43,20 +41,24 @@ class AdmintopController extends BaseController
             $genre_sales[$value->category]["num"] = 0;
         }
 
-        ChromePhp::log('bbb');
-
-        /*
         foreach ($uorder as $u_value){
             foreach ($u_value->uorderDetail as $value){
-                $genre_name = GENRE::find($value->uorderProduct->genre_id);
+                foreach ($genre as $genre_id){
+                    if($genre_id['genre_id'] == $value->uorderProduct->genre_id){
+                        $genre_name = $genre_id;
+                    }
+                }
                 $genre_sales[$genre_name->category]["price"] += intval($value->uorderProduct->product_price) * intval($value->uorder_number);
                 $genre_sales[$genre_name->category]["num"] += 1;
             }
 
         }
+
+
+
         return response()->json($genre_sales);
 
-         */
+
     }
 
     //
