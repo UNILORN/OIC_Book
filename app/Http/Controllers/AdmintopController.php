@@ -28,7 +28,7 @@ class AdmintopController extends BaseController
     {
         ChromePhp::log('aa');
 
-         $uorder = UORDER::with('uorderDetail')
+         /*$uorder = UORDER::with('uorderDetail')
             ->with('uorderDetail.uorderProduct')
             ->get();
 
@@ -50,7 +50,7 @@ class AdmintopController extends BaseController
             }
 
         }
-        return response()->json($genre_sales);
+        return response()->json($genre_sales);*/
 
     }
 
