@@ -25,6 +25,14 @@ class UORDERDETAILS_TABLE extends Seeder
                 'uorder_details_flug' => $faker->boolean()
             ];
         }
+        for ($i = 2001; $i <= 5000; $i++) {
+            $data[] = [
+                'uorder_id' => $i % 1500 + 1500,
+                'product_id' => rand(1, 100),
+                'uorder_number' => $faker->randomDigitNotNull(),
+                'uorder_details_flug' => $faker->boolean()
+            ];
+        }
         DB::table('UORDERDETAILS')->insert($data);
     }
 }
