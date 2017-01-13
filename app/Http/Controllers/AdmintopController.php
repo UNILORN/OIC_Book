@@ -35,9 +35,7 @@ class AdmintopController extends BaseController
         $genre  = GENRE::all();
         $genre_sales = [];
 
-        ChromePhp::log('bbb');
 
-         /*
 //        ジャンルの数だけ初期化
         foreach ($genre as $key => $value){
             $genre_sales[$value->category] = [];
@@ -45,6 +43,9 @@ class AdmintopController extends BaseController
             $genre_sales[$value->category]["num"] = 0;
         }
 
+        ChromePhp::log('bbb');
+
+        /*
         foreach ($uorder as $u_value){
             foreach ($u_value->uorderDetail as $value){
                 $genre_name = GENRE::find($value->uorderProduct->genre_id);
