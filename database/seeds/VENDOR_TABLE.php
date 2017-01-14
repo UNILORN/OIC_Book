@@ -26,6 +26,13 @@ class VENDOR_TABLE extends Seeder
                 'vendor_phone_number' => $faker->phoneNumber()
             ];
         }
+        $data[] = [
+            'vendor_id' => 101,
+            'vendor_name' => '株式会社アオキ',
+            'vendor_email' => 'b5159@oic.jp',
+            'vendor_address' => $faker->address(),
+            'vendor_phone_number' => $faker->phoneNumber()
+        ];
         DB::table('VENDOR')->insert($data);
     }
 }
