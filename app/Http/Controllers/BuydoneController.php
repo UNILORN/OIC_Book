@@ -33,8 +33,8 @@ class BuydoneController extends Controller
 
       $use_point = (int)$request->use_point;
 
-      if($use_point > $user_point) {
-          redirect('/');
+      if($use_point > $user_point || $use_point <= -1) {
+          return redirect('/');
       }
 
       $sum-=$use_point;
