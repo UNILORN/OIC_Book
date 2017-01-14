@@ -29,14 +29,25 @@ class BuydoneController extends Controller
       $sum = new \App\Service\AuthcartService;
       $sum = $sum->getSum($user->id);
 
+      $user_point = $user['original']['user_point'];
+
+      $use_point = (int)$request->use_point;
+
+      if($use_point > $user_point) {
+          redirect('/');
+      }
+
+      $sum-=$use_point;
+
       $uorder = new \App\Service\BuydoneService;
 
       $point = $request->input('point');
       $point = floor( $sum/100 );
-      $uorderadd = $uorder -> uorderadd($user,$sum,$timestamp,$point);
+      $uorderadd = $uorder -> uorderadd($user,$sum,$timestamp,$point,$use_point);
       $uorderdetailadd = $uorder -> uorderdetailadd($cart,$timestamp);
       $stockupdata = $uorder -> stockupdate($cart);
       $pointadd = $uorder -> pointadd($user,$point);
+      $pointsub = $uorder -> pointsub($user,$use_point);
       $cartdel = new \App\Service\AuthcartService;
       $cartdel -> deleteAllItem($user->id,$cartarray);
 

@@ -10,14 +10,14 @@ use \App\UORDER_DETAIL;
 use \App\User;
 
 class BuydoneService{
-  public function uorderadd($user,$sum,$timestamp,$point){
+  public function uorderadd($user,$sum,$timestamp,$point,$use_point){
     $today = Carbon::now();
     $dadada = UORDER::insert([
         'uorder_id'=>$timestamp,
         'user_id'=>$user->id,
         'uorder_day'=>$today,
         'uorder_price'=>$sum,
-        'uorder_use_point'=>0,
+        'uorder_use_point'=>$use_point,
         'uorder_add_point'=>$point,
         'uorder_payment'=>1,
         'uorder_cancel'=>0,
@@ -51,6 +51,11 @@ class BuydoneService{
   }
   public function pointadd($user,$point){
     $user->user_point = $point + intval($user->user_point);
+    $user->save();
+  }
+
+  public function pointsub($user,$point){
+    $user->user_point = intval($user->user_point) - $point;
     $user->save();
   }
 

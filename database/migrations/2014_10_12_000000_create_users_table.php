@@ -21,8 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('user_post_code',45)->nullable();
             $table->string('user_address',45)->nullable();
             $table->string('user_phone_number',45)->nullable();
-            $table->integer('user_point')->nullable();
-            $table->integer('employee_id')->nullable();
+            $table->integer('user_point')->default(0);
             $table->boolean('user_recede_flug')->nullable();
             $table->boolean('delete_flg')->default(0);
             $table->rememberToken();
