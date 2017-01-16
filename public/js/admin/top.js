@@ -8,7 +8,6 @@ $(function () {
     }).done(function (data) {
         sales = data;
 
-        console.log('/genresales ' + sales);
 
         // 売上情報整形
         var salesdata = [ ['Element', '売上/円', {role: 'style'}, {role: 'annotation'}]];
@@ -51,15 +50,17 @@ $(function () {
     }).done(function (data) {
         monthlysales = data;
 
-        console.log('/monrhlysales' + monthlysales);
-
         // 売上情報整形
         var salesdata = [ ['Element', '売上/円', {role: 'style'}]];
 
+        var d = 11;
+
         // 表示するデータ　[横軸,縦軸,スタイル]
         for (key in monthlysales) {
-            monthname = parseInt(key) + 1;
-            salesdata[salesdata.length] = [monthname+"月", monthlysales[key], ""];
+            var date = new Date();
+            date.setMonth(date.getMonth() - d--);
+            monthname = date.getMonth() + 1;
+            salesdata[salesdata.length] = [monthname + "月", monthlysales[key], ""];
         }
 
         google.charts.load('current', {packages: ['corechart', 'bar']});

@@ -33,26 +33,30 @@
 
             <div class="total">
                 <div class="inner">
+                    使用ポイント <span> @if(isset($use_point)){{$use_point}}@else{{0}}@endif pt</span>
+                </div>
+                <div class="inner">
                     合計金額 <span>{{$sum}}円</span>
                 </div>
             </div>
 </div>
   </div>
 </div>
-<div class="buy_cont">
-  <div class="buy_button">
-    <form  action="/buy_done" method="post">
-<input type="hidden" name="_token" value="{{ csrf_token() }}">
-      <input class="button_enter" type="submit" value="確定">
-    </form>
-  </div>
- <div class="buy_method">
+  <div class="buy_cont">
+    <div class="buy_button">
+        <form  action="/buy_done" method="post">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input type="hidden" name="use_point" value="@if(isset($use_point)){{$use_point}}@else{{0}}@endif">
+            <input class="button_enter" type="submit" value="確定">
+        </form>
+    </div>
+    <div class="buy_method">
        <form class="method_from">
-         <p>支払い方法</p>
-     <p>{{ $buy }}</p>
-     <input type="hidden" name="buy" class="form" value="{{$buy}}" disabled="disabled">
- </form>
-</div>
+           <p>支払い方法</p>
+           <p>{{ $buy }}</p>
+           <input type="hidden" name="buy" class="form" value="{{$buy}}" disabled="disabled">
+        </form>
+    </div>
 
 <div class="buy_profile">
   <table>
@@ -104,6 +108,16 @@
 </form>
 </tbody>
 </table>
+    <p>ポイント使用</p>
+    <form action="/buy_confirm" method="get">
+        {{csrf_field()}}
+        <input type="hidden" name="buy" value="{{$buy}}">
+        @if(isset($error))
+            <p style="color: red;">{{$error}}</p>    
+        @endif
+        <input type="number" name="use_point" value="0" min="0" max="{{$user->user_point}}">
+        <input type="submit" value="確定">
+    </form>
 </div>
 
 

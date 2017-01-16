@@ -58,6 +58,7 @@ Route::get('/logout',function(){
     //購入
     Route::get('/buy','BuyController@index');
     Route::post('/buy_confirm','ConfirmController@buy');
+    Route::get('/buy_confirm','ConfirmController@point');
     Route::post('/buy_done','BuydoneController@index');
     //退会処理
     Route::get('/recede','RecedeController@index');
