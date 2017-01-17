@@ -25,7 +25,8 @@ class EMPLOYEE_TABLE extends Seeder
             'employee_authority' => 3,
             'employee_phone_number' => $faker->phoneNumber()
         ]);
-        $data = [];
+        /*
+         * $data = [];
         for ($i = 2; $i <= 100; $i++) {
             $data[] = [
                 'employee_id' => $i,
@@ -36,6 +37,7 @@ class EMPLOYEE_TABLE extends Seeder
                 'employee_phone_number' => $faker->phoneNumber()
             ];
         }
+        */
         DB::table('EMPLOYEE')->insert($data);
     }
 }

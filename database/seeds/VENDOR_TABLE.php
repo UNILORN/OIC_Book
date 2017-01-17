@@ -17,7 +17,7 @@ class VENDOR_TABLE extends Seeder
         //faker使う。普通に使う場合と同じ。
         $faker = Faker\Factory::create('ja_JP');
         $data = [];
-        for ($i = 1; $i <= 100; $i++) {
+        for ($i = 1; $i <= 10; $i++) {
             $data[] = [
                 'vendor_id' => $i,
                 'vendor_name' => $faker->company(),
