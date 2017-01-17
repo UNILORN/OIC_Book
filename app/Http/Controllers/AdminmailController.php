@@ -44,7 +44,7 @@ class AdminmailController extends BaseController
         ORDER::insert([
             'order_id'=>$timestamp,
             'vender_id'=>$request->input('vendor_id'),
-            'employee_id'=>50,
+            'employee_id'=>session()->get('employee'),
             'product_id'=>$request->input('product_id'),
             'order_number'=>$request->input('num'),
             'order_day'=>$today,
@@ -52,6 +52,9 @@ class AdminmailController extends BaseController
             'remaining_amount'=>$request->input('num'),
             'order_flug'=>0
         ]);
+
+
+
         Mail::to($request->email)->send(new Mailsend($request));
 
         return view('administer.mail.admin_mailsend');

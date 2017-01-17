@@ -23,6 +23,7 @@ class AdminauthController extends Controller
 
         //セッションに
         if(count($q) === 1){
+
             session()->put('employee',$q->employee_id);
 
             session()->put('authority',$q->employee_authority);

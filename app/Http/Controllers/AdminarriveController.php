@@ -60,7 +60,7 @@ class AdminarriveController extends BaseController
         }
         ARRIVE::insert([
             'order_id' => $request->input('order_id'),
-            'employee_id' => 1,
+            'employee_id' => session()->get('employee'),
             'arrive_number' => $request->input('arrive_number'),
             'arrive_day' => $date,
             'arrive_price' => $request->input('arrive_price')

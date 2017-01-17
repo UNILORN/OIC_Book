@@ -49,7 +49,7 @@ class AdmintopController extends BaseController
                     }
                 }
                 $genre_sales[$genre_name->category]["price"] += intval($value->uorderProduct->product_price) * intval($value->uorder_number);
-                $genre_sales[$genre_name->category]["num"] += 1;
+                $genre_sales[$genre_name->category]["num"] += intval($value->uorder_number);
             }
 
         }
