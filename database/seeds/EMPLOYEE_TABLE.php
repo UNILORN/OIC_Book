@@ -38,6 +38,6 @@ class EMPLOYEE_TABLE extends Seeder
             ];
         }
         */
-        DB::table('EMPLOYEE')->insert($data);
+        //DB::table('EMPLOYEE')->insert($data);
     }
 }
