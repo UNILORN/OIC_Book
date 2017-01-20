@@ -59,8 +59,8 @@ $(function () {
         for (key in monthlysales) {
             var date = new Date();
             date.setMonth(date.getMonth() - d--);
-            monthname = date.getMonth() + 1;
-            salesdata[salesdata.length] = [0 + "月", monthlysales[key], ""];
+            monthname = date.getMonth();
+            salesdata[salesdata.length] = [monthname + "月", monthlysales[key], ""];
         }
 
         google.charts.load('current', {packages: ['corechart', 'bar']});
