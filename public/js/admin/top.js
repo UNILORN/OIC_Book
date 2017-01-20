@@ -60,7 +60,7 @@ $(function () {
             var date = new Date();
             date.setMonth(date.getMonth());
             monthname = date.getMonth();
-            salesdata[salesdata.length] = [monthname + "月", monthlysales[key], ""];
+            salesdata[salesdata.length] = [1 + "月", monthlysales[key], ""];
         }
 
         google.charts.load('current', {packages: ['corechart', 'bar']});
