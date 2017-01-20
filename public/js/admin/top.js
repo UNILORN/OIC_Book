@@ -58,9 +58,9 @@ $(function () {
         // 表示するデータ　[横軸,縦軸,スタイル]
         for (key in monthlysales) {
             var date = new Date();
-            date.setMonth(date.getMonth() - d--);
+            date.setMonth(date.getMonth());
             monthname = date.getMonth();
-            salesdata[salesdata.length] = [0 + "月", monthlysales[key], ""];
+            salesdata[salesdata.length] = [monthname + "月", monthlysales[key], ""];
         }
 
         google.charts.load('current', {packages: ['corechart', 'bar']});
