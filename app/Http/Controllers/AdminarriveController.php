@@ -65,6 +65,11 @@ class AdminarriveController extends BaseController
             'arrive_day' => $date,
             'arrive_price' => $request->input('arrive_price')
         ]);
+
+        $product = PRODUCT::find($order->product_id);
+        $product->product_stock = $product->product_stock + $request->input('arrive_number');
+        $product->save();
+
         return redirect('/admin/arrive/create');
     }
 

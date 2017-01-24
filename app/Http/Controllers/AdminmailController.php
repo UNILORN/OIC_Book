@@ -44,7 +44,11 @@ class AdminmailController extends BaseController
         ORDER::insert([
             'order_id'=>$timestamp,
             'vender_id'=>$request->input('vendor_id'),
+<<<<<<< HEAD
             'employee_id'=>session()->get('employee'),
+=======
+            'employee_id'=>1,
+>>>>>>> 1ab42d0a2656fe5c8ae8cb067bf38ee2c180caee
             'product_id'=>$request->input('product_id'),
             'order_number'=>$request->input('num'),
             'order_day'=>$today,

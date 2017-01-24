@@ -13,18 +13,18 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Model::unguard();
-        $this->call(ARRIVE_TABLE::class);
+//        $this->call(ARRIVE_TABLE::class);
 //        $this->call(CART_TABLE::class);
         $this->call(PRODUCT_TABLE::class);
         $this->call(EMPLOYEE_TABLE::class);
         $this->call(GENRE_TABLE::class);
         $this->call(VENDOR_TABLE::class);
-        $this->call(UORDER_TABLE::class);
-        $this->call(ORDER_TABLE::class);
-        $this->call(UORDER_PAID_TABLE::class);
-        $this->call(VENDOR_TABLE::class);
-        $this->call(UORDERDETAILS_TABLE::class);
-        $this->call(REVIEW_TABLE::class);
+  //      $this->call(UORDER_TABLE::class);
+ //       $this->call(ORDER_TABLE::class);
+ //       $this->call(UORDER_PAID_TABLE::class);
+ //       $this->call(VENDOR_TABLE::class);
+ //       $this->call(UORDERDETAILS_TABLE::class);
+ //       $this->call(REVIEW_TABLE::class);
         Model::reguard();
     }
 }
