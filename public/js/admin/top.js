@@ -62,7 +62,7 @@ $(function () {
             date.setMonth(date.getMonth() - d--);
             monthname = date.getMonth() + 1;
 
-            salesdata[salesdata.length] = [1 + "月", monthlysales[key], ""];
+            salesdata[salesdata.length] = [monthname + "月", monthlysales[key], ""];
         }
 
         google.charts.load('current', {packages: ['corechart', 'bar']});
