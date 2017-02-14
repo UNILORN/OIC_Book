@@ -19,10 +19,10 @@ class ApiController extends Controller
 
         //okなら
         if(count($q) === 1){
-            return response()->json($q->employee_id);
+            return response()->json(['result' => $q->employee_id]);
         }
 
-        return response()->json(false);
+        return response()->json(['result' => false]);
 
     }
 
