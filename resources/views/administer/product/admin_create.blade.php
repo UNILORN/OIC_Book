@@ -6,6 +6,8 @@
 
 @section('main')
 
+
+    <div id="drop_zone">
     <h2>商品新規登録</h2>
     <form class="form-horizontal" action="/admin/stock" method="post" enctype="multipart/form-data">
         {{csrf_field()}}
@@ -28,7 +30,9 @@
         </div>
         <div class="input-group">
             <span class="input-group-addon" >商品画像</span>
+            <div id="disp" ></div>
             <input type="file" name="product_image" v-model="product_image" class="form-control" placeholder="保留" value="">
+            <div id="drop" style="width:700px; height:150px; padding:10px; border:3px solid" ondragover="onDragOver(event)" ondrop="onDrop(event)"  >ここにドロップしたファイルのプロパティを読み込みます。</div>
         </div>
         <div class="input-group">
             <span class="input-group-addon" >著者</span>
@@ -69,4 +73,8 @@
 
         <button class="btn btn-default "  type="submit" name="submit">新規登録</button>
     </form>
+    <div>
+
+        <script src="/js/admin/product.js"></script>
+
 @endsection

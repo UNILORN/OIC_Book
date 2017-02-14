@@ -61,6 +61,8 @@ class AdminstockController extends BaseController
 
         $image = $request->product_image;
 
+        dd($image);
+
         //一意の画像の名前をつける
         $fileName = sha1(uniqid(rand(), true));
 
