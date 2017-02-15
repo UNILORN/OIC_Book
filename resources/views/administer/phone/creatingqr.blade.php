@@ -23,7 +23,7 @@
 
     <script type="application/javascript">
         $(window).on("load",function(){
-            $('#qrcode').qrcode("{{$order_id}},{{$id}},{{$num}}");
+            $('#qrcode').qrcode("{{$order_id}},{{$id}},{{$num}},{{$price}}");
         });
     </script>
 

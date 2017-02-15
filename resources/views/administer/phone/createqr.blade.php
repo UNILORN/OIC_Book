@@ -27,7 +27,8 @@
 
                     <input type="hidden" name="product_id" value="{{$value->product_id}}">
                     <input type="hidden" name="order_id" value="{{$value->order_id}}">
-                    <input type="number" name="num" value="0" max="{{(int)$value->order_number - (int)$value->remaining_amount}}">
+                    入荷個数<input type="number" name="num" value="0" max="{{(int)$value->order_number - (int)$value->remaining_amount}}">
+                    価格<input type="number" name="price" value="0">
                     <input type="submit" value="生成">
                 </form>
             </td>
