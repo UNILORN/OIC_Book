@@ -31,6 +31,6 @@
     <p>Hold a QR Code in front of your webcam.</p>
     <video  id="camsource" autoplay width="320" height="240">Put your fallback message here.</video>
     <canvas id="qr-canvas" width="320" height="240" style="display:none"></canvas>
-    <h3 id="qr-value"></h3>
 
+    <h3 id="qr-value"></h3>
 @endsection
