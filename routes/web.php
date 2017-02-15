@@ -118,4 +118,5 @@ Route::get('/logout',function(){
 
     Route::get('/admin/phone', 'AdminPhoneController@index');
     Route::get('admin/readqr', 'AdminPhoneController@readqr');
-    Route::get('admin/createqr', 'AdminPhoneController@createqr');
+    Route::get('/admin/createqr', 'AdminPhoneController@selectqr');
+    Route::post('/admin/createqr', 'AdminPhoneController@createqr');
