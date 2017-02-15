@@ -115,3 +115,7 @@ Route::get('/logout',function(){
     Route::get('/admin/login', 'AdminauthController@index');
     Route::post('/admin/login', 'AdminauthController@check');
     Route::get('/admin/logout', 'AdminauthController@logout');
+
+    Route::get('/admin/phone', 'AdminPhoneController@index');
+    Route::get('admin/readqr', 'AdminPhoneController@readqr');
+    Route::get('admin/createqr', 'AdminPhoneController@createqr');

@@ -4,6 +4,17 @@
 @section('title', 'Top')
 @section('css','admin/admin_top')
 @section('main')
+
+    <?php
+
+    $ua=$_SERVER['HTTP_USER_AGENT'];
+    if((strpos($ua,'iPhone')!==false)||(strpos($ua,'iPod')!==false)||(strpos($ua,'Android')!==false)) {
+        header('Location:/admin/phone');
+        exit();
+    }
+
+    ?>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 

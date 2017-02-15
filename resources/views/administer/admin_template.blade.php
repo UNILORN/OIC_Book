@@ -37,6 +37,7 @@
             <li @yield('payment')><a href="/admin/payment">入金確認</a></li>
             <li @yield('mail')><a href="/admin/mailform">発注メールフォーム</a></li>
             <li @yield('arriveform')><a href="/admin/arrive/create">入荷登録フォーム</a></li>
+            <li @yield('qr')><a href="/admin/phone">スマホ</a></li>
           </ul>
           <ul class="nav navbar-right">
             <li @yield('arriveform')><a href="/admin/logout">ログアウト</a></li>
