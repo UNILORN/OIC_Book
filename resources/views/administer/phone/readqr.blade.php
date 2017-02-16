@@ -27,8 +27,8 @@
     <script type="text/javascript" src="/js/camera.js"></script>
     <script type="text/javascript" src="/js/init.js"></script>
 
-    <h1>JSQRCode Scanner</h1>
-    <p>Hold a QR Code in front of your webcam.</p>
+    <h1>QRコード読み取り</h1>
+    <p>カメラでQRコードを読み取ってください</p>
     <video  id="camsource" autoplay width="320" height="240">Put your fallback message here.</video>
     <canvas id="qr-canvas" width="320" height="240" style="display:none"></canvas>
 
