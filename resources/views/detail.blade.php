@@ -46,11 +46,12 @@
                 <div class="cart-form">
                     <form action="/addsessioncart" method="post">
                         <div class="cart-num">
-                            <select name="number" class="form-select hasCustomSelect">
+                            <input type="number" min="0" max="{{$product->product_stock}}" name="number" class="form-control" id="exampleInputName2" placeholder="0">
+                                {{--
                                 @foreach (range(1,$product->product_stock) as $key => $value)
                                     <option value="{{$value}}">{{$value}}</option>
                                 @endforeach
-                            </select>
+                                --}}
                         </div>
                         <input type="hidden" name="product_id" value="{{$product->product_id}}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">

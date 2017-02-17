@@ -88,6 +88,7 @@ Route::get('/logout',function(){
     Route::post('/admin/user/{id}/delete','AdminuserController@destroy');
 
     //仕入先情報
+    Route::get('/admin/1', 'AdminvendorController@1');
     Route::resource('/admin/vendor','AdminvendorController');
     Route::post('/admin/vendor/{id}/update','AdminvendorController@update');
     Route::post('/admin/vendor/{id}/delete','AdminvendorController@destroy');
